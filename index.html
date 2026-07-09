@@ -116,7 +116,7 @@
   <div class="grid" id="grid"></div>
 
   <div class="setup" id="tracker">
-    <b style="color:var(--text)">📊 Results tracker — 70+ best bets</b> <span id="record" style="margin-left:8px"></span>
+    <b style="color:var(--text)">📊 Results tracker — logged plays</b> <span id="record" style="margin-left:8px"></span>
     <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
       <span class="btn go" onclick="gradeResults()">Grade &amp; refresh record</span>
       <span class="btn" onclick="toggleLog()">Log a bet manually</span>
@@ -130,7 +130,7 @@
       <span class="btn go" onclick="addManual()">Add bet</span>
     </div>
     <div id="results" style="margin-top:10px"></div>
-    <div class="note" style="margin-top:8px">Auto-logs any 70+ PLAY when you load lines. Grades from the free MLB Stats API once games are Final; win = pitcher's actual outs are under the line. Record is 1 unit per bet. (Log is stored per-device.)</div>
+    <div class="note" style="margin-top:8px">Auto-logs the day's real edges (PLAY 60+) when you load lines. Grades from the free MLB Stats API once games are Final; win = pitcher's actual outs are under the line. Record is 1 unit per bet; tiers show whether higher-PLAY bets hit more. (Log is stored per-device.)</div>
   </div>
 
   <div class="legend">
@@ -143,7 +143,7 @@
     <div style="margin-top:8px">Green = strong under lean · yellow = moderate · red-tint = leans OVER · grey = no research note (line only).</div>
     <h3 style="margin-top:14px">⭐ PLAY score — the actual best-bet ranking</h3>
     <div class="row">Only appears when a live line is loaded. It blends three things: the <b>Under Lean</b> (is there a real reason he goes short), the <b>cushion</b> (how far his projected outs sit below the line — more room = safer), and the <b>price</b> (plus money helps, heavy juice like −175 hurts because the market already knows).</div>
-    <div class="row"><b>⭐ Best plays</b> shows only PLAY <b>70 or higher</b> — your best-bet cutoff. Everything below that is filtered out.</div>
+    <div class="row"><b>⭐ Best plays</b> ranks <b>every pitcher with a line</b> by edge — best on top, no cutoff. A low Under Lean can still rank high if the line sits well above his projection (big <b>+ cushion</b>). The bigger the cushion, the safer the under.</div>
   </div>
 
   <div class="disclaimer">
@@ -320,7 +320,7 @@ function render(){
 
   rows.forEach(row=>{
     const l=row.live, r=row.r, pl=row.play;
-    if(filter==='play' && (!pl || pl.play<70)) return;
+    if(filter==='play' && !pl) return;
     const trig=(!l && r)?betTrigger(r):null;
     const name = l? l.name : (r?prettyName(r.key):"?");
     const team = l? l.team : "";
@@ -382,7 +382,7 @@ function snapshotPlays(){
   if(start && today < start){ renderResults(); return; }
   const plays=loadPlays(); let added=false;
   LINES.forEach(l=>{ const r=research(l.name); const pl=computePlay(l,r);
-    if(pl && pl.play>=70){ const id=today+'|'+l.name.toLowerCase();
+    if(pl && pl.play>=60){ const id=today+'|'+l.name.toLowerCase();
       if(!plays.some(p=>p.id===id)){ plays.push({id,date:today,name:l.name,team:l.team,line:l.point,side:'under',price:l.under,play:pl.play,graded:false}); added=true; }
     }});
   if(added) savePlays(plays);
@@ -452,7 +452,7 @@ function renderResults(){
   if(rec){
     if(!graded.length){ rec.innerHTML='<span class="note">no graded bets yet</span>'; }
     else{
-      const tiers=[['70+',70],['80+',80],['90+',90]];
+      const tiers=[['60+',60],['70+',70],['80+',80]];
       const parts=tiers.map(([lbl,m])=>{ const r=recFor(graded,m); if(!r.n) return null;
         return `${lbl}: <b style="color:${r.w>=r.l?'#7ee787':'#ff7b72'}">${r.w}-${r.l}</b> <span style="color:${r.u>=0?'#7ee787':'#ff7b72'}">${r.u>=0?'+':''}${r.u.toFixed(2)}u</span>`;
       }).filter(Boolean);
