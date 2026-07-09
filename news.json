@@ -1,0 +1,14 @@
+[
+  {"pitcher":"Patrick Sandoval","team":"BOS","date":"2026-07-09","strength":"strong",
+   "quote":"Ran his pitch count only to 68 in his final rehab start; Red Sox say they'll \"continue to build up his pitch count\" and hadn't locked starter vs reliever — likely on a restriction in his first game back.",
+   "source":"MLB.com","url":"https://www.mlb.com/news/patrick-sandoval-throws-four-innings-in-rehab-start"},
+  {"pitcher":"Logan Henderson","team":"MIL","date":"2026-07-09","strength":"moderate",
+   "quote":"Brewers easing him in — threw 74 pitches last time with plans to \"crack the 80-pitch marker\" this start.",
+   "source":"CBS Sports","url":"https://www.cbssports.com/mlb/players/29075729/logan-henderson/"},
+  {"pitcher":"Jack Perkins","team":"ATH","date":"2026-07-09","strength":"moderate",
+   "quote":"On a managed build-up — 75 then 85 pitches in back-to-back starts, ~5 IP, still used as a swingman.",
+   "source":"CBS Sports","url":"https://www.cbssports.com/fantasy/baseball/news/athletics-jack-perkins-handed-another-start-1007949/"},
+  {"pitcher":"Drew Rasmussen","team":"TB","date":"2026-07-09","strength":"caution",
+   "quote":"NOT a limit this year — coach Kyle Snyder called ~170 innings \"very reasonable\" for 2026 after capping him at 6 IP max all 2025. Logged so you don't mistake him for an under.",
+   "source":"MLB.com","url":"https://www.mlb.com/news/drew-rasmussen-settling-into-transition-to-rays-rotation"}
+]

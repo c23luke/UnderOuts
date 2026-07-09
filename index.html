@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Under Outs — Live Pitcher Outs Dashboard</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2430; --border:#2a3441;
+    --text:#e6edf3; --muted:#8b98a5; --accent:#3fb950; --warn:#d29922;
+    --hot:#f85149; --chip:#21262d; --blue:#58a6ff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--text);padding:16px;line-height:1.5}
+  h1{font-size:20px;margin:0 0 2px}
+  .sub{color:var(--muted);font-size:12.5px;margin-bottom:14px}
+  .banner{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:12px}
+  .banner b{color:var(--accent)}
+  .setup{background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:12.5px;color:var(--muted)}
+  .setup select{background:#0d1117;border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:7px;font-size:13px}
+  .status{font-size:12px;margin-left:2px;display:inline-block}
+  .controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
+  .controls input{background:var(--panel2);border:1px solid var(--border);color:var(--text);
+    padding:9px 11px;border-radius:8px;font-size:14px;min-width:150px;flex:1}
+  .btn{background:var(--chip);border:1px solid var(--border);color:var(--text);padding:8px 13px;
+    border-radius:20px;font-size:13px;cursor:pointer;user-select:none}
+  .btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .btn.go{background:var(--accent);color:#04250f;border-color:var(--accent);font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:13px 15px;
+    display:flex;flex-direction:column;gap:8px}
+  .card.tier1{border-left:4px solid var(--accent)}
+  .card.tier2{border-left:4px solid var(--warn)}
+  .card.tier3{border-left:4px solid var(--hot)}
+  .card.tier0{border-left:4px solid var(--border)}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+  .name{font-size:16px;font-weight:600}
+  .team{color:var(--muted);font-size:12px}
+  .score{text-align:center;min-width:56px}
+  .score .num{font-size:24px;font-weight:700;line-height:1}
+  .score .lbl{font-size:9px;letter-spacing:.5px;color:var(--muted);text-transform:uppercase}
+  .s-hi{color:var(--accent)} .s-mid{color:var(--warn)} .s-lo{color:var(--hot)} .s-na{color:var(--muted)}
+  .linerow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .pill{border:1px solid var(--border);border-radius:7px;padding:3px 9px;font-size:12px;font-weight:600}
+  .pill.pt{background:#0d2136;border-color:#1f4b73;color:#79c0ff}
+  .pill.ov{color:#ff9b94} .pill.un{color:#7ee787}
+  .pill.book{background:var(--chip);color:var(--muted);font-weight:400;font-size:11px}
+  .badge{border-radius:7px;padding:3px 9px;font-size:12px;font-weight:700;letter-spacing:.3px}
+  .b-strong{background:#12291a;border:1px solid #2f6b3d;color:#7ee787}
+  .b-lean{background:#2a2411;border:1px solid #6b5a1f;color:#e3b341}
+  .b-thin{background:var(--chip);border:1px solid var(--border);color:var(--muted)}
+  #results td,#results th{padding:5px 8px;border-bottom:1px solid var(--border)}
+  #tracker input{background:#0d1117;border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:7px;font-size:13px}
+  .chips{display:flex;flex-wrap:wrap;gap:5px}
+  .chip{background:var(--chip);border:1px solid var(--border);border-radius:6px;padding:2px 7px;font-size:10.5px;color:var(--muted)}
+  .chip.on{color:var(--text)}
+  .chip.rookie{border-color:#3fb95055;color:#7ee787}
+  .chip.il{border-color:#a371f755;color:#d2a8ff}
+  .chip.vet{border-color:#d2992255;color:#e3b341}
+  .chip.opener{border-color:#58a6ff55;color:#79c0ff}
+  .chip.trend{border-color:#f8514955;color:#ff7b72}
+  .note{font-size:12px;color:var(--muted)}
+  .note b{color:var(--text);font-weight:600}
+  .proj{font-size:12px;color:var(--muted)}
+  .proj b{color:var(--text)}
+  .legend{margin-top:20px;background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px;font-size:12.5px;color:var(--muted)}
+  .legend h3{color:var(--text);font-size:13px;margin:0 0 8px}
+  .legend .row{margin-bottom:5px}
+  .disclaimer{margin-top:16px;font-size:11.5px;color:var(--muted);border-top:1px solid var(--border);padding-top:12px}
+  a{color:var(--blue)}
+</style>
+</head>
+<body>
+  <h1>Under Outs — Live Pitcher Outs Dashboard</h1>
+  <div class="sub">MLB · total pitcher outs O/U · workload research overlay · hosted build</div>
+
+  <div class="banner">
+    <b>Read the number, not the innings.</b> Under a total-outs line = that many outs or fewer. Divide by 3 for innings:
+    <b>Under 15.5 = 5.0 IP or fewer</b> · Under 17.5 = 5.2 IP · Under 18.5 = 6.0 IP. The "Under Lean" badge is my
+    workload research (rookie caps, IL/TJ returns, veteran/age, openers, short-outing trends) — higher = stronger reason to expect a short start.
+  </div>
+
+  <div class="setup">
+    <b style="color:var(--text)">Live feed</b> — <b style="color:#e3b341">manual pull only.</b> Tap Load around game time to fetch current lines. Your API key is stored securely on the server, never in this page.<br>
+    <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <select id="book">
+        <option value="bovada">Bovada</option>
+        <option value="">Best available</option>
+        <option value="draftkings">DraftKings</option>
+        <option value="fanduel">FanDuel</option>
+        <option value="betmgm">BetMGM</option>
+      </select>
+      <span class="btn go" onclick="loadLive()">Load live lines</span>
+      <label style="display:inline-flex;align-items:center;gap:5px;font-size:12px;cursor:pointer"><input type="checkbox" id="autoref"> auto-refresh hourly</label>
+      <span id="status" class="status"></span>
+    </div>
+  </div>
+
+  <div class="controls">
+    <input id="search" placeholder="Search pitcher or team…" oninput="render()">
+    <span class="btn active" data-f="all" onclick="setFilter(this)">All</span>
+    <span class="btn" data-f="play" onclick="setFilter(this)">⭐ Best plays</span>
+    <span class="btn" data-f="haveline" onclick="setFilter(this)">Has live line</span>
+    <span class="btn" data-f="rookie" onclick="setFilter(this)">Rookie limit</span>
+    <span class="btn" data-f="il" onclick="setFilter(this)">IL return</span>
+    <span class="btn" data-f="vet" onclick="setFilter(this)">Veteran / age</span>
+    <span class="btn" data-f="opener" onclick="setFilter(this)">Opener</span>
+    <span class="btn" data-f="trend" onclick="setFilter(this)">Short trend</span>
+    <span class="btn" data-f="under" onclick="setFilter(this)">Under leans only</span>
+    <span class="btn" onclick="toggleNews()" style="border-color:#3a5bbf">📰 Workload news</span>
+  </div>
+
+  <div id="newspanel" style="display:none;margin-bottom:16px"></div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="setup" id="tracker">
+    <b style="color:var(--text)">📊 Results tracker — 70+ best bets</b> <span id="record" style="margin-left:8px"></span>
+    <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <span class="btn go" onclick="gradeResults()">Grade &amp; refresh record</span>
+      <span class="btn" onclick="toggleLog()">Log a bet manually</span>
+      <span class="btn" onclick="clearPlays()" style="border-color:#6b2f2f;color:#ff9b94">Clear log</span>
+    </div>
+    <div id="logform" style="display:none;margin-top:8px;gap:6px;flex-wrap:wrap;align-items:center">
+      <input id="m_name" placeholder="Pitcher (e.g. Connor Prielipp)" style="min-width:170px">
+      <input id="m_line" placeholder="Line e.g. 15.5" style="width:110px">
+      <input id="m_price" placeholder="Under price e.g. -105" style="width:150px">
+      <input id="m_date" type="date">
+      <span class="btn go" onclick="addManual()">Add bet</span>
+    </div>
+    <div id="results" style="margin-top:10px"></div>
+    <div class="note" style="margin-top:8px">Auto-logs any 70+ PLAY when you load lines. Grades from the free MLB Stats API once games are Final; win = pitcher's actual outs are under the line. Record is 1 unit per bet. (Log is stored per-device.)</div>
+  </div>
+
+  <div class="legend">
+    <h3>Under Lean score (0–100) — the research overlay</h3>
+    <div class="row"><b style="color:#7ee787">Rookie / hard innings limit</b> — team-stated pitch or inning cap (biggest weight).</div>
+    <div class="row"><b style="color:#d2a8ff">IL return / Tommy John build-up</b> — early starts back are usually capped.</div>
+    <div class="row"><b style="color:#e3b341">Veteran / age &amp; durability</b> — older arms (33+), declining velo, or teams easing workload late.</div>
+    <div class="row"><b style="color:#79c0ff">Opener / planned bullpen game</b> — starter only expected 1–3 innings.</div>
+    <div class="row"><b style="color:#ff7b72">Recent short-outing trend</b> — averaging &lt;5.2 IP / low pitch counts lately.</div>
+    <div style="margin-top:8px">Green = strong under lean · yellow = moderate · red-tint = leans OVER · grey = no research note (line only).</div>
+    <h3 style="margin-top:14px">⭐ PLAY score — the actual best-bet ranking</h3>
+    <div class="row">Only appears when a live line is loaded. It blends three things: the <b>Under Lean</b> (is there a real reason he goes short), the <b>cushion</b> (how far his projected outs sit below the line — more room = safer), and the <b>price</b> (plus money helps, heavy juice like −175 hurts because the market already knows).</div>
+    <div class="row"><b>⭐ Best plays</b> shows only PLAY <b>70 or higher</b> — your best-bet cutoff. Everything below that is filtered out.</div>
+  </div>
+
+  <div class="disclaimer">
+    Live lines pull through a secure serverless proxy; your Odds API key is stored as a server secret, never exposed in this page.
+    Research scores refresh when you rebuild the RESEARCH list (or via your scheduled task). Verify confirmed starters and pregame
+    news at first pitch. This is informational only, not betting advice; a capped starter can still be pulled early or stretch past
+    his cap. Only stake what you can afford to lose.
+  </div>
+
+<script>
+// ---- Research overlay (fallback; live copy loaded from /research.json at startup) ----
+let RESEARCH = [
+  {key:"sandoval", tier:1, score:80, flags:{il:1}, proj:"~4 IP (11–13 outs)",
+   note:"<b>Top under.</b> First start back after a 2-year Tommy John layoff. Rehab pitch count only reached ~68 — expect a hard ~65–75 pitch / ~4-inning cap. Confirm he's starting."},
+  {key:"henderson", tier:2, score:55, flags:{rookie:1}, proj:"~5 IP (14–16 outs)",
+   note:"Brewers rookie being eased in — ~74 pitches recently, targeting 80 this start. Moderate under, best on higher lines."},
+  {key:"perkins", tier:2, score:48, flags:{rookie:1}, proj:"~4.2–5 IP (13–16 outs)",
+   note:"A's rookie/swingman on managed pitch counts — 75 then 85 pitches, ~5 IP, sometimes used in relief. Under lean on 16.5+."},
+  {key:"rasmussen", tier:3, score:32, flags:{}, proj:"~5.2–6 IP (16–18 outs)",
+   note:"<b>No longer a cap play.</b> Rays loosened his reins for 2026 (~170 IP target) after limiting him to 6 IP max all 2025. Neutral, line-dependent."},
+  {key:"eovaldi", tier:3, score:28, flags:{vet:1}, proj:"~6 IP (17–19 outs)",
+   note:"Veteran (36) — can go 6–7 when sharp, but an age/workload watch. Lean over/neutral unless a limit is announced."},
+  {key:"luzardo", tier:3, score:30, flags:{}, proj:"~5–6 IP (15–18 outs)",
+   note:"Mid-rotation lefty, typically 5–6 IP. Neutral — depends on the line and price."},
+  {key:"valdez", tier:3, score:16, flags:{}, proj:"~6.2–7 IP (20–21 outs)",
+   note:"Astros workhorse, routinely 6+ deep innings. Strong <b>over</b> lean."},
+  {key:"keller", tier:3, score:20, flags:{}, proj:"~6–7 IP (18–21 outs)",
+   note:"Pirates innings-eater, usually 6+. <b>Over</b> lean."},
+];
+function research(name){
+  const n=(name||'').toLowerCase();
+  return RESEARCH.find(r=>n.includes(r.key))||null;
+}
+
+// ---- Workload news feed (fallback; live copy loaded from /news.json at startup) ----
+let NEWS = [
+  {pitcher:"Patrick Sandoval", team:"BOS", date:"2026-07-09", strength:"strong",
+   quote:"Ran his pitch count only to 68 in his final rehab start; Red Sox say they'll \"continue to build up his pitch count\" and hadn't locked starter vs reliever — likely on a restriction in his first game back.",
+   source:"MLB.com", url:"https://www.mlb.com/news/patrick-sandoval-throws-four-innings-in-rehab-start"},
+  {pitcher:"Logan Henderson", team:"MIL", date:"2026-07-09", strength:"moderate",
+   quote:"Brewers easing him in — threw 74 pitches last time with plans to \"crack the 80-pitch marker\" this start.",
+   source:"CBS Sports", url:"https://www.cbssports.com/mlb/players/29075729/logan-henderson/"},
+  {pitcher:"Jack Perkins", team:"ATH", date:"2026-07-09", strength:"moderate",
+   quote:"On a managed build-up — 75 then 85 pitches in back-to-back starts, ~5 IP, still used as a swingman.",
+   source:"CBS Sports", url:"https://www.cbssports.com/fantasy/baseball/news/athletics-jack-perkins-handed-another-start-1007949/"},
+  {pitcher:"Drew Rasmussen", team:"TB", date:"2026-07-09", strength:"caution",
+   quote:"NOT a limit this year — coach Kyle Snyder called ~170 innings \"very reasonable\" for 2026 after capping him at 6 IP max all 2025. Logged so you don't mistake him for an under.",
+   source:"MLB.com", url:"https://www.mlb.com/news/drew-rasmussen-settling-into-transition-to-rays-rotation"},
+];
+function renderNews(){
+  const box=document.getElementById('newspanel'); if(!box) return;
+  const color={strong:'#7ee787',moderate:'#e3b341',caution:'#ff7b72'};
+  const items=NEWS.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(n=>`
+    <div class="card tier2" style="margin-bottom:10px">
+      <div class="top"><div><div class="name">${n.pitcher}</div><div class="team">${n.team} · ${n.date}</div></div>
+        <span class="badge" style="background:var(--chip);border:1px solid var(--border);color:${color[n.strength]||'#8b98a5'}">${(n.strength||'').toUpperCase()}</span></div>
+      <div class="note" style="font-size:13px;color:var(--text)">${n.quote}</div>
+      <div class="note">Source: <a href="${n.url}" target="_blank" rel="noopener">${n.source}</a></div>
+    </div>`).join('');
+  box.innerHTML=`<div class="banner" style="margin-bottom:10px"><b>📰 Workload news — with sources.</b> Explicit reports that a starter may be limited today. Check these against how deep they actually go to see how reliable the "he's only going ~X" talk is.</div>${NEWS.length?items:'<div class="note">No workload news logged today yet.</div>'}`;
+}
+function toggleNews(){ const b=document.getElementById('newspanel'); const show=b.style.display==='none'; b.style.display=show?'block':'none'; if(show) renderNews(); }
+
+let LINES=[];
+let filter="all";
+
+function setFilter(el){
+  document.querySelectorAll('.controls .btn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active'); filter=el.dataset.f; render();
+}
+function amer(p){ if(p==null) return ""; return p>0?("+"+p):(""+p); }
+function scoreClass(s){return s==null?'s-na':s>=70?'s-hi':s>=45?'s-mid':'s-lo';}
+
+async function loadLive(){
+  const bookPref=document.getElementById('book').value;
+  const st=document.getElementById('status');
+  st.style.color="var(--muted)"; st.textContent="Loading events…";
+  try{
+    const evRes=await fetch(`/api/odds`);
+    if(!evRes.ok) throw new Error("events HTTP "+evRes.status);
+    const events=await evRes.json();
+    if(!Array.isArray(events)) throw new Error((events&&events.error)||"bad response — is ODDS_API_KEY set in Vercel?");
+    const now=Date.now(), lo=now-6*3600*1000, hi=now+30*3600*1000;
+    const todays=events.filter(e=>{const t=Date.parse(e.commence_time); return t>=lo && t<=hi;});
+    const list=(todays.length?todays:events).slice(0,20);
+    let remaining=evRes.headers.get('x-requests-remaining');
+    const out=[]; let done=0;
+    for(const e of list){
+      done++;
+      st.textContent=`Loading props ${done}/${list.length}…`;
+      try{
+        const r=await fetch(`/api/odds?eventId=${encodeURIComponent(e.id)}`);
+        remaining=r.headers.get('x-requests-remaining')||remaining;
+        if(!r.ok) continue;
+        const data=await r.json();
+        const books=data.bookmakers||[];
+        let bk = bookPref ? books.find(b=>b.key===bookPref) : null;
+        if(!bk) bk=books[0];
+        const perPitcher={};
+        const scan = bk?[bk]:books;
+        for(const b of scan){
+          const m=(b.markets||[]).find(x=>x.key==='pitcher_outs'); if(!m) continue;
+          for(const o of m.outcomes){
+            const nm=o.description||o.name; if(!nm) continue;
+            perPitcher[nm]=perPitcher[nm]||{name:nm,team:`${data.away_team} @ ${data.home_team}`,book:b.title};
+            if((o.name||'').toLowerCase().startsWith('over')){perPitcher[nm].over=o.price;perPitcher[nm].point=o.point;}
+            if((o.name||'').toLowerCase().startsWith('under')){perPitcher[nm].under=o.price;perPitcher[nm].point=o.point;}
+          }
+          if(bk) break;
+        }
+        Object.values(perPitcher).forEach(p=>out.push(p));
+      }catch(err){/* skip event */}
+    }
+    LINES=out;
+    snapshotPlays();
+    if(!out.length){
+      st.style.color="var(--warn)";
+      st.textContent="Connected, but no pitcher_outs lines posted yet. Try again closer to game time.";
+    }else{
+      st.style.color="var(--accent)";
+      st.textContent=`Loaded ${out.length} lines at ${new Date().toLocaleTimeString()}`+(remaining?` · ${remaining} API credits left`:"");
+    }
+    render();
+  }catch(err){
+    st.style.color="var(--hot)";
+    st.textContent="Couldn't load ("+err.message+")";
+    render();
+  }
+}
+
+// ---- Best-play engine ----
+function projOutsMid(r){
+  if(!r||!r.proj) return null;
+  const m=r.proj.match(/(\d+)\s*[–-]\s*(\d+)\s*outs/);
+  if(m) return (parseInt(m[1])+parseInt(m[2]))/2;
+  const s=r.proj.match(/(\d+)\+?\s*outs/);
+  if(s) return parseInt(s[1]);
+  return null;
+}
+function computePlay(l,r){
+  if(!l||!r||l.point==null||l.under==null) return null;
+  const mid=projOutsMid(r); if(mid==null) return null;
+  const threshold=Math.floor(l.point);
+  const cushion=threshold-mid;
+  const up=l.under;
+  const priceAdj = up>=0 ? up/10 : up/15;
+  let play=Math.round(r.score + cushion*8 + priceAdj);
+  play=Math.max(0,Math.min(99,play));
+  const vt = play>=72?'strong':play>=58?'lean':'thin';
+  return {play, cushion:Math.round(cushion*10)/10, vt};
+}
+function betTrigger(r){
+  const mid=projOutsMid(r); if(mid==null) return null;
+  const priceAdj=-110/15;
+  const neededCushion=(70 - r.score - priceAdj)/8;
+  const neededFloor=mid+neededCushion;
+  const minLine=Math.max(0,Math.ceil(neededFloor))+0.5;
+  return {minLine, mid};
+}
+
+function render(){
+  const q=(document.getElementById('search').value||'').toLowerCase();
+  const grid=document.getElementById('grid'); grid.innerHTML='';
+  const rows=[];
+  const seen=new Set();
+  LINES.forEach(l=>{ seen.add((l.name||'').toLowerCase().split(' ').pop()); rows.push({live:l, r:research(l.name), play:computePlay(l,research(l.name))}); });
+  RESEARCH.forEach(r=>{ if(!seen.has(r.key)) rows.push({live:null, r:r, play:null, nameGuess:r.key}); });
+
+  if(filter==='play'){
+    rows.sort((a,b)=>((b.play?b.play.play:-1)-(a.play?a.play.play:-1)));
+  }else{
+    rows.sort((a,b)=>((b.r?b.r.score:-1)-(a.r?a.r.score:-1)));
+  }
+
+  rows.forEach(row=>{
+    const l=row.live, r=row.r, pl=row.play;
+    if(filter==='play' && (!pl || pl.play<70)) return;
+    const trig=(!l && r)?betTrigger(r):null;
+    const name = l? l.name : (r?prettyName(r.key):"?");
+    const team = l? l.team : "";
+    if(q && !(name.toLowerCase().includes(q)||team.toLowerCase().includes(q))) return;
+    if(filter==='haveline' && !l) return;
+    if(filter==='under' && !(r&&r.score>=45)) return;
+    if(['rookie','il','vet','opener','trend'].includes(filter) && !(r&&r.flags[filter])) return;
+
+    const tier = r?('tier'+r.tier):'tier0';
+    const score = r?r.score:null;
+    const f = r?r.flags:{};
+    const chips=[
+      ['rookie','Rookie limit',f.rookie],
+      ['il','IL / TJ return',f.il],
+      ['vet','Veteran / age',f.vet],
+      ['opener','Opener',f.opener],
+      ['trend','Short trend',f.trend],
+    ].map(([c,lab,on])=>`<span class="chip ${c} ${on?'on':''}" style="${on?'':'opacity:.3'}">${lab}</span>`).join('');
+
+    let lineHtml;
+    if(l){
+      lineHtml=`<div class="linerow">
+        <span class="pill pt">${l.point!=null?l.point:'—'} outs</span>
+        <span class="pill ov">O ${amer(l.over)}</span>
+        <span class="pill un">U ${amer(l.under)}</span>
+        <span class="pill book">${l.book||''}</span>
+        ${l.point!=null?`<span class="note" style="margin-left:auto">under = ≤${Math.floor(l.point)} outs = ${(Math.floor(l.point)/3).toFixed(1)} IP</span>`:''}
+      </div>`;
+    }else{
+      lineHtml=`<div class="linerow"><span class="pill book">No line posted yet — not bettable</span></div>`;
+    }
+
+    grid.innerHTML+=`
+      <div class="card ${tier}">
+        <div class="top">
+          <div><div class="name">${name}</div><div class="team">${team}</div></div>
+          <div class="score"><div class="num ${scoreClass(score)}">${score==null?'—':score}</div><div class="lbl">Under Lean</div></div>
+        </div>
+        ${lineHtml}
+        ${pl?`<div class="linerow"><span class="badge b-${pl.vt}">⭐ PLAY ${pl.play} · ${pl.vt.toUpperCase()}</span><span class="note">${pl.cushion>=0?'+':''}${pl.cushion} out cushion · under ${amer(l.under)}</span></div>`:''}
+        ${trig?`<div class="note">🎯 <b>Bet trigger:</b> take the under only if the line posts at <b>${trig.minLine}+ outs</b> (projected ~${trig.mid} outs). Below that, pass — even with a high Under Lean.</div>`:''}
+        ${r?`<div class="proj">Projected: <b>${r.proj}</b></div><div class="chips">${chips}</div><div class="note">${r.note}</div>`:''}
+      </div>`;
+  });
+  if(!grid.innerHTML) grid.innerHTML='<div class="note">No matches. Tap “Load live lines,” or clear the filter.</div>';
+}
+function prettyName(k){return k.charAt(0).toUpperCase()+k.slice(1);}
+
+// ---- Results tracker (localStorage + MLB Stats API) ----
+function loadPlays(){try{return JSON.parse(localStorage.getItem('uo_plays')||'[]');}catch(e){return[];}}
+function savePlays(p){try{localStorage.setItem('uo_plays',JSON.stringify(p));}catch(e){}}
+function localDate(){return new Date().toLocaleDateString('en-CA');}
+function tomorrowDate(){const d=new Date();d.setDate(d.getDate()+1);return d.toLocaleDateString('en-CA');}
+function payoutUnits(price){price=+price; if(isNaN(price)) price=-110; return price>=0?price/100:100/Math.abs(price);}
+
+function snapshotPlays(){
+  const today=localDate();
+  const start=localStorage.getItem('uo_track_start');
+  if(start && today < start){ renderResults(); return; }
+  const plays=loadPlays(); let added=false;
+  LINES.forEach(l=>{ const r=research(l.name); const pl=computePlay(l,r);
+    if(pl && pl.play>=70){ const id=today+'|'+l.name.toLowerCase();
+      if(!plays.some(p=>p.id===id)){ plays.push({id,date:today,name:l.name,team:l.team,line:l.point,side:'under',price:l.under,play:pl.play,graded:false}); added=true; }
+    }});
+  if(added) savePlays(plays);
+  renderResults();
+}
+function toggleLog(){ const f=document.getElementById('logform'); f.style.display=f.style.display==='none'?'flex':'none'; if(!document.getElementById('m_date').value) document.getElementById('m_date').value=localDate(); }
+function addManual(){
+  const name=document.getElementById('m_name').value.trim();
+  const line=parseFloat(document.getElementById('m_line').value);
+  const price=parseInt(document.getElementById('m_price').value);
+  const date=document.getElementById('m_date').value||localDate();
+  if(!name||isNaN(line)){ alert('Enter a pitcher name and a line'); return; }
+  const plays=loadPlays(); const id=date+'|'+name.toLowerCase();
+  if(!plays.some(p=>p.id===id)) plays.push({id,date,name,team:'(manual)',line,side:'under',price:isNaN(price)?-110:price,play:'manual',graded:false});
+  savePlays(plays);
+  document.getElementById('m_name').value=''; document.getElementById('m_line').value=''; document.getElementById('m_price').value='';
+  renderResults();
+}
+function clearPlays(){ if(confirm('Clear all logged bets and start fresh tomorrow? (nothing will auto-log for the rest of today)')){ savePlays([]); try{localStorage.setItem('uo_track_start',tomorrowDate());}catch(e){} renderResults(); } }
+function resumeTracking(){ try{localStorage.removeItem('uo_track_start');}catch(e){} if(LINES.length) snapshotPlays(); else renderResults(); }
+
+async function finalOutsForDate(date){
+  const map={};
+  try{
+    const s=await fetch(`https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${date}`).then(r=>r.json());
+    const games=(s.dates&&s.dates[0]&&s.dates[0].games)||[];
+    for(const g of games){
+      if(!g.status||g.status.abstractGameState!=='Final') continue;
+      const bx=await fetch(`https://statsapi.mlb.com/api/v1/game/${g.gamePk}/boxscore`).then(r=>r.json());
+      ['home','away'].forEach(side=>{ const team=bx.teams&&bx.teams[side]; if(!team) return;
+        (team.pitchers||[]).forEach(pid=>{ const pl=team.players&&team.players['ID'+pid];
+          if(pl&&pl.stats&&pl.stats.pitching){ const nm=(pl.person&&pl.person.fullName)||''; const outs=pl.stats.pitching.outs;
+            if(nm&&outs!=null) map[nm.toLowerCase()]={outs:+outs,name:nm}; } });
+      });
+    }
+  }catch(e){}
+  return map;
+}
+async function gradeResults(){
+  const rec=document.getElementById('record'); rec.textContent=' grading…'; rec.style.color='var(--muted)';
+  const plays=loadPlays();
+  const dates=[...new Set(plays.filter(p=>!p.graded).map(p=>p.date))];
+  for(const d of dates){
+    const map=await finalOutsForDate(d);
+    plays.filter(p=>p.date===d&&!p.graded).forEach(p=>{
+      const last=p.name.toLowerCase().split(' ').pop();
+      let found=null;
+      for(const k in map){ if(k.split(' ').pop()===last){found=map[k];break;} }
+      if(!found){ for(const k in map){ if(k.includes(last)){found=map[k];break;} } }
+      if(found&&found.outs!=null){ p.outs=found.outs; p.graded=true;
+        const win = p.side==='under' ? (found.outs < p.line) : (found.outs > p.line);
+        p.result = win?'W':'L'; }
+    });
+  }
+  savePlays(plays); renderResults();
+}
+function recFor(graded,minScore){
+  const g=graded.filter(p=>typeof p.play==='number' && p.play>=minScore);
+  const w=g.filter(p=>p.result==='W').length, l=g.filter(p=>p.result==='L').length;
+  let u=0; g.forEach(p=>u+= p.result==='W'?payoutUnits(p.price):-1);
+  return {w,l,u,n:w+l};
+}
+function renderResults(){
+  const plays=loadPlays().slice().sort((a,b)=> b.date.localeCompare(a.date) || a.name.localeCompare(b.name));
+  const graded=plays.filter(p=>p.graded);
+  const rec=document.getElementById('record');
+  if(rec){
+    if(!graded.length){ rec.innerHTML='<span class="note">no graded bets yet</span>'; }
+    else{
+      const tiers=[['70+',70],['80+',80],['90+',90]];
+      const parts=tiers.map(([lbl,m])=>{ const r=recFor(graded,m); if(!r.n) return null;
+        return `${lbl}: <b style="color:${r.w>=r.l?'#7ee787':'#ff7b72'}">${r.w}-${r.l}</b> <span style="color:${r.u>=0?'#7ee787':'#ff7b72'}">${r.u>=0?'+':''}${r.u.toFixed(2)}u</span>`;
+      }).filter(Boolean);
+      rec.innerHTML = parts.length? parts.join(' &nbsp;&middot;&nbsp; ') : '<span class="note">graded, but no scored tiers</span>';
+    }
+  }
+  const box=document.getElementById('results'); if(!box) return;
+  if(!plays.length){
+    const start=localStorage.getItem('uo_track_start');
+    const paused = (start && localDate() < start) ? ` <b style="color:#e3b341">Tracking paused — auto-log resumes ${start}.</b> <span class="btn" style="padding:2px 8px" onclick="resumeTracking()">Start now instead</span>` : '';
+    box.innerHTML='<div class="note">No logged best bets yet. They auto-log when you load lines with a 70+ play, or add one manually above.'+paused+'</div>'; return;
+  }
+  const rows=plays.map(p=>{
+    const res=p.graded?`<b style="color:${p.result==='W'?'#7ee787':'#ff7b72'}">${p.result}</b> (${p.outs} outs)`:'<span class="note">pending</span>';
+    return `<tr><td>${p.date}</td><td>${p.name}</td><td>U ${p.line}</td><td>${amer(p.price)}</td><td>${p.play===undefined?'':p.play}</td><td>${res}</td></tr>`;
+  }).join('');
+  box.innerHTML=`<table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr style="color:var(--muted);text-align:left"><th>Date</th><th>Pitcher</th><th>Bet</th><th>Price</th><th>PLAY</th><th>Result</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+
+// ---- init (no auto-fetch; manual pull only) ----
+try{
+  const savedBook=localStorage.getItem('uo_book'); if(savedBook!==null) document.getElementById('book').value=savedBook;
+  document.getElementById('book').addEventListener('change',e=>{localStorage.setItem('uo_book',e.target.value); if(LINES.length) loadLive();});
+}catch(e){}
+render();
+renderResults();
+// Load the day's research + news from json (falls back to embedded copies if missing).
+fetch('research.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
+  if(Array.isArray(d)&&d.length){ RESEARCH=d; render(); if(LINES.length) snapshotPlays(); }
+}).catch(()=>{});
+fetch('news.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
+  if(Array.isArray(d)){ NEWS=d; if(document.getElementById('newspanel').style.display!=='none') renderNews(); }
+}).catch(()=>{});
+
+// ---- auto-refresh (default ON for the phone build: loads on open + refreshes hourly) ----
+const AUTO_DEFAULT=true;
+let autoTimer=null;
+function applyAuto(){
+  const cb=document.getElementById('autoref');
+  if(autoTimer){clearInterval(autoTimer);autoTimer=null;}
+  if(cb.checked){ if(!LINES.length) loadLive(); autoTimer=setInterval(loadLive,3600000); }
+}
+(function setupAuto(){
+  const cb=document.getElementById('autoref');
+  const saved=localStorage.getItem('uo_autoref');
+  cb.checked = saved===null?AUTO_DEFAULT:(saved==='1');
+  cb.addEventListener('change',()=>{localStorage.setItem('uo_autoref',cb.checked?'1':'0');applyAuto();});
+  applyAuto();
+})();
+</script>
+</body>
+</html>
