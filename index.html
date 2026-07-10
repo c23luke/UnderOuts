@@ -177,6 +177,9 @@ function research(name){
   const n=(name||'').toLowerCase();
   return RESEARCH.find(r=>n.includes(r.key))||null;
 }
+// ---- SIERA (skill) layer: reads r.siera off the matched research entry (refreshed daily) ----
+function sieraFor(name){ const r=research(name); return (r&&typeof r.siera==='number')?r.siera:null; }
+function sieraBump(s){ return s==null?0:Math.max(-10,Math.min(15,(s-4.0)*5)); }
 
 // ---- Workload news feed (fallback; live copy loaded from /news.json at startup) ----
 let NEWS = [
@@ -290,10 +293,13 @@ function computePlay(l,r){
   const cushion=threshold-mid;
   const up=l.under;
   const priceAdj = up>=0 ? up/10 : up/15;
-  let play=Math.round(r.score + cushion*8 + priceAdj);
+  const siera=sieraFor(l.name);
+  const sBump=sieraBump(siera);
+  let play=Math.round(r.score + sBump + cushion*8 + priceAdj);
   play=Math.max(0,Math.min(99,play));
   const vt = play>=72?'strong':play>=58?'lean':'thin';
-  return {play, cushion:Math.round(cushion*10)/10, vt};
+  const elite = (siera!=null && siera>=4.5 && cushion>=1);
+  return {play, cushion:Math.round(cushion*10)/10, vt, siera, elite};
 }
 function betTrigger(r){
   const mid=projOutsMid(r); if(mid==null) return null;
@@ -323,6 +329,7 @@ function render(){
     if(filter==='play' && !pl) return;
     const trig=(!l && r)?betTrigger(r):null;
     const name = l? l.name : (r?prettyName(r.key):"?");
+    const siera = sieraFor(name);
     const team = l? l.team : "";
     if(q && !(name.toLowerCase().includes(q)||team.toLowerCase().includes(q))) return;
     if(filter==='haveline' && !l) return;
@@ -360,6 +367,7 @@ function render(){
           <div class="score"><div class="num ${scoreClass(score)}">${score==null?'—':score}</div><div class="lbl">Under Lean</div></div>
         </div>
         ${lineHtml}
+        ${siera!=null?`<div class="linerow"><span class="pill" style="border-color:${siera>=4.5?'#f8514955':(siera<=3.2?'#3fb95055':'#2a3441')};color:${siera>=4.5?'#ff7b72':(siera<=3.2?'#7ee787':'#8b98a5')}">SIERA ${siera.toFixed(2)}${siera>=4.5?' · bad arm':(siera<=3.0?' · elite arm':'')}</span>${(pl&&pl.elite)?'<span class="badge b-strong">🔥 BAD + SHORT</span>':''}</div>`:''}
         ${pl?`<div class="linerow"><span class="badge b-${pl.vt}">⭐ PLAY ${pl.play} · ${pl.vt.toUpperCase()}</span><span class="note">${pl.cushion>=0?'+':''}${pl.cushion} out cushion · under ${amer(l.under)}</span></div>`:''}
         ${trig?`<div class="note">🎯 <b>Bet trigger:</b> take the under only if the line posts at <b>${trig.minLine}+ outs</b> (projected ~${trig.mid} outs). Below that, pass — even with a high Under Lean.</div>`:''}
         ${r?`<div class="proj">Projected: <b>${r.proj}</b></div><div class="chips">${chips}</div><div class="note">${r.note}</div>`:''}
