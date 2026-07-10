@@ -51,8 +51,14 @@
   .b-lean{background:#2a2411;border:1px solid #6b5a1f;color:#e3b341}
   .b-thin{background:var(--chip);border:1px solid var(--border);color:var(--muted)}
   #results td,#results th{padding:5px 8px;border-bottom:1px solid var(--border)}
-  #tracker input,#mybets input{background:#0d1117;border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:7px;font-size:13px}
-  #mybets{border-color:#3a5bbf}
+  #tracker input{background:#0d1117;border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:7px;font-size:13px}
+  .bslip{background:var(--panel);border-radius:14px;padding:12px 13px;margin-bottom:9px}
+  .bslip-top{display:flex;justify-content:space-between;font-size:14.5px;font-weight:600;color:var(--text)}
+  .bslip-sub{color:var(--muted);font-size:12px;margin:3px 0 9px}
+  .bslip-track{position:relative;height:7px;background:var(--bg);border-radius:20px;overflow:hidden}
+  .bslip-fill{position:absolute;left:0;top:0;bottom:0;border-radius:20px}
+  .bslip-mark{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--text)}
+  .bslip-stat{display:flex;justify-content:space-between;font-size:11px;margin-top:5px}
   .chips{display:flex;flex-wrap:wrap;gap:5px}
   .chip{background:var(--chip);border:1px solid var(--border);border-radius:6px;padding:2px 7px;font-size:10.5px;color:var(--muted)}
   .chip.on{color:var(--text)}
@@ -73,32 +79,23 @@
 </style>
 </head>
 <body>
-  <h1>Under Outs — Live Pitcher Outs Dashboard</h1>
-  <div class="sub">MLB · total pitcher outs O/U · workload research overlay · hosted build</div>
+  <h1 style="font-size:19px">Under outs</h1>
+  <div class="sub">your bets, live · MLB pitcher outs</div>
 
-  <div class="banner">
-    <b>Read the number, not the innings.</b> Under a total-outs line = that many outs or fewer. Divide by 3 for innings:
-    <b>Under 15.5 = 5.0 IP or fewer</b> · Under 17.5 = 5.2 IP · Under 18.5 = 6.0 IP. The "Under Lean" badge is my
-    workload research (rookie caps, IL/TJ returns, veteran/age, openers, short-outing trends) — higher = stronger reason to expect a short start.
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px">
+    <span class="btn go" onclick="loadLive()">Load lines</span>
+    <select id="book">
+      <option value="bovada">Bovada</option>
+      <option value="">Best avail</option>
+      <option value="draftkings">DraftKings</option>
+      <option value="fanduel">FanDuel</option>
+      <option value="betmgm">BetMGM</option>
+    </select>
+    <label style="display:inline-flex;align-items:center;gap:5px;font-size:12px;cursor:pointer"><input type="checkbox" id="autoref"> auto</label>
+    <span id="status" class="status"></span>
   </div>
 
-  <div class="setup">
-    <b style="color:var(--text)">Live feed</b> — <b style="color:#e3b341">manual pull only.</b> Tap Load around game time to fetch current lines. Your API key is stored securely on the server, never in this page.<br>
-    <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-      <select id="book">
-        <option value="bovada">Bovada</option>
-        <option value="">Best available</option>
-        <option value="draftkings">DraftKings</option>
-        <option value="fanduel">FanDuel</option>
-        <option value="betmgm">BetMGM</option>
-      </select>
-      <span class="btn go" onclick="loadLive()">Load live lines</span>
-      <label style="display:inline-flex;align-items:center;gap:5px;font-size:12px;cursor:pointer"><input type="checkbox" id="autoref"> auto-refresh hourly</label>
-      <span id="status" class="status"></span>
-    </div>
-  </div>
-
-  <div class="setup" id="mybets"></div>
+  <div id="mybets" style="margin-bottom:16px"></div>
 
   <div class="controls">
     <input id="search" placeholder="Search pitcher…" oninput="render()">
@@ -561,32 +558,33 @@ function renderMyBets(){
   const rows=bets.map(bt=>{
     const lv=LIVE[bt.name.toLowerCase().split(' ').pop()];
     const fl=Math.floor(bt.line);
-    let status='<span class="note">not started yet</span>';
+    const max=fl+4;
+    let outsTxt='—', col='var(--muted)', statL='<span class="note">not started</span>', statR='needs ≤'+fl, fillPct=0, fillCol='#2a3441';
     if(lv){
+      const outs=lv.outs; outsTxt=outs+' outs'; fillPct=Math.min(100,Math.round(outs/max*100));
       if(lv.state==='Final'){
-        const won=lv.outs<bt.line;
-        if(won){w++;u+=betUnits(bt.price);}else{l++;u-=1;}
-        status=`<b style="color:${won?'#7ee787':'#ff7b72'}">${won?'WON ✅':'LOST'}</b> · finished ${lv.outs} outs`;
+        const won=outs<bt.line;
+        if(won){w++;u+=betUnits(bt.price); col=fillCol='var(--accent)'; statL='<span style="color:var(--accent)">✓ won · +'+betUnits(bt.price).toFixed(2)+'u</span>';}
+        else{l++;u-=1; col=fillCol='var(--hot)'; statL='<span style="color:var(--hot)">✕ lost</span>';}
+        statR='final';
       }else{
-        const busted=lv.outs>fl;
-        status=`<span style="color:${busted?'#ff7b72':'#7ee787'}">🔴 ${lv.outs} outs — ${busted?'BUSTED':'alive (needs ≤'+fl+')'}</span>`;
+        const busted=outs>fl; col=fillCol=busted?'var(--hot)':'var(--accent)';
+        statL='<span style="color:'+col+'">● live · '+(busted?'busted':'alive')+'</span>';
       }
     }
-    return `<div class="linerow" style="justify-content:space-between;border-bottom:1px solid var(--border);padding:7px 0">
-      <div style="font-size:13px"><b style="color:var(--text)">${bt.name}</b> · Under ${bt.line} (${amer(bt.price)})${bt.auto?' <span class="note">· auto</span>':''}<br>${status}</div>
-      ${bt.auto?'':`<span class="btn" style="padding:2px 9px" onclick="removeMyBet('${bt.id}')">✕</span>`}</div>`;
-  }).join('');
-  const rec=(w+l)?`<b style="color:${w>=l?'#7ee787':'#ff7b72'}">${w}-${l}</b> · <b style="color:${u>=0?'#7ee787':'#ff7b72'}">${u>=0?'+':''}${u.toFixed(2)}u</b>`:'<span class="note">none graded yet</span>';
-  box.innerHTML=`
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <b style="color:var(--text);font-size:15px">🎟️ My Bets</b><span style="font-size:13px">${rec}</span></div>
-    ${bets.length?rows:'<div class="note" style="margin-top:6px">No bets yet. The bot adds them automatically when it alerts you — or add one below.</div>'}
-    <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-      <input id="mb_name" placeholder="Add manually: pitcher" style="flex:1;min-width:110px">
-      <input id="mb_line" placeholder="17.5" style="width:70px">
-      <input id="mb_price" placeholder="-110" style="width:80px">
-      <span class="btn go" onclick="addMyBet()">Add</span>
+    const markPct=Math.round(fl/max*100);
+    return `<div class="bslip">
+      <div class="bslip-top"><span>${bt.name}</span><span style="color:${col}">${outsTxt}</span></div>
+      <div class="bslip-sub">Under ${bt.line} · ${amer(bt.price)}</div>
+      <div class="bslip-track"><div class="bslip-fill" style="width:${fillPct}%;background:${fillCol}"></div><div class="bslip-mark" style="left:${markPct}%"></div></div>
+      <div class="bslip-stat">${statL}<span class="note">${statR}</span></div>
     </div>`;
+  }).join('');
+  const rec=(w+l)?`<span style="color:${w>=l?'var(--accent)':'var(--hot)'}">${w}-${l}</span> · <span style="color:${u>=0?'var(--accent)':'var(--hot)'}">${u>=0?'+':''}${u.toFixed(2)}u</span>`:'<span class="note">none graded yet</span>';
+  box.innerHTML=`
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+      <b style="color:var(--text);font-size:15px">Your bets</b><span style="font-size:12px">${rec}</span></div>
+    ${bets.length?rows:'<div class="note">No bets yet — they appear here automatically when the bot alerts you.</div>'}`;
 }
 
 // ---- init (no auto-fetch; manual pull only) ----
