@@ -548,9 +548,16 @@ function addMyBet(){
 }
 function removeMyBet(id){ saveBets(loadBets().filter(x=>x.id!==id)); renderMyBets(); }
 function clearMyBets(){ if(confirm('Remove all your bets?')){ saveBets([]); renderMyBets(); } }
+let AUTO_BETS=[];
+async function fetchBets(){ try{ const d=await fetch('bets.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]); if(Array.isArray(d)) AUTO_BETS=d; }catch(e){} renderMyBets(); }
+function allBets(){
+  const merged=AUTO_BETS.map(b=>({...b, auto:true}));
+  loadBets().forEach(m=>{ if(!merged.some(a=>a.name===m.name && a.line===m.line)) merged.push(m); });
+  return merged;
+}
 function renderMyBets(){
   const box=document.getElementById('mybets'); if(!box) return;
-  const bets=loadBets(); let w=0,l=0,u=0;
+  const bets=allBets(); let w=0,l=0,u=0;
   const rows=bets.map(bt=>{
     const lv=LIVE[bt.name.toLowerCase().split(' ').pop()];
     const fl=Math.floor(bt.line);
@@ -566,30 +573,21 @@ function renderMyBets(){
       }
     }
     return `<div class="linerow" style="justify-content:space-between;border-bottom:1px solid var(--border);padding:7px 0">
-      <div style="font-size:13px"><b style="color:var(--text)">${bt.name}</b> · Under ${bt.line} (${amer(bt.price)})<br>${status}</div>
-      <span class="btn" style="padding:2px 9px" onclick="removeMyBet('${bt.id}')">✕</span></div>`;
+      <div style="font-size:13px"><b style="color:var(--text)">${bt.name}</b> · Under ${bt.line} (${amer(bt.price)})${bt.auto?' <span class="note">· auto</span>':''}<br>${status}</div>
+      ${bt.auto?'':`<span class="btn" style="padding:2px 9px" onclick="removeMyBet('${bt.id}')">✕</span>`}</div>`;
   }).join('');
   const rec=(w+l)?`<b style="color:${w>=l?'#7ee787':'#ff7b72'}">${w}-${l}</b> · <b style="color:${u>=0?'#7ee787':'#ff7b72'}">${u>=0?'+':''}${u.toFixed(2)}u</b>`:'<span class="note">none graded yet</span>';
   box.innerHTML=`
     <div style="display:flex;justify-content:space-between;align-items:center">
       <b style="color:var(--text);font-size:15px">🎟️ My Bets</b><span style="font-size:13px">${rec}</span></div>
-    ${bets.length?rows:'<div class="note" style="margin-top:6px">No bets yet — add the ones you placed below. They show live outs during the game and win/loss after.</div>'}
+    ${bets.length?rows:'<div class="note" style="margin-top:6px">No bets yet. The bot adds them automatically when it alerts you — or add one below.</div>'}
     <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-      <input id="mb_name" placeholder="Pitcher" style="flex:1;min-width:110px">
-      <input id="mb_line" placeholder="Line e.g. 17.5" style="width:100px">
-      <input id="mb_price" placeholder="Price e.g. -110" style="width:110px">
-      <span class="btn go" onclick="addMyBet()">Add bet</span>
-      ${bets.length?`<span class="btn" style="border-color:#6b2f2f;color:#ff9b94" onclick="clearMyBets()">Clear</span>`:''}
+      <input id="mb_name" placeholder="Add manually: pitcher" style="flex:1;min-width:110px">
+      <input id="mb_line" placeholder="17.5" style="width:70px">
+      <input id="mb_price" placeholder="-110" style="width:80px">
+      <span class="btn go" onclick="addMyBet()">Add</span>
     </div>`;
 }
-// seed today's three placed bets, once
-(function seedBets(){
-  if(localStorage.getItem('uo_seeded_0710')) return;
-  const b=loadBets(); const today=new Date().toLocaleDateString('en-CA');
-  [{name:'Brandon Young',line:17.5,price:-110},{name:'Nolan McLean',line:17.5,price:150},{name:'Parker Messick',line:17.5,price:100}]
-    .forEach(s=>{ if(!b.some(x=>x.name===s.name)) b.push({id:'seed_'+s.name.replace(/\s/g,''), date:today, name:s.name, line:s.line, side:'under', price:s.price}); });
-  saveBets(b); localStorage.setItem('uo_seeded_0710','1');
-})();
 
 // ---- init (no auto-fetch; manual pull only) ----
 try{
@@ -622,8 +620,9 @@ function applyAuto(){
   applyAuto();
 })();
 renderMyBets();
+fetchBets();
 fetchLive();
-setInterval(fetchLive, 120000); // refresh live outs every 2 min while open
+setInterval(()=>{ fetchBets(); fetchLive(); }, 120000); // refresh bets + live outs every 2 min while open
 </script>
 </body>
 </html>
