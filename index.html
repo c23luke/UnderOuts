@@ -51,7 +51,8 @@
   .b-lean{background:#2a2411;border:1px solid #6b5a1f;color:#e3b341}
   .b-thin{background:var(--chip);border:1px solid var(--border);color:var(--muted)}
   #results td,#results th{padding:5px 8px;border-bottom:1px solid var(--border)}
-  #tracker input{background:#0d1117;border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:7px;font-size:13px}
+  #tracker input,#mybets input{background:#0d1117;border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:7px;font-size:13px}
+  #mybets{border-color:#3a5bbf}
   .chips{display:flex;flex-wrap:wrap;gap:5px}
   .chip{background:var(--chip);border:1px solid var(--border);border-radius:6px;padding:2px 7px;font-size:10.5px;color:var(--muted)}
   .chip.on{color:var(--text)}
@@ -97,18 +98,23 @@
     </div>
   </div>
 
+  <div class="setup" id="mybets"></div>
+
   <div class="controls">
-    <input id="search" placeholder="Search pitcher or team…" oninput="render()">
-    <span class="btn active" data-f="all" onclick="setFilter(this)">All</span>
+    <input id="search" placeholder="Search pitcher…" oninput="render()">
+    <span class="btn active" data-f="all" onclick="setFilter(this)">All pitchers</span>
     <span class="btn" data-f="play" onclick="setFilter(this)">⭐ Best plays</span>
-    <span class="btn" data-f="haveline" onclick="setFilter(this)">Has live line</span>
-    <span class="btn" data-f="rookie" onclick="setFilter(this)">Rookie limit</span>
-    <span class="btn" data-f="il" onclick="setFilter(this)">IL return</span>
-    <span class="btn" data-f="vet" onclick="setFilter(this)">Veteran / age</span>
-    <span class="btn" data-f="opener" onclick="setFilter(this)">Opener</span>
-    <span class="btn" data-f="trend" onclick="setFilter(this)">Short trend</span>
-    <span class="btn" data-f="under" onclick="setFilter(this)">Under leans only</span>
-    <span class="btn" onclick="toggleNews()" style="border-color:#3a5bbf">📰 Workload news</span>
+    <span class="btn" onclick="toggleNews()" style="border-color:#3a5bbf">📰 News</span>
+    <select id="fltSel" onchange="setFilterSel(this.value)" style="background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:9px 10px;border-radius:8px;font-size:13px">
+      <option value="all">More filters…</option>
+      <option value="haveline">has live line</option>
+      <option value="under">under leans only</option>
+      <option value="rookie">rookie limit</option>
+      <option value="il">IL / TJ return</option>
+      <option value="vet">veteran / age</option>
+      <option value="opener">opener</option>
+      <option value="trend">short trend</option>
+    </select>
   </div>
 
   <div id="newspanel" style="display:none;margin-bottom:16px"></div>
@@ -116,7 +122,7 @@
   <div class="grid" id="grid"></div>
 
   <div class="setup" id="tracker">
-    <b style="color:var(--text)">📊 Results tracker — logged plays</b> <span id="record" style="margin-left:8px"></span>
+    <b style="color:var(--text)">📊 Model record <span class="note" style="font-weight:400">(auto — the model's own picks, not your bets)</span></b> <span id="record" style="margin-left:8px"></span>
     <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
       <span class="btn go" onclick="gradeResults()">Grade &amp; refresh record</span>
       <span class="btn" onclick="toggleLog()">Log a bet manually</span>
@@ -215,7 +221,15 @@ let filter="all";
 
 function setFilter(el){
   document.querySelectorAll('.controls .btn').forEach(b=>b.classList.remove('active'));
-  el.classList.add('active'); filter=el.dataset.f; render();
+  el.classList.add('active'); filter=el.dataset.f;
+  const sel=document.getElementById('fltSel'); if(sel) sel.value='all';
+  render();
+}
+function setFilterSel(v){
+  filter=v;
+  document.querySelectorAll('.controls .btn').forEach(b=>b.classList.remove('active'));
+  if(v==='all'){ const a=document.querySelector('.controls .btn[data-f="all"]'); if(a) a.classList.add('active'); }
+  render();
 }
 function amer(p){ if(p==null) return ""; return p>0?("+"+p):(""+p); }
 function scoreClass(s){return s==null?'s-na':s>=70?'s-hi':s>=45?'s-mid':'s-lo';}
@@ -301,6 +315,29 @@ function computePlay(l,r){
   const elite = (siera!=null && siera>=4.5 && cushion>=1);
   return {play, cushion:Math.round(cushion*10)/10, vt, siera, elite};
 }
+
+// ---- live in-game outs from the free MLB Stats API (keyed by last name) ----
+let LIVE = {};
+async function fetchLive(){
+  try{
+    const today=new Date().toLocaleDateString('en-CA');
+    const s=await fetch(`https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${today}`,{cache:'no-store'}).then(r=>r.json());
+    const games=(s.dates&&s.dates[0]&&s.dates[0].games)||[];
+    const live={};
+    for(const g of games){
+      const st=g.status&&g.status.abstractGameState; // Preview / Live / Final
+      if(st==='Preview') continue;
+      const bx=await fetch(`https://statsapi.mlb.com/api/v1/game/${g.gamePk}/boxscore`,{cache:'no-store'}).then(r=>r.json());
+      ['home','away'].forEach(side=>{ const team=bx.teams&&bx.teams[side]; if(!team) return;
+        (team.pitchers||[]).forEach(pid=>{ const pl=team.players&&team.players['ID'+pid];
+          if(pl&&pl.stats&&pl.stats.pitching){ const full=(pl.person&&pl.person.fullName)||''; const outs=pl.stats.pitching.outs;
+            const last=full.toLowerCase().split(' ').pop();
+            if(last&&outs!=null) live[last]={outs:+outs, state:st}; } });
+      });
+    }
+    LIVE=live; render(); renderMyBets();
+  }catch(e){}
+}
 function betTrigger(r){
   const mid=projOutsMid(r); if(mid==null) return null;
   const priceAdj=-110/15;
@@ -330,6 +367,7 @@ function render(){
     const trig=(!l && r)?betTrigger(r):null;
     const name = l? l.name : (r?prettyName(r.key):"?");
     const siera = sieraFor(name);
+    const lv = LIVE[name.toLowerCase().split(' ').pop()];
     const team = l? l.team : "";
     if(q && !(name.toLowerCase().includes(q)||team.toLowerCase().includes(q))) return;
     if(filter==='haveline' && !l) return;
@@ -360,6 +398,18 @@ function render(){
       lineHtml=`<div class="linerow"><span class="pill book">No line posted yet — not bettable</span></div>`;
     }
 
+    let liveHtml='';
+    if(lv){
+      const ip=(lv.outs/3).toFixed(1);
+      let tag='';
+      if(l&&l.point!=null){ const fl=Math.floor(l.point);
+        if(lv.outs>fl) tag=`<span class="badge" style="background:#2a1111;border:1px solid #6b2f2f;color:#ff7b72">UNDER BUSTED</span>`;
+        else if(lv.state==='Final') tag=`<span class="badge b-strong">UNDER HIT ✅</span>`;
+        else tag=`<span class="badge" style="background:#12291a;border:1px solid #2f6b3d;color:#7ee787">alive · needs ≤${fl}</span>`;
+      }
+      liveHtml=`<div class="linerow"><span class="pill" style="border-color:#6b2f2f;color:${lv.state==='Final'?'#8b98a5':'#ff5a5a'}">${lv.state==='Final'?'FINAL':'🔴 LIVE'} ${lv.outs} outs · ${ip} IP</span>${tag}</div>`;
+    }
+
     grid.innerHTML+=`
       <div class="card ${tier}">
         <div class="top">
@@ -367,6 +417,7 @@ function render(){
           <div class="score"><div class="num ${scoreClass(score)}">${score==null?'—':score}</div><div class="lbl">Under Lean</div></div>
         </div>
         ${lineHtml}
+        ${liveHtml}
         ${siera!=null?`<div class="linerow"><span class="pill" style="border-color:${siera>=4.5?'#f8514955':(siera<=3.2?'#3fb95055':'#2a3441')};color:${siera>=4.5?'#ff7b72':(siera<=3.2?'#7ee787':'#8b98a5')}">SIERA ${siera.toFixed(2)}${siera>=4.5?' · bad arm':(siera<=3.0?' · elite arm':'')}</span>${(pl&&pl.elite)?'<span class="badge b-strong">🔥 BAD + SHORT</span>':''}</div>`:''}
         ${pl?`<div class="linerow"><span class="badge b-${pl.vt}">⭐ PLAY ${pl.play} · ${pl.vt.toUpperCase()}</span><span class="note">${pl.cushion>=0?'+':''}${pl.cushion} out cushion · under ${amer(l.under)}</span></div>`:''}
         ${trig?`<div class="note">🎯 <b>Bet trigger:</b> take the under only if the line posts at <b>${trig.minLine}+ outs</b> (projected ~${trig.mid} outs). Below that, pass — even with a high Under Lean.</div>`:''}
@@ -480,6 +531,66 @@ function renderResults(){
   box.innerHTML=`<table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr style="color:var(--muted);text-align:left"><th>Date</th><th>Pitcher</th><th>Bet</th><th>Price</th><th>PLAY</th><th>Result</th></tr></thead><tbody>${rows}</tbody></table>`;
 }
 
+// ---- My Bets: the bets you actually placed (live-tracked + graded) ----
+function loadBets(){ try{return JSON.parse(localStorage.getItem('uo_mybets')||'[]');}catch(e){return[];} }
+function saveBets(b){ try{localStorage.setItem('uo_mybets',JSON.stringify(b));}catch(e){} }
+function betUnits(price){ price=+price; if(isNaN(price)) price=-110; return price>=0?price/100:100/Math.abs(price); }
+function addMyBet(){
+  const name=document.getElementById('mb_name').value.trim();
+  const line=parseFloat(document.getElementById('mb_line').value);
+  const price=parseInt(document.getElementById('mb_price').value);
+  if(!name||isNaN(line)){ alert('Enter a pitcher name and a line'); return; }
+  const b=loadBets();
+  b.push({id:'b'+Date.now(), date:new Date().toLocaleDateString('en-CA'), name, line, side:'under', price:isNaN(price)?-110:price});
+  saveBets(b);
+  ['mb_name','mb_line','mb_price'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
+  renderMyBets();
+}
+function removeMyBet(id){ saveBets(loadBets().filter(x=>x.id!==id)); renderMyBets(); }
+function clearMyBets(){ if(confirm('Remove all your bets?')){ saveBets([]); renderMyBets(); } }
+function renderMyBets(){
+  const box=document.getElementById('mybets'); if(!box) return;
+  const bets=loadBets(); let w=0,l=0,u=0;
+  const rows=bets.map(bt=>{
+    const lv=LIVE[bt.name.toLowerCase().split(' ').pop()];
+    const fl=Math.floor(bt.line);
+    let status='<span class="note">not started yet</span>';
+    if(lv){
+      if(lv.state==='Final'){
+        const won=lv.outs<bt.line;
+        if(won){w++;u+=betUnits(bt.price);}else{l++;u-=1;}
+        status=`<b style="color:${won?'#7ee787':'#ff7b72'}">${won?'WON ✅':'LOST'}</b> · finished ${lv.outs} outs`;
+      }else{
+        const busted=lv.outs>fl;
+        status=`<span style="color:${busted?'#ff7b72':'#7ee787'}">🔴 ${lv.outs} outs — ${busted?'BUSTED':'alive (needs ≤'+fl+')'}</span>`;
+      }
+    }
+    return `<div class="linerow" style="justify-content:space-between;border-bottom:1px solid var(--border);padding:7px 0">
+      <div style="font-size:13px"><b style="color:var(--text)">${bt.name}</b> · Under ${bt.line} (${amer(bt.price)})<br>${status}</div>
+      <span class="btn" style="padding:2px 9px" onclick="removeMyBet('${bt.id}')">✕</span></div>`;
+  }).join('');
+  const rec=(w+l)?`<b style="color:${w>=l?'#7ee787':'#ff7b72'}">${w}-${l}</b> · <b style="color:${u>=0?'#7ee787':'#ff7b72'}">${u>=0?'+':''}${u.toFixed(2)}u</b>`:'<span class="note">none graded yet</span>';
+  box.innerHTML=`
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <b style="color:var(--text);font-size:15px">🎟️ My Bets</b><span style="font-size:13px">${rec}</span></div>
+    ${bets.length?rows:'<div class="note" style="margin-top:6px">No bets yet — add the ones you placed below. They show live outs during the game and win/loss after.</div>'}
+    <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+      <input id="mb_name" placeholder="Pitcher" style="flex:1;min-width:110px">
+      <input id="mb_line" placeholder="Line e.g. 17.5" style="width:100px">
+      <input id="mb_price" placeholder="Price e.g. -110" style="width:110px">
+      <span class="btn go" onclick="addMyBet()">Add bet</span>
+      ${bets.length?`<span class="btn" style="border-color:#6b2f2f;color:#ff9b94" onclick="clearMyBets()">Clear</span>`:''}
+    </div>`;
+}
+// seed today's three placed bets, once
+(function seedBets(){
+  if(localStorage.getItem('uo_seeded_0710')) return;
+  const b=loadBets(); const today=new Date().toLocaleDateString('en-CA');
+  [{name:'Brandon Young',line:17.5,price:-110},{name:'Nolan McLean',line:17.5,price:150},{name:'Parker Messick',line:17.5,price:100}]
+    .forEach(s=>{ if(!b.some(x=>x.name===s.name)) b.push({id:'seed_'+s.name.replace(/\s/g,''), date:today, name:s.name, line:s.line, side:'under', price:s.price}); });
+  saveBets(b); localStorage.setItem('uo_seeded_0710','1');
+})();
+
 // ---- init (no auto-fetch; manual pull only) ----
 try{
   const savedBook=localStorage.getItem('uo_book'); if(savedBook!==null) document.getElementById('book').value=savedBook;
@@ -510,6 +621,9 @@ function applyAuto(){
   cb.addEventListener('change',()=>{localStorage.setItem('uo_autoref',cb.checked?'1':'0');applyAuto();});
   applyAuto();
 })();
+renderMyBets();
+fetchLive();
+setInterval(fetchLive, 120000); // refresh live outs every 2 min while open
 </script>
 </body>
 </html>
