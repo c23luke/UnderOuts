@@ -69,8 +69,8 @@ function renderMyBets(){
     const fl=Math.floor(bt.line); const s=liveStatus(bt.name,bt.line);
     let outsTxt='—',col='var(--muted)',statL='<span class="note">not started</span>',statR=fl+' to stay under',fillPct=100,fillCol='#2f3b4d';
     if(s){ const o=s.outs; outsTxt=o+' outs'; fillPct=Math.max(0,Math.round((fl-o)/fl*100));
-      if(s.final){ if(s.won){w++;u+=betUnits(bt.price);col=fillCol='var(--accent)';fillPct=100;statL='<span style="color:var(--accent)">✓ won · +'+betUnits(bt.price).toFixed(2)+'u</span>';} else {l++;u-=1;col=fillCol='var(--hot)';fillPct=0;statL='<span style="color:var(--hot)">✕ lost</span>';} statR='final · '+s.outs+' outs'; }
-      else { const bust=s.busted; col=fillCol=bust?'var(--hot)':'var(--accent)'; if(bust) fillPct=0; statL='<span style="color:'+col+'">● live · '+(bust?'busted':'alive')+'</span>'; statR=bust?'busted':((fl-o)+' outs to spare'); } }
+      if(s.final){ if(s.won){w++;u+=betUnits(bt.price);col=fillCol='var(--accent)';fillPct=Math.max(6,fillPct);statL='<span style="color:var(--accent)">✓ won · +'+betUnits(bt.price).toFixed(2)+'u</span>';} else {l++;u-=1;col=fillCol='var(--hot)';fillPct=100;statL='<span style="color:var(--hot)">✕ lost</span>';} statR='final · '+o+' outs'; }
+      else { const bust=s.busted; col=fillCol=bust?'var(--hot)':'var(--accent)'; if(bust) fillPct=100; statL='<span style="color:'+col+'">● live · '+(bust?'busted':'alive')+'</span>'; statR=bust?'busted':((fl-o)+' outs to spare'); } }
     const why = bt.proj!=null ? ('We project ~<b>'+bt.proj+' outs</b> vs the '+bt.line+' line'+(bt.edge!=null?' — a <b style="color:var(--accent)">+'+bt.edge+'% edge</b>':'')+'.') : '';
     return '<div class="card bet"><div class="top"><span>'+bt.name+'</span><span style="color:'+col+'">'+outsTxt+'</span></div>'
       +'<div class="bsub">Under '+bt.line+' · '+AMER(bt.price)+'</div>'
