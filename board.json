@@ -51,24 +51,12 @@
     "name": "Noah Cameron",
     "team": "Kansas City Royals @ Baltimore Orioles",
     "line": 16.5,
-    "under": -125,
-    "book": "BetMGM",
+    "under": -130,
+    "book": "Fanatics",
     "proj": 15.4,
-    "edge": 9,
+    "edge": 8,
     "pUnder": 65,
     "siera": 4.300232012025752,
-    "bet": false
-  },
-  {
-    "name": "Griffin Jax",
-    "team": "Seattle Mariners @ Tampa Bay Rays",
-    "line": 14.5,
-    "under": -125,
-    "book": "DraftKings",
-    "proj": 13,
-    "edge": 8,
-    "pUnder": 64,
-    "siera": 3.68301279730026,
     "bet": false
   },
   {
@@ -81,18 +69,6 @@
     "edge": 8,
     "pUnder": 63,
     "siera": 4.382264000137164,
-    "bet": false
-  },
-  {
-    "name": "Logan Gilbert",
-    "team": "Seattle Mariners @ Tampa Bay Rays",
-    "line": 17.5,
-    "under": 125,
-    "book": "Caesars",
-    "proj": 17.3,
-    "edge": 7,
-    "pUnder": 52,
-    "siera": 3.3467572660001252,
     "bet": false
   },
   {
@@ -147,10 +123,10 @@
     "name": "Javier Assad",
     "team": "Chicago Cubs @ Cincinnati Reds",
     "line": 14.5,
-    "under": 130,
-    "book": "FanDuel",
+    "under": 135,
+    "book": "Bovada",
     "proj": 15.4,
-    "edge": -7,
+    "edge": -6,
     "pUnder": 37,
     "siera": 4.772792936693159,
     "bet": false
