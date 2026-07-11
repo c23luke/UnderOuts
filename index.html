@@ -5,79 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Under Outs</title>
 <style>
-  :root{--bg:#0d1117;--panel:#161b22;--panel2:#1c2430;--border:#2a3441;--text:#e6edf3;--muted:#8b98a5;--accent:#3fb950;--warn:#d29922;--hot:#f85149;--blue:#58a6ff;--chip:#21262d}
+  :root{--bg:#0d1117;--panel:#161b22;--border:#2a3441;--text:#e6edf3;--muted:#8b98a5;--accent:#3fb950;--warn:#d29922;--hot:#f85149;--chip:#21262d}
   *{box-sizing:border-box}
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);padding:16px;line-height:1.5}
   h1{font-size:19px;margin:0}
-  .sub{color:var(--muted);font-size:12.5px;margin:2px 0 14px}
-  select{background:#0d1117;border:1px solid var(--border);color:var(--text);padding:9px 10px;border-radius:8px;font-size:13px}
-  .btn{background:var(--chip);border:1px solid var(--border);color:var(--text);padding:9px 13px;border-radius:20px;font-size:13px;cursor:pointer;user-select:none}
-  .btn.go{background:var(--accent);color:#04250f;border-color:var(--accent);font-weight:600}
-  .status{font-size:12px}
-  .sec{color:var(--muted);font-size:12px;margin:0 2px 8px;letter-spacing:.3px;text-transform:uppercase}
-  .bslip{background:var(--panel);border-radius:14px;padding:12px 13px;margin-bottom:9px}
-  .top{display:flex;justify-content:space-between;font-size:14.5px;font-weight:600}
+  .sub{color:var(--muted);font-size:12.5px;margin:2px 0 16px}
+  .sec{color:var(--muted);font-size:12px;margin:18px 2px 8px;letter-spacing:.3px;text-transform:uppercase}
+  .card{background:var(--panel);border-radius:14px;padding:12px 13px;margin-bottom:9px}
+  .card.bet{border:1px solid #2f6b3d}
+  .top{display:flex;justify-content:space-between;align-items:center;font-size:14.5px;font-weight:600}
   .bsub{color:var(--muted);font-size:12px;margin:3px 0 8px}
-  .track{position:relative;height:7px;background:var(--bg);border-radius:20px;overflow:hidden}
+  .why{font-size:12.5px;margin:2px 0 8px}
+  .track{position:relative;height:7px;background:var(--bg);border-radius:20px;overflow:hidden;margin-top:2px}
   .fill{position:absolute;left:0;top:0;bottom:0;border-radius:20px}
   .mark{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--text)}
   .st{display:flex;justify-content:space-between;font-size:11px;margin-top:5px}
-  .row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px}
+  .badge{font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px}
   .note{font-size:12px;color:var(--muted)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
 </style>
 </head>
 <body>
   <h1>Under outs</h1>
-  <div class="sub">your bets, live · MLB pitcher outs</div>
+  <div class="sub">your bets + tonight's model board · MLB pitcher outs</div>
 
-  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px">
-    <span class="btn go" onclick="loadLive()">Load lines</span>
-    <select id="book"><option value="bovada">Bovada</option><option value="">Best avail</option><option value="draftkings">DraftKings</option><option value="fanduel">FanDuel</option><option value="betmgm">BetMGM</option></select>
-    <label style="display:inline-flex;align-items:center;gap:5px;font-size:12px"><input type="checkbox" id="autoref"> auto</label>
-    <span id="status" class="status"></span>
-  </div>
+  <div class="sec">Your bets</div>
+  <div id="mybets"></div>
 
-  <div id="mybets" style="margin-bottom:18px"></div>
-
-  <div class="sec">Today's lines</div>
-  <div class="grid" id="grid"><div class="note">Tap “Load lines” to pull today's pitcher-outs lines.</div></div>
+  <div class="sec">Tonight's board — ranked by model edge</div>
+  <div id="board"><div class="note">Waiting for the model. Start the bot on your Mac (node ~/Downloads/alert.js) — the board updates every hour.</div></div>
 
 <script>
 const AMER=p=>(p==null?'':(p>0?('+'+p):(''+p)));
 function betUnits(a){a=+a;if(isNaN(a))a=-110;return a>=0?a/100:100/Math.abs(a);}
-let LINES=[], LIVE={}, AUTO_BETS=[];
+let BOARD=[], BETS=[], LIVE={};
 
-async function loadLive(){
-  const bookPref=document.getElementById('book').value, st=document.getElementById('status');
-  st.style.color='var(--muted)'; st.textContent='Loading…';
-  try{
-    const ev=await fetch('/api/odds').then(r=>r.json());
-    if(!Array.isArray(ev)) throw new Error((ev&&ev.error)||'bad response');
-    const now=Date.now(), lo=now-6*3600*1000, hi=now+30*3600*1000;
-    const list=ev.filter(e=>{const t=Date.parse(e.commence_time);return t>=lo&&t<=hi;}).slice(0,20);
-    let rem=null; const out=[];
-    for(const e of list){
-      try{
-        const r=await fetch('/api/odds?eventId='+encodeURIComponent(e.id)); rem=r.headers.get('x-requests-remaining')||rem;
-        if(!r.ok) continue; const data=await r.json(); const books=data.bookmakers||[];
-        let bk=bookPref?books.find(b=>b.key===bookPref):null; if(!bk) bk=books[0];
-        const per={}; const scan=bk?[bk]:books;
-        for(const b of scan){ const m=(b.markets||[]).find(x=>x.key==='pitcher_outs'); if(!m) continue;
-          for(const o of m.outcomes){ const nm=o.description||o.name; if(!nm) continue; per[nm]=per[nm]||{name:nm,team:data.away_team+' @ '+data.home_team,book:b.title};
-            if((o.name||'').toLowerCase().startsWith('over')){per[nm].over=o.price;per[nm].point=o.point;}
-            if((o.name||'').toLowerCase().startsWith('under')){per[nm].under=o.price;per[nm].point=o.point;} }
-          if(bk) break; }
-        Object.values(per).forEach(p=>out.push(p));
-      }catch(e){}
-    }
-    LINES=out;
-    st.style.color=out.length?'var(--accent)':'var(--warn)';
-    st.textContent=out.length?('Loaded '+out.length+' lines '+new Date().toLocaleTimeString()+(rem?' · '+rem+' credits':'')):'No lines posted yet.';
-    renderBoard();
-  }catch(err){ st.style.color='var(--hot)'; st.textContent="Couldn't load ("+err.message+')'; }
-}
-
+async function fetchBoard(){ try{ const d=await fetch('board.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]); if(Array.isArray(d)) BOARD=d; }catch(e){} renderBoard(); }
+async function fetchBets(){ try{ const d=await fetch('bets.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]); if(Array.isArray(d)) BETS=d; }catch(e){} renderMyBets(); }
 async function fetchLive(){
   try{
     const today=new Date().toLocaleDateString('en-CA');
@@ -86,53 +49,59 @@ async function fetchLive(){
     for(const g of games){ const stt=g.status&&g.status.abstractGameState; if(stt==='Preview') continue;
       const bx=await fetch('https://statsapi.mlb.com/api/v1/game/'+g.gamePk+'/boxscore',{cache:'no-store'}).then(r=>r.json());
       ['home','away'].forEach(side=>{ const t=bx.teams&&bx.teams[side]; if(!t) return;
-        (t.pitchers||[]).forEach(pid=>{ const pl=t.players&&t.players['ID'+pid]; if(pl&&pl.stats&&pl.stats.pitching){ const nm=(pl.person&&pl.person.fullName)||''; const outs=pl.stats.pitching.outs; const last=nm.toLowerCase().split(' ').pop(); if(last&&outs!=null) live[last]={outs:+outs,state:stt}; } }); });
+        (t.pitchers||[]).forEach(pid=>{ const pl=t.players&&t.players['ID'+pid]; if(pl&&pl.stats&&pl.stats.pitching){ const nm=(pl.person&&pl.person.fullName)||''; const o=pl.stats.pitching.outs; const last=nm.toLowerCase().split(' ').pop(); if(last&&o!=null) live[last]={outs:+o,state:stt}; } }); });
     }
     LIVE=live; renderMyBets(); renderBoard();
   }catch(e){}
 }
 
-async function fetchBets(){ try{ const d=await fetch('bets.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]); if(Array.isArray(d)) AUTO_BETS=d; }catch(e){} renderMyBets(); }
+function liveStatus(name,line){
+  const lv=LIVE[name.toLowerCase().split(' ').pop()]; if(!lv) return null;
+  const fl=Math.floor(line);
+  if(lv.state==='Final') return {outs:lv.outs, final:true, won:lv.outs<line};
+  return {outs:lv.outs, final:false, busted:lv.outs>fl};
+}
 
 function renderMyBets(){
   const box=document.getElementById('mybets'); if(!box) return;
-  const bets=AUTO_BETS; let w=0,l=0,u=0;
-  const rows=bets.map(bt=>{
-    const lv=LIVE[bt.name.toLowerCase().split(' ').pop()]; const fl=Math.floor(bt.line); const max=fl+4;
-    let outsTxt='—', col='var(--muted)', statL='<span class="note">not started</span>', statR='needs ≤'+fl, fillPct=0, fillCol='#2a3441';
-    if(lv){ const o=lv.outs; outsTxt=o+' outs'; fillPct=Math.min(100,Math.round(o/max*100));
-      if(lv.state==='Final'){ const won=o<bt.line; if(won){w++;u+=betUnits(bt.price);col=fillCol='var(--accent)';statL='<span style="color:var(--accent)">✓ won · +'+betUnits(bt.price).toFixed(2)+'u</span>';} else {l++;u-=1;col=fillCol='var(--hot)';statL='<span style="color:var(--hot)">✕ lost</span>';} statR='final'; }
-      else { const bust=o>fl; col=fillCol=bust?'var(--hot)':'var(--accent)'; statL='<span style="color:'+col+'">● live · '+(bust?'busted':'alive')+'</span>'; } }
-    const markPct=Math.round(fl/max*100);
-    const why = (bt.proj!=null?('model: proj '+bt.proj+' vs '+bt.line+(bt.edge!=null?' · +'+bt.edge+'% edge':'')):'');
-    return '<div class="bslip"><div class="top"><span>'+bt.name+'</span><span style="color:'+col+'">'+outsTxt+'</span></div>'
-      +'<div class="bsub">Under '+bt.line+' · '+AMER(bt.price)+(why?' · '+why:'')+'</div>'
-      +'<div class="track"><div class="fill" style="width:'+fillPct+'%;background:'+fillCol+'"></div><div class="mark" style="left:'+markPct+'%"></div></div>'
+  let w=0,l=0,u=0;
+  const rows=BETS.map(bt=>{
+    const fl=Math.floor(bt.line), max=fl+4; const s=liveStatus(bt.name,bt.line);
+    let outsTxt='—',col='var(--muted)',statL='<span class="note">not started</span>',statR='needs ≤'+fl,fillPct=0,fillCol='#2a3441';
+    if(s){ outsTxt=s.outs+' outs'; fillPct=Math.min(100,Math.round(s.outs/max*100));
+      if(s.final){ if(s.won){w++;u+=betUnits(bt.price);col=fillCol='var(--accent)';statL='<span style="color:var(--accent)">✓ won · +'+betUnits(bt.price).toFixed(2)+'u</span>';} else {l++;u-=1;col=fillCol='var(--hot)';statL='<span style="color:var(--hot)">✕ lost</span>';} statR='final'; }
+      else { col=fillCol=s.busted?'var(--hot)':'var(--accent)'; statL='<span style="color:'+col+'">● live · '+(s.busted?'busted':'alive')+'</span>'; } }
+    const why = bt.proj!=null ? ('We project ~<b>'+bt.proj+' outs</b> vs the '+bt.line+' line'+(bt.edge!=null?' — a <b style="color:var(--accent)">+'+bt.edge+'% edge</b>':'')+'.') : '';
+    return '<div class="card bet"><div class="top"><span>'+bt.name+'</span><span style="color:'+col+'">'+outsTxt+'</span></div>'
+      +'<div class="bsub">Under '+bt.line+' · '+AMER(bt.price)+'</div>'
+      +(why?'<div class="why">'+why+'</div>':'')
+      +'<div class="track"><div class="fill" style="width:'+fillPct+'%;background:'+fillCol+'"></div><div class="mark" style="left:'+Math.round(fl/max*100)+'%"></div></div>'
       +'<div class="st">'+statL+'<span class="note">'+statR+'</span></div></div>';
   }).join('');
   const rec=(w+l)?('<span style="color:'+(w>=l?'var(--accent)':'var(--hot)')+'">'+w+'-'+l+'</span> · <span style="color:'+(u>=0?'var(--accent)':'var(--hot)')+'">'+(u>=0?'+':'')+u.toFixed(2)+'u</span>'):'<span class="note">none graded yet</span>';
-  box.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><b style="font-size:15px">Your bets</b><span style="font-size:12px">'+rec+'</span></div>'
-    +(bets.length?rows:'<div class="note">No bets yet — the bot adds them automatically when it finds a +EV under.</div>');
+  box.innerHTML='<div style="display:flex;justify-content:flex-end;margin-bottom:6px;font-size:12px">'+rec+'</div>'
+    +(BETS.length?rows:'<div class="note">No bets yet — the bot adds one automatically when it finds a +EV under.</div>');
 }
 
 function renderBoard(){
-  const grid=document.getElementById('grid'); if(!grid) return;
-  if(!LINES.length){ return; }
-  grid.innerHTML=LINES.slice().sort((a,b)=>(a.point||99)-(b.point||99)).map(l=>{
-    const lv=LIVE[l.name.toLowerCase().split(' ').pop()]; let live='';
-    if(lv){ const fl=Math.floor(l.point); const col=lv.state==='Final'?'#8b98a5':(lv.outs>fl?'#ff7b72':'#3fb950'); live='<span style="color:'+col+'">'+(lv.state==='Final'?'final ':'🔴 ')+lv.outs+' outs</span>'; }
-    return '<div class="bslip"><div class="top"><span>'+l.name+'</span><span class="note">'+(l.point!=null?l.point+' outs':'—')+'</span></div>'
-      +'<div class="bsub">'+l.team+' · O '+AMER(l.over)+' / U '+AMER(l.under)+' · '+(l.book||'')+'</div>'
-      +(live?'<div class="st">'+live+'<span class="note">'+(l.point!=null?'under ≤'+Math.floor(l.point):'')+'</span></div>':'')+'</div>';
+  const box=document.getElementById('board'); if(!box) return;
+  if(!BOARD.length) return;
+  box.innerHTML=BOARD.map(p=>{
+    const edge=p.edge; const good=edge>=6;
+    const badgeCol = edge>=6?'background:#12291a;color:#7ee787':(edge>=0?'background:#2a2411;color:#e3b341':'background:var(--chip);color:var(--muted)');
+    const label = edge>=6?('BET · +'+edge+'%'):(edge>=0?('lean +'+edge+'%'):('pass '+edge+'%'));
+    const s=liveStatus(p.name,p.line); let live='';
+    if(s){ const c=s.final?'#8b98a5':(s.busted?'#ff7b72':'#3fb950'); live=' · <span style="color:'+c+'">'+(s.final?'final ':'🔴 ')+s.outs+' outs</span>'; }
+    const why='We project ~<b>'+p.proj+' outs</b>'+(p.pUnder!=null?', so the under hits about <b>'+p.pUnder+'%</b> of the time':'')+'. Line '+p.line+'.';
+    return '<div class="card'+(good?' bet':'')+'"><div class="top"><span>'+p.name+'</span><span class="badge" style="'+badgeCol+'">'+label+'</span></div>'
+      +'<div class="bsub">Under '+p.line+' · '+AMER(p.under)+' · '+(p.book||'')+live+'</div>'
+      +'<div class="why">'+why+'</div></div>';
   }).join('');
 }
 
-try{ if(!localStorage.getItem('uo_reset_v5')){ ['uo_mybets','uo_plays','uo_seeded_0710','uo_seeded','uo_track_start','uo_book'].forEach(k=>localStorage.removeItem(k)); localStorage.setItem('uo_reset_v5','1'); } }catch(e){}
-let autoTimer=null;
-function applyAuto(){ const cb=document.getElementById('autoref'); if(autoTimer){clearInterval(autoTimer);autoTimer=null;} if(cb.checked){ loadLive(); autoTimer=setInterval(()=>{loadLive();fetchBets();fetchLive();},3600000);} }
-(function(){ const cb=document.getElementById('autoref'); const s=localStorage.getItem('uo_autoref'); cb.checked=s==='1'; cb.addEventListener('change',()=>{localStorage.setItem('uo_autoref',cb.checked?'1':'0');applyAuto();}); applyAuto(); })();
-fetchBets(); fetchLive();
-setInterval(()=>{ fetchBets(); fetchLive(); }, 120000);
+try{ ['uo_mybets','uo_plays','uo_seeded_0710','uo_seeded','uo_track_start','uo_autoref','uo_book'].forEach(k=>localStorage.removeItem(k)); }catch(e){}
+fetchBoard(); fetchBets(); fetchLive();
+setInterval(()=>{ fetchBoard(); fetchBets(); fetchLive(); }, 120000);
 </script>
 </body>
 </html>
