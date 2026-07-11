@@ -86,13 +86,16 @@ function renderMyBets(){
 function renderBoard(){
   const box=document.getElementById('board'); if(!box) return;
   if(!BOARD.length) return;
-  box.innerHTML=BOARD.map(p=>{
-    const edge=p.edge; const good=edge>=6;
-    const badgeCol = edge>=6?'background:#12291a;color:#7ee787':(edge>=0?'background:#2a2411;color:#e3b341':'background:var(--chip);color:var(--muted)');
-    const label = edge>=6?('BET · +'+edge+'%'):(edge>=0?('lean +'+edge+'%'):('pass '+edge+'%'));
+  const nbets=BOARD.filter(p=>p.bet).length;
+  const head='<div class="note" style="margin-bottom:8px">'+(nbets? (nbets+' qualify as bets tonight — everything else is a pass.') : 'No bets qualify tonight — the model is passing. That is normal.')+'</div>';
+  box.innerHTML=head+BOARD.map(p=>{
+    const good=!!p.bet;
+    const badgeCol = good?'background:#12291a;color:#7ee787':'background:#1c2430;color:#8b98a5';
+    const label = good?('BET · +'+p.edge+'%'):'pass';
+    const reason = good?(p.siera!=null&&p.siera>=4.4?'bad arm':(p.proj<=14?'short-outing arm':'value')):'';
     const s=liveStatus(p.name,p.line); let live='';
     if(s){ const c=s.final?'#8b98a5':(s.busted?'#ff7b72':'#3fb950'); live=' · <span style="color:'+c+'">'+(s.final?'final ':'🔴 ')+s.outs+' outs</span>'; }
-    const why='We project ~<b>'+p.proj+' outs</b>'+(p.pUnder!=null?', so the under hits about <b>'+p.pUnder+'%</b> of the time':'')+'. Line '+p.line+'.';
+    const why='We project ~<b>'+p.proj+' outs</b>'+(p.pUnder!=null?', under hits ~<b>'+p.pUnder+'%</b>':'')+'. Line '+p.line+(good?' · <span style="color:var(--accent)">'+reason+'</span>':'')+'.';
     return '<div class="card'+(good?' bet':'')+'"><div class="top"><span>'+p.name+'</span><span class="badge" style="'+badgeCol+'">'+label+'</span></div>'
       +'<div class="bsub">Under '+p.line+' · '+AMER(p.under)+' · '+(p.book||'')+live+'</div>'
       +'<div class="why">'+why+'</div></div>';
