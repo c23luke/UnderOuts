@@ -70,5 +70,17 @@
     "proj": 13.5,
     "edge": 12,
     "auto": true
+  },
+  {
+    "id": "2026-07-11|lodolo",
+    "date": "2026-07-11",
+    "name": "Nick Lodolo",
+    "team": "Chicago Cubs @ Cincinnati Reds",
+    "line": 16.5,
+    "side": "under",
+    "price": -130,
+    "proj": 14.8,
+    "edge": 16,
+    "auto": true
   }
 ]
