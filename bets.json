@@ -58,5 +58,101 @@
     "proj": 16,
     "edge": 8,
     "auto": true
+  },
+  {
+    "id": "2026-07-11|peralta",
+    "date": "2026-07-11",
+    "name": "Freddy Peralta",
+    "team": "Boston Red Sox @ New York Mets",
+    "line": 17.5,
+    "side": "under",
+    "price": -119,
+    "proj": 15.6,
+    "edge": 19,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|rocker",
+    "date": "2026-07-11",
+    "name": "Kumar Rocker",
+    "team": "Houston Astros @ Texas Rangers",
+    "line": 15.5,
+    "side": "under",
+    "price": 101,
+    "proj": 14,
+    "edge": 17,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|bibee",
+    "date": "2026-07-11",
+    "name": "Tanner Bibee",
+    "team": "Cleveland Guardians @ Miami Marlins",
+    "line": 17.5,
+    "side": "under",
+    "price": 105,
+    "proj": 16.5,
+    "edge": 11,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|johnson",
+    "date": "2026-07-11",
+    "name": "Ryan Johnson",
+    "team": "Los Angeles Angels @ Minnesota Twins",
+    "line": 15.5,
+    "side": "under",
+    "price": -162,
+    "proj": 13.5,
+    "edge": 11,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|sproat",
+    "date": "2026-07-11",
+    "name": "Brandon Sproat",
+    "team": "Milwaukee Brewers @ Pittsburgh Pirates",
+    "line": 15.5,
+    "side": "under",
+    "price": -143,
+    "proj": 13.9,
+    "edge": 11,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|bradish",
+    "date": "2026-07-11",
+    "name": "Kyle Bradish",
+    "team": "Kansas City Royals @ Baltimore Orioles",
+    "line": 17.5,
+    "side": "under",
+    "price": 111,
+    "proj": 16.9,
+    "edge": 8,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|cameron",
+    "date": "2026-07-11",
+    "name": "Noah Cameron",
+    "team": "Kansas City Royals @ Baltimore Orioles",
+    "line": 16.5,
+    "side": "under",
+    "price": -130,
+    "proj": 15.4,
+    "edge": 8,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|lodolo",
+    "date": "2026-07-11",
+    "name": "Nick Lodolo",
+    "team": "Chicago Cubs @ Cincinnati Reds",
+    "line": 15.5,
+    "side": "under",
+    "price": -102,
+    "proj": 14.9,
+    "edge": 8,
+    "auto": true
   }
 ]
