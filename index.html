@@ -106,9 +106,8 @@
       <option value="all">More filters…</option>
       <option value="haveline">has live line</option>
       <option value="under">under leans only</option>
-      <option value="rookie">rookie limit</option>
+      <option value="cap">confirmed cap</option>
       <option value="il">IL / TJ return</option>
-      <option value="vet">veteran / age</option>
       <option value="opener">opener</option>
       <option value="trend">short trend</option>
     </select>
@@ -369,15 +368,14 @@ function render(){
     if(q && !(name.toLowerCase().includes(q)||team.toLowerCase().includes(q))) return;
     if(filter==='haveline' && !l) return;
     if(filter==='under' && !(r&&r.score>=45)) return;
-    if(['rookie','il','vet','opener','trend'].includes(filter) && !(r&&r.flags[filter])) return;
+    if(['cap','il','opener','trend'].includes(filter) && !(r&&r.flags[filter])) return;
 
     const tier = r?('tier'+r.tier):'tier0';
     const score = r?r.score:null;
     const f = r?r.flags:{};
     const chips=[
-      ['rookie','Rookie limit',f.rookie],
+      ['cap','Confirmed cap',f.cap],
       ['il','IL / TJ return',f.il],
-      ['vet','Veteran / age',f.vet],
       ['opener','Opener',f.opener],
       ['trend','Short trend',f.trend],
     ].map(([c,lab,on])=>`<span class="chip ${c} ${on?'on':''}" style="${on?'':'opacity:.3'}">${lab}</span>`).join('');
@@ -617,6 +615,7 @@ function applyAuto(){
   cb.addEventListener('change',()=>{localStorage.setItem('uo_autoref',cb.checked?'1':'0');applyAuto();});
   applyAuto();
 })();
+try{ if(!localStorage.getItem('uo_reset_v2')){ ['uo_mybets','uo_plays','uo_seeded_0710'].forEach(k=>localStorage.removeItem(k)); localStorage.setItem('uo_reset_v2','1'); } }catch(e){}
 renderMyBets();
 fetchBets();
 fetchLive();
