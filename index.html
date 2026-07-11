@@ -3,593 +3,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Under Outs — Live Pitcher Outs Dashboard</title>
+<title>Under Outs</title>
 <style>
-  :root{
-    --bg:#0d1117; --panel:#161b22; --panel2:#1c2430; --border:#2a3441;
-    --text:#e6edf3; --muted:#8b98a5; --accent:#3fb950; --warn:#d29922;
-    --hot:#f85149; --chip:#21262d; --blue:#58a6ff;
-  }
+  :root{--bg:#0d1117;--panel:#161b22;--panel2:#1c2430;--border:#2a3441;--text:#e6edf3;--muted:#8b98a5;--accent:#3fb950;--warn:#d29922;--hot:#f85149;--blue:#58a6ff;--chip:#21262d}
   *{box-sizing:border-box}
-  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    background:var(--bg);color:var(--text);padding:16px;line-height:1.5}
-  h1{font-size:20px;margin:0 0 2px}
-  .sub{color:var(--muted);font-size:12.5px;margin-bottom:14px}
-  .banner{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:12px}
-  .banner b{color:var(--accent)}
-  .setup{background:var(--panel2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:12.5px;color:var(--muted)}
-  .setup select{background:#0d1117;border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:7px;font-size:13px}
-  .status{font-size:12px;margin-left:2px;display:inline-block}
-  .controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center}
-  .controls input{background:var(--panel2);border:1px solid var(--border);color:var(--text);
-    padding:9px 11px;border-radius:8px;font-size:14px;min-width:150px;flex:1}
-  .btn{background:var(--chip);border:1px solid var(--border);color:var(--text);padding:8px 13px;
-    border-radius:20px;font-size:13px;cursor:pointer;user-select:none}
-  .btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);padding:16px;line-height:1.5}
+  h1{font-size:19px;margin:0}
+  .sub{color:var(--muted);font-size:12.5px;margin:2px 0 14px}
+  select{background:#0d1117;border:1px solid var(--border);color:var(--text);padding:9px 10px;border-radius:8px;font-size:13px}
+  .btn{background:var(--chip);border:1px solid var(--border);color:var(--text);padding:9px 13px;border-radius:20px;font-size:13px;cursor:pointer;user-select:none}
   .btn.go{background:var(--accent);color:#04250f;border-color:var(--accent);font-weight:600}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
-  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:13px 15px;
-    display:flex;flex-direction:column;gap:8px}
-  .card.tier1{border-left:4px solid var(--accent)}
-  .card.tier2{border-left:4px solid var(--warn)}
-  .card.tier3{border-left:4px solid var(--hot)}
-  .card.tier0{border-left:4px solid var(--border)}
-  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-  .name{font-size:16px;font-weight:600}
-  .team{color:var(--muted);font-size:12px}
-  .score{text-align:center;min-width:56px}
-  .score .num{font-size:24px;font-weight:700;line-height:1}
-  .score .lbl{font-size:9px;letter-spacing:.5px;color:var(--muted);text-transform:uppercase}
-  .s-hi{color:var(--accent)} .s-mid{color:var(--warn)} .s-lo{color:var(--hot)} .s-na{color:var(--muted)}
-  .linerow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-  .pill{border:1px solid var(--border);border-radius:7px;padding:3px 9px;font-size:12px;font-weight:600}
-  .pill.pt{background:#0d2136;border-color:#1f4b73;color:#79c0ff}
-  .pill.ov{color:#ff9b94} .pill.un{color:#7ee787}
-  .pill.book{background:var(--chip);color:var(--muted);font-weight:400;font-size:11px}
-  .badge{border-radius:7px;padding:3px 9px;font-size:12px;font-weight:700;letter-spacing:.3px}
-  .b-strong{background:#12291a;border:1px solid #2f6b3d;color:#7ee787}
-  .b-lean{background:#2a2411;border:1px solid #6b5a1f;color:#e3b341}
-  .b-thin{background:var(--chip);border:1px solid var(--border);color:var(--muted)}
-  #results td,#results th{padding:5px 8px;border-bottom:1px solid var(--border)}
-  #tracker input{background:#0d1117;border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:7px;font-size:13px}
+  .status{font-size:12px}
+  .sec{color:var(--muted);font-size:12px;margin:0 2px 8px;letter-spacing:.3px;text-transform:uppercase}
   .bslip{background:var(--panel);border-radius:14px;padding:12px 13px;margin-bottom:9px}
-  .bslip-top{display:flex;justify-content:space-between;font-size:14.5px;font-weight:600;color:var(--text)}
-  .bslip-sub{color:var(--muted);font-size:12px;margin:3px 0 9px}
-  .bslip-track{position:relative;height:7px;background:var(--bg);border-radius:20px;overflow:hidden}
-  .bslip-fill{position:absolute;left:0;top:0;bottom:0;border-radius:20px}
-  .bslip-mark{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--text)}
-  .bslip-stat{display:flex;justify-content:space-between;font-size:11px;margin-top:5px}
-  .chips{display:flex;flex-wrap:wrap;gap:5px}
-  .chip{background:var(--chip);border:1px solid var(--border);border-radius:6px;padding:2px 7px;font-size:10.5px;color:var(--muted)}
-  .chip.on{color:var(--text)}
-  .chip.rookie{border-color:#3fb95055;color:#7ee787}
-  .chip.il{border-color:#a371f755;color:#d2a8ff}
-  .chip.vet{border-color:#d2992255;color:#e3b341}
-  .chip.opener{border-color:#58a6ff55;color:#79c0ff}
-  .chip.trend{border-color:#f8514955;color:#ff7b72}
+  .top{display:flex;justify-content:space-between;font-size:14.5px;font-weight:600}
+  .bsub{color:var(--muted);font-size:12px;margin:3px 0 8px}
+  .track{position:relative;height:7px;background:var(--bg);border-radius:20px;overflow:hidden}
+  .fill{position:absolute;left:0;top:0;bottom:0;border-radius:20px}
+  .mark{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--text)}
+  .st{display:flex;justify-content:space-between;font-size:11px;margin-top:5px}
+  .row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px}
   .note{font-size:12px;color:var(--muted)}
-  .note b{color:var(--text);font-weight:600}
-  .proj{font-size:12px;color:var(--muted)}
-  .proj b{color:var(--text)}
-  .legend{margin-top:20px;background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px;font-size:12.5px;color:var(--muted)}
-  .legend h3{color:var(--text);font-size:13px;margin:0 0 8px}
-  .legend .row{margin-bottom:5px}
-  .disclaimer{margin-top:16px;font-size:11.5px;color:var(--muted);border-top:1px solid var(--border);padding-top:12px}
-  a{color:var(--blue)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
 </style>
 </head>
 <body>
-  <h1 style="font-size:19px">Under outs</h1>
+  <h1>Under outs</h1>
   <div class="sub">your bets, live · MLB pitcher outs</div>
 
   <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px">
     <span class="btn go" onclick="loadLive()">Load lines</span>
-    <select id="book">
-      <option value="bovada">Bovada</option>
-      <option value="">Best avail</option>
-      <option value="draftkings">DraftKings</option>
-      <option value="fanduel">FanDuel</option>
-      <option value="betmgm">BetMGM</option>
-    </select>
-    <label style="display:inline-flex;align-items:center;gap:5px;font-size:12px;cursor:pointer"><input type="checkbox" id="autoref"> auto</label>
+    <select id="book"><option value="bovada">Bovada</option><option value="">Best avail</option><option value="draftkings">DraftKings</option><option value="fanduel">FanDuel</option><option value="betmgm">BetMGM</option></select>
+    <label style="display:inline-flex;align-items:center;gap:5px;font-size:12px"><input type="checkbox" id="autoref"> auto</label>
     <span id="status" class="status"></span>
   </div>
 
-  <div id="mybets" style="margin-bottom:16px"></div>
+  <div id="mybets" style="margin-bottom:18px"></div>
 
-  <div class="controls">
-    <input id="search" placeholder="Search pitcher…" oninput="render()">
-    <span class="btn active" data-f="all" onclick="setFilter(this)">All pitchers</span>
-    <span class="btn" data-f="play" onclick="setFilter(this)">⭐ Best plays</span>
-    <span class="btn" onclick="toggleNews()" style="border-color:#3a5bbf">📰 News</span>
-    <select id="fltSel" onchange="setFilterSel(this.value)" style="background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:9px 10px;border-radius:8px;font-size:13px">
-      <option value="all">More filters…</option>
-      <option value="haveline">has live line</option>
-      <option value="under">under leans only</option>
-      <option value="cap">confirmed cap</option>
-      <option value="il">IL / TJ return</option>
-      <option value="opener">opener</option>
-      <option value="trend">short trend</option>
-    </select>
-  </div>
-
-  <div id="newspanel" style="display:none;margin-bottom:16px"></div>
-
-  <div class="grid" id="grid"></div>
-
-  <div class="setup" id="tracker">
-    <b style="color:var(--text)">📊 Model record <span class="note" style="font-weight:400">(auto — the model's own picks, not your bets)</span></b> <span id="record" style="margin-left:8px"></span>
-    <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-      <span class="btn go" onclick="gradeResults()">Grade &amp; refresh record</span>
-      <span class="btn" onclick="toggleLog()">Log a bet manually</span>
-      <span class="btn" onclick="clearPlays()" style="border-color:#6b2f2f;color:#ff9b94">Clear log</span>
-    </div>
-    <div id="logform" style="display:none;margin-top:8px;gap:6px;flex-wrap:wrap;align-items:center">
-      <input id="m_name" placeholder="Pitcher (e.g. Connor Prielipp)" style="min-width:170px">
-      <input id="m_line" placeholder="Line e.g. 15.5" style="width:110px">
-      <input id="m_price" placeholder="Under price e.g. -105" style="width:150px">
-      <input id="m_date" type="date">
-      <span class="btn go" onclick="addManual()">Add bet</span>
-    </div>
-    <div id="results" style="margin-top:10px"></div>
-    <div class="note" style="margin-top:8px">Auto-logs the day's real edges (PLAY 60+) when you load lines. Grades from the free MLB Stats API once games are Final; win = pitcher's actual outs are under the line. Record is 1 unit per bet; tiers show whether higher-PLAY bets hit more. (Log is stored per-device.)</div>
-  </div>
-
-  <div class="legend">
-    <h3>Under Lean score (0–100) — the research overlay</h3>
-    <div class="row"><b style="color:#7ee787">Rookie / hard innings limit</b> — team-stated pitch or inning cap (biggest weight).</div>
-    <div class="row"><b style="color:#d2a8ff">IL return / Tommy John build-up</b> — early starts back are usually capped.</div>
-    <div class="row"><b style="color:#e3b341">Veteran / age &amp; durability</b> — older arms (33+), declining velo, or teams easing workload late.</div>
-    <div class="row"><b style="color:#79c0ff">Opener / planned bullpen game</b> — starter only expected 1–3 innings.</div>
-    <div class="row"><b style="color:#ff7b72">Recent short-outing trend</b> — averaging &lt;5.2 IP / low pitch counts lately.</div>
-    <div style="margin-top:8px">Green = strong under lean · yellow = moderate · red-tint = leans OVER · grey = no research note (line only).</div>
-    <h3 style="margin-top:14px">⭐ PLAY score — the actual best-bet ranking</h3>
-    <div class="row">Only appears when a live line is loaded. It blends three things: the <b>Under Lean</b> (is there a real reason he goes short), the <b>cushion</b> (how far his projected outs sit below the line — more room = safer), and the <b>price</b> (plus money helps, heavy juice like −175 hurts because the market already knows).</div>
-    <div class="row"><b>⭐ Best plays</b> ranks <b>every pitcher with a line</b> by edge — best on top, no cutoff. A low Under Lean can still rank high if the line sits well above his projection (big <b>+ cushion</b>). The bigger the cushion, the safer the under.</div>
-  </div>
-
-  <div class="disclaimer">
-    Live lines pull through a secure serverless proxy; your Odds API key is stored as a server secret, never exposed in this page.
-    Research scores refresh when you rebuild the RESEARCH list (or via your scheduled task). Verify confirmed starters and pregame
-    news at first pitch. This is informational only, not betting advice; a capped starter can still be pulled early or stretch past
-    his cap. Only stake what you can afford to lose.
-  </div>
+  <div class="sec">Today's lines</div>
+  <div class="grid" id="grid"><div class="note">Tap “Load lines” to pull today's pitcher-outs lines.</div></div>
 
 <script>
-// ---- Research overlay (fallback; live copy loaded from /research.json at startup) ----
-let RESEARCH = [];
-function research(name){
-  const n=(name||'').toLowerCase();
-  return RESEARCH.find(r=>n.includes(r.key))||null;
-}
-// ---- SIERA (skill) layer: reads r.siera off the matched research entry (refreshed daily) ----
-function sieraFor(name){ const r=research(name); return (r&&typeof r.siera==='number')?r.siera:null; }
-function sieraBump(s){ return s==null?0:Math.max(-10,Math.min(15,(s-4.0)*5)); }
-
-// ---- Workload news feed (fallback; live copy loaded from /news.json at startup) ----
-let NEWS = [];
-function renderNews(){
-  const box=document.getElementById('newspanel'); if(!box) return;
-  const color={strong:'#7ee787',moderate:'#e3b341',caution:'#ff7b72'};
-  const items=NEWS.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(n=>`
-    <div class="card tier2" style="margin-bottom:10px">
-      <div class="top"><div><div class="name">${n.pitcher}</div><div class="team">${n.team} · ${n.date}</div></div>
-        <span class="badge" style="background:var(--chip);border:1px solid var(--border);color:${color[n.strength]||'#8b98a5'}">${(n.strength||'').toUpperCase()}</span></div>
-      <div class="note" style="font-size:13px;color:var(--text)">${n.quote}</div>
-      <div class="note">Source: <a href="${n.url}" target="_blank" rel="noopener">${n.source}</a></div>
-    </div>`).join('');
-  box.innerHTML=`<div class="banner" style="margin-bottom:10px"><b>📰 Workload news — with sources.</b> Explicit reports that a starter may be limited today. Check these against how deep they actually go to see how reliable the "he's only going ~X" talk is.</div>${NEWS.length?items:'<div class="note">No workload news logged today yet.</div>'}`;
-}
-function toggleNews(){ const b=document.getElementById('newspanel'); const show=b.style.display==='none'; b.style.display=show?'block':'none'; if(show) renderNews(); }
-
-let LINES=[];
-let filter="all";
-
-function setFilter(el){
-  document.querySelectorAll('.controls .btn').forEach(b=>b.classList.remove('active'));
-  el.classList.add('active'); filter=el.dataset.f;
-  const sel=document.getElementById('fltSel'); if(sel) sel.value='all';
-  render();
-}
-function setFilterSel(v){
-  filter=v;
-  document.querySelectorAll('.controls .btn').forEach(b=>b.classList.remove('active'));
-  if(v==='all'){ const a=document.querySelector('.controls .btn[data-f="all"]'); if(a) a.classList.add('active'); }
-  render();
-}
-function amer(p){ if(p==null) return ""; return p>0?("+"+p):(""+p); }
-function scoreClass(s){return s==null?'s-na':s>=70?'s-hi':s>=45?'s-mid':'s-lo';}
+const AMER=p=>(p==null?'':(p>0?('+'+p):(''+p)));
+function betUnits(a){a=+a;if(isNaN(a))a=-110;return a>=0?a/100:100/Math.abs(a);}
+let LINES=[], LIVE={}, AUTO_BETS=[];
 
 async function loadLive(){
-  const bookPref=document.getElementById('book').value;
-  const st=document.getElementById('status');
-  st.style.color="var(--muted)"; st.textContent="Loading events…";
+  const bookPref=document.getElementById('book').value, st=document.getElementById('status');
+  st.style.color='var(--muted)'; st.textContent='Loading…';
   try{
-    const evRes=await fetch(`/api/odds`);
-    if(!evRes.ok) throw new Error("events HTTP "+evRes.status);
-    const events=await evRes.json();
-    if(!Array.isArray(events)) throw new Error((events&&events.error)||"bad response — is ODDS_API_KEY set in Vercel?");
+    const ev=await fetch('/api/odds').then(r=>r.json());
+    if(!Array.isArray(ev)) throw new Error((ev&&ev.error)||'bad response');
     const now=Date.now(), lo=now-6*3600*1000, hi=now+30*3600*1000;
-    const todays=events.filter(e=>{const t=Date.parse(e.commence_time); return t>=lo && t<=hi;});
-    const list=(todays.length?todays:events).slice(0,20);
-    let remaining=evRes.headers.get('x-requests-remaining');
-    const out=[]; let done=0;
+    const list=ev.filter(e=>{const t=Date.parse(e.commence_time);return t>=lo&&t<=hi;}).slice(0,20);
+    let rem=null; const out=[];
     for(const e of list){
-      done++;
-      st.textContent=`Loading props ${done}/${list.length}…`;
       try{
-        const r=await fetch(`/api/odds?eventId=${encodeURIComponent(e.id)}`);
-        remaining=r.headers.get('x-requests-remaining')||remaining;
-        if(!r.ok) continue;
-        const data=await r.json();
-        const books=data.bookmakers||[];
-        let bk = bookPref ? books.find(b=>b.key===bookPref) : null;
-        if(!bk) bk=books[0];
-        const perPitcher={};
-        const scan = bk?[bk]:books;
-        for(const b of scan){
-          const m=(b.markets||[]).find(x=>x.key==='pitcher_outs'); if(!m) continue;
-          for(const o of m.outcomes){
-            const nm=o.description||o.name; if(!nm) continue;
-            perPitcher[nm]=perPitcher[nm]||{name:nm,team:`${data.away_team} @ ${data.home_team}`,book:b.title};
-            if((o.name||'').toLowerCase().startsWith('over')){perPitcher[nm].over=o.price;perPitcher[nm].point=o.point;}
-            if((o.name||'').toLowerCase().startsWith('under')){perPitcher[nm].under=o.price;perPitcher[nm].point=o.point;}
-          }
-          if(bk) break;
-        }
-        Object.values(perPitcher).forEach(p=>out.push(p));
-      }catch(err){/* skip event */}
+        const r=await fetch('/api/odds?eventId='+encodeURIComponent(e.id)); rem=r.headers.get('x-requests-remaining')||rem;
+        if(!r.ok) continue; const data=await r.json(); const books=data.bookmakers||[];
+        let bk=bookPref?books.find(b=>b.key===bookPref):null; if(!bk) bk=books[0];
+        const per={}; const scan=bk?[bk]:books;
+        for(const b of scan){ const m=(b.markets||[]).find(x=>x.key==='pitcher_outs'); if(!m) continue;
+          for(const o of m.outcomes){ const nm=o.description||o.name; if(!nm) continue; per[nm]=per[nm]||{name:nm,team:data.away_team+' @ '+data.home_team,book:b.title};
+            if((o.name||'').toLowerCase().startsWith('over')){per[nm].over=o.price;per[nm].point=o.point;}
+            if((o.name||'').toLowerCase().startsWith('under')){per[nm].under=o.price;per[nm].point=o.point;} }
+          if(bk) break; }
+        Object.values(per).forEach(p=>out.push(p));
+      }catch(e){}
     }
     LINES=out;
-    snapshotPlays();
-    if(!out.length){
-      st.style.color="var(--warn)";
-      st.textContent="Connected, but no pitcher_outs lines posted yet. Try again closer to game time.";
-    }else{
-      st.style.color="var(--accent)";
-      st.textContent=`Loaded ${out.length} lines at ${new Date().toLocaleTimeString()}`+(remaining?` · ${remaining} API credits left`:"");
-    }
-    render();
-  }catch(err){
-    st.style.color="var(--hot)";
-    st.textContent="Couldn't load ("+err.message+")";
-    render();
-  }
+    st.style.color=out.length?'var(--accent)':'var(--warn)';
+    st.textContent=out.length?('Loaded '+out.length+' lines '+new Date().toLocaleTimeString()+(rem?' · '+rem+' credits':'')):'No lines posted yet.';
+    renderBoard();
+  }catch(err){ st.style.color='var(--hot)'; st.textContent="Couldn't load ("+err.message+')'; }
 }
 
-// ---- Best-play engine ----
-function projOutsMid(r){
-  if(!r||!r.proj) return null;
-  const m=r.proj.match(/(\d+)\s*[–-]\s*(\d+)\s*outs/);
-  if(m) return (parseInt(m[1])+parseInt(m[2]))/2;
-  const s=r.proj.match(/(\d+)\+?\s*outs/);
-  if(s) return parseInt(s[1]);
-  return null;
-}
-function computePlay(l,r){
-  if(!l||!r||l.point==null||l.under==null) return null;
-  const mid=projOutsMid(r); if(mid==null) return null;
-  const threshold=Math.floor(l.point);
-  const cushion=threshold-mid;
-  const up=l.under;
-  const priceAdj = up>=0 ? up/10 : up/15;
-  const siera=sieraFor(l.name);
-  const sBump=sieraBump(siera);
-  let play=Math.round(r.score + sBump + cushion*8 + priceAdj);
-  play=Math.max(0,Math.min(99,play));
-  const vt = play>=72?'strong':play>=58?'lean':'thin';
-  const elite = (siera!=null && siera>=4.5 && cushion>=1);
-  return {play, cushion:Math.round(cushion*10)/10, vt, siera, elite};
-}
-
-// ---- live in-game outs from the free MLB Stats API (keyed by last name) ----
-let LIVE = {};
 async function fetchLive(){
   try{
     const today=new Date().toLocaleDateString('en-CA');
-    const s=await fetch(`https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${today}`,{cache:'no-store'}).then(r=>r.json());
-    const games=(s.dates&&s.dates[0]&&s.dates[0].games)||[];
-    const live={};
-    for(const g of games){
-      const st=g.status&&g.status.abstractGameState; // Preview / Live / Final
-      if(st==='Preview') continue;
-      const bx=await fetch(`https://statsapi.mlb.com/api/v1/game/${g.gamePk}/boxscore`,{cache:'no-store'}).then(r=>r.json());
-      ['home','away'].forEach(side=>{ const team=bx.teams&&bx.teams[side]; if(!team) return;
-        (team.pitchers||[]).forEach(pid=>{ const pl=team.players&&team.players['ID'+pid];
-          if(pl&&pl.stats&&pl.stats.pitching){ const full=(pl.person&&pl.person.fullName)||''; const outs=pl.stats.pitching.outs;
-            const last=full.toLowerCase().split(' ').pop();
-            if(last&&outs!=null) live[last]={outs:+outs, state:st}; } });
-      });
+    const s=await fetch('https://statsapi.mlb.com/api/v1/schedule?sportId=1&date='+today,{cache:'no-store'}).then(r=>r.json());
+    const games=(s.dates&&s.dates[0]&&s.dates[0].games)||[]; const live={};
+    for(const g of games){ const stt=g.status&&g.status.abstractGameState; if(stt==='Preview') continue;
+      const bx=await fetch('https://statsapi.mlb.com/api/v1/game/'+g.gamePk+'/boxscore',{cache:'no-store'}).then(r=>r.json());
+      ['home','away'].forEach(side=>{ const t=bx.teams&&bx.teams[side]; if(!t) return;
+        (t.pitchers||[]).forEach(pid=>{ const pl=t.players&&t.players['ID'+pid]; if(pl&&pl.stats&&pl.stats.pitching){ const nm=(pl.person&&pl.person.fullName)||''; const outs=pl.stats.pitching.outs; const last=nm.toLowerCase().split(' ').pop(); if(last&&outs!=null) live[last]={outs:+outs,state:stt}; } }); });
     }
-    LIVE=live; render(); renderMyBets();
+    LIVE=live; renderMyBets(); renderBoard();
   }catch(e){}
 }
-function betTrigger(r){
-  const mid=projOutsMid(r); if(mid==null) return null;
-  const priceAdj=-110/15;
-  const neededCushion=(70 - r.score - priceAdj)/8;
-  const neededFloor=mid+neededCushion;
-  const minLine=Math.max(0,Math.ceil(neededFloor))+0.5;
-  return {minLine, mid};
-}
 
-function render(){
-  const q=(document.getElementById('search').value||'').toLowerCase();
-  const grid=document.getElementById('grid'); grid.innerHTML='';
-  const rows=[];
-  const seen=new Set();
-  LINES.forEach(l=>{ seen.add((l.name||'').toLowerCase().split(' ').pop()); rows.push({live:l, r:research(l.name), play:computePlay(l,research(l.name))}); });
-  RESEARCH.forEach(r=>{ if(!seen.has(r.key)) rows.push({live:null, r:r, play:null, nameGuess:r.key}); });
-
-  if(filter==='play'){
-    rows.sort((a,b)=>((b.play?b.play.play:-1)-(a.play?a.play.play:-1)));
-  }else{
-    rows.sort((a,b)=>((b.r?b.r.score:-1)-(a.r?a.r.score:-1)));
-  }
-
-  rows.forEach(row=>{
-    const l=row.live, r=row.r, pl=row.play;
-    if(filter==='play' && !pl) return;
-    const trig=(!l && r)?betTrigger(r):null;
-    const name = l? l.name : (r?prettyName(r.key):"?");
-    const siera = sieraFor(name);
-    const lv = LIVE[name.toLowerCase().split(' ').pop()];
-    const team = l? l.team : "";
-    if(q && !(name.toLowerCase().includes(q)||team.toLowerCase().includes(q))) return;
-    if(filter==='haveline' && !l) return;
-    if(filter==='under' && !(r&&r.score>=45)) return;
-    if(['cap','il','opener','trend'].includes(filter) && !(r&&r.flags[filter])) return;
-
-    const tier = r?('tier'+r.tier):'tier0';
-    const score = r?r.score:null;
-    const f = r?r.flags:{};
-    const chips=[
-      ['cap','Confirmed cap',f.cap],
-      ['il','IL / TJ return',f.il],
-      ['opener','Opener',f.opener],
-      ['trend','Short trend',f.trend],
-    ].map(([c,lab,on])=>`<span class="chip ${c} ${on?'on':''}" style="${on?'':'opacity:.3'}">${lab}</span>`).join('');
-
-    let lineHtml;
-    if(l){
-      lineHtml=`<div class="linerow">
-        <span class="pill pt">${l.point!=null?l.point:'—'} outs</span>
-        <span class="pill ov">O ${amer(l.over)}</span>
-        <span class="pill un">U ${amer(l.under)}</span>
-        <span class="pill book">${l.book||''}</span>
-        ${l.point!=null?`<span class="note" style="margin-left:auto">under = ≤${Math.floor(l.point)} outs = ${(Math.floor(l.point)/3).toFixed(1)} IP</span>`:''}
-      </div>`;
-    }else{
-      lineHtml=`<div class="linerow"><span class="pill book">No line posted yet — not bettable</span></div>`;
-    }
-
-    let liveHtml='';
-    if(lv){
-      const ip=(lv.outs/3).toFixed(1);
-      let tag='';
-      if(l&&l.point!=null){ const fl=Math.floor(l.point);
-        if(lv.outs>fl) tag=`<span class="badge" style="background:#2a1111;border:1px solid #6b2f2f;color:#ff7b72">UNDER BUSTED</span>`;
-        else if(lv.state==='Final') tag=`<span class="badge b-strong">UNDER HIT ✅</span>`;
-        else tag=`<span class="badge" style="background:#12291a;border:1px solid #2f6b3d;color:#7ee787">alive · needs ≤${fl}</span>`;
-      }
-      liveHtml=`<div class="linerow"><span class="pill" style="border-color:#6b2f2f;color:${lv.state==='Final'?'#8b98a5':'#ff5a5a'}">${lv.state==='Final'?'FINAL':'🔴 LIVE'} ${lv.outs} outs · ${ip} IP</span>${tag}</div>`;
-    }
-
-    grid.innerHTML+=`
-      <div class="card ${tier}">
-        <div class="top">
-          <div><div class="name">${name}</div><div class="team">${team}</div></div>
-          <div class="score"><div class="num ${scoreClass(score)}">${score==null?'—':score}</div><div class="lbl">Under Lean</div></div>
-        </div>
-        ${lineHtml}
-        ${liveHtml}
-        ${siera!=null?`<div class="linerow"><span class="pill" style="border-color:${siera>=4.5?'#f8514955':(siera<=3.2?'#3fb95055':'#2a3441')};color:${siera>=4.5?'#ff7b72':(siera<=3.2?'#7ee787':'#8b98a5')}">SIERA ${siera.toFixed(2)}${siera>=4.5?' · bad arm':(siera<=3.0?' · elite arm':'')}</span>${(pl&&pl.elite)?'<span class="badge b-strong">🔥 BAD + SHORT</span>':''}</div>`:''}
-        ${pl?`<div class="linerow"><span class="badge b-${pl.vt}">⭐ PLAY ${pl.play} · ${pl.vt.toUpperCase()}</span><span class="note">${pl.cushion>=0?'+':''}${pl.cushion} out cushion · under ${amer(l.under)}</span></div>`:''}
-        ${trig?`<div class="note">🎯 <b>Bet trigger:</b> take the under only if the line posts at <b>${trig.minLine}+ outs</b> (projected ~${trig.mid} outs). Below that, pass — even with a high Under Lean.</div>`:''}
-        ${r?`<div class="proj">Projected: <b>${r.proj}</b></div><div class="chips">${chips}</div><div class="note">${r.note}</div>`:''}
-      </div>`;
-  });
-  if(!grid.innerHTML) grid.innerHTML='<div class="note">No matches. Tap “Load live lines,” or clear the filter.</div>';
-}
-function prettyName(k){return k.charAt(0).toUpperCase()+k.slice(1);}
-
-// ---- Results tracker (localStorage + MLB Stats API) ----
-function loadPlays(){try{return JSON.parse(localStorage.getItem('uo_plays')||'[]');}catch(e){return[];}}
-function savePlays(p){try{localStorage.setItem('uo_plays',JSON.stringify(p));}catch(e){}}
-function localDate(){return new Date().toLocaleDateString('en-CA');}
-function tomorrowDate(){const d=new Date();d.setDate(d.getDate()+1);return d.toLocaleDateString('en-CA');}
-function payoutUnits(price){price=+price; if(isNaN(price)) price=-110; return price>=0?price/100:100/Math.abs(price);}
-
-function snapshotPlays(){
-  const today=localDate();
-  const start=localStorage.getItem('uo_track_start');
-  if(start && today < start){ renderResults(); return; }
-  const plays=loadPlays(); let added=false;
-  LINES.forEach(l=>{ const r=research(l.name); const pl=computePlay(l,r);
-    if(pl && pl.play>=60){ const id=today+'|'+l.name.toLowerCase();
-      if(!plays.some(p=>p.id===id)){ plays.push({id,date:today,name:l.name,team:l.team,line:l.point,side:'under',price:l.under,play:pl.play,graded:false}); added=true; }
-    }});
-  if(added) savePlays(plays);
-  renderResults();
-}
-function toggleLog(){ const f=document.getElementById('logform'); f.style.display=f.style.display==='none'?'flex':'none'; if(!document.getElementById('m_date').value) document.getElementById('m_date').value=localDate(); }
-function addManual(){
-  const name=document.getElementById('m_name').value.trim();
-  const line=parseFloat(document.getElementById('m_line').value);
-  const price=parseInt(document.getElementById('m_price').value);
-  const date=document.getElementById('m_date').value||localDate();
-  if(!name||isNaN(line)){ alert('Enter a pitcher name and a line'); return; }
-  const plays=loadPlays(); const id=date+'|'+name.toLowerCase();
-  if(!plays.some(p=>p.id===id)) plays.push({id,date,name,team:'(manual)',line,side:'under',price:isNaN(price)?-110:price,play:'manual',graded:false});
-  savePlays(plays);
-  document.getElementById('m_name').value=''; document.getElementById('m_line').value=''; document.getElementById('m_price').value='';
-  renderResults();
-}
-function clearPlays(){ if(confirm('Clear all logged bets and start fresh tomorrow? (nothing will auto-log for the rest of today)')){ savePlays([]); try{localStorage.setItem('uo_track_start',tomorrowDate());}catch(e){} renderResults(); } }
-function resumeTracking(){ try{localStorage.removeItem('uo_track_start');}catch(e){} if(LINES.length) snapshotPlays(); else renderResults(); }
-
-async function finalOutsForDate(date){
-  const map={};
-  try{
-    const s=await fetch(`https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=${date}`).then(r=>r.json());
-    const games=(s.dates&&s.dates[0]&&s.dates[0].games)||[];
-    for(const g of games){
-      if(!g.status||g.status.abstractGameState!=='Final') continue;
-      const bx=await fetch(`https://statsapi.mlb.com/api/v1/game/${g.gamePk}/boxscore`).then(r=>r.json());
-      ['home','away'].forEach(side=>{ const team=bx.teams&&bx.teams[side]; if(!team) return;
-        (team.pitchers||[]).forEach(pid=>{ const pl=team.players&&team.players['ID'+pid];
-          if(pl&&pl.stats&&pl.stats.pitching){ const nm=(pl.person&&pl.person.fullName)||''; const outs=pl.stats.pitching.outs;
-            if(nm&&outs!=null) map[nm.toLowerCase()]={outs:+outs,name:nm}; } });
-      });
-    }
-  }catch(e){}
-  return map;
-}
-async function gradeResults(){
-  const rec=document.getElementById('record'); rec.textContent=' grading…'; rec.style.color='var(--muted)';
-  const plays=loadPlays();
-  const dates=[...new Set(plays.filter(p=>!p.graded).map(p=>p.date))];
-  for(const d of dates){
-    const map=await finalOutsForDate(d);
-    plays.filter(p=>p.date===d&&!p.graded).forEach(p=>{
-      const last=p.name.toLowerCase().split(' ').pop();
-      let found=null;
-      for(const k in map){ if(k.split(' ').pop()===last){found=map[k];break;} }
-      if(!found){ for(const k in map){ if(k.includes(last)){found=map[k];break;} } }
-      if(found&&found.outs!=null){ p.outs=found.outs; p.graded=true;
-        const win = p.side==='under' ? (found.outs < p.line) : (found.outs > p.line);
-        p.result = win?'W':'L'; }
-    });
-  }
-  savePlays(plays); renderResults();
-}
-function recFor(graded,minScore){
-  const g=graded.filter(p=>typeof p.play==='number' && p.play>=minScore);
-  const w=g.filter(p=>p.result==='W').length, l=g.filter(p=>p.result==='L').length;
-  let u=0; g.forEach(p=>u+= p.result==='W'?payoutUnits(p.price):-1);
-  return {w,l,u,n:w+l};
-}
-function renderResults(){
-  const plays=loadPlays().slice().sort((a,b)=> b.date.localeCompare(a.date) || a.name.localeCompare(b.name));
-  const graded=plays.filter(p=>p.graded);
-  const rec=document.getElementById('record');
-  if(rec){
-    if(!graded.length){ rec.innerHTML='<span class="note">no graded bets yet</span>'; }
-    else{
-      const tiers=[['60+',60],['70+',70],['80+',80]];
-      const parts=tiers.map(([lbl,m])=>{ const r=recFor(graded,m); if(!r.n) return null;
-        return `${lbl}: <b style="color:${r.w>=r.l?'#7ee787':'#ff7b72'}">${r.w}-${r.l}</b> <span style="color:${r.u>=0?'#7ee787':'#ff7b72'}">${r.u>=0?'+':''}${r.u.toFixed(2)}u</span>`;
-      }).filter(Boolean);
-      rec.innerHTML = parts.length? parts.join(' &nbsp;&middot;&nbsp; ') : '<span class="note">graded, but no scored tiers</span>';
-    }
-  }
-  const box=document.getElementById('results'); if(!box) return;
-  if(!plays.length){
-    const start=localStorage.getItem('uo_track_start');
-    const paused = (start && localDate() < start) ? ` <b style="color:#e3b341">Tracking paused — auto-log resumes ${start}.</b> <span class="btn" style="padding:2px 8px" onclick="resumeTracking()">Start now instead</span>` : '';
-    box.innerHTML='<div class="note">No logged best bets yet. They auto-log when you load lines with a 70+ play, or add one manually above.'+paused+'</div>'; return;
-  }
-  const rows=plays.map(p=>{
-    const res=p.graded?`<b style="color:${p.result==='W'?'#7ee787':'#ff7b72'}">${p.result}</b> (${p.outs} outs)`:'<span class="note">pending</span>';
-    return `<tr><td>${p.date}</td><td>${p.name}</td><td>U ${p.line}</td><td>${amer(p.price)}</td><td>${p.play===undefined?'':p.play}</td><td>${res}</td></tr>`;
-  }).join('');
-  box.innerHTML=`<table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr style="color:var(--muted);text-align:left"><th>Date</th><th>Pitcher</th><th>Bet</th><th>Price</th><th>PLAY</th><th>Result</th></tr></thead><tbody>${rows}</tbody></table>`;
-}
-
-// ---- My Bets: the bets you actually placed (live-tracked + graded) ----
-function loadBets(){ try{return JSON.parse(localStorage.getItem('uo_mybets')||'[]');}catch(e){return[];} }
-function saveBets(b){ try{localStorage.setItem('uo_mybets',JSON.stringify(b));}catch(e){} }
-function betUnits(price){ price=+price; if(isNaN(price)) price=-110; return price>=0?price/100:100/Math.abs(price); }
-function addMyBet(){
-  const name=document.getElementById('mb_name').value.trim();
-  const line=parseFloat(document.getElementById('mb_line').value);
-  const price=parseInt(document.getElementById('mb_price').value);
-  if(!name||isNaN(line)){ alert('Enter a pitcher name and a line'); return; }
-  const b=loadBets();
-  b.push({id:'b'+Date.now(), date:new Date().toLocaleDateString('en-CA'), name, line, side:'under', price:isNaN(price)?-110:price});
-  saveBets(b);
-  ['mb_name','mb_line','mb_price'].forEach(id=>{const el=document.getElementById(id); if(el) el.value='';});
-  renderMyBets();
-}
-function removeMyBet(id){ saveBets(loadBets().filter(x=>x.id!==id)); renderMyBets(); }
-function clearMyBets(){ if(confirm('Remove all your bets?')){ saveBets([]); renderMyBets(); } }
-let AUTO_BETS=[];
 async function fetchBets(){ try{ const d=await fetch('bets.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]); if(Array.isArray(d)) AUTO_BETS=d; }catch(e){} renderMyBets(); }
-function allBets(){
-  const merged=AUTO_BETS.map(b=>({...b, auto:true}));
-  loadBets().forEach(m=>{ if(!merged.some(a=>a.name===m.name && a.line===m.line)) merged.push(m); });
-  return merged;
-}
+
 function renderMyBets(){
   const box=document.getElementById('mybets'); if(!box) return;
-  const bets=allBets(); let w=0,l=0,u=0;
+  const bets=AUTO_BETS; let w=0,l=0,u=0;
   const rows=bets.map(bt=>{
-    const lv=LIVE[bt.name.toLowerCase().split(' ').pop()];
-    const fl=Math.floor(bt.line);
-    const max=fl+4;
+    const lv=LIVE[bt.name.toLowerCase().split(' ').pop()]; const fl=Math.floor(bt.line); const max=fl+4;
     let outsTxt='—', col='var(--muted)', statL='<span class="note">not started</span>', statR='needs ≤'+fl, fillPct=0, fillCol='#2a3441';
-    if(lv){
-      const outs=lv.outs; outsTxt=outs+' outs'; fillPct=Math.min(100,Math.round(outs/max*100));
-      if(lv.state==='Final'){
-        const won=outs<bt.line;
-        if(won){w++;u+=betUnits(bt.price); col=fillCol='var(--accent)'; statL='<span style="color:var(--accent)">✓ won · +'+betUnits(bt.price).toFixed(2)+'u</span>';}
-        else{l++;u-=1; col=fillCol='var(--hot)'; statL='<span style="color:var(--hot)">✕ lost</span>';}
-        statR='final';
-      }else{
-        const busted=outs>fl; col=fillCol=busted?'var(--hot)':'var(--accent)';
-        statL='<span style="color:'+col+'">● live · '+(busted?'busted':'alive')+'</span>';
-      }
-    }
+    if(lv){ const o=lv.outs; outsTxt=o+' outs'; fillPct=Math.min(100,Math.round(o/max*100));
+      if(lv.state==='Final'){ const won=o<bt.line; if(won){w++;u+=betUnits(bt.price);col=fillCol='var(--accent)';statL='<span style="color:var(--accent)">✓ won · +'+betUnits(bt.price).toFixed(2)+'u</span>';} else {l++;u-=1;col=fillCol='var(--hot)';statL='<span style="color:var(--hot)">✕ lost</span>';} statR='final'; }
+      else { const bust=o>fl; col=fillCol=bust?'var(--hot)':'var(--accent)'; statL='<span style="color:'+col+'">● live · '+(bust?'busted':'alive')+'</span>'; } }
     const markPct=Math.round(fl/max*100);
-    return `<div class="bslip">
-      <div class="bslip-top"><span>${bt.name}</span><span style="color:${col}">${outsTxt}</span></div>
-      <div class="bslip-sub">Under ${bt.line} · ${amer(bt.price)}</div>
-      <div class="bslip-track"><div class="bslip-fill" style="width:${fillPct}%;background:${fillCol}"></div><div class="bslip-mark" style="left:${markPct}%"></div></div>
-      <div class="bslip-stat">${statL}<span class="note">${statR}</span></div>
-    </div>`;
+    const why = (bt.proj!=null?('model: proj '+bt.proj+' vs '+bt.line+(bt.edge!=null?' · +'+bt.edge+'% edge':'')):'');
+    return '<div class="bslip"><div class="top"><span>'+bt.name+'</span><span style="color:'+col+'">'+outsTxt+'</span></div>'
+      +'<div class="bsub">Under '+bt.line+' · '+AMER(bt.price)+(why?' · '+why:'')+'</div>'
+      +'<div class="track"><div class="fill" style="width:'+fillPct+'%;background:'+fillCol+'"></div><div class="mark" style="left:'+markPct+'%"></div></div>'
+      +'<div class="st">'+statL+'<span class="note">'+statR+'</span></div></div>';
   }).join('');
-  const rec=(w+l)?`<span style="color:${w>=l?'var(--accent)':'var(--hot)'}">${w}-${l}</span> · <span style="color:${u>=0?'var(--accent)':'var(--hot)'}">${u>=0?'+':''}${u.toFixed(2)}u</span>`:'<span class="note">none graded yet</span>';
-  box.innerHTML=`
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-      <b style="color:var(--text);font-size:15px">Your bets</b><span style="font-size:12px">${rec}</span></div>
-    ${bets.length?rows:'<div class="note">No bets yet — they appear here automatically when the bot alerts you.</div>'}`;
+  const rec=(w+l)?('<span style="color:'+(w>=l?'var(--accent)':'var(--hot)')+'">'+w+'-'+l+'</span> · <span style="color:'+(u>=0?'var(--accent)':'var(--hot)')+'">'+(u>=0?'+':'')+u.toFixed(2)+'u</span>'):'<span class="note">none graded yet</span>';
+  box.innerHTML='<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><b style="font-size:15px">Your bets</b><span style="font-size:12px">'+rec+'</span></div>'
+    +(bets.length?rows:'<div class="note">No bets yet — the bot adds them automatically when it finds a +EV under.</div>');
 }
 
-// ---- init (no auto-fetch; manual pull only) ----
-try{
-  const savedBook=localStorage.getItem('uo_book'); if(savedBook!==null) document.getElementById('book').value=savedBook;
-  document.getElementById('book').addEventListener('change',e=>{localStorage.setItem('uo_book',e.target.value); if(LINES.length) loadLive();});
-}catch(e){}
-render();
-renderResults();
-// Load the day's research + news from json (falls back to embedded copies if missing).
-fetch('research.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
-  if(Array.isArray(d)){ RESEARCH=d; render(); if(LINES.length) snapshotPlays(); }
-}).catch(()=>{});
-fetch('news.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
-  if(Array.isArray(d)){ NEWS=d; if(document.getElementById('newspanel').style.display!=='none') renderNews(); }
-}).catch(()=>{});
+function renderBoard(){
+  const grid=document.getElementById('grid'); if(!grid) return;
+  if(!LINES.length){ return; }
+  grid.innerHTML=LINES.slice().sort((a,b)=>(a.point||99)-(b.point||99)).map(l=>{
+    const lv=LIVE[l.name.toLowerCase().split(' ').pop()]; let live='';
+    if(lv){ const fl=Math.floor(l.point); const col=lv.state==='Final'?'#8b98a5':(lv.outs>fl?'#ff7b72':'#3fb950'); live='<span style="color:'+col+'">'+(lv.state==='Final'?'final ':'🔴 ')+lv.outs+' outs</span>'; }
+    return '<div class="bslip"><div class="top"><span>'+l.name+'</span><span class="note">'+(l.point!=null?l.point+' outs':'—')+'</span></div>'
+      +'<div class="bsub">'+l.team+' · O '+AMER(l.over)+' / U '+AMER(l.under)+' · '+(l.book||'')+'</div>'
+      +(live?'<div class="st">'+live+'<span class="note">'+(l.point!=null?'under ≤'+Math.floor(l.point):'')+'</span></div>':'')+'</div>';
+  }).join('');
+}
 
-// ---- auto-refresh (default ON for the phone build: loads on open + refreshes hourly) ----
-const AUTO_DEFAULT=true;
+try{ if(!localStorage.getItem('uo_reset_v5')){ ['uo_mybets','uo_plays','uo_seeded_0710','uo_seeded','uo_track_start','uo_book'].forEach(k=>localStorage.removeItem(k)); localStorage.setItem('uo_reset_v5','1'); } }catch(e){}
 let autoTimer=null;
-function applyAuto(){
-  const cb=document.getElementById('autoref');
-  if(autoTimer){clearInterval(autoTimer);autoTimer=null;}
-  if(cb.checked){ if(!LINES.length) loadLive(); autoTimer=setInterval(loadLive,3600000); }
-}
-(function setupAuto(){
-  const cb=document.getElementById('autoref');
-  const saved=localStorage.getItem('uo_autoref');
-  cb.checked = saved===null?AUTO_DEFAULT:(saved==='1');
-  cb.addEventListener('change',()=>{localStorage.setItem('uo_autoref',cb.checked?'1':'0');applyAuto();});
-  applyAuto();
-})();
-try{ if(!localStorage.getItem('uo_reset_v2')){ ['uo_mybets','uo_plays','uo_seeded_0710'].forEach(k=>localStorage.removeItem(k)); localStorage.setItem('uo_reset_v2','1'); } }catch(e){}
-renderMyBets();
-fetchBets();
-fetchLive();
-setInterval(()=>{ fetchBets(); fetchLive(); }, 120000); // refresh bets + live outs every 2 min while open
+function applyAuto(){ const cb=document.getElementById('autoref'); if(autoTimer){clearInterval(autoTimer);autoTimer=null;} if(cb.checked){ loadLive(); autoTimer=setInterval(()=>{loadLive();fetchBets();fetchLive();},3600000);} }
+(function(){ const cb=document.getElementById('autoref'); const s=localStorage.getItem('uo_autoref'); cb.checked=s==='1'; cb.addEventListener('change',()=>{localStorage.setItem('uo_autoref',cb.checked?'1':'0');applyAuto();}); applyAuto(); })();
+fetchBets(); fetchLive();
+setInterval(()=>{ fetchBets(); fetchLive(); }, 120000);
 </script>
 </body>
 </html>
