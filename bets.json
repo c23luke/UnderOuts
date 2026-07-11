@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "id": "2026-07-11|peralta",
+    "date": "2026-07-11",
+    "name": "Freddy Peralta",
+    "team": "Boston Red Sox @ New York Mets",
+    "line": 17.5,
+    "side": "under",
+    "price": -115,
+    "proj": 14.2,
+    "edge": 33,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|rocker",
+    "date": "2026-07-11",
+    "name": "Kumar Rocker",
+    "team": "Houston Astros @ Texas Rangers",
+    "line": 16.5,
+    "side": "under",
+    "price": -109,
+    "proj": 14.1,
+    "edge": 27,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|jump",
+    "date": "2026-07-11",
+    "name": "Gage Jump",
+    "team": "Athletics @ Chicago White Sox",
+    "line": 16.5,
+    "side": "under",
+    "price": -125,
+    "proj": 13.9,
+    "edge": 25,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|cameron",
+    "date": "2026-07-11",
+    "name": "Noah Cameron",
+    "team": "Kansas City Royals @ Baltimore Orioles",
+    "line": 15.5,
+    "side": "under",
+    "price": -104,
+    "proj": 14.6,
+    "edge": 11,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|bibee",
+    "date": "2026-07-11",
+    "name": "Tanner Bibee",
+    "team": "Cleveland Guardians @ Miami Marlins",
+    "line": 17.5,
+    "side": "under",
+    "price": 103,
+    "proj": 16.8,
+    "edge": 10,
+    "auto": true
+  }
+]
