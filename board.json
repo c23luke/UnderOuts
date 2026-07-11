@@ -12,88 +12,28 @@
     "bet": true
   },
   {
-    "name": "Tyler Mahle",
-    "team": "Colorado Rockies @ San Francisco Giants",
+    "name": "Nick Lodolo",
+    "team": "Chicago Cubs @ Cincinnati Reds",
     "line": 16.5,
-    "under": -105,
+    "under": -125,
     "book": "BetMGM",
-    "proj": 14.7,
-    "edge": 23,
-    "pUnder": 75,
-    "siera": 4.277620269415772,
-    "bet": true
-  },
-  {
-    "name": "Kyle Freeland",
-    "team": "Colorado Rockies @ San Francisco Giants",
-    "line": 17.5,
-    "under": -138,
-    "book": "FanDuel",
-    "proj": 15.3,
-    "edge": 19,
-    "pUnder": 77,
-    "siera": 4.263284763115281,
-    "bet": true
-  },
-  {
-    "name": "Griffin Jax",
-    "team": "Seattle Mariners @ Tampa Bay Rays",
-    "line": 14.5,
-    "under": 170,
-    "book": "BetMGM",
-    "proj": 14,
-    "edge": 18,
-    "pUnder": 55,
-    "siera": 3.68301279730026,
-    "bet": false
-  },
-  {
-    "name": "Freddy Peralta",
-    "team": "Boston Red Sox @ New York Mets",
-    "line": 17.5,
-    "under": -130,
-    "book": "Fanatics",
-    "proj": 15.6,
+    "proj": 14.8,
     "edge": 17,
-    "pUnder": 74,
-    "siera": 4.237485742709565,
+    "pUnder": 72,
+    "siera": 4.764531987080305,
     "bet": true
   },
   {
     "name": "Kumar Rocker",
     "team": "Houston Astros @ Texas Rangers",
     "line": 15.5,
-    "under": -105,
-    "book": "DraftKings",
+    "under": -108,
+    "book": "FanDuel",
     "proj": 14,
-    "edge": 16,
+    "edge": 15,
     "pUnder": 67,
     "siera": 4.311030986995121,
     "bet": true
-  },
-  {
-    "name": "Tanner Bibee",
-    "team": "Cleveland Guardians @ Miami Marlins",
-    "line": 17.5,
-    "under": 105,
-    "book": "Bovada",
-    "proj": 16.5,
-    "edge": 11,
-    "pUnder": 60,
-    "siera": 4.358942054145419,
-    "bet": false
-  },
-  {
-    "name": "Cam Schlittler",
-    "team": "New York Yankees @ Washington Nationals",
-    "line": 17.5,
-    "under": 119,
-    "book": "Caesars",
-    "proj": 17,
-    "edge": 10,
-    "pUnder": 56,
-    "siera": 2.967380770527248,
-    "bet": false
   },
   {
     "name": "Kyle Bradish",
@@ -108,27 +48,27 @@
     "bet": false
   },
   {
-    "name": "Nick Lodolo",
-    "team": "Chicago Cubs @ Cincinnati Reds",
-    "line": 15.5,
-    "under": -102,
-    "book": "FanDuel",
-    "proj": 14.8,
-    "edge": 9,
-    "pUnder": 60,
-    "siera": 4.764531987080305,
-    "bet": false
-  },
-  {
     "name": "Noah Cameron",
     "team": "Kansas City Royals @ Baltimore Orioles",
     "line": 16.5,
-    "under": -130,
-    "book": "Fanatics",
+    "under": -125,
+    "book": "BetMGM",
     "proj": 15.4,
-    "edge": 8,
+    "edge": 9,
     "pUnder": 65,
     "siera": 4.300232012025752,
+    "bet": false
+  },
+  {
+    "name": "Griffin Jax",
+    "team": "Seattle Mariners @ Tampa Bay Rays",
+    "line": 14.5,
+    "under": -125,
+    "book": "DraftKings",
+    "proj": 13,
+    "edge": 8,
+    "pUnder": 64,
+    "siera": 3.68301279730026,
     "bet": false
   },
   {
@@ -144,6 +84,18 @@
     "bet": false
   },
   {
+    "name": "Logan Gilbert",
+    "team": "Seattle Mariners @ Tampa Bay Rays",
+    "line": 17.5,
+    "under": 125,
+    "book": "Caesars",
+    "proj": 17.3,
+    "edge": 7,
+    "pUnder": 52,
+    "siera": 3.3467572660001252,
+    "bet": false
+  },
+  {
     "name": "Walker Buehler",
     "team": "Toronto Blue Jays @ San Diego Padres",
     "line": 15.5,
@@ -156,23 +108,11 @@
     "bet": false
   },
   {
-    "name": "Logan Gilbert",
-    "team": "Seattle Mariners @ Tampa Bay Rays",
-    "line": 17.5,
-    "under": 145,
-    "book": "BetOnline.ag",
-    "proj": 18,
-    "edge": 2,
-    "pUnder": 43,
-    "siera": 3.3467572660001252,
-    "bet": false
-  },
-  {
     "name": "Casey Mize",
     "team": "Philadelphia Phillies @ Detroit Tigers",
     "line": 17.5,
     "under": -135,
-    "book": "BetOnline.ag",
+    "book": "Fanatics",
     "proj": 17,
     "edge": -2,
     "pUnder": 55,
@@ -189,18 +129,6 @@
     "edge": -3,
     "pUnder": 57,
     "siera": 3.382864899557298,
-    "bet": false
-  },
-  {
-    "name": "Eury Perez",
-    "team": "Cleveland Guardians @ Miami Marlins",
-    "line": 16.5,
-    "under": -115,
-    "book": "Fanatics",
-    "proj": 16.6,
-    "edge": -5,
-    "pUnder": 49,
-    "siera": 3.8233595538835745,
     "bet": false
   },
   {
