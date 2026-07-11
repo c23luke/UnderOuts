@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "id": "2026-07-11|yesavage",
+    "date": "2026-07-11",
+    "name": "Trey Yesavage",
+    "team": "Toronto Blue Jays @ San Diego Padres",
+    "line": 17.5,
+    "side": "under",
+    "price": -105,
+    "proj": 14,
+    "edge": 36,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|mahle",
+    "date": "2026-07-11",
+    "name": "Tyler Mahle",
+    "team": "Colorado Rockies @ San Francisco Giants",
+    "line": 16.5,
+    "side": "under",
+    "price": -110,
+    "proj": 14.7,
+    "edge": 22,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|freeland",
+    "date": "2026-07-11",
+    "name": "Kyle Freeland",
+    "team": "Colorado Rockies @ San Francisco Giants",
+    "line": 17.5,
+    "side": "under",
+    "price": -135,
+    "proj": 15.3,
+    "edge": 20,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|peralta",
+    "date": "2026-07-11",
+    "name": "Freddy Peralta",
+    "team": "Boston Red Sox @ New York Mets",
+    "line": 17.5,
+    "side": "under",
+    "price": -130,
+    "proj": 15.6,
+    "edge": 17,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|rocker",
+    "date": "2026-07-11",
+    "name": "Kumar Rocker",
+    "team": "Houston Astros @ Texas Rangers",
+    "line": 15.5,
+    "side": "under",
+    "price": -103,
+    "proj": 14,
+    "edge": 16,
+    "auto": true
+  },
+  {
+    "id": "2026-07-11|johnson",
+    "date": "2026-07-11",
+    "name": "Ryan Johnson",
+    "team": "Los Angeles Angels @ Minnesota Twins",
+    "line": 15.5,
+    "side": "under",
+    "price": -150,
+    "proj": 13.5,
+    "edge": 12,
+    "auto": true
+  }
+]

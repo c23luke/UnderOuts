@@ -8,9 +8,8 @@
     "proj": 14,
     "edge": 36,
     "pUnder": 87,
-    "mean": 17.2,
-    "sd": 3.13,
-    "n": 13
+    "siera": 4.549453444619198,
+    "bet": true
   },
   {
     "name": "Tyler Mahle",
@@ -21,48 +20,44 @@
     "proj": 14.7,
     "edge": 22,
     "pUnder": 75,
-    "mean": 15.2,
-    "sd": 2.72,
-    "n": 14
+    "siera": 4.277620269415772,
+    "bet": true
   },
   {
     "name": "Kyle Freeland",
     "team": "Colorado Rockies @ San Francisco Giants",
     "line": 17.5,
-    "under": -129,
-    "book": "DraftKings",
+    "under": -135,
+    "book": "BetOnline.ag",
     "proj": 15.3,
-    "edge": 21,
+    "edge": 20,
     "pUnder": 77,
-    "mean": 15.6,
-    "sd": 2.95,
-    "n": 16
+    "siera": 4.263284763115281,
+    "bet": true
   },
   {
     "name": "Freddy Peralta",
     "team": "Boston Red Sox @ New York Mets",
     "line": 17.5,
-    "under": -119,
-    "book": "DraftKings",
+    "under": -130,
+    "book": "BetMGM",
     "proj": 15.6,
-    "edge": 19,
+    "edge": 17,
     "pUnder": 74,
-    "mean": 15.6,
-    "sd": 2.98,
-    "n": 19
+    "siera": 4.237485742709565,
+    "bet": true
   },
   {
     "name": "Kumar Rocker",
     "team": "Houston Astros @ Texas Rangers",
     "line": 15.5,
-    "under": 101,
-    "book": "DraftKings",
+    "under": -103,
+    "book": "Caesars",
     "proj": 14,
-    "edge": 17,
+    "edge": 16,
     "pUnder": 67,
-    "mean": 14.3,
-    "sd": 3.41,
-    "n": 15
+    "siera": 4.311030986995121,
+    "bet": true
   },
   {
     "name": "Griffin Jax",
@@ -73,35 +68,44 @@
     "proj": 14,
     "edge": 15,
     "pUnder": 55,
-    "mean": 13.4,
-    "sd": 3.68,
-    "n": 13
+    "siera": 3.68301279730026,
+    "bet": false
   },
   {
-    "name": "Joe Ryan",
+    "name": "Ryan Johnson",
     "team": "Los Angeles Angels @ Minnesota Twins",
-    "line": 17.5,
-    "under": 163,
-    "book": "Caesars",
-    "proj": 17.4,
-    "edge": 13,
-    "pUnder": 51,
-    "mean": 16.6,
-    "sd": 4.49,
-    "n": 19
+    "line": 15.5,
+    "under": -150,
+    "book": "DraftKings",
+    "proj": 13.5,
+    "edge": 12,
+    "pUnder": 72,
+    "siera": 4.616440827498826,
+    "bet": true
   },
   {
     "name": "Gage Jump",
     "team": "Athletics @ Chicago White Sox",
     "line": 17.5,
-    "under": -132,
+    "under": -137,
     "book": "DraftKings",
     "proj": 15.5,
-    "edge": 13,
+    "edge": 12,
     "pUnder": 70,
-    "mean": 15.6,
-    "sd": 3.89,
-    "n": 8
+    "siera": 4.035807548305836,
+    "bet": false
+  },
+  {
+    "name": "Joe Ryan",
+    "team": "Los Angeles Angels @ Minnesota Twins",
+    "line": 17.5,
+    "under": 156,
+    "book": "DraftKings",
+    "proj": 17.4,
+    "edge": 12,
+    "pUnder": 51,
+    "siera": 3.186155308085894,
+    "bet": false
   },
   {
     "name": "Tanner Bibee",
@@ -112,22 +116,8 @@
     "proj": 16.5,
     "edge": 11,
     "pUnder": 60,
-    "mean": 17,
-    "sd": 4.05,
-    "n": 19
-  },
-  {
-    "name": "Ryan Johnson",
-    "team": "Los Angeles Angels @ Minnesota Twins",
-    "line": 15.5,
-    "under": -162,
-    "book": "DraftKings",
-    "proj": 13.5,
-    "edge": 11,
-    "pUnder": 72,
-    "mean": 14.1,
-    "sd": 3.35,
-    "n": 5
+    "siera": 4.358942054145419,
+    "bet": false
   },
   {
     "name": "Brandon Sproat",
@@ -138,9 +128,8 @@
     "proj": 13.9,
     "edge": 11,
     "pUnder": 69,
-    "mean": 14.4,
-    "sd": 3.16,
-    "n": 15
+    "siera": 4.145378496124429,
+    "bet": false
   },
   {
     "name": "Cam Schlittler",
@@ -151,35 +140,20 @@
     "proj": 17,
     "edge": 10,
     "pUnder": 56,
-    "mean": 17.7,
-    "sd": 3.23,
-    "n": 19
+    "siera": 2.967380770527248,
+    "bet": false
   },
   {
     "name": "Kyle Bradish",
     "team": "Kansas City Royals @ Baltimore Orioles",
     "line": 17.5,
-    "under": 111,
-    "book": "DraftKings",
+    "under": 115,
+    "book": "BetMGM",
     "proj": 16.9,
-    "edge": 8,
+    "edge": 9,
     "pUnder": 56,
-    "mean": 17.1,
-    "sd": 4.09,
-    "n": 18
-  },
-  {
-    "name": "Noah Cameron",
-    "team": "Kansas City Royals @ Baltimore Orioles",
-    "line": 16.5,
-    "under": -130,
-    "book": "Fanatics",
-    "proj": 15.4,
-    "edge": 8,
-    "pUnder": 65,
-    "mean": 15.6,
-    "sd": 2.9,
-    "n": 17
+    "siera": 4.296800430712088,
+    "bet": false
   },
   {
     "name": "Nick Lodolo",
@@ -187,12 +161,23 @@
     "line": 15.5,
     "under": -102,
     "book": "FanDuel",
-    "proj": 14.9,
+    "proj": 14.8,
+    "edge": 9,
+    "pUnder": 60,
+    "siera": 4.764531987080305,
+    "bet": false
+  },
+  {
+    "name": "Noah Cameron",
+    "team": "Kansas City Royals @ Baltimore Orioles",
+    "line": 16.5,
+    "under": -130,
+    "book": "BetMGM",
+    "proj": 15.4,
     "edge": 8,
-    "pUnder": 58,
-    "mean": 15.7,
-    "sd": 2.85,
-    "n": 11
+    "pUnder": 65,
+    "siera": 4.300232012025752,
+    "bet": false
   },
   {
     "name": "Peter Lambert",
@@ -203,9 +188,8 @@
     "proj": 16.5,
     "edge": 6,
     "pUnder": 63,
-    "mean": 17.2,
-    "sd": 2.91,
-    "n": 14
+    "siera": 4.382264000137164,
+    "bet": false
   },
   {
     "name": "Walker Buehler",
@@ -216,9 +200,8 @@
     "proj": 14.9,
     "edge": 5,
     "pUnder": 58,
-    "mean": 14.7,
-    "sd": 3.06,
-    "n": 18
+    "siera": 4.132094427875806,
+    "bet": false
   },
   {
     "name": "Logan Gilbert",
@@ -229,9 +212,8 @@
     "proj": 18,
     "edge": 2,
     "pUnder": 43,
-    "mean": 18.2,
-    "sd": 2.77,
-    "n": 18
+    "siera": 3.3467572660001252,
+    "bet": false
   },
   {
     "name": "Cristopher Sanchez",
@@ -242,9 +224,8 @@
     "proj": 18,
     "edge": 1,
     "pUnder": 45,
-    "mean": 19,
-    "sd": 3.85,
-    "n": 19
+    "siera": 2.8448019890638605,
+    "bet": false
   },
   {
     "name": "Yoshinobu Yamamoto",
@@ -255,9 +236,8 @@
     "proj": 18,
     "edge": -3,
     "pUnder": 57,
-    "mean": 19.8,
-    "sd": 2.99,
-    "n": 16
+    "siera": 3.382864899557298,
+    "bet": false
   },
   {
     "name": "Casey Mize",
@@ -268,9 +248,8 @@
     "proj": 17,
     "edge": -5,
     "pUnder": 45,
-    "mean": 16.7,
-    "sd": 3.91,
-    "n": 13
+    "siera": 3.590404343750073,
+    "bet": false
   },
   {
     "name": "Eury Perez",
@@ -281,9 +260,8 @@
     "proj": 16.6,
     "edge": -5,
     "pUnder": 49,
-    "mean": 16,
-    "sd": 3.12,
-    "n": 15
+    "siera": 3.8233595538835745,
+    "bet": false
   },
   {
     "name": "Javier Assad",
@@ -294,9 +272,8 @@
     "proj": 15.4,
     "edge": -9,
     "pUnder": 37,
-    "mean": 15.8,
-    "sd": 2.7,
-    "n": 7
+    "siera": 4.772792936693159,
+    "bet": false
   },
   {
     "name": "Brandon Pfaadt",
@@ -307,21 +284,7 @@
     "proj": 15.2,
     "edge": -11,
     "pUnder": 40,
-    "mean": 16.1,
-    "sd": 2.84,
-    "n": 5
-  },
-  {
-    "name": "Braxton Ashcraft",
-    "team": "Milwaukee Brewers @ Pittsburgh Pirates",
-    "line": 14.5,
-    "under": 106,
-    "book": "DraftKings",
-    "proj": 18.5,
-    "edge": -41,
-    "pUnder": 8,
-    "mean": 18,
-    "sd": 2.78,
-    "n": 18
+    "siera": 4.328406824197435,
+    "bet": false
   }
 ]
