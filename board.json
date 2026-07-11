@@ -1,17 +1,5 @@
 [
   {
-    "name": "Ryan Johnson",
-    "team": "Los Angeles Angels @ Minnesota Twins",
-    "line": 16.5,
-    "under": -115,
-    "book": "Fanatics",
-    "proj": 11,
-    "edge": 35,
-    "pUnder": 88,
-    "siera": 4.616440827498826,
-    "bet": true
-  },
-  {
     "name": "Trey Yesavage",
     "team": "Toronto Blue Jays @ San Diego Padres",
     "line": 17.5,
@@ -39,10 +27,10 @@
     "name": "Kyle Freeland",
     "team": "Colorado Rockies @ San Francisco Giants",
     "line": 17.5,
-    "under": -125,
-    "book": "BetMGM",
+    "under": -138,
+    "book": "FanDuel",
     "proj": 15.3,
-    "edge": 22,
+    "edge": 19,
     "pUnder": 77,
     "siera": 4.263284763115281,
     "bet": true
@@ -72,28 +60,28 @@
     "bet": true
   },
   {
-    "name": "Joe Ryan",
-    "team": "Los Angeles Angels @ Minnesota Twins",
-    "line": 17.5,
-    "under": 136,
-    "book": "Caesars",
-    "proj": 16.5,
-    "edge": 15,
-    "pUnder": 58,
-    "siera": 3.186155308085894,
-    "bet": true
-  },
-  {
     "name": "Kumar Rocker",
     "team": "Houston Astros @ Texas Rangers",
     "line": 15.5,
-    "under": -108,
-    "book": "FanDuel",
+    "under": -105,
+    "book": "DraftKings",
     "proj": 14,
-    "edge": 15,
+    "edge": 16,
     "pUnder": 67,
     "siera": 4.311030986995121,
     "bet": true
+  },
+  {
+    "name": "Tanner Bibee",
+    "team": "Cleveland Guardians @ Miami Marlins",
+    "line": 17.5,
+    "under": 105,
+    "book": "Bovada",
+    "proj": 16.5,
+    "edge": 11,
+    "pUnder": 60,
+    "siera": 4.358942054145419,
+    "bet": false
   },
   {
     "name": "Cam Schlittler",
@@ -105,18 +93,6 @@
     "edge": 10,
     "pUnder": 56,
     "siera": 2.967380770527248,
-    "bet": false
-  },
-  {
-    "name": "Tanner Bibee",
-    "team": "Cleveland Guardians @ Miami Marlins",
-    "line": 17.5,
-    "under": 100,
-    "book": "BetOnline.ag",
-    "proj": 16.5,
-    "edge": 10,
-    "pUnder": 60,
-    "siera": 4.358942054145419,
     "bet": false
   },
   {
@@ -132,18 +108,6 @@
     "bet": false
   },
   {
-    "name": "Noah Cameron",
-    "team": "Kansas City Royals @ Baltimore Orioles",
-    "line": 16.5,
-    "under": -125,
-    "book": "BetMGM",
-    "proj": 15.4,
-    "edge": 9,
-    "pUnder": 65,
-    "siera": 4.300232012025752,
-    "bet": false
-  },
-  {
     "name": "Nick Lodolo",
     "team": "Chicago Cubs @ Cincinnati Reds",
     "line": 15.5,
@@ -156,13 +120,25 @@
     "bet": false
   },
   {
+    "name": "Noah Cameron",
+    "team": "Kansas City Royals @ Baltimore Orioles",
+    "line": 16.5,
+    "under": -130,
+    "book": "Fanatics",
+    "proj": 15.4,
+    "edge": 8,
+    "pUnder": 65,
+    "siera": 4.300232012025752,
+    "bet": false
+  },
+  {
     "name": "Peter Lambert",
     "team": "Houston Astros @ Texas Rangers",
     "line": 17.5,
-    "under": -130,
-    "book": "Fanatics",
+    "under": -125,
+    "book": "BetMGM",
     "proj": 16.5,
-    "edge": 7,
+    "edge": 8,
     "pUnder": 63,
     "siera": 4.382264000137164,
     "bet": false
@@ -216,6 +192,18 @@
     "bet": false
   },
   {
+    "name": "Eury Perez",
+    "team": "Cleveland Guardians @ Miami Marlins",
+    "line": 16.5,
+    "under": -115,
+    "book": "Fanatics",
+    "proj": 16.6,
+    "edge": -5,
+    "pUnder": 49,
+    "siera": 3.8233595538835745,
+    "bet": false
+  },
+  {
     "name": "Brandon Pfaadt",
     "team": "Arizona Diamondbacks @ Los Angeles Dodgers",
     "line": 14.5,
@@ -225,18 +213,6 @@
     "edge": -5,
     "pUnder": 40,
     "siera": 4.328406824197435,
-    "bet": false
-  },
-  {
-    "name": "Eury Perez",
-    "team": "Cleveland Guardians @ Miami Marlins",
-    "line": 16.5,
-    "under": -118,
-    "book": "FanDuel",
-    "proj": 16.6,
-    "edge": -5,
-    "pUnder": 49,
-    "siera": 3.8233595538835745,
     "bet": false
   },
   {
@@ -255,10 +231,10 @@
     "name": "Cristopher Sanchez",
     "team": "Philadelphia Phillies @ Detroit Tigers",
     "line": 18.5,
-    "under": -175,
+    "under": -164,
     "book": "DraftKings",
     "proj": 18,
-    "edge": -8,
+    "edge": -7,
     "pUnder": 55,
     "siera": 2.8448019890638605,
     "bet": false
