@@ -157,24 +157,7 @@
 
 <script>
 // ---- Research overlay (fallback; live copy loaded from /research.json at startup) ----
-let RESEARCH = [
-  {key:"sandoval", tier:1, score:80, flags:{il:1}, proj:"~4 IP (11–13 outs)",
-   note:"<b>Top under.</b> First start back after a 2-year Tommy John layoff. Rehab pitch count only reached ~68 — expect a hard ~65–75 pitch / ~4-inning cap. Confirm he's starting."},
-  {key:"henderson", tier:2, score:55, flags:{rookie:1}, proj:"~5 IP (14–16 outs)",
-   note:"Brewers rookie being eased in — ~74 pitches recently, targeting 80 this start. Moderate under, best on higher lines."},
-  {key:"perkins", tier:2, score:48, flags:{rookie:1}, proj:"~4.2–5 IP (13–16 outs)",
-   note:"A's rookie/swingman on managed pitch counts — 75 then 85 pitches, ~5 IP, sometimes used in relief. Under lean on 16.5+."},
-  {key:"rasmussen", tier:3, score:32, flags:{}, proj:"~5.2–6 IP (16–18 outs)",
-   note:"<b>No longer a cap play.</b> Rays loosened his reins for 2026 (~170 IP target) after limiting him to 6 IP max all 2025. Neutral, line-dependent."},
-  {key:"eovaldi", tier:3, score:28, flags:{vet:1}, proj:"~6 IP (17–19 outs)",
-   note:"Veteran (36) — can go 6–7 when sharp, but an age/workload watch. Lean over/neutral unless a limit is announced."},
-  {key:"luzardo", tier:3, score:30, flags:{}, proj:"~5–6 IP (15–18 outs)",
-   note:"Mid-rotation lefty, typically 5–6 IP. Neutral — depends on the line and price."},
-  {key:"valdez", tier:3, score:16, flags:{}, proj:"~6.2–7 IP (20–21 outs)",
-   note:"Astros workhorse, routinely 6+ deep innings. Strong <b>over</b> lean."},
-  {key:"keller", tier:3, score:20, flags:{}, proj:"~6–7 IP (18–21 outs)",
-   note:"Pirates innings-eater, usually 6+. <b>Over</b> lean."},
-];
+let RESEARCH = [];
 function research(name){
   const n=(name||'').toLowerCase();
   return RESEARCH.find(r=>n.includes(r.key))||null;
@@ -184,20 +167,7 @@ function sieraFor(name){ const r=research(name); return (r&&typeof r.siera==='nu
 function sieraBump(s){ return s==null?0:Math.max(-10,Math.min(15,(s-4.0)*5)); }
 
 // ---- Workload news feed (fallback; live copy loaded from /news.json at startup) ----
-let NEWS = [
-  {pitcher:"Patrick Sandoval", team:"BOS", date:"2026-07-09", strength:"strong",
-   quote:"Ran his pitch count only to 68 in his final rehab start; Red Sox say they'll \"continue to build up his pitch count\" and hadn't locked starter vs reliever — likely on a restriction in his first game back.",
-   source:"MLB.com", url:"https://www.mlb.com/news/patrick-sandoval-throws-four-innings-in-rehab-start"},
-  {pitcher:"Logan Henderson", team:"MIL", date:"2026-07-09", strength:"moderate",
-   quote:"Brewers easing him in — threw 74 pitches last time with plans to \"crack the 80-pitch marker\" this start.",
-   source:"CBS Sports", url:"https://www.cbssports.com/mlb/players/29075729/logan-henderson/"},
-  {pitcher:"Jack Perkins", team:"ATH", date:"2026-07-09", strength:"moderate",
-   quote:"On a managed build-up — 75 then 85 pitches in back-to-back starts, ~5 IP, still used as a swingman.",
-   source:"CBS Sports", url:"https://www.cbssports.com/fantasy/baseball/news/athletics-jack-perkins-handed-another-start-1007949/"},
-  {pitcher:"Drew Rasmussen", team:"TB", date:"2026-07-09", strength:"caution",
-   quote:"NOT a limit this year — coach Kyle Snyder called ~170 innings \"very reasonable\" for 2026 after capping him at 6 IP max all 2025. Logged so you don't mistake him for an under.",
-   source:"MLB.com", url:"https://www.mlb.com/news/drew-rasmussen-settling-into-transition-to-rays-rotation"},
-];
+let NEWS = [];
 function renderNews(){
   const box=document.getElementById('newspanel'); if(!box) return;
   const color={strong:'#7ee787',moderate:'#e3b341',caution:'#ff7b72'};
@@ -594,7 +564,7 @@ render();
 renderResults();
 // Load the day's research + news from json (falls back to embedded copies if missing).
 fetch('research.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
-  if(Array.isArray(d)&&d.length){ RESEARCH=d; render(); if(LINES.length) snapshotPlays(); }
+  if(Array.isArray(d)){ RESEARCH=d; render(); if(LINES.length) snapshotPlays(); }
 }).catch(()=>{});
 fetch('news.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{
   if(Array.isArray(d)){ NEWS=d; if(document.getElementById('newspanel').style.display!=='none') renderNews(); }
