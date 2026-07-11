@@ -82,5 +82,17 @@
     "proj": 14.8,
     "edge": 16,
     "auto": true
+  },
+  {
+    "id": "2026-07-11|jump",
+    "date": "2026-07-11",
+    "name": "Gage Jump",
+    "team": "Athletics @ Chicago White Sox",
+    "line": 17.5,
+    "side": "under",
+    "price": -136,
+    "proj": 15.5,
+    "edge": 12,
+    "auto": true
   }
 ]
