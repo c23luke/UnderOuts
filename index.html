@@ -66,16 +66,16 @@ function renderMyBets(){
   const box=document.getElementById('mybets'); if(!box) return;
   let w=0,l=0,u=0;
   const rows=BETS.map(bt=>{
-    const fl=Math.floor(bt.line), max=fl+4; const s=liveStatus(bt.name,bt.line);
-    let outsTxt='—',col='var(--muted)',statL='<span class="note">not started</span>',statR='needs ≤'+fl,fillPct=0,fillCol='#2a3441';
-    if(s){ outsTxt=s.outs+' outs'; fillPct=Math.min(100,Math.round(s.outs/max*100));
-      if(s.final){ if(s.won){w++;u+=betUnits(bt.price);col=fillCol='var(--accent)';statL='<span style="color:var(--accent)">✓ won · +'+betUnits(bt.price).toFixed(2)+'u</span>';} else {l++;u-=1;col=fillCol='var(--hot)';statL='<span style="color:var(--hot)">✕ lost</span>';} statR='final'; }
-      else { col=fillCol=s.busted?'var(--hot)':'var(--accent)'; statL='<span style="color:'+col+'">● live · '+(s.busted?'busted':'alive')+'</span>'; } }
+    const fl=Math.floor(bt.line); const s=liveStatus(bt.name,bt.line);
+    let outsTxt='—',col='var(--muted)',statL='<span class="note">not started</span>',statR=fl+' to stay under',fillPct=100,fillCol='#2f3b4d';
+    if(s){ const o=s.outs; outsTxt=o+' outs'; fillPct=Math.max(0,Math.round((fl-o)/fl*100));
+      if(s.final){ if(s.won){w++;u+=betUnits(bt.price);col=fillCol='var(--accent)';statL='<span style="color:var(--accent)">✓ won · +'+betUnits(bt.price).toFixed(2)+'u</span>';} else {l++;u-=1;col=fillCol='var(--hot)';fillPct=0;statL='<span style="color:var(--hot)">✕ lost</span>';} statR='final'; }
+      else { const bust=s.busted; col=fillCol=bust?'var(--hot)':'var(--accent)'; if(bust) fillPct=0; statL='<span style="color:'+col+'">● live · '+(bust?'busted':'alive')+'</span>'; statR=bust?'busted':((fl-o)+' outs to spare'); } }
     const why = bt.proj!=null ? ('We project ~<b>'+bt.proj+' outs</b> vs the '+bt.line+' line'+(bt.edge!=null?' — a <b style="color:var(--accent)">+'+bt.edge+'% edge</b>':'')+'.') : '';
     return '<div class="card bet"><div class="top"><span>'+bt.name+'</span><span style="color:'+col+'">'+outsTxt+'</span></div>'
       +'<div class="bsub">Under '+bt.line+' · '+AMER(bt.price)+'</div>'
       +(why?'<div class="why">'+why+'</div>':'')
-      +'<div class="track"><div class="fill" style="width:'+fillPct+'%;background:'+fillCol+'"></div><div class="mark" style="left:'+Math.round(fl/max*100)+'%"></div></div>'
+      +'<div class="track"><div class="fill" style="width:'+fillPct+'%;background:'+fillCol+'"></div></div>'
       +'<div class="st">'+statL+'<span class="note">'+statR+'</span></div></div>';
   }).join('');
   const rec=(w+l)?('<span style="color:'+(w>=l?'var(--accent)':'var(--hot)')+'">'+w+'-'+l+'</span> · <span style="color:'+(u>=0?'var(--accent)':'var(--hot)')+'">'+(u>=0?'+':'')+u.toFixed(2)+'u</span>'):'<span class="note">none graded yet</span>';
