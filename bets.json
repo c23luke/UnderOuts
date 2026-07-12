@@ -130,5 +130,29 @@
     "proj": 18,
     "edge": 27,
     "auto": true
+  },
+  {
+    "id": "2026-07-12|lorenzen",
+    "date": "2026-07-12",
+    "name": "Michael Lorenzen",
+    "team": "Colorado Rockies @ San Francisco Giants",
+    "line": 16.5,
+    "side": "under",
+    "price": -115,
+    "proj": 13.8,
+    "edge": 26,
+    "auto": true
+  },
+  {
+    "id": "2026-07-12|schultz",
+    "date": "2026-07-12",
+    "name": "Noah Schultz",
+    "team": "Athletics @ Chicago White Sox",
+    "line": 15.5,
+    "side": "under",
+    "price": -163,
+    "proj": 13.3,
+    "edge": 16,
+    "auto": true
   }
 ]
