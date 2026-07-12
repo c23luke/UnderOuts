@@ -132,15 +132,15 @@
     "bet": false
   },
   {
-    "name": "Cade Cavalli",
-    "team": "New York Yankees @ Washington Nationals",
-    "line": 14.5,
-    "under": 125,
-    "book": "Bovada",
-    "proj": 14.9,
-    "edge": 2,
-    "pUnder": 46,
-    "siera": 3.59688847850125,
+    "name": "Jose Soriano",
+    "team": "Los Angeles Angels @ Minnesota Twins",
+    "line": 16.5,
+    "under": -111,
+    "book": "DraftKings",
+    "proj": 16.2,
+    "edge": 1,
+    "pUnder": 53,
+    "siera": 4.005172315792379,
     "bet": false
   },
   {
@@ -156,27 +156,27 @@
     "bet": false
   },
   {
-    "name": "Jose Soriano",
-    "team": "Los Angeles Angels @ Minnesota Twins",
-    "line": 16.5,
-    "under": -116,
-    "book": "DraftKings",
-    "proj": 16.2,
-    "edge": 0,
-    "pUnder": 53,
-    "siera": 4.005172315792379,
-    "bet": false
-  },
-  {
     "name": "Joey Cantillo",
     "team": "Cleveland Guardians @ Miami Marlins",
     "line": 15.5,
-    "under": -150,
-    "book": "Fanatics",
+    "under": -148,
+    "book": "Caesars",
     "proj": 14.7,
     "edge": -1,
     "pUnder": 59,
     "siera": 4.431683681046908,
+    "bet": false
+  },
+  {
+    "name": "Cade Cavalli",
+    "team": "New York Yankees @ Washington Nationals",
+    "line": 15.5,
+    "under": -137,
+    "book": "Caesars",
+    "proj": 14.9,
+    "edge": -3,
+    "pUnder": 55,
+    "siera": 3.59688847850125,
     "bet": false
   },
   {
@@ -207,10 +207,10 @@
     "name": "Seth Lugo",
     "team": "Kansas City Royals @ Baltimore Orioles",
     "line": 15.5,
-    "under": -135,
+    "under": -140,
     "book": "Fanatics",
     "proj": 16.1,
-    "edge": -15,
+    "edge": -16,
     "pUnder": 42,
     "siera": 4.5323021499973795,
     "bet": false
@@ -242,12 +242,12 @@
   {
     "name": "Emerson Hancock",
     "team": "Seattle Mariners @ Tampa Bay Rays",
-    "line": 16.5,
-    "under": -170,
-    "book": "Fanatics",
+    "line": 15.5,
+    "under": 102,
+    "book": "Caesars",
     "proj": 17.2,
     "edge": -23,
-    "pUnder": 40,
+    "pUnder": 26,
     "siera": 3.7479195553032616,
     "bet": false
   }
