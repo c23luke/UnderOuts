@@ -24,6 +24,18 @@
     "bet": true
   },
   {
+    "name": "Paul Skenes",
+    "team": "Milwaukee Brewers @ Pittsburgh Pirates",
+    "line": 17.5,
+    "under": 135,
+    "book": "Fanatics",
+    "proj": 17,
+    "edge": 12,
+    "pUnder": 54,
+    "siera": 3.0969645239792483,
+    "bet": false
+  },
+  {
     "name": "Taj Bradley",
     "team": "Los Angeles Angels @ Minnesota Twins",
     "line": 17.5,
@@ -36,18 +48,6 @@
     "bet": false
   },
   {
-    "name": "Paul Skenes",
-    "team": "Milwaukee Brewers @ Pittsburgh Pirates",
-    "line": 17.5,
-    "under": 130,
-    "book": "FanDuel",
-    "proj": 17,
-    "edge": 11,
-    "pUnder": 54,
-    "siera": 3.0969645239792483,
-    "bet": false
-  },
-  {
     "name": "Robert Gasser",
     "team": "Milwaukee Brewers @ Pittsburgh Pirates",
     "line": 17.5,
@@ -57,18 +57,6 @@
     "edge": 10,
     "pUnder": 65,
     "siera": 4.353168095765975,
-    "bet": false
-  },
-  {
-    "name": "German Marquez",
-    "team": "Toronto Blue Jays @ San Diego Padres",
-    "line": 14.5,
-    "under": 120,
-    "book": "Bovada",
-    "proj": 14.2,
-    "edge": 8,
-    "pUnder": 54,
-    "siera": 5.585546562847026,
     "bet": false
   },
   {
@@ -99,12 +87,36 @@
     "name": "Kevin Gausman",
     "team": "Toronto Blue Jays @ San Diego Padres",
     "line": 17.5,
-    "under": 130,
+    "under": 125,
     "book": "Fanatics",
     "proj": 17.4,
-    "edge": 8,
+    "edge": 7,
     "pUnder": 51,
     "siera": 3.7576612162351184,
+    "bet": false
+  },
+  {
+    "name": "German Marquez",
+    "team": "Toronto Blue Jays @ San Diego Padres",
+    "line": 14.5,
+    "under": 109,
+    "book": "Caesars",
+    "proj": 14.2,
+    "edge": 6,
+    "pUnder": 54,
+    "siera": 5.585546562847026,
+    "bet": false
+  },
+  {
+    "name": "Dustin May",
+    "team": "Atlanta Braves @ St. Louis Cardinals",
+    "line": 16.5,
+    "under": -107,
+    "book": "DraftKings",
+    "proj": 15.7,
+    "edge": 4,
+    "pUnder": 56,
+    "siera": 3.821063017974563,
     "bet": false
   },
   {
@@ -132,18 +144,6 @@
     "bet": false
   },
   {
-    "name": "Dustin May",
-    "team": "Atlanta Braves @ St. Louis Cardinals",
-    "line": 16.5,
-    "under": -111,
-    "book": "DraftKings",
-    "proj": 15.7,
-    "edge": 4,
-    "pUnder": 56,
-    "siera": 3.821063017974563,
-    "bet": false
-  },
-  {
     "name": "JT Ginn",
     "team": "Athletics @ Chicago White Sox",
     "line": 16.5,
@@ -153,18 +153,6 @@
     "edge": 3,
     "pUnder": 57,
     "siera": 4.4983223749031245,
-    "bet": false
-  },
-  {
-    "name": "Jose Soriano",
-    "team": "Los Angeles Angels @ Minnesota Twins",
-    "line": 16.5,
-    "under": -111,
-    "book": "DraftKings",
-    "proj": 16.2,
-    "edge": 1,
-    "pUnder": 53,
-    "siera": 4.005172315792379,
     "bet": false
   },
   {
@@ -184,11 +172,23 @@
     "team": "Cleveland Guardians @ Miami Marlins",
     "line": 15.5,
     "under": -148,
-    "book": "Caesars",
+    "book": "FanDuel",
     "proj": 14.7,
     "edge": -1,
     "pUnder": 59,
     "siera": 4.431683681046908,
+    "bet": false
+  },
+  {
+    "name": "Tarik Skubal",
+    "team": "Philadelphia Phillies @ Detroit Tigers",
+    "line": 17.5,
+    "under": 148,
+    "book": "FanDuel",
+    "proj": 18.7,
+    "edge": -7,
+    "pUnder": 33,
+    "siera": 2.696155980028643,
     "bet": false
   },
   {
@@ -204,25 +204,25 @@
     "bet": false
   },
   {
-    "name": "Tarik Skubal",
-    "team": "Philadelphia Phillies @ Detroit Tigers",
-    "line": 17.5,
-    "under": 130,
-    "book": "Bovada",
-    "proj": 18.7,
-    "edge": -10,
-    "pUnder": 33,
-    "siera": 2.696155980028643,
+    "name": "Jose Soriano",
+    "team": "Los Angeles Angels @ Minnesota Twins",
+    "line": 15.5,
+    "under": -106,
+    "book": "Caesars",
+    "proj": 16.2,
+    "edge": -9,
+    "pUnder": 42,
+    "siera": 4.005172315792379,
     "bet": false
   },
   {
     "name": "Ian Seymour",
     "team": "Seattle Mariners @ Tampa Bay Rays",
     "line": 15.5,
-    "under": -180,
+    "under": -170,
     "book": "Bovada",
     "proj": 15.1,
-    "edge": -10,
+    "edge": -9,
     "pUnder": 54,
     "siera": 3.383506069242502,
     "bet": false
@@ -240,27 +240,27 @@
     "bet": false
   },
   {
-    "name": "Emerson Hancock",
-    "team": "Seattle Mariners @ Tampa Bay Rays",
-    "line": 16.5,
-    "under": -120,
-    "book": "FanDuel",
-    "proj": 17.2,
-    "edge": -15,
-    "pUnder": 40,
-    "siera": 3.7479195553032616,
-    "bet": false
-  },
-  {
     "name": "Zack Wheeler",
     "team": "Philadelphia Phillies @ Detroit Tigers",
     "line": 17.5,
     "under": 140,
-    "book": "Fanatics",
+    "book": "FanDuel",
     "proj": 19.5,
     "edge": -19,
     "pUnder": 23,
     "siera": 3.062393357271942,
+    "bet": false
+  },
+  {
+    "name": "Emerson Hancock",
+    "team": "Seattle Mariners @ Tampa Bay Rays",
+    "line": 15.5,
+    "under": -110,
+    "book": "DraftKings",
+    "proj": 17.2,
+    "edge": -26,
+    "pUnder": 26,
+    "siera": 3.7479195553032616,
     "bet": false
   }
 ]
