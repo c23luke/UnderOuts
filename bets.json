@@ -22,5 +22,29 @@
     "proj": 13.3,
     "edge": 19,
     "auto": true
+  },
+  {
+    "id": "2026-07-12|javier",
+    "date": "2026-07-12",
+    "name": "Cristian Javier",
+    "team": "Houston Astros @ Texas Rangers",
+    "line": 12.5,
+    "side": "under",
+    "price": -135,
+    "proj": 6.1,
+    "edge": 35,
+    "auto": true
+  },
+  {
+    "id": "2026-07-12|seymour",
+    "date": "2026-07-12",
+    "name": "Ian Seymour",
+    "team": "Seattle Mariners @ Tampa Bay Rays",
+    "line": 15,
+    "side": "under",
+    "price": -120,
+    "proj": 11,
+    "edge": 31,
+    "auto": true
   }
 ]
