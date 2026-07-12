@@ -24,18 +24,6 @@
     "bet": true
   },
   {
-    "name": "Paul Skenes",
-    "team": "Milwaukee Brewers @ Pittsburgh Pirates",
-    "line": 17.5,
-    "under": 140,
-    "book": "Fanatics",
-    "proj": 17,
-    "edge": 13,
-    "pUnder": 54,
-    "siera": 3.0969645239792483,
-    "bet": false
-  },
-  {
     "name": "Taj Bradley",
     "team": "Los Angeles Angels @ Minnesota Twins",
     "line": 17.5,
@@ -45,6 +33,18 @@
     "edge": 12,
     "pUnder": 54,
     "siera": 3.738714841306107,
+    "bet": false
+  },
+  {
+    "name": "Paul Skenes",
+    "team": "Milwaukee Brewers @ Pittsburgh Pirates",
+    "line": 17.5,
+    "under": 130,
+    "book": "FanDuel",
+    "proj": 17,
+    "edge": 11,
+    "pUnder": 54,
+    "siera": 3.0969645239792483,
     "bet": false
   },
   {
@@ -63,19 +63,31 @@
     "name": "German Marquez",
     "team": "Toronto Blue Jays @ San Diego Padres",
     "line": 14.5,
-    "under": 121,
-    "book": "Caesars",
+    "under": 120,
+    "book": "Bovada",
     "proj": 14.2,
-    "edge": 9,
+    "edge": 8,
     "pUnder": 54,
     "siera": 5.585546562847026,
+    "bet": false
+  },
+  {
+    "name": "Shane Baz",
+    "team": "Kansas City Royals @ Baltimore Orioles",
+    "line": 17.5,
+    "under": 146,
+    "book": "FanDuel",
+    "proj": 17.6,
+    "edge": 8,
+    "pUnder": 49,
+    "siera": 4.62490886317244,
     "bet": false
   },
   {
     "name": "Trevor McDonald",
     "team": "Colorado Rockies @ San Francisco Giants",
     "line": 15.5,
-    "under": -124,
+    "under": -127,
     "book": "Caesars",
     "proj": 14,
     "edge": 8,
@@ -120,6 +132,18 @@
     "bet": false
   },
   {
+    "name": "Dustin May",
+    "team": "Atlanta Braves @ St. Louis Cardinals",
+    "line": 16.5,
+    "under": -111,
+    "book": "DraftKings",
+    "proj": 15.7,
+    "edge": 4,
+    "pUnder": 56,
+    "siera": 3.821063017974563,
+    "bet": false
+  },
+  {
     "name": "JT Ginn",
     "team": "Athletics @ Chicago White Sox",
     "line": 16.5,
@@ -129,18 +153,6 @@
     "edge": 3,
     "pUnder": 57,
     "siera": 4.4983223749031245,
-    "bet": false
-  },
-  {
-    "name": "Dustin May",
-    "team": "Atlanta Braves @ St. Louis Cardinals",
-    "line": 16.5,
-    "under": -120,
-    "book": "Caesars",
-    "proj": 15.7,
-    "edge": 2,
-    "pUnder": 56,
-    "siera": 3.821063017974563,
     "bet": false
   },
   {
@@ -156,25 +168,13 @@
     "bet": false
   },
   {
-    "name": "Shane Baz",
-    "team": "Kansas City Royals @ Baltimore Orioles",
-    "line": 18.5,
-    "under": -175,
-    "book": "Bovada",
-    "proj": 17.6,
-    "edge": 0,
-    "pUnder": 63,
-    "siera": 4.62490886317244,
-    "bet": false
-  },
-  {
     "name": "Cade Cavalli",
     "team": "New York Yankees @ Washington Nationals",
     "line": 15.5,
-    "under": -127,
+    "under": -124,
     "book": "Caesars",
     "proj": 14.9,
-    "edge": -1,
+    "edge": 0,
     "pUnder": 55,
     "siera": 3.59688847850125,
     "bet": false
@@ -195,10 +195,10 @@
     "name": "Payton Tolle",
     "team": "Boston Red Sox @ New York Mets",
     "line": 16.5,
-    "under": 102,
-    "book": "DraftKings",
+    "under": 110,
+    "book": "FanDuel",
     "proj": 17.5,
-    "edge": -10,
+    "edge": -8,
     "pUnder": 39,
     "siera": 3.9324372965162975,
     "bet": false
@@ -219,10 +219,10 @@
     "name": "Ian Seymour",
     "team": "Seattle Mariners @ Tampa Bay Rays",
     "line": 15.5,
-    "under": -182,
-    "book": "Caesars",
+    "under": -180,
+    "book": "Bovada",
     "proj": 15.1,
-    "edge": -11,
+    "edge": -10,
     "pUnder": 54,
     "siera": 3.383506069242502,
     "bet": false
@@ -240,6 +240,18 @@
     "bet": false
   },
   {
+    "name": "Emerson Hancock",
+    "team": "Seattle Mariners @ Tampa Bay Rays",
+    "line": 16.5,
+    "under": -120,
+    "book": "FanDuel",
+    "proj": 17.2,
+    "edge": -15,
+    "pUnder": 40,
+    "siera": 3.7479195553032616,
+    "bet": false
+  },
+  {
     "name": "Zack Wheeler",
     "team": "Philadelphia Phillies @ Detroit Tigers",
     "line": 17.5,
@@ -249,18 +261,6 @@
     "edge": -19,
     "pUnder": 23,
     "siera": 3.062393357271942,
-    "bet": false
-  },
-  {
-    "name": "Emerson Hancock",
-    "team": "Seattle Mariners @ Tampa Bay Rays",
-    "line": 15.5,
-    "under": -107,
-    "book": "DraftKings",
-    "proj": 17.2,
-    "edge": -26,
-    "pUnder": 26,
-    "siera": 3.7479195553032616,
     "bet": false
   }
 ]
