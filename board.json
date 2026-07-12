@@ -15,7 +15,7 @@
     "name": "Noah Schultz",
     "team": "Athletics @ Chicago White Sox",
     "line": 15.5,
-    "under": -142,
+    "under": -147,
     "book": "DraftKings",
     "proj": 13.3,
     "edge": 19,
@@ -24,25 +24,13 @@
     "bet": true
   },
   {
-    "name": "Taj Bradley",
-    "team": "Los Angeles Angels @ Minnesota Twins",
-    "line": 17.5,
-    "under": 155,
-    "book": "BetMGM",
-    "proj": 17.2,
-    "edge": 15,
-    "pUnder": 54,
-    "siera": 3.738714841306107,
-    "bet": false
-  },
-  {
     "name": "Paul Skenes",
     "team": "Milwaukee Brewers @ Pittsburgh Pirates",
     "line": 17.5,
-    "under": 135,
-    "book": "Fanatics",
+    "under": 130,
+    "book": "FanDuel",
     "proj": 17,
-    "edge": 12,
+    "edge": 11,
     "pUnder": 54,
     "siera": 3.0969645239792483,
     "bet": false
@@ -60,13 +48,25 @@
     "bet": false
   },
   {
+    "name": "Taj Bradley",
+    "team": "Los Angeles Angels @ Minnesota Twins",
+    "line": 17.5,
+    "under": 130,
+    "book": "Bovada",
+    "proj": 17.2,
+    "edge": 10,
+    "pUnder": 54,
+    "siera": 3.738714841306107,
+    "bet": false
+  },
+  {
     "name": "Robert Gasser",
     "team": "Milwaukee Brewers @ Pittsburgh Pirates",
     "line": 17.5,
-    "under": -120,
+    "under": -130,
     "book": "BetMGM",
     "proj": 16.2,
-    "edge": 10,
+    "edge": 8,
     "pUnder": 65,
     "siera": 4.353168095765975,
     "bet": false
@@ -136,7 +136,7 @@
     "team": "Arizona Diamondbacks @ Los Angeles Dodgers",
     "line": 15.5,
     "under": -115,
-    "book": "DraftKings",
+    "book": "Bovada",
     "proj": 14.7,
     "edge": 5,
     "pUnder": 58,
@@ -147,12 +147,24 @@
     "name": "JT Ginn",
     "team": "Athletics @ Chicago White Sox",
     "line": 16.5,
-    "under": -115,
+    "under": -119,
     "book": "DraftKings",
     "proj": 15.8,
-    "edge": 3,
+    "edge": 2,
     "pUnder": 57,
     "siera": 4.4983223749031245,
+    "bet": false
+  },
+  {
+    "name": "Joey Cantillo",
+    "team": "Cleveland Guardians @ Miami Marlins",
+    "line": 15.5,
+    "under": -137,
+    "book": "DraftKings",
+    "proj": 14.7,
+    "edge": 1,
+    "pUnder": 59,
+    "siera": 4.431683681046908,
     "bet": false
   },
   {
@@ -165,18 +177,6 @@
     "edge": 1,
     "pUnder": 55,
     "siera": 3.59688847850125,
-    "bet": false
-  },
-  {
-    "name": "Joey Cantillo",
-    "team": "Cleveland Guardians @ Miami Marlins",
-    "line": 15.5,
-    "under": -148,
-    "book": "FanDuel",
-    "proj": 14.7,
-    "edge": -1,
-    "pUnder": 59,
-    "siera": 4.431683681046908,
     "bet": false
   },
   {
