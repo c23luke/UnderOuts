@@ -5,34 +5,49 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Under Outs</title>
 <style>
-  :root{--bg:#0d1117;--panel:#161b22;--border:#2a3441;--text:#e6edf3;--muted:#8b98a5;--accent:#3fb950;--warn:#d29922;--hot:#f85149;--chip:#21262d}
+  :root{--bg:#0b0f16;--card:#151b26;--card2:#1a2231;--line:#232c3b;--text:#eaeff6;--muted:#7d8a9c;--green:#37c871;--red:#ff5c5c;--amber:#e0a33a;--accent:#4a9eff}
   *{box-sizing:border-box}
-  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);padding:16px;line-height:1.5}
-  h1{font-size:19px;margin:0}
-  .sub{color:var(--muted);font-size:12.5px;margin:2px 0 16px}
-  .sec{color:var(--muted);font-size:12px;margin:18px 2px 8px;letter-spacing:.3px;text-transform:uppercase}
-  .card{background:var(--panel);border-radius:14px;padding:12px 13px;margin-bottom:9px}
-  .card.bet{border:1px solid #2f6b3d}
-  .top{display:flex;justify-content:space-between;align-items:center;font-size:14.5px;font-weight:600}
-  .bsub{color:var(--muted);font-size:12px;margin:3px 0 8px}
-  .why{font-size:12.5px;margin:2px 0 8px}
-  .track{position:relative;height:7px;background:var(--bg);border-radius:20px;overflow:hidden;margin-top:2px}
-  .fill{position:absolute;left:0;top:0;bottom:0;border-radius:20px}
-  .mark{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--text)}
-  .st{display:flex;justify-content:space-between;font-size:11px;margin-top:5px}
-  .badge{font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px}
-  .note{font-size:12px;color:var(--muted)}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;padding:18px 16px 40px;max-width:560px;margin:0 auto}
+  .head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+  .head h1{font-size:20px;font-weight:650;margin:0;letter-spacing:-.2px}
+  .rec{font-size:13px;color:var(--muted)}
+  .how{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:12.5px;color:var(--muted);line-height:1.55;margin-bottom:22px}
+  .how b{color:var(--text);font-weight:600}
+  .label{font-size:11px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin:0 2px 10px}
+  .betcard{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--green);border-radius:14px;padding:14px 15px;margin-bottom:12px}
+  .betcard .r1{display:flex;justify-content:space-between;align-items:center;margin-bottom:2px}
+  .name{font-size:16px;font-weight:600}
+  .team{font-size:12px;color:var(--muted)}
+  .line{font-size:14px;color:var(--text);font-weight:600}
+  .reason{display:inline-block;font-size:11px;font-weight:600;color:#8fe0ab;background:rgba(55,200,113,.12);padding:2px 8px;border-radius:20px;margin:8px 0 6px}
+  .why{font-size:12.5px;color:var(--muted);line-height:1.5;margin-bottom:10px}
+  .why b{color:var(--text);font-weight:600}
+  .meter{position:relative;height:8px;background:#0c1119;border-radius:20px;overflow:hidden}
+  .mfill{position:absolute;left:0;top:0;bottom:0;border-radius:20px;transition:width .4s}
+  .mmark{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--text);opacity:.85}
+  .mlabel{font-size:11.5px;margin-top:6px;font-weight:600}
+  .muted{color:var(--muted);font-weight:400}
+  .empty{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 16px;text-align:center;color:var(--muted);font-size:13px}
+  .brow{display:flex;align-items:center;gap:10px;padding:11px 4px;border-bottom:1px solid var(--line);font-size:13px}
+  .brow .bn{flex:1;min-width:0}
+  .brow .bn .t2{font-size:11px;color:var(--muted)}
+  .tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .tag.bet{color:#8fe0ab;background:rgba(55,200,113,.14)}
+  .tag.pass{color:var(--muted);background:#1a2231}
 </style>
 </head>
 <body>
-  <h1>Under outs</h1>
-  <div class="sub">your bets + tonight's model board · MLB pitcher outs</div>
+  <div class="head"><h1>Under Outs</h1><span class="rec" id="rec"></span></div>
 
-  <div class="sec">Your bets</div>
-  <div id="mybets"></div>
+  <div class="how">
+    <b>How picks work.</b> We project every starter's outs from his recent starts, his skill (SIERA), and the matchup — then compare that to the sportsbook line. We only bet the rare spot where a <b>bad-skill arm who doesn't go deep</b> meets an <b>inflated line</b> with a real edge, capped at the 3 best. Most nights that's <b>0-2 bets</b>, sometimes none — and passing is the point.
+  </div>
 
-  <div class="sec">Tonight's board — ranked by model edge</div>
-  <div id="board"><div class="note">Waiting for the model. Start the bot on your Mac (node ~/Downloads/alert.js) — the board updates every hour.</div></div>
+  <div class="label">Tonight's bets</div>
+  <div id="bets"></div>
+
+  <div class="label" style="margin-top:26px">Full board · ranked by edge</div>
+  <div id="board"><div class="empty">Waiting for the model. Start the bot on your Mac — the board updates every hour.</div></div>
 
 <script>
 const AMER=p=>(p==null?'':(p>0?('+'+p):(''+p)));
@@ -40,7 +55,7 @@ function betUnits(a){a=+a;if(isNaN(a))a=-110;return a>=0?a/100:100/Math.abs(a);}
 let BOARD=[], BETS=[], LIVE={};
 
 async function fetchBoard(){ try{ const d=await fetch('board.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]); if(Array.isArray(d)) BOARD=d; }catch(e){} renderBoard(); }
-async function fetchBets(){ try{ const d=await fetch('bets.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]); if(Array.isArray(d)) BETS=d; }catch(e){} renderMyBets(); }
+async function fetchBets(){ try{ const d=await fetch('bets.json',{cache:'no-store'}).then(r=>r.ok?r.json():[]); if(Array.isArray(d)) BETS=d; }catch(e){} renderBets(); }
 async function fetchLive(){
   try{
     const today=new Date().toLocaleDateString('en-CA');
@@ -51,54 +66,44 @@ async function fetchLive(){
       ['home','away'].forEach(side=>{ const t=bx.teams&&bx.teams[side]; if(!t) return;
         (t.pitchers||[]).forEach(pid=>{ const pl=t.players&&t.players['ID'+pid]; if(pl&&pl.stats&&pl.stats.pitching){ const nm=(pl.person&&pl.person.fullName)||''; const o=pl.stats.pitching.outs; const last=nm.toLowerCase().split(' ').pop(); if(last&&o!=null) live[last]={outs:+o,state:stt}; } }); });
     }
-    LIVE=live; renderMyBets(); renderBoard();
+    LIVE=live; renderBets(); renderBoard();
   }catch(e){}
 }
+function live(name){ return LIVE[name.toLowerCase().split(' ').pop()]; }
 
-function liveStatus(name,line){
-  const lv=LIVE[name.toLowerCase().split(' ').pop()]; if(!lv) return null;
-  const fl=Math.floor(line);
-  if(lv.state==='Final') return {outs:lv.outs, final:true, won:lv.outs<line};
-  return {outs:lv.outs, final:false, busted:lv.outs>fl};
+function meter(name,line){
+  const lv=live(name); const fl=Math.floor(line), max=fl+3;
+  if(!lv) return '<div class="meter"><div class="mmark" style="left:'+Math.round((fl+0.5)/max*100)+'%"></div></div><div class="mlabel muted">first pitch soon · line '+line+'</div>';
+  const o=lv.outs, over=o>fl, final=lv.state==='Final';
+  const col=over?'var(--red)':'var(--green)';
+  const label=final?(over?('✗ lost · '+o+' outs'):('✓ won · '+o+' outs')):(over?('busted · '+o+' outs'):(o+' outs · '+(fl-o)+' to spare'));
+  return '<div class="meter"><div class="mfill" style="width:'+Math.min(100,Math.round(o/max*100))+'%;background:'+col+'"></div><div class="mmark" style="left:'+Math.round((fl+0.5)/max*100)+'%"></div></div>'
+    +'<div class="mlabel" style="color:'+col+'">'+label+' <span class="muted">· line '+line+'</span></div>';
 }
 
-function renderMyBets(){
-  const box=document.getElementById('mybets'); if(!box) return;
+function renderBets(){
+  const box=document.getElementById('bets'); if(!box) return;
   let w=0,l=0,u=0;
-  const rows=BETS.map(bt=>{
-    const fl=Math.floor(bt.line); const s=liveStatus(bt.name,bt.line);
-    let outsTxt='—',col='var(--muted)',statL='<span class="note">not started</span>',statR=fl+' to stay under',fillPct=100,fillCol='#2f3b4d';
-    if(s){ const o=s.outs; outsTxt=o+' outs'; fillPct=Math.max(0,Math.round((fl-o)/fl*100));
-      if(s.final){ if(s.won){w++;u+=betUnits(bt.price);col=fillCol='var(--accent)';fillPct=Math.max(6,fillPct);statL='<span style="color:var(--accent)">✓ won · +'+betUnits(bt.price).toFixed(2)+'u</span>';} else {l++;u-=1;col=fillCol='var(--hot)';fillPct=100;statL='<span style="color:var(--hot)">✕ lost</span>';} statR='final · '+o+' outs'; }
-      else { const bust=s.busted; col=fillCol=bust?'var(--hot)':'var(--accent)'; if(bust) fillPct=100; statL='<span style="color:'+col+'">● live · '+(bust?'busted':'alive')+'</span>'; statR=bust?'busted':((fl-o)+' outs to spare'); } }
-    const why = bt.proj!=null ? ('We project ~<b>'+bt.proj+' outs</b> vs the '+bt.line+' line'+(bt.edge!=null?' — a <b style="color:var(--accent)">+'+bt.edge+'% edge</b>':'')+'.') : '';
-    return '<div class="card bet"><div class="top"><span>'+bt.name+'</span><span style="color:'+col+'">'+outsTxt+'</span></div>'
-      +'<div class="bsub">Under '+bt.line+' · '+AMER(bt.price)+'</div>'
-      +(why?'<div class="why">'+why+'</div>':'')
-      +'<div class="track"><div class="fill" style="width:'+fillPct+'%;background:'+fillCol+'"></div></div>'
-      +'<div class="st">'+statL+'<span class="note">'+statR+'</span></div></div>';
+  BETS.forEach(bt=>{ const lv=live(bt.name); if(lv&&lv.state==='Final'){ if(lv.outs<bt.line){w++;u+=betUnits(bt.price);} else {l++;u-=1;} } });
+  document.getElementById('rec').innerHTML = (w+l)?('<b style="color:'+(w>=l?'var(--green)':'var(--red)')+'">'+w+'-'+l+'</b> · <b style="color:'+(u>=0?'var(--green)':'var(--red)')+'">'+(u>=0?'+':'')+u.toFixed(2)+'u</b>'):'';
+  if(!BETS.length){ box.innerHTML='<div class="empty">No bets tonight — nothing sharp qualified. That\'s the model doing its job.</div>'; return; }
+  box.innerHTML=BETS.map(bt=>{
+    const why='We project <b>~'+bt.proj+' outs</b>. The line is <b>'+bt.line+'</b>'+(bt.edge!=null?', so the under carries a <b style="color:var(--green)">+'+bt.edge+'% edge</b>':'')+'.';
+    return '<div class="betcard"><div class="r1"><div><div class="name">'+bt.name+'</div><div class="team">'+(bt.team||'')+'</div></div>'
+      +'<div class="line">Under '+bt.line+'<span class="muted" style="font-weight:400"> · '+AMER(bt.price)+'</span></div></div>'
+      +(bt.reason?'<div class="reason">'+bt.reason+'</div>':'')
+      +'<div class="why">'+why+'</div>'+meter(bt.name,bt.line)+'</div>';
   }).join('');
-  const rec=(w+l)?('<span style="color:'+(w>=l?'var(--accent)':'var(--hot)')+'">'+w+'-'+l+'</span> · <span style="color:'+(u>=0?'var(--accent)':'var(--hot)')+'">'+(u>=0?'+':'')+u.toFixed(2)+'u</span>'):'<span class="note">none graded yet</span>';
-  box.innerHTML='<div style="display:flex;justify-content:flex-end;margin-bottom:6px;font-size:12px">'+rec+'</div>'
-    +(BETS.length?rows:'<div class="note">No bets yet — the bot adds one automatically when it finds a +EV under.</div>');
 }
 
 function renderBoard(){
   const box=document.getElementById('board'); if(!box) return;
   if(!BOARD.length) return;
-  const nbets=BOARD.filter(p=>p.bet).length;
-  const head='<div class="note" style="margin-bottom:8px">'+(nbets? (nbets+' qualify as bets tonight — everything else is a pass.') : 'No bets qualify tonight — the model is passing. That is normal.')+'</div>';
-  box.innerHTML=head+BOARD.map(p=>{
-    const good=!!p.bet;
-    const badgeCol = good?'background:#12291a;color:#7ee787':'background:#1c2430;color:#8b98a5';
-    const label = good?('BET · +'+p.edge+'%'):'pass';
-    const reason = good?(p.siera!=null&&p.siera>=4.4?'bad arm':(p.proj<=14?'short-outing arm':'value')):'';
-    const s=liveStatus(p.name,p.line); let live='';
-    if(s){ const c=s.final?'#8b98a5':(s.busted?'#ff7b72':'#3fb950'); live=' · <span style="color:'+c+'">'+(s.final?'final ':'🔴 ')+s.outs+' outs</span>'; }
-    const why='We project ~<b>'+p.proj+' outs</b>'+(p.pUnder!=null?', under hits ~<b>'+p.pUnder+'%</b>':'')+'. Line '+p.line+(good?' · <span style="color:var(--accent)">'+reason+'</span>':'')+'.';
-    return '<div class="card'+(good?' bet':'')+'"><div class="top"><span>'+p.name+'</span><span class="badge" style="'+badgeCol+'">'+label+'</span></div>'
-      +'<div class="bsub">Under '+p.line+' · '+AMER(p.under)+' · '+(p.book||'')+live+'</div>'
-      +'<div class="why">'+why+'</div></div>';
+  box.innerHTML=BOARD.map(p=>{
+    const lv=live(p.name); let ls='';
+    if(lv){ const fl=Math.floor(p.line); const over=lv.outs>fl; ls='<span style="color:'+(over?'var(--red)':'var(--green)')+';font-size:11px">'+(lv.state==='Final'?'':'')+lv.outs+' outs</span>'; }
+    return '<div class="brow"><div class="bn"><div>'+p.name+'</div><div class="t2">proj ~'+p.proj+' vs '+p.line+' · '+(p.edge>=0?'+':'')+p.edge+'% edge'+(p.reason?' · '+p.reason:'')+'</div></div>'
+      +ls+'<span class="tag '+(p.bet?'bet':'pass')+'">'+(p.bet?'BET':'pass')+'</span></div>';
   }).join('');
 }
 
