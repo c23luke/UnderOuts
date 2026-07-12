@@ -15,7 +15,7 @@
     "name": "Noah Schultz",
     "team": "Athletics @ Chicago White Sox",
     "line": 15.5,
-    "under": -146,
+    "under": -142,
     "book": "DraftKings",
     "proj": 13.3,
     "edge": 19,
@@ -36,18 +36,6 @@
     "bet": false
   },
   {
-    "name": "Robert Gasser",
-    "team": "Milwaukee Brewers @ Pittsburgh Pirates",
-    "line": 17.5,
-    "under": -110,
-    "book": "BetMGM",
-    "proj": 16.2,
-    "edge": 12,
-    "pUnder": 65,
-    "siera": 4.353168095765975,
-    "bet": false
-  },
-  {
     "name": "Paul Skenes",
     "team": "Milwaukee Brewers @ Pittsburgh Pirates",
     "line": 17.5,
@@ -60,15 +48,27 @@
     "bet": false
   },
   {
-    "name": "Trevor McDonald",
-    "team": "Colorado Rockies @ San Francisco Giants",
-    "line": 15.5,
-    "under": -125,
+    "name": "German Marquez",
+    "team": "Toronto Blue Jays @ San Diego Padres",
+    "line": 14.5,
+    "under": 132,
+    "book": "FanDuel",
+    "proj": 14.2,
+    "edge": 11,
+    "pUnder": 54,
+    "siera": 5.585546562847026,
+    "bet": false
+  },
+  {
+    "name": "Robert Gasser",
+    "team": "Milwaukee Brewers @ Pittsburgh Pirates",
+    "line": 17.5,
+    "under": -120,
     "book": "BetMGM",
-    "proj": 14,
-    "edge": 8,
-    "pUnder": 64,
-    "siera": 4.0316025260201,
+    "proj": 16.2,
+    "edge": 10,
+    "pUnder": 65,
+    "siera": 4.353168095765975,
     "bet": false
   },
   {
@@ -84,27 +84,27 @@
     "bet": false
   },
   {
+    "name": "Trevor McDonald",
+    "team": "Colorado Rockies @ San Francisco Giants",
+    "line": 15.5,
+    "under": -127,
+    "book": "Caesars",
+    "proj": 14,
+    "edge": 8,
+    "pUnder": 64,
+    "siera": 4.0316025260201,
+    "bet": false
+  },
+  {
     "name": "Kevin Gausman",
     "team": "Toronto Blue Jays @ San Diego Padres",
     "line": 17.5,
     "under": 130,
-    "book": "Fanatics",
+    "book": "BetMGM",
     "proj": 17.4,
     "edge": 8,
     "pUnder": 51,
     "siera": 3.7576612162351184,
-    "bet": false
-  },
-  {
-    "name": "German Marquez",
-    "team": "Toronto Blue Jays @ San Diego Padres",
-    "line": 14.5,
-    "under": 109,
-    "book": "Caesars",
-    "proj": 14.2,
-    "edge": 6,
-    "pUnder": 54,
-    "siera": 5.585546562847026,
     "bet": false
   },
   {
@@ -123,10 +123,10 @@
     "name": "Will Warren",
     "team": "New York Yankees @ Washington Nationals",
     "line": 15.5,
-    "under": -105,
-    "book": "Caesars",
+    "under": -101,
+    "book": "DraftKings",
     "proj": 15.1,
-    "edge": 4,
+    "edge": 5,
     "pUnder": 55,
     "siera": 3.987372335279941,
     "bet": false
@@ -135,10 +135,10 @@
     "name": "Emmet Sheehan",
     "team": "Arizona Diamondbacks @ Los Angeles Dodgers",
     "line": 15.5,
-    "under": -122,
-    "book": "Caesars",
+    "under": -115,
+    "book": "DraftKings",
     "proj": 14.7,
-    "edge": 3,
+    "edge": 5,
     "pUnder": 58,
     "siera": 3.7176806522099994,
     "bet": false
@@ -153,18 +153,6 @@
     "edge": 3,
     "pUnder": 57,
     "siera": 4.4983223749031245,
-    "bet": false
-  },
-  {
-    "name": "Payton Tolle",
-    "team": "Boston Red Sox @ New York Mets",
-    "line": 17.5,
-    "under": 105,
-    "book": "BetMGM",
-    "proj": 17.5,
-    "edge": 1,
-    "pUnder": 50,
-    "siera": 3.9324372965162975,
     "bet": false
   },
   {
@@ -192,6 +180,18 @@
     "bet": false
   },
   {
+    "name": "Payton Tolle",
+    "team": "Boston Red Sox @ New York Mets",
+    "line": 17.5,
+    "under": -120,
+    "book": "BetMGM",
+    "proj": 17.5,
+    "edge": -5,
+    "pUnder": 50,
+    "siera": 3.9324372965162975,
+    "bet": false
+  },
+  {
     "name": "Tarik Skubal",
     "team": "Philadelphia Phillies @ Detroit Tigers",
     "line": 17.5,
@@ -204,18 +204,6 @@
     "bet": false
   },
   {
-    "name": "Jose Soriano",
-    "team": "Los Angeles Angels @ Minnesota Twins",
-    "line": 15.5,
-    "under": -106,
-    "book": "Caesars",
-    "proj": 16.2,
-    "edge": -9,
-    "pUnder": 42,
-    "siera": 4.005172315792379,
-    "bet": false
-  },
-  {
     "name": "Ian Seymour",
     "team": "Seattle Mariners @ Tampa Bay Rays",
     "line": 15.5,
@@ -225,6 +213,18 @@
     "edge": -9,
     "pUnder": 54,
     "siera": 3.383506069242502,
+    "bet": false
+  },
+  {
+    "name": "Jose Soriano",
+    "team": "Los Angeles Angels @ Minnesota Twins",
+    "line": 15.5,
+    "under": -108,
+    "book": "FanDuel",
+    "proj": 16.2,
+    "edge": -10,
+    "pUnder": 42,
+    "siera": 4.005172315792379,
     "bet": false
   },
   {
@@ -243,10 +243,10 @@
     "name": "Zack Wheeler",
     "team": "Philadelphia Phillies @ Detroit Tigers",
     "line": 17.5,
-    "under": 145,
+    "under": 150,
     "book": "BetMGM",
     "proj": 19.5,
-    "edge": -18,
+    "edge": -17,
     "pUnder": 23,
     "siera": 3.062393357271942,
     "bet": false
@@ -255,8 +255,8 @@
     "name": "Emerson Hancock",
     "team": "Seattle Mariners @ Tampa Bay Rays",
     "line": 16.5,
-    "under": -139,
-    "book": "Caesars",
+    "under": -140,
+    "book": "BetMGM",
     "proj": 17.2,
     "edge": -19,
     "pUnder": 40,
