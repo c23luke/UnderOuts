@@ -118,5 +118,17 @@
     "proj": 14.4,
     "edge": 25,
     "auto": true
+  },
+  {
+    "id": "2026-07-11|yamamoto",
+    "date": "2026-07-11",
+    "name": "Yoshinobu Yamamoto",
+    "team": "Arizona Diamondbacks @ Los Angeles Dodgers",
+    "line": 20.5,
+    "side": "under",
+    "price": 120,
+    "proj": 18,
+    "edge": 27,
+    "auto": true
   }
 ]

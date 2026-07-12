@@ -1,50 +1,14 @@
 [
   {
-    "name": "Trey Yesavage",
-    "team": "Toronto Blue Jays @ San Diego Padres",
-    "line": 17.5,
-    "under": -122,
-    "book": "FanDuel",
-    "proj": 14,
-    "edge": 32,
-    "pUnder": 87,
-    "siera": 4.549453444619198,
-    "bet": true
-  },
-  {
-    "name": "Walker Buehler",
-    "team": "Toronto Blue Jays @ San Diego Padres",
-    "line": 15.5,
-    "under": -110,
-    "book": "BetMGM",
-    "proj": 14.9,
-    "edge": 5,
-    "pUnder": 58,
-    "siera": 4.132094427875806,
-    "bet": false
-  },
-  {
     "name": "Yoshinobu Yamamoto",
     "team": "Arizona Diamondbacks @ Los Angeles Dodgers",
-    "line": 18.5,
-    "under": -136,
-    "book": "FanDuel",
+    "line": 20.5,
+    "under": 120,
+    "book": "Fanatics",
     "proj": 18,
-    "edge": -1,
-    "pUnder": 57,
+    "edge": 27,
+    "pUnder": 73,
     "siera": 3.382864899557298,
-    "bet": false
-  },
-  {
-    "name": "Brandon Pfaadt",
-    "team": "Arizona Diamondbacks @ Los Angeles Dodgers",
-    "line": 14.5,
-    "under": 130,
-    "book": "Bovada",
-    "proj": 15.2,
-    "edge": -3,
-    "pUnder": 40,
-    "siera": 4.328406824197435,
-    "bet": false
+    "bet": true
   }
 ]
