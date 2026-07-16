@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "name": "Christian Scott",
+    "team": "New York Mets @ Philadelphia Phillies",
+    "line": 14.5,
+    "under": 130,
+    "book": "Fanatics",
+    "proj": 13.8,
+    "edge": 15,
+    "pUnder": 58,
+    "siera": 3.947958717647239,
+    "reason": "",
+    "bet": false
+  },
+  {
+    "name": "Aaron Nola",
+    "team": "New York Mets @ Philadelphia Phillies",
+    "line": 16.5,
+    "under": -115,
+    "book": "DraftKings",
+    "proj": 15.4,
+    "edge": 12,
+    "pUnder": 66,
+    "siera": 3.946816497978269,
+    "reason": "",
+    "bet": false
+  }
+]
