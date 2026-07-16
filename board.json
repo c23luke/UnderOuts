@@ -3,26 +3,26 @@
     "name": "Christian Scott",
     "team": "New York Mets @ Philadelphia Phillies",
     "line": 14.5,
-    "under": 120,
-    "book": "Bovada",
-    "proj": 13.8,
-    "edge": 13,
-    "pUnder": 58,
+    "under": 121,
+    "book": "DraftKings",
+    "proj": 13,
+    "edge": 22,
+    "pUnder": 67,
     "siera": 3.947958717647239,
-    "reason": "",
-    "bet": false
+    "reason": "confirmed cap",
+    "bet": true
   },
   {
     "name": "Aaron Nola",
     "team": "New York Mets @ Philadelphia Phillies",
     "line": 15.5,
-    "under": -154,
-    "book": "FanDuel",
+    "under": -162,
+    "book": "DraftKings",
     "proj": 15.4,
-    "edge": -9,
+    "edge": -10,
     "pUnder": 51,
     "siera": 3.946816497978269,
-    "reason": "",
+    "reason": "confirmed cap",
     "bet": false
   }
 ]

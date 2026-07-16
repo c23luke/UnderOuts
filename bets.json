@@ -70,5 +70,17 @@
     "proj": 16.5,
     "edge": 19,
     "auto": true
+  },
+  {
+    "id": "2026-07-16|scott",
+    "date": "2026-07-16",
+    "name": "Christian Scott",
+    "team": "New York Mets @ Philadelphia Phillies",
+    "line": 14.5,
+    "side": "under",
+    "price": 121,
+    "proj": 13,
+    "edge": 22,
+    "auto": true
   }
 ]
