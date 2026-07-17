@@ -118,5 +118,29 @@
     "proj": 13,
     "edge": 20,
     "auto": true
+  },
+  {
+    "id": "2026-07-17|jax",
+    "date": "2026-07-17",
+    "name": "Griffin Jax",
+    "team": "Tampa Bay Rays @ Boston Red Sox",
+    "line": 14.5,
+    "side": "under",
+    "price": 165,
+    "proj": 13.1,
+    "edge": 25,
+    "auto": true
+  },
+  {
+    "id": "2026-07-17|bennett",
+    "date": "2026-07-17",
+    "name": "Jake Bennett",
+    "team": "Tampa Bay Rays @ Boston Red Sox",
+    "line": 17.5,
+    "side": "under",
+    "price": 110,
+    "proj": 15,
+    "edge": 24,
+    "auto": true
   }
 ]
