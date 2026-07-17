@@ -1,31 +1,5 @@
 [
   {
-    "name": "Griffin Jax",
-    "team": "Tampa Bay Rays @ Boston Red Sox",
-    "line": 14.5,
-    "under": 165,
-    "book": "Fanatics",
-    "proj": 13.1,
-    "edge": 25,
-    "pUnder": 63,
-    "siera": 3.68301279730026,
-    "reason": "confirmed cap",
-    "bet": true
-  },
-  {
-    "name": "Jake Bennett",
-    "team": "Tampa Bay Rays @ Boston Red Sox",
-    "line": 17.5,
-    "under": 110,
-    "book": "DraftKings",
-    "proj": 15,
-    "edge": 24,
-    "pUnder": 71,
-    "siera": 3.890573527967539,
-    "reason": "confirmed cap",
-    "bet": true
-  },
-  {
     "name": "Gavin Williams",
     "team": "Pittsburgh Pirates @ Cleveland Guardians",
     "line": 17.5,
@@ -49,7 +23,7 @@
     "pUnder": 82,
     "siera": 4.675172580262893,
     "reason": "confirmed cap",
-    "bet": false
+    "bet": true
   },
   {
     "name": "Cal Quantrill",
@@ -62,7 +36,7 @@
     "pUnder": 62,
     "siera": 4.786361860320946,
     "reason": "bad arm + short",
-    "bet": false
+    "bet": true
   },
   {
     "name": "Spencer Miles",
@@ -156,19 +130,6 @@
     "bet": false
   },
   {
-    "name": "Cade Cavalli",
-    "team": "Washington Nationals @ Athletics",
-    "line": 16.5,
-    "under": -130,
-    "book": "BetMGM",
-    "proj": 15.3,
-    "edge": 4,
-    "pUnder": 61,
-    "siera": 3.59688847850125,
-    "reason": "",
-    "bet": false
-  },
-  {
     "name": "Chris Sale",
     "team": "Texas Rangers @ Atlanta Braves",
     "line": 17.5,
@@ -195,19 +156,6 @@
     "bet": false
   },
   {
-    "name": "Sandy Alcantara",
-    "team": "Miami Marlins @ Milwaukee Brewers",
-    "line": 17.5,
-    "under": 135,
-    "book": "BetMGM",
-    "proj": 18,
-    "edge": 2,
-    "pUnder": 44,
-    "siera": 4.389433343744845,
-    "reason": "confirmed cap",
-    "bet": false
-  },
-  {
     "name": "Gerrit Cole",
     "team": "Los Angeles Dodgers @ New York Yankees",
     "line": 16.5,
@@ -221,16 +169,29 @@
     "bet": false
   },
   {
-    "name": "Landen Roupp",
-    "team": "San Francisco Giants @ Seattle Mariners",
-    "line": 16.5,
-    "under": -125,
-    "book": "DraftKings",
-    "proj": 16,
+    "name": "Sandy Alcantara",
+    "team": "Miami Marlins @ Milwaukee Brewers",
+    "line": 17.5,
+    "under": 125,
+    "book": "Bovada",
+    "proj": 18,
     "edge": 0,
-    "pUnder": 55,
-    "siera": 3.9642320673557685,
+    "pUnder": 44,
+    "siera": 4.389433343744845,
     "reason": "confirmed cap",
+    "bet": false
+  },
+  {
+    "name": "Cade Cavalli",
+    "team": "Washington Nationals @ Athletics",
+    "line": 15.5,
+    "under": -110,
+    "book": "BetMGM",
+    "proj": 15.3,
+    "edge": -1,
+    "pUnder": 52,
+    "siera": 3.59688847850125,
+    "reason": "",
     "bet": false
   },
   {
@@ -247,6 +208,32 @@
     "bet": false
   },
   {
+    "name": "Landen Roupp",
+    "team": "San Francisco Giants @ Seattle Mariners",
+    "line": 16.5,
+    "under": -129,
+    "book": "DraftKings",
+    "proj": 16,
+    "edge": -1,
+    "pUnder": 55,
+    "siera": 3.9642320673557685,
+    "reason": "confirmed cap",
+    "bet": false
+  },
+  {
+    "name": "Gage Jump",
+    "team": "Washington Nationals @ Athletics",
+    "line": 15.5,
+    "under": -110,
+    "book": "BetMGM",
+    "proj": 15.5,
+    "edge": -2,
+    "pUnder": 50,
+    "siera": 4.035807548305836,
+    "reason": "",
+    "bet": false
+  },
+  {
     "name": "Bailey Ober",
     "team": "Minnesota Twins @ Chicago Cubs",
     "line": 14.5,
@@ -260,23 +247,10 @@
     "bet": false
   },
   {
-    "name": "Gage Jump",
-    "team": "Washington Nationals @ Athletics",
-    "line": 15.5,
-    "under": -115,
-    "book": "BetMGM",
-    "proj": 15.5,
-    "edge": -3,
-    "pUnder": 50,
-    "siera": 4.035807548305836,
-    "reason": "",
-    "bet": false
-  },
-  {
     "name": "Roki Sasaki",
     "team": "Los Angeles Dodgers @ New York Yankees",
     "line": 15.5,
-    "under": -170,
+    "under": -175,
     "book": "Bovada",
     "proj": 14.8,
     "edge": -5,
