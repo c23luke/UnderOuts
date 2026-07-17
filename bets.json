@@ -82,5 +82,17 @@
     "proj": 13,
     "edge": 22,
     "auto": true
+  },
+  {
+    "id": "2026-07-17|quantrill",
+    "date": "2026-07-17",
+    "name": "Cal Quantrill",
+    "team": "Texas Rangers @ Atlanta Braves",
+    "line": 14.5,
+    "side": "under",
+    "price": 120,
+    "proj": 13.2,
+    "edge": 16,
+    "auto": true
   }
 ]
