@@ -16,27 +16,14 @@
     "name": "Anthony Kay",
     "team": "Chicago White Sox @ Toronto Blue Jays",
     "line": 15.5,
-    "under": -160,
-    "book": "Bovada",
+    "under": -156,
+    "book": "DraftKings",
     "proj": 13,
-    "edge": 20,
+    "edge": 21,
     "pUnder": 82,
     "siera": 4.675172580262893,
     "reason": "confirmed cap",
     "bet": true
-  },
-  {
-    "name": "Griffin Jax",
-    "team": "Tampa Bay Rays @ Boston Red Sox",
-    "line": 14.5,
-    "under": 165,
-    "book": "BetMGM",
-    "proj": 14.1,
-    "edge": 17,
-    "pUnder": 54,
-    "siera": 3.68301279730026,
-    "reason": "confirmed cap",
-    "bet": false
   },
   {
     "name": "Cal Quantrill",
@@ -61,6 +48,19 @@
     "edge": 16,
     "pUnder": 66,
     "siera": 5.30245780905921,
+    "reason": "confirmed cap",
+    "bet": false
+  },
+  {
+    "name": "Griffin Jax",
+    "team": "Tampa Bay Rays @ Boston Red Sox",
+    "line": 14.5,
+    "under": 154,
+    "book": "FanDuel",
+    "proj": 14.1,
+    "edge": 15,
+    "pUnder": 54,
+    "siera": 3.68301279730026,
     "reason": "confirmed cap",
     "bet": false
   },
@@ -260,6 +260,19 @@
     "bet": false
   },
   {
+    "name": "Bailey Ober",
+    "team": "Minnesota Twins @ Chicago Cubs",
+    "line": 14.5,
+    "under": 140,
+    "book": "Bovada",
+    "proj": 15.7,
+    "edge": -4,
+    "pUnder": 38,
+    "siera": 4.8079184761758045,
+    "reason": "",
+    "bet": false
+  },
+  {
     "name": "Roki Sasaki",
     "team": "Los Angeles Dodgers @ New York Yankees",
     "line": 15.5,
@@ -286,19 +299,6 @@
     "bet": false
   },
   {
-    "name": "Bailey Ober",
-    "team": "Minnesota Twins @ Chicago Cubs",
-    "line": 14.5,
-    "under": 120,
-    "book": "Bovada",
-    "proj": 15.7,
-    "edge": -8,
-    "pUnder": 38,
-    "siera": 4.8079184761758045,
-    "reason": "",
-    "bet": false
-  },
-  {
     "name": "Peter Lambert",
     "team": "Baltimore Orioles @ Houston Astros",
     "line": 16.5,
@@ -315,8 +315,8 @@
     "name": "Michael McGreevy",
     "team": "St. Louis Cardinals @ Arizona Diamondbacks",
     "line": 16.5,
-    "under": -118,
-    "book": "Caesars",
+    "under": -117,
+    "book": "DraftKings",
     "proj": 16.9,
     "edge": -10,
     "pUnder": 44,
