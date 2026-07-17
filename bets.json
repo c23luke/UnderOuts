@@ -94,5 +94,29 @@
     "proj": 13.2,
     "edge": 16,
     "auto": true
+  },
+  {
+    "id": "2026-07-17|williams",
+    "date": "2026-07-17",
+    "name": "Gavin Williams",
+    "team": "Pittsburgh Pirates @ Cleveland Guardians",
+    "line": 17.5,
+    "side": "under",
+    "price": 125,
+    "proj": 16,
+    "edge": 24,
+    "auto": true
+  },
+  {
+    "id": "2026-07-17|kay",
+    "date": "2026-07-17",
+    "name": "Anthony Kay",
+    "team": "Chicago White Sox @ Toronto Blue Jays",
+    "line": 15.5,
+    "side": "under",
+    "price": -160,
+    "proj": 13,
+    "edge": 20,
+    "auto": true
   }
 ]
