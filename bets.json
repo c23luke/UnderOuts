@@ -142,5 +142,17 @@
     "proj": 15,
     "edge": 24,
     "auto": true
+  },
+  {
+    "id": "2026-07-17|miles",
+    "date": "2026-07-17",
+    "name": "Spencer Miles",
+    "team": "Chicago White Sox @ Toronto Blue Jays",
+    "line": 11.5,
+    "side": "under",
+    "price": 130,
+    "proj": 10.8,
+    "edge": 15,
+    "auto": true
   }
 ]
