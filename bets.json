@@ -11,5 +11,18 @@
     "edge": 23,
     "tag": "both",
     "auto": true
+  },
+  {
+    "id": "2026-07-18|littell",
+    "date": "2026-07-18",
+    "name": "Zack Littell",
+    "team": "Washington Nationals @ Athletics",
+    "line": 14.5,
+    "side": "under",
+    "price": 130,
+    "proj": 13.1,
+    "edge": 22,
+    "tag": "both",
+    "auto": true
   }
 ]

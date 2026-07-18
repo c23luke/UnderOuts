@@ -1,5 +1,18 @@
 [
   {
+    "name": "Zack Littell",
+    "team": "Washington Nationals @ Athletics",
+    "line": 14.5,
+    "under": 130,
+    "book": "BetMGM",
+    "proj": 13.1,
+    "edge": 22,
+    "pUnder": 66,
+    "siera": 5.112916479775423,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "Grayson Rodriguez",
     "team": "Detroit Tigers @ Los Angeles Angels",
     "line": 15.5,
@@ -28,12 +41,12 @@
   {
     "name": "JT Ginn",
     "team": "Washington Nationals @ Athletics",
-    "line": 14.5,
-    "under": 105,
-    "book": "Fanatics",
+    "line": 15.5,
+    "under": -146,
+    "book": "DraftKings",
     "proj": 15.1,
-    "edge": -4,
-    "pUnder": 44,
+    "edge": -6,
+    "pUnder": 54,
     "siera": 4.4983223749031245,
     "tag": null,
     "bet": false
