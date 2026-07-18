@@ -1,0 +1,110 @@
+[
+  {
+    "date": "2026-07-17",
+    "name": "Anthony Kay",
+    "line": 15.5,
+    "price": -151,
+    "proj": 13,
+    "siera": 4.68,
+    "edge": 22,
+    "actualOuts": 12,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-17",
+    "name": "Brady Singer",
+    "line": 17.5,
+    "price": -108,
+    "proj": 13.8,
+    "siera": 4.48,
+    "edge": 28,
+    "actualOuts": 21,
+    "won": false,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-17",
+    "name": "Cal Quantrill",
+    "line": 14.5,
+    "price": 125,
+    "proj": 13.2,
+    "siera": 4.79,
+    "edge": 17,
+    "actualOuts": 12,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-12",
+    "name": "Andrew Abbott",
+    "line": 16.5,
+    "price": -104,
+    "proj": 15,
+    "siera": 4.89,
+    "edge": 20,
+    "actualOuts": 12,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-12",
+    "name": "Cristian Javier",
+    "line": 12.5,
+    "price": -143,
+    "proj": 6.2,
+    "siera": 7,
+    "edge": 33,
+    "actualOuts": 9,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-12",
+    "name": "Michael Lorenzen",
+    "line": 16.5,
+    "price": -130,
+    "proj": 13.8,
+    "siera": 4.72,
+    "edge": 23,
+    "actualOuts": 15,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-12",
+    "name": "Noah Schultz",
+    "line": 15.5,
+    "price": -141,
+    "proj": 12.2,
+    "siera": 5.23,
+    "edge": 23,
+    "actualOuts": 15,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-11",
+    "name": "Nick Lodolo",
+    "line": 16.5,
+    "price": -125,
+    "proj": 14.8,
+    "siera": 4.76,
+    "edge": 17,
+    "actualOuts": 15,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-11",
+    "name": "Trey Yesavage",
+    "line": 17.5,
+    "price": -122,
+    "proj": 14,
+    "siera": 4.55,
+    "edge": 32,
+    "actualOuts": 5,
+    "won": true,
+    "tag": "both"
+  }
+]
