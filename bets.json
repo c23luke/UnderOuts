@@ -190,5 +190,29 @@
     "proj": 11.9,
     "edge": 33,
     "auto": true
+  },
+  {
+    "id": "2026-07-18|rodriguez",
+    "date": "2026-07-18",
+    "name": "Grayson Rodriguez",
+    "team": "Detroit Tigers @ Los Angeles Angels",
+    "line": 15.5,
+    "side": "under",
+    "price": -121,
+    "proj": 12.5,
+    "edge": 25,
+    "auto": true
+  },
+  {
+    "id": "2026-07-18|williams",
+    "date": "2026-07-18",
+    "name": "Gavin Williams",
+    "team": "Pittsburgh Pirates @ Cleveland Guardians",
+    "line": 17.5,
+    "side": "under",
+    "price": 130,
+    "proj": 16,
+    "edge": 25,
+    "auto": true
   }
 ]
