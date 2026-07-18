@@ -166,5 +166,17 @@
     "proj": 13.8,
     "edge": 28,
     "auto": true
+  },
+  {
+    "id": "2026-07-17|detmers",
+    "date": "2026-07-17",
+    "name": "Reid Detmers",
+    "team": "Detroit Tigers @ Los Angeles Angels",
+    "line": 17.5,
+    "side": "under",
+    "price": 110,
+    "proj": 16,
+    "edge": 16,
+    "auto": true
   }
 ]
