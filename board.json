@@ -1,44 +1,5 @@
 [
   {
-    "name": "Brandon Pfaadt",
-    "team": "St. Louis Cardinals @ Arizona Diamondbacks",
-    "line": 17.5,
-    "under": 115,
-    "book": "Fanatics",
-    "proj": 14.1,
-    "edge": 34,
-    "pUnder": 81,
-    "siera": 4.328406824197435,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Trevor Rogers",
-    "team": "Baltimore Orioles @ Houston Astros",
-    "line": 17.5,
-    "under": 102,
-    "book": "Caesars",
-    "proj": 14.4,
-    "edge": 25,
-    "pUnder": 75,
-    "siera": 4.721453623165538,
-    "tag": "both",
-    "bet": true
-  },
-  {
-    "name": "Shane Drohan",
-    "team": "Miami Marlins @ Milwaukee Brewers",
-    "line": 17.5,
-    "under": -124,
-    "book": "Caesars",
-    "proj": 13.8,
-    "edge": 23,
-    "pUnder": 78,
-    "siera": 3.829184659452078,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Grayson Rodriguez",
     "team": "Detroit Tigers @ Los Angeles Angels",
     "line": 15.5,
@@ -48,32 +9,6 @@
     "edge": 23,
     "pUnder": 79,
     "siera": 5.032762779392477,
-    "tag": "both",
-    "bet": true
-  },
-  {
-    "name": "MacKenzie Gore",
-    "team": "Texas Rangers @ Atlanta Braves",
-    "line": 17.5,
-    "under": 100,
-    "book": "DraftKings",
-    "proj": 15,
-    "edge": 20,
-    "pUnder": 70,
-    "siera": 3.9288619020525064,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Griffin Canning",
-    "team": "San Diego Padres @ Kansas City Royals",
-    "line": 14.5,
-    "under": -120,
-    "book": "Fanatics",
-    "proj": 12.4,
-    "edge": 13,
-    "pUnder": 68,
-    "siera": 4.577041110438114,
     "tag": "both",
     "bet": true
   },
@@ -100,19 +35,6 @@
     "edge": -6,
     "pUnder": 54,
     "siera": 4.4983223749031245,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Max Meyer",
-    "team": "Miami Marlins @ Milwaukee Brewers",
-    "line": 15.5,
-    "under": -115,
-    "book": "Fanatics",
-    "proj": 16,
-    "edge": -9,
-    "pUnder": 45,
-    "siera": 3.7637271282633376,
     "tag": null,
     "bet": false
   },
