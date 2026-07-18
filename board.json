@@ -1,5 +1,18 @@
 [
   {
+    "name": "Brandon Pfaadt",
+    "team": "St. Louis Cardinals @ Arizona Diamondbacks",
+    "line": 17.5,
+    "under": -115,
+    "book": "Fanatics",
+    "proj": 13.5,
+    "edge": 27,
+    "pUnder": 81,
+    "siera": 4.328406824197435,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Grayson Rodriguez",
     "team": "Detroit Tigers @ Los Angeles Angels",
     "line": 15.5,
@@ -13,30 +26,30 @@
     "bet": true
   },
   {
-    "name": "Shane Drohan",
-    "team": "Miami Marlins @ Milwaukee Brewers",
-    "line": 17.5,
-    "under": -125,
-    "book": "BetMGM",
-    "proj": 15,
-    "edge": 20,
-    "pUnder": 75,
-    "siera": 3.829184659452078,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Trevor Rogers",
     "team": "Baltimore Orioles @ Houston Astros",
     "line": 17.5,
     "under": -110,
     "book": "BetMGM",
-    "proj": 15.4,
-    "edge": 18,
-    "pUnder": 70,
+    "proj": 14.3,
+    "edge": 22,
+    "pUnder": 75,
     "siera": 4.721453623165538,
     "tag": "both",
     "bet": true
+  },
+  {
+    "name": "Shane Drohan",
+    "team": "Miami Marlins @ Milwaukee Brewers",
+    "line": 17.5,
+    "under": -125,
+    "book": "BetMGM",
+    "proj": 13.8,
+    "edge": 22,
+    "pUnder": 77,
+    "siera": 3.829184659452078,
+    "tag": null,
+    "bet": false
   },
   {
     "name": "Bryan Woo",
@@ -55,8 +68,8 @@
     "name": "MacKenzie Gore",
     "team": "Texas Rangers @ Atlanta Braves",
     "line": 17.5,
-    "under": -131,
-    "book": "DraftKings",
+    "under": -132,
+    "book": "Caesars",
     "proj": 15.8,
     "edge": 9,
     "pUnder": 66,
@@ -65,15 +78,41 @@
     "bet": false
   },
   {
+    "name": "Spencer Arrighetti",
+    "team": "Baltimore Orioles @ Houston Astros",
+    "line": 15.5,
+    "under": 100,
+    "book": "DraftKings",
+    "proj": 14.6,
+    "edge": 8,
+    "pUnder": 58,
+    "siera": 4.665250534866669,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Griffin Canning",
     "team": "San Diego Padres @ Kansas City Royals",
     "line": 14.5,
-    "under": -120,
+    "under": -118,
     "book": "BetMGM",
     "proj": 13.7,
     "edge": 4,
     "pUnder": 59,
     "siera": 4.577041110438114,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Dustin May",
+    "team": "St. Louis Cardinals @ Arizona Diamondbacks",
+    "line": 15.5,
+    "under": -114,
+    "book": "FanDuel",
+    "proj": 14.8,
+    "edge": 2,
+    "pUnder": 55,
+    "siera": 3.821063017974563,
     "tag": null,
     "bet": false
   },
@@ -91,19 +130,6 @@
     "bet": false
   },
   {
-    "name": "Dustin May",
-    "team": "St. Louis Cardinals @ Arizona Diamondbacks",
-    "line": 15.5,
-    "under": -114,
-    "book": "FanDuel",
-    "proj": 15.7,
-    "edge": -5,
-    "pUnder": 48,
-    "siera": 3.821063017974563,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "JT Ginn",
     "team": "Washington Nationals @ Athletics",
     "line": 15.5,
@@ -113,32 +139,6 @@
     "edge": -6,
     "pUnder": 54,
     "siera": 4.4983223749031245,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Spencer Arrighetti",
-    "team": "Baltimore Orioles @ Houston Astros",
-    "line": 15.5,
-    "under": -151,
-    "book": "DraftKings",
-    "proj": 15.6,
-    "edge": -11,
-    "pUnder": 49,
-    "siera": 4.665250534866669,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Brandon Pfaadt",
-    "team": "St. Louis Cardinals @ Arizona Diamondbacks",
-    "line": 15.5,
-    "under": -125,
-    "book": "BetMGM",
-    "proj": 16,
-    "edge": -13,
-    "pUnder": 43,
-    "siera": 4.328406824197435,
     "tag": null,
     "bet": false
   },

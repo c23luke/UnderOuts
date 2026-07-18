@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": "2026-07-18|rodriguez",
+    "date": "2026-07-18",
+    "name": "Grayson Rodriguez",
+    "team": "Detroit Tigers @ Los Angeles Angels",
+    "line": 15.5,
+    "side": "under",
+    "price": -130,
+    "proj": 12.5,
+    "edge": 23,
+    "tag": "both",
+    "auto": true
+  },
+  {
+    "id": "2026-07-18|rogers",
+    "date": "2026-07-18",
+    "name": "Trevor Rogers",
+    "team": "Baltimore Orioles @ Houston Astros",
+    "line": 17.5,
+    "side": "under",
+    "price": -110,
+    "proj": 14.3,
+    "edge": 22,
+    "tag": "both",
+    "auto": true
+  }
+]
