@@ -1,1 +1,106 @@
-[]
+[
+  {
+    "name": "Shane Bieber",
+    "team": "Chicago White Sox @ Toronto Blue Jays",
+    "line": 15.5,
+    "under": -122,
+    "book": "Caesars",
+    "proj": 11.9,
+    "edge": 33,
+    "pUnder": 88,
+    "siera": 5.692636488657734,
+    "reason": "bad arm + short",
+    "bet": true
+  },
+  {
+    "name": "Trevor Rogers",
+    "team": "Baltimore Orioles @ Houston Astros",
+    "line": 16.5,
+    "under": -103,
+    "book": "DraftKings",
+    "proj": 15.5,
+    "edge": 9,
+    "pUnder": 60,
+    "siera": 4.721453623165538,
+    "reason": "",
+    "bet": false
+  },
+  {
+    "name": "Shane Drohan",
+    "team": "Miami Marlins @ Milwaukee Brewers",
+    "line": 16.5,
+    "under": -107,
+    "book": "Caesars",
+    "proj": 15.6,
+    "edge": 8,
+    "pUnder": 60,
+    "siera": 3.829184659452078,
+    "reason": "",
+    "bet": false
+  },
+  {
+    "name": "Taj Bradley",
+    "team": "Minnesota Twins @ Chicago Cubs",
+    "line": 16.5,
+    "under": 100,
+    "book": "DraftKings",
+    "proj": 16,
+    "edge": 6,
+    "pUnder": 56,
+    "siera": 3.738714841306107,
+    "reason": "confirmed cap",
+    "bet": false
+  },
+  {
+    "name": "Matthew Boyd",
+    "team": "Minnesota Twins @ Chicago Cubs",
+    "line": 16.5,
+    "under": -107,
+    "book": "DraftKings",
+    "proj": 15.9,
+    "edge": 6,
+    "pUnder": 58,
+    "siera": 3.5708124731032385,
+    "reason": "",
+    "bet": false
+  },
+  {
+    "name": "JT Ginn",
+    "team": "Washington Nationals @ Athletics",
+    "line": 15.5,
+    "under": -120,
+    "book": "Caesars",
+    "proj": 15.2,
+    "edge": -2,
+    "pUnder": 53,
+    "siera": 4.4983223749031245,
+    "reason": "",
+    "bet": false
+  },
+  {
+    "name": "Spencer Arrighetti",
+    "team": "Baltimore Orioles @ Houston Astros",
+    "line": 14.5,
+    "under": 145,
+    "book": "Bovada",
+    "proj": 15.6,
+    "edge": -3,
+    "pUnder": 38,
+    "siera": 4.665250534866669,
+    "reason": "confirmed cap",
+    "bet": false
+  },
+  {
+    "name": "Davis Martin",
+    "team": "Chicago White Sox @ Toronto Blue Jays",
+    "line": 16.5,
+    "under": -128,
+    "book": "DraftKings",
+    "proj": 16.6,
+    "edge": -7,
+    "pUnder": 49,
+    "siera": 4.012466080066449,
+    "reason": "",
+    "bet": false
+  }
+]

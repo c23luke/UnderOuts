@@ -178,5 +178,17 @@
     "proj": 16,
     "edge": 16,
     "auto": true
+  },
+  {
+    "id": "2026-07-18|bieber",
+    "date": "2026-07-18",
+    "name": "Shane Bieber",
+    "team": "Chicago White Sox @ Toronto Blue Jays",
+    "line": 15.5,
+    "side": "under",
+    "price": -122,
+    "proj": 11.9,
+    "edge": 33,
+    "auto": true
   }
 ]
