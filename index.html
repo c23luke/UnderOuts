@@ -52,16 +52,19 @@
   <div class="lab" style="margin-top:26px">Board · ranked by edge</div>
   <div id="board"><div class="empty">Waiting on the model — start the bot on your Mac. Updates hourly.</div></div>
 
+  <div class="lab" style="margin-top:26px">Correlated F5 · opposing offense</div>
+  <div id="corr"><div class="empty">No correlated bets yet. Fires whenever an under-outs alert sends.</div></div>
+
   <div class="lab" style="margin-top:26px">Recent results</div>
   <div id="hist"><div class="empty">No graded bets yet.</div></div>
 
 <script>
 const AMER=p=>(p==null?'':(p>0?('+'+p):(''+p)));
 function bu(a){a=+a;if(isNaN(a))a=-110;return a>=0?a/100:100/Math.abs(a);}
-let BOARD=[],BETS=[],HIST=[],LIVE={};
+let BOARD=[],BETS=[],HIST=[],CORR=[],LIVE={};
 
 async function j(u){ try{const d=await fetch(u,{cache:'no-store'}).then(r=>r.ok?r.json():null); return Array.isArray(d)?d:[];}catch(e){return [];} }
-async function load(){ BOARD=await j('board.json'); BETS=await j('bets.json'); HIST=await j('history.json'); await live(); renderAll(); }
+async function load(){ BOARD=await j('board.json'); BETS=await j('bets.json'); HIST=await j('history.json'); CORR=await j('correlated.json'); await live(); renderAll(); }
 async function live(){
   try{ const t=new Date().toLocaleDateString('en-CA');
     const s=await fetch('https://statsapi.mlb.com/api/v1/schedule?sportId=1&date='+t,{cache:'no-store'}).then(r=>r.json());
@@ -75,7 +78,19 @@ async function live(){
 }
 function lv(n){return LIVE[n.toLowerCase().split(' ').pop()];}
 
-function renderAll(){ renderStats(); renderBets(); renderBoard(); renderHist(); }
+function renderAll(){ renderStats(); renderBets(); renderBoard(); renderCorr(); renderHist(); }
+
+function renderCorr(){
+  const box=document.getElementById('corr'); if(!CORR.length)return;
+  const chip=r=>r==='W'?'<b style="color:var(--green)">W</b>':r==='L'?'<b style="color:var(--red)">L</b>':r==='P'?'<b style="color:var(--muted)">push</b>':'<span style="color:var(--dim)">◷</span>';
+  box.innerHTML=CORR.slice(0,20).map(c=>{
+    const score=c.graded?(c.oppF5+'-'+c.ownF5+' F5'):'tracking';
+    const ml=c.f5ml!=null?('ML '+AMER(c.f5ml)+' '+chip(c.mlResult)):'';
+    const rl=c.f5rlPoint!=null?('RL '+(c.f5rlPoint>0?'+':'')+c.f5rlPoint+' '+chip(c.rlResult)):'';
+    const parts=[ml,rl].filter(Boolean).join(' · ');
+    return '<div class="hrow"><div><div>'+c.oppTeam+' <span style="color:var(--dim);font-size:11px">off '+c.pitcher+'</span></div><div class="t2">'+parts+' · '+score+'</div></div><div style="font-size:11px;color:var(--dim)">'+c.date+'</div></div>';
+  }).join('');
+}
 
 function renderStats(){
   const g=HIST; const w=g.filter(r=>r.won).length,l=g.length-w; let u=0; g.forEach(r=>u+= r.won?bu(r.price):-1);
