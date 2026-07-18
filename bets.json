@@ -214,5 +214,18 @@
     "proj": 16,
     "edge": 25,
     "auto": true
+  },
+  {
+    "id": "2026-07-18|rogers",
+    "date": "2026-07-18",
+    "name": "Trevor Rogers",
+    "team": "Baltimore Orioles @ Houston Astros",
+    "line": 17.5,
+    "side": "under",
+    "price": -110,
+    "proj": 15.4,
+    "edge": 18,
+    "tag": "both",
+    "auto": true
   }
 ]
