@@ -1,13 +1,134 @@
 [
   {
-    "key": "bradish",
-    "tier": 3,
-    "score": 20,
+    "key": "sandoval",
+    "tier": 2,
+    "score": 68,
     "flags": {
       "il": true
     },
+    "proj": "~4.1 IP (13 outs)",
+    "note": "CONFIRMED: 2nd start back from a 2-year Tommy John recovery; debut was 4.1 IP on 65 pitches with a manager-stated ~68-80 pitch ceiling — genuine short-outing build-up."
+  },
+  {
+    "key": "dobnak",
+    "tier": 2,
+    "score": 60,
+    "flags": {
+      "trend": true
+    },
+    "proj": "~4 IP (12 outs)",
+    "note": "CONFIRMED: making his first start of the season after only two relief appearances — a bullpen arm spot-starting, not stretched out to go deep."
+  },
+  {
+    "key": "allen",
+    "tier": 2,
+    "score": 55,
+    "flags": {
+      "rookie": true
+    },
+    "proj": "~4.2 IP (14 outs)",
+    "note": "CONFIRMED: called up from Triple-A that day to start the doubleheader nightcap (Game 2) — fresh call-up spot start, likely short with heavy bullpen backing."
+  },
+  {
+    "key": "murphy",
+    "tier": 2,
+    "score": 50,
+    "flags": {
+      "rookie": true
+    },
+    "proj": "~4.2 IP (14 outs)",
+    "note": "CONFIRMED: first career MLB start after only two relief appearances — not built up as a big-league starter, so a limited pitch count is likely (market prices much of this)."
+  },
+  {
+    "key": "seymour",
+    "tier": 3,
+    "score": 28,
+    "flags": {
+      "trend": true
+    },
+    "proj": "~5 IP (15 outs)",
+    "note": "Converted reliever but now an established starter (6-2); no confirmed cap tonight — defer to market."
+  },
+  {
+    "key": "jones",
+    "tier": 3,
+    "score": 30,
+    "flags": {
+      "il": true
+    },
+    "proj": "~5 IP (15 outs)",
+    "note": "Back from May-2025 UCL surgery; workload managed but built up by mid-July with no confirmed per-start cap — defer to market."
+  },
+  {
+    "key": "sheehan",
+    "tier": 3,
+    "score": 30,
+    "flags": {
+      "il": true
+    },
+    "proj": "~5 IP (15 outs)",
+    "note": "Post-TJ and workload watched (recent 4.1-5 IP outings) but no announced hard cap — defer to market."
+  },
+  {
+    "key": "bieber",
+    "tier": 3,
+    "score": 25,
+    "flags": {
+      "il": true,
+      "vet": true
+    },
+    "proj": "~5 IP (15 outs)",
+    "note": "Back from 2024 TJ but fully built up (~80-85 pitches, manager says 'where he should be') — no current cap, defer to market."
+  },
+  {
+    "key": "lowder",
+    "tier": 3,
+    "score": 22,
+    "flags": {
+      "il": true
+    },
+    "proj": "~5 IP (15 outs)",
+    "note": "Returned from a June shoulder IL stint but rebuilt over 6+ weeks; no current confirmed cap — defer to market."
+  },
+  {
+    "key": "canning",
+    "tier": 3,
+    "score": 18,
+    "flags": {},
+    "proj": "~5 IP (15 outs)",
+    "note": "Durable (13 GS) with a weak ERA that's already priced; no cap — defer to market."
+  },
+  {
+    "key": "drohan",
+    "tier": 3,
+    "score": 18,
+    "flags": {},
+    "proj": "~5 IP (15 outs)",
+    "note": "Back-end starter, no confirmed cap — defer to market."
+  },
+  {
+    "key": "weathers",
+    "tier": 3,
+    "score": 18,
+    "flags": {},
+    "proj": "~5 IP (15 outs)",
+    "note": "Recent starts near 5.1 IP; no confirmed innings limit — defer to market."
+  },
+  {
+    "key": "ginn",
+    "tier": 3,
+    "score": 15,
+    "flags": {},
     "proj": "~5.2 IP (16 outs)",
-    "note": "Back from 2024 TJ but fully built up this year \u2014 no confirmed cap tonight, defer to market."
+    "note": "Young but established starter (SP149, 7-6); no cap — defer to market."
+  },
+  {
+    "key": "rogers",
+    "tier": 3,
+    "score": 15,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Built up and healthy; no cap — defer to market."
   },
   {
     "key": "arrighetti",
@@ -15,289 +136,130 @@
     "score": 15,
     "flags": {},
     "proj": "~5.2 IP (16 outs)",
-    "note": "No confirmed cap \u2014 defer to market."
+    "note": "Established in the rotation; no confirmed cap — defer to market."
   },
   {
-    "key": "gray",
-    "tier": 3,
-    "score": 10,
-    "flags": {
-      "vet": true
-    },
-    "proj": "~6 IP (18 outs)",
-    "note": "Durable vet, no cap \u2014 defer to market."
-  },
-  {
-    "key": "bennett",
-    "tier": 3,
-    "score": 28,
-    "siera": 3.89,
-    "flags": {
-      "rookie": true
-    },
-    "proj": "~5 IP (15 outs)",
-    "note": "Rookie in a DH spot but established this year (2.64 ERA); no confirmed cap \u2014 defer to market."
-  },
-  {
-    "key": "jax",
+    "key": "may",
     "tier": 3,
     "score": 15,
-    "siera": 3.68,
     "flags": {},
     "proj": "~5.2 IP (16 outs)",
-    "note": "Converted to full starter this year (2.80 ERA in 61 IP) \u2014 no opener/cap, defer to market."
+    "note": "Fully built up this year; no cap — defer to market."
   },
   {
-    "key": "mcclanahan",
+    "key": "sugano",
     "tier": 3,
-    "score": 22,
-    "flags": {
-      "il": true,
-      "vet": true
-    },
-    "proj": "~5 IP (15 outs)",
-    "note": "On a season innings limit from TJ/nerve (2 yrs lost) but now built up (86 IP, recent QS streak) and reportedly lined up for Sunday \u2014 no confirmed short cap, defer to market."
-  },
-  {
-    "key": "cole",
-    "tier": 3,
-    "score": 10,
-    "siera": 3.91,
+    "score": 15,
     "flags": {
       "vet": true
-    },
-    "proj": "~6 IP (18 outs)",
-    "note": "Durable ace, no cap \u2014 defer to market."
-  },
-  {
-    "key": "sasaki",
-    "tier": 3,
-    "score": 25,
-    "siera": 4.25,
-    "flags": {
-      "il": true
     },
     "proj": "~5.2 IP (16 outs)",
-    "note": "Back from shoulder IL earlier this year but fully built up (6 IP last start, 16 GS) \u2014 no current cap, defer to market."
+    "note": "Durable vet; no cap — defer to market."
   },
   {
-    "key": "miles",
+    "key": "rodriguez",
     "tier": 3,
-    "score": 30,
-    "siera": 3.24,
-    "flags": {
-      "rookie": true
-    },
-    "proj": "~4 IP (12 outs)",
-    "note": "Rookie on a short leash \u2014 market already prices ~11.5 outs; no extra confirmed cap beyond what's priced, defer to market."
+    "score": 15,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Healthy and built up; no confirmed cap — defer to market."
   },
   {
-    "key": "kay",
+    "key": "ashcraft",
     "tier": 3,
-    "score": 30,
-    "siera": 4.68,
+    "score": 15,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Starting DH Game 2 but a rotation regular (9-3); no cap — defer to market."
+  },
+  {
+    "key": "martin",
+    "tier": 3,
+    "score": 12,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Durable (9-4); no cap — defer to market."
+  },
+  {
+    "key": "bradley",
+    "tier": 3,
+    "score": 12,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Durable starter; no cap — defer to market."
+  },
+  {
+    "key": "littell",
+    "tier": 3,
+    "score": 12,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Innings-eater; no cap — defer to market."
+  },
+  {
+    "key": "meyer",
+    "tier": 3,
+    "score": 12,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Strong season (9-1); no cap — defer to market."
+  },
+  {
+    "key": "manaea",
+    "tier": 3,
+    "score": 12,
     "flags": {
-      "trend": true
+      "vet": true
     },
-    "proj": "~4.2 IP (13 outs)",
-    "note": "Swingman making a spot start with weak skill (4.68 SIERA), but that's priced (~15.5 line); no confirmed cap \u2014 defer to market."
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Veteran, built up; no cap — defer to market."
+  },
+  {
+    "key": "gore",
+    "tier": 3,
+    "score": 10,
+    "flags": {},
+    "proj": "~6 IP (17 outs)",
+    "note": "Quality starter who works deep; no cap — defer to market."
+  },
+  {
+    "key": "pfaadt",
+    "tier": 3,
+    "score": 10,
+    "flags": {},
+    "proj": "~6 IP (18 outs)",
+    "note": "Durable young starter; no cap — defer to market."
+  },
+  {
+    "key": "boyd",
+    "tier": 3,
+    "score": 10,
+    "flags": {},
+    "proj": "~6 IP (18 outs)",
+    "note": "All-Star form; no cap — defer to market."
   },
   {
     "key": "williams",
     "tier": 3,
     "score": 10,
-    "siera": 3.33,
     "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Solid arm, no cap \u2014 defer to market."
+    "proj": "~6 IP (18 outs)",
+    "note": "Durable (10-4); no cap — defer to market."
   },
   {
-    "key": "jones",
-    "tier": 3,
-    "score": 30,
-    "siera": 3.53,
-    "flags": {
-      "il": true
-    },
-    "proj": "~5 IP (15 outs)",
-    "note": "Back from May-2025 UCL surgery; season workload managed but built up by mid-July with no confirmed per-start cap tonight \u2014 defer to market."
-  },
-  {
-    "key": "melton",
-    "tier": 3,
-    "score": 22,
-    "siera": 3.94,
-    "flags": {
-      "rookie": true
-    },
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Rookie but no confirmed cap; market prices him ~17.5 \u2014 defer to market."
-  },
-  {
-    "key": "detmers",
-    "tier": 3,
-    "score": 15,
-    "siera": 3.61,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "No confirmed cap \u2014 defer to market."
-  },
-  {
-    "key": "lugo",
-    "tier": 3,
-    "score": 12,
-    "siera": 4.53,
-    "flags": {
-      "vet": true
-    },
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Durable vet, no cap \u2014 defer to market."
-  },
-  {
-    "key": "king",
-    "tier": 3,
-    "score": 18,
-    "siera": 4.49,
-    "flags": {
-      "il": true
-    },
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Missed time earlier but built up now; no confirmed cap \u2014 defer to market."
-  },
-  {
-    "key": "bradley",
-    "tier": 3,
-    "score": 15,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "No confirmed cap \u2014 defer to market."
-  },
-  {
-    "key": "rea",
-    "tier": 3,
-    "score": 15,
-    "siera": 4.77,
-    "flags": {
-      "vet": true
-    },
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Weak skill but durable and priced; no cap \u2014 defer to market."
-  },
-  {
-    "key": "springs",
-    "tier": 3,
-    "score": 18,
-    "flags": {
-      "vet": true,
-      "il": true
-    },
-    "proj": "~5 IP (15 outs)",
-    "note": "Back from 2024 TJ but built up this year; no confirmed cap \u2014 defer to market."
-  },
-  {
-    "key": "griffin",
-    "tier": 3,
-    "score": 18,
-    "flags": {},
-    "proj": "~5 IP (15 outs)",
-    "note": "All-Star this year and established in the rotation; no opener/cap \u2014 defer to market."
-  },
-  {
-    "key": "gilbert",
+    "key": "luzardo",
     "tier": 3,
     "score": 10,
     "flags": {},
     "proj": "~6 IP (18 outs)",
-    "note": "Durable, no cap \u2014 defer to market."
+    "note": "Front-line starter (SP11); no cap — defer to market."
   },
   {
-    "key": "roupp",
+    "key": "skubal",
     "tier": 3,
-    "score": 15,
-    "siera": 3.96,
+    "score": 5,
     "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "No confirmed cap \u2014 defer to market."
-  },
-  {
-    "key": "degrom",
-    "tier": 3,
-    "score": 12,
-    "flags": {
-      "vet": true
-    },
-    "proj": "~6 IP (18 outs)",
-    "note": "Healthy and built up this year, no cap \u2014 defer to market."
-  },
-  {
-    "key": "sale",
-    "tier": 3,
-    "score": 8,
-    "siera": 3.15,
-    "flags": {
-      "vet": true
-    },
-    "proj": "~6 IP (18 outs)",
-    "note": "Ace form, no cap \u2014 defer to market."
-  },
-  {
-    "key": "alcantara",
-    "tier": 3,
-    "score": 12,
-    "siera": 4.39,
-    "flags": {
-      "vet": true
-    },
-    "proj": "~6 IP (18 outs)",
-    "note": "Workhorse, no cap; weak SIERA already priced \u2014 defer to market."
-  },
-  {
-    "key": "henderson",
-    "tier": 3,
-    "score": 35,
-    "siera": 3.18,
-    "flags": {
-      "rookie": true
-    },
-    "proj": "~5 IP (15 outs)",
-    "note": "Rookie with a documented pitch-count ramp (still building toward ~80 pitches, ~4.7 IP/start) \u2014 but that's market-priced; no new confirmed cap, defer to market."
-  },
-  {
-    "key": "singer",
-    "tier": 3,
-    "score": 15,
-    "siera": 4.48,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "No confirmed cap \u2014 defer to market."
-  },
-  {
-    "key": "freeland",
-    "tier": 3,
-    "score": 12,
-    "flags": {
-      "vet": true
-    },
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Durable vet, no cap \u2014 defer to market."
-  },
-  {
-    "key": "pallante",
-    "tier": 3,
-    "score": 15,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "No confirmed cap \u2014 defer to market."
-  },
-  {
-    "key": "kelly",
-    "tier": 3,
-    "score": 15,
-    "siera": 5.3,
-    "flags": {
-      "vet": true
-    },
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Weak SIERA but durable and priced; no cap \u2014 defer to market."
+    "proj": "~6.2 IP (20 outs)",
+    "note": "Ace who routinely works deep; no cap — defer to market."
   }
 ]
