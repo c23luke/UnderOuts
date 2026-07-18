@@ -16,10 +16,10 @@
     "name": "Grayson Rodriguez",
     "team": "Detroit Tigers @ Los Angeles Angels",
     "line": 15.5,
-    "under": -114,
-    "book": "FanDuel",
+    "under": -121,
+    "book": "DraftKings",
     "proj": 12.5,
-    "edge": 26,
+    "edge": 25,
     "pUnder": 79,
     "siera": 5.032762779392477,
     "reason": "confirmed cap",
@@ -65,6 +65,19 @@
     "bet": false
   },
   {
+    "name": "Taj Bradley",
+    "team": "Minnesota Twins @ Chicago Cubs",
+    "line": 17.5,
+    "under": -130,
+    "book": "Fanatics",
+    "proj": 16,
+    "edge": 11,
+    "pUnder": 68,
+    "siera": 3.738714841306107,
+    "reason": "confirmed cap",
+    "bet": false
+  },
+  {
     "name": "Bryan Woo",
     "team": "San Francisco Giants @ Seattle Mariners",
     "line": 17.5,
@@ -75,32 +88,6 @@
     "pUnder": 50,
     "siera": 3.628222841239033,
     "reason": "",
-    "bet": false
-  },
-  {
-    "name": "JT Ginn",
-    "team": "Washington Nationals @ Athletics",
-    "line": 16.5,
-    "under": -125,
-    "book": "BetMGM",
-    "proj": 15.1,
-    "edge": 7,
-    "pUnder": 63,
-    "siera": 4.4983223749031245,
-    "reason": "",
-    "bet": false
-  },
-  {
-    "name": "Taj Bradley",
-    "team": "Minnesota Twins @ Chicago Cubs",
-    "line": 16.5,
-    "under": -102,
-    "book": "FanDuel",
-    "proj": 16,
-    "edge": 6,
-    "pUnder": 56,
-    "siera": 3.738714841306107,
-    "reason": "confirmed cap",
     "bet": false
   },
   {
@@ -130,6 +117,19 @@
     "bet": false
   },
   {
+    "name": "JT Ginn",
+    "team": "Washington Nationals @ Athletics",
+    "line": 15.5,
+    "under": -125,
+    "book": "BetMGM",
+    "proj": 15.1,
+    "edge": -2,
+    "pUnder": 54,
+    "siera": 4.4983223749031245,
+    "reason": "",
+    "bet": false
+  },
+  {
     "name": "Davis Martin",
     "team": "Chicago White Sox @ Toronto Blue Jays",
     "line": 16.5,
@@ -140,19 +140,6 @@
     "pUnder": 49,
     "siera": 4.012466080066449,
     "reason": "",
-    "bet": false
-  },
-  {
-    "name": "Spencer Arrighetti",
-    "team": "Baltimore Orioles @ Houston Astros",
-    "line": 14.5,
-    "under": 145,
-    "book": "Bovada",
-    "proj": 15.6,
-    "edge": -3,
-    "pUnder": 38,
-    "siera": 4.665250534866669,
-    "reason": "confirmed cap",
     "bet": false
   },
   {
@@ -182,6 +169,19 @@
     "bet": false
   },
   {
+    "name": "Spencer Arrighetti",
+    "team": "Baltimore Orioles @ Houston Astros",
+    "line": 14.5,
+    "under": 125,
+    "book": "Bovada",
+    "proj": 15.6,
+    "edge": -7,
+    "pUnder": 38,
+    "siera": 4.665250534866669,
+    "reason": "confirmed cap",
+    "bet": false
+  },
+  {
     "name": "Brandon Pfaadt",
     "team": "St. Louis Cardinals @ Arizona Diamondbacks",
     "line": 15.5,
@@ -192,6 +192,19 @@
     "pUnder": 43,
     "siera": 4.328406824197435,
     "reason": "",
+    "bet": false
+  },
+  {
+    "name": "Rhett Lowder",
+    "team": "Cincinnati Reds @ Colorado Rockies",
+    "line": 12.5,
+    "under": -115,
+    "book": "BetMGM",
+    "proj": 13.4,
+    "edge": -12,
+    "pUnder": 42,
+    "siera": 4.834255071459845,
+    "reason": "bad arm + short",
     "bet": false
   },
   {
