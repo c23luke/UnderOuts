@@ -65,32 +65,6 @@
     "bet": false
   },
   {
-    "name": "Taj Bradley",
-    "team": "Minnesota Twins @ Chicago Cubs",
-    "line": 16.5,
-    "under": 100,
-    "book": "DraftKings",
-    "proj": 16,
-    "edge": 6,
-    "pUnder": 56,
-    "siera": 3.738714841306107,
-    "reason": "confirmed cap",
-    "bet": false
-  },
-  {
-    "name": "Matthew Boyd",
-    "team": "Minnesota Twins @ Chicago Cubs",
-    "line": 16.5,
-    "under": -107,
-    "book": "DraftKings",
-    "proj": 15.9,
-    "edge": 6,
-    "pUnder": 58,
-    "siera": 3.5708124731032385,
-    "reason": "",
-    "bet": false
-  },
-  {
     "name": "Jared Jones",
     "team": "Pittsburgh Pirates @ Cleveland Guardians",
     "line": 15.5,
@@ -101,6 +75,32 @@
     "pUnder": 68,
     "siera": 3.5312273599173505,
     "reason": "confirmed cap",
+    "bet": false
+  },
+  {
+    "name": "Taj Bradley",
+    "team": "Minnesota Twins @ Chicago Cubs",
+    "line": 16.5,
+    "under": -109,
+    "book": "DraftKings",
+    "proj": 16,
+    "edge": 4,
+    "pUnder": 56,
+    "siera": 3.738714841306107,
+    "reason": "confirmed cap",
+    "bet": false
+  },
+  {
+    "name": "Matthew Boyd",
+    "team": "Minnesota Twins @ Chicago Cubs",
+    "line": 16.5,
+    "under": -116,
+    "book": "DraftKings",
+    "proj": 15.9,
+    "edge": 4,
+    "pUnder": 58,
+    "siera": 3.5708124731032385,
+    "reason": "",
     "bet": false
   },
   {
