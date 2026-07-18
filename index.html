@@ -41,6 +41,7 @@
   .tag.g{color:var(--green);background:rgba(0,229,138,.13)} .tag.a{color:var(--amber);background:rgba(224,163,58,.14)} .tag.p{color:var(--dim);background:#141a24}
   .hrow{display:flex;justify-content:space-between;align-items:center;padding:10px 3px;border-bottom:1px solid var(--line);font-size:13px}
   .systems{margin:-12px 0 24px}
+  .syscap{font-size:10px;color:var(--dim);letter-spacing:.6px;text-transform:uppercase;margin:0 2px 9px}
   .sysrow{display:flex;justify-content:space-between;align-items:center;background:var(--card);border-radius:12px;padding:11px 13px;margin-bottom:7px}
   .sysrow.b{border-left:3px solid var(--green)} .sysrow.a{border-left:3px solid var(--amber)}
   .sysL{font-size:11.5px;font-weight:700;letter-spacing:.3px}
@@ -111,13 +112,14 @@ function renderStats(){
   // by-system breakdown backtested across EVERY bad-arm start (systems.json), not just flagship bets:
   //   BAD ARM = all SIERA≥4.4 · BAD ARM + SHORT = the short subset
   const base = SYS.length ? SYS : g.map(r=>({won:r.won,price:r.price,short:r.tag==='both'}));
-  const badarmAll=calcSys(base);
-  const shortSub=calcSys(base.filter(r=>r.short));
+  const badarmAll=calcSys(base);   // system 1: bet under on EVERY bad arm (SIERA≥4.4) → ~70%
+  const both=calcSys(g);           // system 2: the picks actually sent (bad arm + short) → your live record
   const num=(c)=>'<div class="sysR"><span>'+c.w+'-'+c.l+'</span><span style="color:'+(c.u>=0?'var(--green)':'var(--red)')+'">'+(c.u>=0?'+':'')+c.u.toFixed(1)+'u</span><span style="color:'+(c.roi>=0?'var(--green)':'var(--red)')+'">'+(c.roi>=0?'+':'')+c.roi.toFixed(0)+'%</span></div>';
   const row=(cls,label,tag,c)=> c.n? ('<div class="sysrow '+cls+'"><div class="sysL">'+label+' <b>'+tag+' · '+(c.n?Math.round(c.w/c.n*100):0)+'%</b></div>'+num(c)+'</div>') : '';
   document.getElementById('systems').innerHTML =
-      row('a','BAD ARM · SIERA ≥4.4','ALL '+badarmAll.n,badarmAll)
-    + row('b','BAD ARM + SHORT','SHORT '+shortSub.n,shortSub);
+      '<div class="syscap">Two systems tracked</div>'
+    + row('a','BAD ARM · SIERA ≥4.4','ALL '+badarmAll.n,badarmAll)
+    + row('b','BAD ARM + SHORT · sent','PICKS '+both.n,both);
 }
 
 function liveLine(name,line){
