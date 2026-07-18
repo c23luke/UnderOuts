@@ -40,11 +40,19 @@
   .tag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap}
   .tag.g{color:var(--green);background:rgba(0,229,138,.13)} .tag.a{color:var(--amber);background:rgba(224,163,58,.14)} .tag.p{color:var(--dim);background:#141a24}
   .hrow{display:flex;justify-content:space-between;align-items:center;padding:10px 3px;border-bottom:1px solid var(--line);font-size:13px}
+  .systems{margin:-12px 0 24px}
+  .sysrow{display:flex;justify-content:space-between;align-items:center;background:var(--card);border-radius:12px;padding:11px 13px;margin-bottom:7px}
+  .sysrow.b{border-left:3px solid var(--green)} .sysrow.a{border-left:3px solid var(--amber)}
+  .sysL{font-size:11.5px;font-weight:700;letter-spacing:.3px}
+  .sysL b{font-size:9.5px;color:var(--dim);font-weight:700;margin-left:5px}
+  .sysR{display:flex;gap:13px;font-size:13px;font-weight:700}
+  .sysR .lbl{font-size:9px;color:var(--dim);font-weight:600;display:block;letter-spacing:.4px;text-align:right}
 </style>
 </head>
 <body>
   <div class="top"><div class="logo">UNDER<span>OUTS</span></div><div class="topsub" id="topsub"></div></div>
   <div class="stats" id="stats"></div>
+  <div class="systems" id="systems"></div>
 
   <div class="lab">Tonight's bets</div>
   <div id="bets"></div>
@@ -92,14 +100,22 @@ function renderCorr(){
   }).join('');
 }
 
+function calcSys(arr){ const w=arr.filter(r=>r.won).length,l=arr.length-w; let u=0; arr.forEach(r=>u+= r.won?bu(r.price):-1); const roi=arr.length?(u/arr.length*100):0; return {w,l,u,roi,n:arr.length}; }
 function renderStats(){
-  const g=HIST; const w=g.filter(r=>r.won).length,l=g.length-w; let u=0; g.forEach(r=>u+= r.won?bu(r.price):-1);
-  const roi=g.length?(u/g.length*100):0;
+  const g=HIST; const o=calcSys(g);
   document.getElementById('topsub').textContent = BOARD.length? (BOARD.length+' priced · '+BOARD.filter(p=>p.bet).length+' bets tonight') : '';
   document.getElementById('stats').innerHTML=
-    '<div class="stat"><div class="v">'+w+'-'+l+'</div><div class="k">record</div></div>'
-   +'<div class="stat"><div class="v" style="color:'+(u>=0?'var(--green)':'var(--red)')+'">'+(u>=0?'+':'')+u.toFixed(1)+'u</div><div class="k">profit</div></div>'
-   +'<div class="stat"><div class="v" style="color:'+(roi>=0?'var(--green)':'var(--red)')+'">'+(roi>=0?'+':'')+roi.toFixed(0)+'%</div><div class="k">roi</div></div>';
+    '<div class="stat"><div class="v">'+o.w+'-'+o.l+'</div><div class="k">record</div></div>'
+   +'<div class="stat"><div class="v" style="color:'+(o.u>=0?'var(--green)':'var(--red)')+'">'+(o.u>=0?'+':'')+o.u.toFixed(1)+'u</div><div class="k">profit</div></div>'
+   +'<div class="stat"><div class="v" style="color:'+(o.roi>=0?'var(--green)':'var(--red)')+'">'+(o.roi>=0?'+':'')+o.roi.toFixed(0)+'%</div><div class="k">roi</div></div>';
+  // by-system breakdown: BAD ARM (all SIERA≥4.4, the 70% system) and its BAD ARM + SHORT subset (83%)
+  const badarmAll=calcSys(g);                                  // every bet already clears SIERA≥4.4
+  const both=calcSys(g.filter(r=>r.tag==='both'));
+  const num=(c)=>'<div class="sysR"><span>'+c.w+'-'+c.l+'</span><span style="color:'+(c.u>=0?'var(--green)':'var(--red)')+'">'+(c.u>=0?'+':'')+c.u.toFixed(1)+'u</span><span style="color:'+(c.roi>=0?'var(--green)':'var(--red)')+'">'+(c.roi>=0?'+':'')+c.roi.toFixed(0)+'%</span></div>';
+  const row=(cls,label,tag,c)=> c.n? ('<div class="sysrow '+cls+'"><div class="sysL">'+label+' <b>'+tag+'</b></div>'+num(c)+'</div>') : '';
+  document.getElementById('systems').innerHTML =
+      row('a','BAD ARM · SIERA ≥4.4','70% SYSTEM',badarmAll)
+    + row('b','BAD ARM + SHORT','83% SYSTEM',both);
 }
 
 function liveLine(name,line){
