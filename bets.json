@@ -24,5 +24,18 @@
     "edge": 22,
     "tag": "both",
     "auto": true
+  },
+  {
+    "id": "2026-07-18|canning",
+    "date": "2026-07-18",
+    "name": "Griffin Canning",
+    "team": "San Diego Padres @ Kansas City Royals",
+    "line": 14.5,
+    "side": "under",
+    "price": -120,
+    "proj": 12.3,
+    "edge": 14,
+    "tag": "both",
+    "auto": true
   }
 ]
