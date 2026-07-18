@@ -1,0 +1,222 @@
+[
+  {
+    "date": "2026-07-17",
+    "name": "Anthony Kay",
+    "line": 15.5,
+    "price": -151,
+    "proj": 13,
+    "siera": 4.68,
+    "actualOuts": 12,
+    "won": true,
+    "short": true
+  },
+  {
+    "date": "2026-07-17",
+    "name": "Bailey Ober",
+    "line": 14.5,
+    "price": 135,
+    "proj": 15.7,
+    "siera": 4.81,
+    "actualOuts": 16,
+    "won": false,
+    "short": false
+  },
+  {
+    "date": "2026-07-17",
+    "name": "Brady Singer",
+    "line": 17.5,
+    "price": -108,
+    "proj": 13.8,
+    "siera": 4.48,
+    "actualOuts": 21,
+    "won": false,
+    "short": true
+  },
+  {
+    "date": "2026-07-17",
+    "name": "Cal Quantrill",
+    "line": 14.5,
+    "price": 125,
+    "proj": 13.2,
+    "siera": 4.79,
+    "actualOuts": 12,
+    "won": true,
+    "short": true
+  },
+  {
+    "date": "2026-07-17",
+    "name": "Colin Rea",
+    "line": 14.5,
+    "price": 130,
+    "proj": 14.7,
+    "siera": 4.77,
+    "actualOuts": 18,
+    "won": false,
+    "short": true
+  },
+  {
+    "date": "2026-07-17",
+    "name": "Merrill Kelly",
+    "line": 14.5,
+    "price": 115,
+    "proj": 15.6,
+    "siera": 5.3,
+    "actualOuts": 15,
+    "won": false,
+    "short": true
+  },
+  {
+    "date": "2026-07-17",
+    "name": "Michael King",
+    "line": 16.5,
+    "price": -105,
+    "proj": 16,
+    "siera": 4.49,
+    "actualOuts": 3,
+    "won": true,
+    "short": true
+  },
+  {
+    "date": "2026-07-17",
+    "name": "Michael McGreevy",
+    "line": 16.5,
+    "price": -118,
+    "proj": 16.9,
+    "siera": 4.46,
+    "actualOuts": 19,
+    "won": false,
+    "short": false
+  },
+  {
+    "date": "2026-07-17",
+    "name": "Seth Lugo",
+    "line": 16.5,
+    "price": -125,
+    "proj": 16,
+    "siera": 4.53,
+    "actualOuts": 18,
+    "won": false,
+    "short": true
+  },
+  {
+    "date": "2026-07-12",
+    "name": "Andrew Abbott",
+    "line": 16.5,
+    "price": -104,
+    "proj": 15,
+    "siera": 4.89,
+    "actualOuts": 12,
+    "won": true,
+    "short": true
+  },
+  {
+    "date": "2026-07-12",
+    "name": "Cristian Javier",
+    "line": 12.5,
+    "price": -143,
+    "proj": 6.2,
+    "siera": 7,
+    "actualOuts": 9,
+    "won": true,
+    "short": true
+  },
+  {
+    "date": "2026-07-12",
+    "name": "Joey Cantillo",
+    "line": 15.5,
+    "price": -130,
+    "proj": 14.7,
+    "siera": 4.43,
+    "actualOuts": 15,
+    "won": true,
+    "short": true
+  },
+  {
+    "date": "2026-07-12",
+    "name": "JT Ginn",
+    "line": 16.5,
+    "price": -120,
+    "proj": 15.8,
+    "siera": 4.5,
+    "actualOuts": 13,
+    "won": true,
+    "short": true
+  },
+  {
+    "date": "2026-07-12",
+    "name": "Michael Lorenzen",
+    "line": 16.5,
+    "price": -130,
+    "proj": 13.8,
+    "siera": 4.72,
+    "actualOuts": 15,
+    "won": true,
+    "short": true
+  },
+  {
+    "date": "2026-07-12",
+    "name": "Noah Schultz",
+    "line": 15.5,
+    "price": -141,
+    "proj": 12.2,
+    "siera": 5.23,
+    "actualOuts": 15,
+    "won": true,
+    "short": true
+  },
+  {
+    "date": "2026-07-12",
+    "name": "Seth Lugo",
+    "line": 15.5,
+    "price": -106,
+    "proj": 16.1,
+    "siera": 4.53,
+    "actualOuts": 12,
+    "won": true,
+    "short": true
+  },
+  {
+    "date": "2026-07-12",
+    "name": "Shane Baz",
+    "line": 17.5,
+    "price": 132,
+    "proj": 17,
+    "siera": 4.62,
+    "actualOuts": 14,
+    "won": true,
+    "short": true
+  },
+  {
+    "date": "2026-07-11",
+    "name": "Javier Assad",
+    "line": 15.5,
+    "price": -145,
+    "proj": 13.3,
+    "siera": 4.77,
+    "actualOuts": 15,
+    "won": true,
+    "short": true
+  },
+  {
+    "date": "2026-07-11",
+    "name": "Nick Lodolo",
+    "line": 16.5,
+    "price": -125,
+    "proj": 14.8,
+    "siera": 4.76,
+    "actualOuts": 15,
+    "won": true,
+    "short": true
+  },
+  {
+    "date": "2026-07-11",
+    "name": "Trey Yesavage",
+    "line": 17.5,
+    "price": -122,
+    "proj": 14,
+    "siera": 4.55,
+    "actualOuts": 5,
+    "won": true,
+    "short": true
+  }
+]

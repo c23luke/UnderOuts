@@ -69,10 +69,10 @@
 <script>
 const AMER=p=>(p==null?'':(p>0?('+'+p):(''+p)));
 function bu(a){a=+a;if(isNaN(a))a=-110;return a>=0?a/100:100/Math.abs(a);}
-let BOARD=[],BETS=[],HIST=[],CORR=[],LIVE={};
+let BOARD=[],BETS=[],HIST=[],CORR=[],SYS=[],LIVE={};
 
 async function j(u){ try{const d=await fetch(u,{cache:'no-store'}).then(r=>r.ok?r.json():null); return Array.isArray(d)?d:[];}catch(e){return [];} }
-async function load(){ BOARD=await j('board.json'); BETS=await j('bets.json'); HIST=await j('history.json'); CORR=await j('correlated.json'); await live(); renderAll(); }
+async function load(){ BOARD=await j('board.json'); BETS=await j('bets.json'); HIST=await j('history.json'); CORR=await j('correlated.json'); SYS=await j('systems.json'); await live(); renderAll(); }
 async function live(){
   try{ const t=new Date().toLocaleDateString('en-CA');
     const s=await fetch('https://statsapi.mlb.com/api/v1/schedule?sportId=1&date='+t,{cache:'no-store'}).then(r=>r.json());
@@ -108,14 +108,16 @@ function renderStats(){
     '<div class="stat"><div class="v">'+o.w+'-'+o.l+'</div><div class="k">record</div></div>'
    +'<div class="stat"><div class="v" style="color:'+(o.u>=0?'var(--green)':'var(--red)')+'">'+(o.u>=0?'+':'')+o.u.toFixed(1)+'u</div><div class="k">profit</div></div>'
    +'<div class="stat"><div class="v" style="color:'+(o.roi>=0?'var(--green)':'var(--red)')+'">'+(o.roi>=0?'+':'')+o.roi.toFixed(0)+'%</div><div class="k">roi</div></div>';
-  // by-system breakdown: BAD ARM (all SIERA≥4.4, the 70% system) and its BAD ARM + SHORT subset (83%)
-  const badarmAll=calcSys(g);                                  // every bet already clears SIERA≥4.4
-  const both=calcSys(g.filter(r=>r.tag==='both'));
+  // by-system breakdown backtested across EVERY bad-arm start (systems.json), not just flagship bets:
+  //   BAD ARM = all SIERA≥4.4 · BAD ARM + SHORT = the short subset
+  const base = SYS.length ? SYS : g.map(r=>({won:r.won,price:r.price,short:r.tag==='both'}));
+  const badarmAll=calcSys(base);
+  const shortSub=calcSys(base.filter(r=>r.short));
   const num=(c)=>'<div class="sysR"><span>'+c.w+'-'+c.l+'</span><span style="color:'+(c.u>=0?'var(--green)':'var(--red)')+'">'+(c.u>=0?'+':'')+c.u.toFixed(1)+'u</span><span style="color:'+(c.roi>=0?'var(--green)':'var(--red)')+'">'+(c.roi>=0?'+':'')+c.roi.toFixed(0)+'%</span></div>';
-  const row=(cls,label,tag,c)=> c.n? ('<div class="sysrow '+cls+'"><div class="sysL">'+label+' <b>'+tag+'</b></div>'+num(c)+'</div>') : '';
+  const row=(cls,label,tag,c)=> c.n? ('<div class="sysrow '+cls+'"><div class="sysL">'+label+' <b>'+tag+' · '+(c.n?Math.round(c.w/c.n*100):0)+'%</b></div>'+num(c)+'</div>') : '';
   document.getElementById('systems').innerHTML =
-      row('a','BAD ARM · SIERA ≥4.4','70% SYSTEM',badarmAll)
-    + row('b','BAD ARM + SHORT','83% SYSTEM',both);
+      row('a','BAD ARM · SIERA ≥4.4','ALL '+badarmAll.n,badarmAll)
+    + row('b','BAD ARM + SHORT','SHORT '+shortSub.n,shortSub);
 }
 
 function liveLine(name,line){
