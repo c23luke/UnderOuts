@@ -1,5 +1,18 @@
 [
   {
+    "name": "Brady Singer",
+    "team": "Cincinnati Reds @ Colorado Rockies",
+    "line": 17.5,
+    "under": -108,
+    "book": "Caesars",
+    "proj": 13.8,
+    "edge": 28,
+    "pUnder": 80,
+    "siera": 4.476716531965249,
+    "reason": "confirmed cap",
+    "bet": true
+  },
+  {
     "name": "Merrill Kelly",
     "team": "St. Louis Cardinals @ Arizona Diamondbacks",
     "line": 17.5,
@@ -39,65 +52,13 @@
     "bet": false
   },
   {
-    "name": "Brady Singer",
-    "team": "Cincinnati Reds @ Colorado Rockies",
-    "line": 16.5,
-    "under": -140,
-    "book": "BetMGM",
-    "proj": 14.6,
-    "edge": 11,
-    "pUnder": 69,
-    "siera": 4.476716531965249,
-    "reason": "confirmed cap",
-    "bet": false
-  },
-  {
-    "name": "Michael King",
-    "team": "San Diego Padres @ Kansas City Royals",
-    "line": 16.5,
-    "under": -105,
-    "book": "BetMGM",
-    "proj": 16,
-    "edge": 6,
-    "pUnder": 57,
-    "siera": 4.493482900727715,
-    "reason": "confirmed cap",
-    "bet": false
-  },
-  {
-    "name": "Colin Rea",
-    "team": "Minnesota Twins @ Chicago Cubs",
-    "line": 14.5,
-    "under": 130,
-    "book": "Bovada",
-    "proj": 14.7,
-    "edge": 4,
-    "pUnder": 47,
-    "siera": 4.771217099870357,
-    "reason": "confirmed cap",
-    "bet": false
-  },
-  {
-    "name": "Seth Lugo",
-    "team": "San Diego Padres @ Kansas City Royals",
-    "line": 16.5,
-    "under": -125,
-    "book": "BetMGM",
-    "proj": 16,
-    "edge": 1,
-    "pUnder": 56,
-    "siera": 4.5323021499973795,
-    "reason": "confirmed cap",
-    "bet": false
-  },
-  {
     "name": "Cade Cavalli",
     "team": "Washington Nationals @ Athletics",
     "line": 15.5,
-    "under": -107,
+    "under": -103,
     "book": "DraftKings",
     "proj": 15.3,
-    "edge": 0,
+    "edge": 1,
     "pUnder": 52,
     "siera": 3.59688847850125,
     "reason": "",
@@ -117,19 +78,6 @@
     "bet": false
   },
   {
-    "name": "Bailey Ober",
-    "team": "Minnesota Twins @ Chicago Cubs",
-    "line": 14.5,
-    "under": 135,
-    "book": "Bovada",
-    "proj": 15.7,
-    "edge": -5,
-    "pUnder": 38,
-    "siera": 4.8079184761758045,
-    "reason": "",
-    "bet": false
-  },
-  {
     "name": "Gage Jump",
     "team": "Washington Nationals @ Athletics",
     "line": 15.5,
@@ -140,19 +88,6 @@
     "pUnder": 50,
     "siera": 4.035807548305836,
     "reason": "",
-    "bet": false
-  },
-  {
-    "name": "Sandy Alcantara",
-    "team": "Miami Marlins @ Milwaukee Brewers",
-    "line": 18.5,
-    "under": -150,
-    "book": "Caesars",
-    "proj": 18,
-    "edge": -6,
-    "pUnder": 54,
-    "siera": 4.389433343744845,
-    "reason": "confirmed cap",
     "bet": false
   },
   {
@@ -174,36 +109,10 @@
     "line": 16.5,
     "under": -115,
     "book": "BetMGM",
-    "proj": 16.9,
-    "edge": -10,
-    "pUnder": 44,
-    "siera": 4.4555680957438994,
-    "reason": "",
-    "bet": false
-  },
-  {
-    "name": "Peter Lambert",
-    "team": "Baltimore Orioles @ Houston Astros",
-    "line": 16.5,
-    "under": -120,
-    "book": "BetMGM",
-    "proj": 16.9,
-    "edge": -10,
-    "pUnder": 44,
-    "siera": 4.382264000137164,
-    "reason": "",
-    "bet": false
-  },
-  {
-    "name": "Dean Kremer",
-    "team": "Baltimore Orioles @ Houston Astros",
-    "line": 16.5,
-    "under": -110,
-    "book": "BetMGM",
-    "proj": 17.1,
-    "edge": -10,
+    "proj": 17,
+    "edge": -11,
     "pUnder": 42,
-    "siera": 3.2353001263238377,
+    "siera": 4.4555680957438994,
     "reason": "",
     "bet": false
   }

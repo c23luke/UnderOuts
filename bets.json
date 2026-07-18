@@ -154,5 +154,17 @@
     "proj": 10.8,
     "edge": 15,
     "auto": true
+  },
+  {
+    "id": "2026-07-17|singer",
+    "date": "2026-07-17",
+    "name": "Brady Singer",
+    "team": "Cincinnati Reds @ Colorado Rockies",
+    "line": 17.5,
+    "side": "under",
+    "price": -108,
+    "proj": 13.8,
+    "edge": 28,
+    "auto": true
   }
 ]
