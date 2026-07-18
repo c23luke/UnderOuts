@@ -26,11 +26,24 @@
     "bet": true
   },
   {
+    "name": "Gavin Williams",
+    "team": "Pittsburgh Pirates @ Cleveland Guardians",
+    "line": 17.5,
+    "under": 104,
+    "book": "FanDuel",
+    "proj": 16,
+    "edge": 19,
+    "pUnder": 68,
+    "siera": 3.326977777006807,
+    "reason": "confirmed cap",
+    "bet": true
+  },
+  {
     "name": "Trevor Rogers",
     "team": "Baltimore Orioles @ Houston Astros",
     "line": 17.5,
-    "under": -110,
-    "book": "Caesars",
+    "under": -112,
+    "book": "DraftKings",
     "proj": 15.4,
     "edge": 18,
     "pUnder": 70,
@@ -39,16 +52,16 @@
     "bet": false
   },
   {
-    "name": "Bryan Woo",
-    "team": "San Francisco Giants @ Seattle Mariners",
-    "line": 17.5,
-    "under": 132,
-    "book": "Caesars",
-    "proj": 17.5,
-    "edge": 7,
-    "pUnder": 50,
-    "siera": 3.628222841239033,
-    "reason": "",
+    "name": "Jared Jones",
+    "team": "Pittsburgh Pirates @ Cleveland Guardians",
+    "line": 14.5,
+    "under": 148,
+    "book": "FanDuel",
+    "proj": 14.1,
+    "edge": 15,
+    "pUnder": 55,
+    "siera": 3.5312273599173505,
+    "reason": "confirmed cap",
     "bet": false
   },
   {
@@ -75,6 +88,19 @@
     "pUnder": 56,
     "siera": 3.738714841306107,
     "reason": "confirmed cap",
+    "bet": false
+  },
+  {
+    "name": "Bryan Woo",
+    "team": "San Francisco Giants @ Seattle Mariners",
+    "line": 17.5,
+    "under": 124,
+    "book": "FanDuel",
+    "proj": 17.5,
+    "edge": 5,
+    "pUnder": 50,
+    "siera": 3.628222841239033,
+    "reason": "",
     "bet": false
   },
   {
