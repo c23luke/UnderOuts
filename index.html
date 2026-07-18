@@ -131,7 +131,7 @@ function renderTracking(){
   const st=document.getElementById('tstat'); if(st) st.innerHTML=
     '<div class="scard"><div class="v">'+A.w+'-'+A.l+'</div><div class="k">record</div></div>'
    +'<div class="scard"><div class="v">'+(A.n?(100*A.w/A.n).toFixed(0):'0')+'%</div><div class="k">hit rate</div></div>'
-   +'<div class="scard"><div class="v" style="color:'+(A.u>=0?'var(--green)':'var(--red)')+'">'+(A.u>=0?'+':'')+A.u.toFixed(1)+'u</div><div class="k">units (1u/bet)</div></div>';
+   +'<div class="scard"><div class="v" style="color:'+(A.u>=0?'var(--green)':'var(--red)')+'">'+(A.u>=0?'+':'')+A.u.toFixed(1)+'u</div><div class="k">units · '+(A.n?((A.u/A.n>=0?'+':'')+(A.u/A.n*100).toFixed(0)):'0')+'% ROI</div></div>';
   const both=agg(gr.filter(r=>r.tag==='both')), ba=agg(gr.filter(r=>r.tag==='badarm'));
   const sysRow=(t,label,g)=>'<div class="sys"><div class="r1"><div>'+tagChip(t)+'</div><div style="font-size:13px"><b style="color:'+(g.w>=g.l?'var(--green)':'var(--red)')+'">'+g.w+'-'+g.l+'</b> · '+(g.n?(100*g.w/g.n).toFixed(0):'0')+'% · <b style="color:'+(g.u>=0?'var(--green)':'var(--red)')+'">'+(g.u>=0?'+':'')+g.u.toFixed(1)+'u</b></div></div><div class="muted" style="font-size:11.5px">'+label+'</div></div>';
   const sys=document.getElementById('tsys'); if(sys) sys.innerHTML=sysRow('both','Bad arm + projected short (≤15 outs)',both)+sysRow('badarm','Bad arm, edge, not projected short',ba);
