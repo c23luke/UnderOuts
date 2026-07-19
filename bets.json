@@ -28,5 +28,20 @@
     "tag": "both",
     "book": "Bovada",
     "auto": true
+  },
+  {
+    "id": "2026-07-19|cantillo",
+    "date": "2026-07-19",
+    "name": "Joey Cantillo",
+    "team": "Pittsburgh Pirates @ Cleveland Guardians",
+    "opp": "Pittsburgh Pirates",
+    "line": 16.5,
+    "side": "under",
+    "price": -145,
+    "proj": 14.4,
+    "edge": 13,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
   }
 ]

@@ -40,6 +40,26 @@
     "graded": false
   },
   {
+    "date": "2026-07-19",
+    "pitcher": "Joey Cantillo",
+    "short": true,
+    "underLine": 16.5,
+    "oppTeam": "Pittsburgh Pirates",
+    "f5ml": -115,
+    "f5rlPoint": 0.5,
+    "f5rlPrice": -165,
+    "f5totPoint": 3.5,
+    "f5totOver": -110,
+    "f5totUnder": -120,
+    "f5Total": null,
+    "ovResult": null,
+    "oppF5": null,
+    "ownF5": null,
+    "mlResult": null,
+    "rlResult": null,
+    "graded": false
+  },
+  {
     "date": "2026-07-18",
     "pitcher": "Grayson Rodriguez",
     "short": false,
