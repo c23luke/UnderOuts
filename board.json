@@ -95,7 +95,7 @@
     "team": "Pittsburgh Pirates @ Cleveland Guardians",
     "line": 17.5,
     "under": 151,
-    "book": "DraftKings",
+    "book": "Caesars",
     "proj": 17.5,
     "edge": 10,
     "pUnder": 50,
@@ -107,8 +107,8 @@
     "name": "Joey Cantillo",
     "team": "Pittsburgh Pirates @ Cleveland Guardians",
     "line": 15.5,
-    "under": -112,
-    "book": "DraftKings",
+    "under": -114,
+    "book": "Caesars",
     "proj": 14.4,
     "edge": 9,
     "pUnder": 62,
@@ -195,6 +195,19 @@
     "bet": false
   },
   {
+    "name": "Robert Gasser",
+    "team": "Miami Marlins @ Milwaukee Brewers",
+    "line": 15.5,
+    "under": -121,
+    "book": "DraftKings",
+    "proj": 15.2,
+    "edge": -2,
+    "pUnder": 53,
+    "siera": 4.353168095765975,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Foster Griffin",
     "team": "Washington Nationals @ Athletics",
     "line": 17.5,
@@ -204,19 +217,6 @@
     "edge": -2,
     "pUnder": 45,
     "siera": 3.588648100013487,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Robert Gasser",
-    "team": "Miami Marlins @ Milwaukee Brewers",
-    "line": 15.5,
-    "under": -125,
-    "book": "Fanatics",
-    "proj": 15.2,
-    "edge": -2,
-    "pUnder": 53,
-    "siera": 4.353168095765975,
     "tag": null,
     "bet": false
   },
@@ -247,19 +247,6 @@
     "bet": false
   },
   {
-    "name": "Cam Schlittler",
-    "team": "Los Angeles Dodgers @ New York Yankees",
-    "line": 17.5,
-    "under": 112,
-    "book": "Caesars",
-    "proj": 18.2,
-    "edge": -6,
-    "pUnder": 41,
-    "siera": 2.967380770527248,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Andre Pallante",
     "team": "St. Louis Cardinals @ Arizona Diamondbacks",
     "line": 16.5,
@@ -269,6 +256,19 @@
     "edge": -7,
     "pUnder": 45,
     "siera": 4.25920757170799,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Cam Schlittler",
+    "team": "Los Angeles Dodgers @ New York Yankees",
+    "line": 17.5,
+    "under": 106,
+    "book": "Caesars",
+    "proj": 18.2,
+    "edge": -7,
+    "pUnder": 41,
+    "siera": 2.967380770527248,
     "tag": null,
     "bet": false
   },
@@ -328,7 +328,7 @@
     "name": "Eury Perez",
     "team": "Miami Marlins @ Milwaukee Brewers",
     "line": 15.5,
-    "under": -157,
+    "under": -159,
     "book": "Caesars",
     "proj": 16.2,
     "edge": -20,
