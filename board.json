@@ -1,19 +1,5 @@
 [
   {
-    "name": "Jacob Lopez",
-    "team": "Washington Nationals @ Athletics",
-    "opp": "Washington Nationals",
-    "line": 14.5,
-    "under": -140,
-    "book": "Bovada",
-    "proj": 10.5,
-    "edge": 27,
-    "pUnder": 85,
-    "siera": 5.6786387260679305,
-    "tag": "both",
-    "bet": true
-  },
-  {
     "name": "Eduardo Rodriguez",
     "team": "St. Louis Cardinals @ Arizona Diamondbacks",
     "opp": "St. Louis Cardinals",
@@ -26,34 +12,6 @@
     "siera": 4.855781398735161,
     "tag": "both",
     "bet": true
-  },
-  {
-    "name": "Ryan Johnson",
-    "team": "Detroit Tigers @ Los Angeles Angels",
-    "opp": "Detroit Tigers",
-    "line": 14.5,
-    "under": 140,
-    "book": "Bovada",
-    "proj": 13.9,
-    "edge": 16,
-    "pUnder": 58,
-    "siera": 4.616440827498826,
-    "tag": "both",
-    "bet": true
-  },
-  {
-    "name": "Casey Mize",
-    "team": "Detroit Tigers @ Los Angeles Angels",
-    "opp": "Los Angeles Angels",
-    "line": 16.5,
-    "under": 100,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 5,
-    "pUnder": 55,
-    "siera": 3.590404343750073,
-    "tag": null,
-    "bet": false
   },
   {
     "name": "Robbie Ray",
