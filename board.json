@@ -130,6 +130,32 @@
     "bet": false
   },
   {
+    "name": "Ryan Feltner",
+    "team": "Cincinnati Reds @ Colorado Rockies",
+    "line": 15.5,
+    "under": -149,
+    "book": "DraftKings",
+    "proj": 14.4,
+    "edge": 1,
+    "pUnder": 61,
+    "siera": 4.77778867156798,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Sonny Gray",
+    "team": "Tampa Bay Rays @ Boston Red Sox",
+    "line": 18.5,
+    "under": -161,
+    "book": "DraftKings",
+    "proj": 17.4,
+    "edge": 0,
+    "pUnder": 61,
+    "siera": 3.760601618071691,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Cam Schlittler",
     "team": "Los Angeles Dodgers @ New York Yankees",
     "line": 17.5,
@@ -139,19 +165,6 @@
     "edge": 0,
     "pUnder": 41,
     "siera": 2.967380770527248,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Sonny Gray",
-    "team": "Tampa Bay Rays @ Boston Red Sox",
-    "line": 18.5,
-    "under": -175,
-    "book": "Bovada",
-    "proj": 17.4,
-    "edge": -2,
-    "pUnder": 61,
-    "siera": 3.760601618071691,
     "tag": null,
     "bet": false
   },
