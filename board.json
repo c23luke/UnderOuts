@@ -18,26 +18,12 @@
     "team": "St. Louis Cardinals @ Arizona Diamondbacks",
     "opp": "St. Louis Cardinals",
     "line": 17.5,
-    "under": 115,
+    "under": 110,
     "book": "Bovada",
     "proj": 16,
-    "edge": 19,
+    "edge": 18,
     "pUnder": 66,
     "siera": 4.855781398735161,
-    "tag": "both",
-    "bet": true
-  },
-  {
-    "name": "German Marquez",
-    "team": "San Diego Padres @ Kansas City Royals",
-    "opp": "Kansas City Royals",
-    "line": 14.5,
-    "under": 120,
-    "book": "Bovada",
-    "proj": 13.4,
-    "edge": 18,
-    "pUnder": 64,
-    "siera": 5.585546562847026,
     "tag": "both",
     "bet": true
   },
@@ -84,6 +70,20 @@
     "bet": true
   },
   {
+    "name": "Noah Cameron",
+    "team": "San Diego Padres @ Kansas City Royals",
+    "opp": "San Diego Padres",
+    "line": 17.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 16,
+    "edge": 15,
+    "pUnder": 69,
+    "siera": 4.300232012025752,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Hunter Greene",
     "team": "Cincinnati Reds @ Colorado Rockies",
     "opp": null,
@@ -98,18 +98,18 @@
     "bet": false
   },
   {
-    "name": "Noah Cameron",
+    "name": "German Marquez",
     "team": "San Diego Padres @ Kansas City Royals",
-    "opp": "San Diego Padres",
-    "line": 17.5,
-    "under": -120,
+    "opp": "Kansas City Royals",
+    "line": 14.5,
+    "under": 100,
     "book": "Bovada",
-    "proj": 16,
+    "proj": 13.4,
     "edge": 14,
-    "pUnder": 69,
-    "siera": 4.300232012025752,
-    "tag": null,
-    "bet": false
+    "pUnder": 64,
+    "siera": 5.585546562847026,
+    "tag": "both",
+    "bet": true
   },
   {
     "name": "Nolan McLean",
@@ -168,20 +168,6 @@
     "bet": false
   },
   {
-    "name": "Casey Mize",
-    "team": "Detroit Tigers @ Los Angeles Angels",
-    "opp": "Los Angeles Angels",
-    "line": 17.5,
-    "under": -130,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 9,
-    "pUnder": 65,
-    "siera": 3.590404343750073,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Grant Holmes",
     "team": "Texas Rangers @ Atlanta Braves",
     "opp": "Texas Rangers",
@@ -206,6 +192,20 @@
     "edge": 6,
     "pUnder": 68,
     "siera": 3.320582076161402,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Casey Mize",
+    "team": "Detroit Tigers @ Los Angeles Angels",
+    "opp": "Los Angeles Angels",
+    "line": 17.5,
+    "under": -145,
+    "book": "Bovada",
+    "proj": 16,
+    "edge": 6,
+    "pUnder": 65,
+    "siera": 3.590404343750073,
     "tag": null,
     "bet": false
   },
