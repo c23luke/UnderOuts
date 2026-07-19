@@ -42,6 +42,17 @@
   .hrow{display:flex;justify-content:space-between;align-items:center;padding:10px 3px;border-bottom:1px solid var(--line);font-size:13px}
   .systems{margin:-12px 0 24px}
   .syscap{font-size:10px;color:var(--dim);letter-spacing:.6px;text-transform:uppercase;margin:0 2px 9px}
+  .tabs{display:flex;gap:8px;margin-bottom:20px}
+  .tabbtn{flex:1;text-align:center;padding:11px;border-radius:12px;background:var(--card);color:var(--muted);font-size:11.5px;font-weight:800;letter-spacing:.6px;cursor:pointer;border:1px solid transparent;user-select:none}
+  .tabbtn.on{color:var(--text);border-color:var(--green);background:var(--card2)}
+  .f5card{background:var(--card);border-radius:16px;padding:15px;margin-bottom:11px;border-left:3px solid var(--green)}
+  .f5card .r1{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+  .f5team{font-size:17px;font-weight:800}
+  .f5off{font-size:11.5px;color:var(--muted);margin-top:2px}
+  .f5line{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-top:1px solid var(--line);font-size:13px}
+  .f5line .k{color:var(--muted)} .f5line .v{font-weight:700}
+  .f5tag{font-size:10px;font-weight:800;padding:3px 9px;border-radius:6px;letter-spacing:.3px;background:var(--green);color:var(--bg)}
+  .f5tag.a{background:var(--amber)}
   .sysrow{display:flex;justify-content:space-between;align-items:center;background:var(--card);border-radius:12px;padding:11px 13px;margin-bottom:7px}
   .sysrow.b{border-left:3px solid var(--green)} .sysrow.a{border-left:3px solid var(--amber)} .sysrow.n{border-left:3px solid var(--dim)}
   .sysL{font-size:11.5px;font-weight:700;letter-spacing:.3px}
@@ -52,20 +63,38 @@
 </head>
 <body>
   <div class="top"><div class="logo">UNDER<span>OUTS</span></div><div class="topsub" id="topsub"></div></div>
-  <div class="stats" id="stats"></div>
-  <div class="systems" id="systems"></div>
 
-  <div class="lab">Tonight's bets</div>
-  <div id="bets"></div>
+  <div class="tabs">
+    <div class="tabbtn on" id="tb-outs" onclick="tab('outs')">UNDER OUTS</div>
+    <div class="tabbtn" id="tb-f5" onclick="tab('f5')">F5 CORRELATED</div>
+  </div>
 
-  <div class="lab" style="margin-top:26px">Correlated F5 · Over · ML · Run Line</div>
-  <div id="corr"><div class="empty">No correlated bets yet. Fires whenever an under-outs alert sends.</div></div>
+  <div id="tab-outs">
+    <div class="stats" id="stats"></div>
+    <div class="systems" id="systems"></div>
 
-  <div class="lab" style="margin-top:26px">Today's slate · pitcher vs opponent · ranked by edge</div>
-  <div id="board"><div class="empty">Waiting on the model — start the bot on your Mac. Updates hourly.</div></div>
+    <div class="lab">Tonight's bets</div>
+    <div id="bets"></div>
 
-  <div class="lab" style="margin-top:26px">Recent results</div>
-  <div id="hist"><div class="empty">No graded bets yet.</div></div>
+    <div class="lab" style="margin-top:26px">Today's slate · pitcher vs opponent · ranked by edge</div>
+    <div id="board"><div class="empty">Waiting on the model — start the bot on your Mac. Updates every 10 min.</div></div>
+
+    <div class="lab" style="margin-top:26px">Recent results</div>
+    <div id="hist"><div class="empty">No graded bets yet.</div></div>
+  </div>
+
+  <div id="tab-f5" style="display:none">
+    <div class="syscap" style="margin-bottom:14px">A bad-arm pitcher going short = his opponent's offense scores early. Take that opponent's F5 — Over first, then ML / Run Line.</div>
+
+    <div class="lab">Today · team to bet F5</div>
+    <div id="f5today"><div class="empty">No F5 plays today yet — fires when an under-outs alert sends.</div></div>
+
+    <div class="lab" style="margin-top:26px">F5 Over systems</div>
+    <div id="f5sys"><div class="empty">Builds once games grade.</div></div>
+
+    <div class="lab" style="margin-top:26px">All tracked F5 · results</div>
+    <div id="f5track"><div class="empty">Nothing graded yet.</div></div>
+  </div>
 
 <script>
 const AMER=p=>(p==null?'':(p>0?('+'+p):(''+p)));
@@ -87,25 +116,51 @@ async function live(){
 }
 function lv(n){return LIVE[n.toLowerCase().split(' ').pop()];}
 
-function renderAll(){ renderStats(); renderBets(); renderBoard(); renderCorr(); renderHist(); }
+function renderAll(){ renderStats(); renderBets(); renderBoard(); renderF5(); renderHist(); }
 
-function renderCorr(){
-  const box=document.getElementById('corr'); if(!CORR.length)return;
-  const chip=r=>r==='W'?'<b style="color:var(--green)">W</b>':r==='L'?'<b style="color:var(--red)">L</b>':r==='P'?'<b style="color:var(--muted)">push</b>':'<span style="color:var(--dim)">◷</span>';
-  // F5 OVER system record — taking the over when a bad-arm pitcher is on the mound
+function tab(t){
+  document.getElementById('tab-outs').style.display = t==='outs'?'':'none';
+  document.getElementById('tab-f5').style.display   = t==='f5'?'':'none';
+  document.getElementById('tb-outs').classList.toggle('on',t==='outs');
+  document.getElementById('tb-f5').classList.toggle('on',t==='f5');
+}
+
+const chipF5=r=>r==='W'?'<b style="color:var(--green)">W</b>':r==='L'?'<b style="color:var(--red)">L</b>':r==='P'?'<b style="color:var(--muted)">push</b>':'<span style="color:var(--dim)">◷ live</span>';
+function renderF5(){
+  const today=new Date().toLocaleDateString('en-CA');
+  // 1) TODAY — the team to bet, one card per pick, Over highlighted
+  const todayC=CORR.filter(c=>c.date===today);
+  const tbox=document.getElementById('f5today');
+  if(todayC.length){
+    tbox.innerHTML=todayC.map(c=>{
+      const tag=c.short?'<span class="f5tag">BAD ARM + SHORT</span>':'<span class="f5tag a">BAD ARM</span>';
+      const lines=[];
+      if(c.f5totPoint!=null) lines.push('<div class="f5line"><span class="k">F5 Over '+c.f5totPoint+'</span><span class="v">'+AMER(c.f5totOver)+' '+chipF5(c.ovResult)+'</span></div>');
+      if(c.f5ml!=null) lines.push('<div class="f5line"><span class="k">'+c.oppTeam+' F5 ML</span><span class="v">'+AMER(c.f5ml)+' '+chipF5(c.mlResult)+'</span></div>');
+      if(c.f5rlPoint!=null) lines.push('<div class="f5line"><span class="k">'+c.oppTeam+' F5 RL '+(c.f5rlPoint>0?'+':'')+c.f5rlPoint+'</span><span class="v">'+AMER(c.f5rlPrice)+' '+chipF5(c.rlResult)+'</span></div>');
+      const runs=c.f5Total!=null?('<div class="f5off" style="margin-top:8px;color:var(--text)">First 5: '+c.oppF5+'-'+c.ownF5+' · '+c.f5Total+' total runs</div>'):'';
+      return '<div class="f5card"><div class="r1"><div><div class="f5team">Take '+c.oppTeam+'</div><div class="f5off">off '+c.pitcher+' (Under '+c.underLine+' outs)</div></div>'+tag+'</div>'+lines.join('')+runs+'</div>';
+    }).join('');
+  } else tbox.innerHTML='<div class="empty">No F5 plays today yet — fires when an under-outs alert sends.</div>';
+
+  // 2) F5 OVER system records
   const sumOv=arr=>{const g=arr.filter(c=>c.ovResult&&c.ovResult!=='P');const w=g.filter(c=>c.ovResult==='W').length,l=g.length-w;let u=0;g.forEach(c=>u+=c.ovResult==='W'?bu(c.f5totOver):-1);return {w,l,u,n:g.length};};
   const ovShort=sumOv(CORR.filter(c=>c.short)), ovAll=sumOv(CORR);
   const sysrow=(cls,label,tag,s)=> s.n? ('<div class="sysrow '+cls+'"><div class="sysL">'+label+' <b>'+tag+' · '+Math.round(s.w/s.n*100)+'%</b></div><div class="sysR"><span>'+s.w+'-'+s.l+'</span><span style="color:'+(s.u>=0?'var(--green)':'var(--red)')+'">'+(s.u>=0?'+':'')+s.u.toFixed(1)+'u</span></div></div>') : '';
-  let head='';
-  if(ovAll.n){ head='<div class="systems" style="margin:0 0 14px">'+sysrow('b','F5 OVER · bad arm + short','O '+ovShort.n,ovShort)+sysrow('a','F5 OVER · any bad arm','O '+ovAll.n,ovAll)+'</div>'; }
-  box.innerHTML= head + CORR.slice(0,24).map(c=>{
-    const runs=c.f5Total!=null?(c.f5Total+'r F5'):(c.graded?(c.oppF5+'-'+c.ownF5+' F5'):'tracking');
-    const ml=c.f5ml!=null?('ML '+AMER(c.f5ml)+' '+chip(c.mlResult)):'';
-    const rl=c.f5rlPoint!=null?('RL '+(c.f5rlPoint>0?'+':'')+c.f5rlPoint+' '+chip(c.rlResult)):'';
-    const ov=c.f5totPoint!=null?('O'+c.f5totPoint+' '+AMER(c.f5totOver)+' '+chip(c.ovResult)):'';
+  const sbox=document.getElementById('f5sys');
+  sbox.innerHTML = ovAll.n ? (sysrow('b','F5 OVER · bad arm + short','O '+ovShort.n,ovShort)+sysrow('a','F5 OVER · any bad arm','O '+ovAll.n,ovAll)) : '<div class="empty">Builds once games grade.</div>';
+
+  // 3) ALL tracked F5 — full history incl. graded ML/RL (e.g. Tigers yesterday)
+  const kbox=document.getElementById('f5track');
+  if(!CORR.length){ kbox.innerHTML='<div class="empty">Nothing tracked yet.</div>'; return; }
+  kbox.innerHTML=CORR.slice(0,40).map(c=>{
+    const runs=c.f5Total!=null?(c.f5Total+'r F5'):(c.graded?(c.oppF5+'-'+c.ownF5):'tracking');
+    const ov=c.f5totPoint!=null?('O'+c.f5totPoint+' '+chipF5(c.ovResult)):'';
+    const ml=c.f5ml!=null?('ML '+chipF5(c.mlResult)):'';
+    const rl=c.f5rlPoint!=null?('RL '+chipF5(c.rlResult)):'';
     const parts=[ov,ml,rl].filter(Boolean).join(' · ');
-    const badge=c.short?'<span style="color:var(--green)">●</span> ':'<span style="color:var(--amber)">●</span> ';
-    return '<div class="hrow"><div><div>'+badge+c.oppTeam+' <span style="color:var(--dim);font-size:11px">off '+c.pitcher+'</span></div><div class="t2">'+parts+' · '+runs+'</div></div><div style="font-size:11px;color:var(--dim)">'+c.date+'</div></div>';
+    const dot=c.short?'<span style="color:var(--green)">●</span> ':'<span style="color:var(--amber)">●</span> ';
+    return '<div class="hrow"><div><div>'+dot+c.oppTeam+' <span style="color:var(--dim);font-size:11px">off '+c.pitcher+'</span></div><div class="t2">'+parts+' · '+runs+'</div></div><div style="font-size:11px;color:var(--dim)">'+c.date+'</div></div>';
   }).join('');
 }
 
