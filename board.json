@@ -2,6 +2,7 @@
   {
     "name": "Hunter Brown",
     "team": "Baltimore Orioles @ Houston Astros",
+    "opp": "Baltimore Orioles",
     "line": 17.5,
     "under": -120,
     "book": "Bovada",
@@ -13,8 +14,23 @@
     "bet": false
   },
   {
+    "name": "Shota Imanaga",
+    "team": "Minnesota Twins @ Chicago Cubs",
+    "opp": "Minnesota Twins",
+    "line": 17.5,
+    "under": 150,
+    "book": "Bovada",
+    "proj": 16.9,
+    "edge": 19,
+    "pUnder": 59,
+    "siera": 3.7841863249994057,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "German Marquez",
     "team": "San Diego Padres @ Kansas City Royals",
+    "opp": "Kansas City Royals",
     "line": 14.5,
     "under": 120,
     "book": "Bovada",
@@ -26,21 +42,9 @@
     "bet": true
   },
   {
-    "name": "Shota Imanaga",
-    "team": "Minnesota Twins @ Chicago Cubs",
-    "line": 17.5,
-    "under": 140,
-    "book": "Bovada",
-    "proj": 16.9,
-    "edge": 17,
-    "pUnder": 59,
-    "siera": 3.7841863249994057,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Noah Cameron",
     "team": "San Diego Padres @ Kansas City Royals",
+    "opp": "San Diego Padres",
     "line": 17.5,
     "under": -120,
     "book": "Bovada",
@@ -54,6 +58,7 @@
   {
     "name": "Paul Skenes",
     "team": "Pittsburgh Pirates @ Cleveland Guardians",
+    "opp": "Cleveland Guardians",
     "line": 17.5,
     "under": 145,
     "book": "Bovada",
@@ -67,6 +72,7 @@
   {
     "name": "Ryan Johnson",
     "team": "Detroit Tigers @ Los Angeles Angels",
+    "opp": "Detroit Tigers",
     "line": 15.5,
     "under": -160,
     "book": "Bovada",
@@ -80,6 +86,7 @@
   {
     "name": "Sonny Gray",
     "team": "Tampa Bay Rays @ Boston Red Sox",
+    "opp": "Tampa Bay Rays",
     "line": 17.5,
     "under": 130,
     "book": "Bovada",
@@ -93,6 +100,7 @@
   {
     "name": "Joey Cantillo",
     "team": "Pittsburgh Pirates @ Cleveland Guardians",
+    "opp": "Pittsburgh Pirates",
     "line": 15.5,
     "under": -125,
     "book": "Bovada",
@@ -106,6 +114,7 @@
   {
     "name": "Brandon Young",
     "team": "Baltimore Orioles @ Houston Astros",
+    "opp": "Houston Astros",
     "line": 17.5,
     "under": -125,
     "book": "Bovada",
@@ -119,6 +128,7 @@
   {
     "name": "Robbie Ray",
     "team": "San Francisco Giants @ Seattle Mariners",
+    "opp": "Seattle Mariners",
     "line": 17.5,
     "under": -125,
     "book": "Bovada",
@@ -132,6 +142,7 @@
   {
     "name": "Ryan Feltner",
     "team": "Cincinnati Reds @ Colorado Rockies",
+    "opp": "Cincinnati Reds",
     "line": 14.5,
     "under": 120,
     "book": "Bovada",
@@ -145,6 +156,7 @@
   {
     "name": "Grant Holmes",
     "team": "Texas Rangers @ Atlanta Braves",
+    "opp": "Texas Rangers",
     "line": 15.5,
     "under": -160,
     "book": "Bovada",
@@ -158,6 +170,7 @@
   {
     "name": "Trey Yesavage",
     "team": "Chicago White Sox @ Toronto Blue Jays",
+    "opp": "Chicago White Sox",
     "line": 16.5,
     "under": -120,
     "book": "Bovada",
@@ -171,6 +184,7 @@
   {
     "name": "Sean Burke",
     "team": "Chicago White Sox @ Toronto Blue Jays",
+    "opp": "Toronto Blue Jays",
     "line": 17.5,
     "under": -115,
     "book": "Bovada",
@@ -182,8 +196,23 @@
     "bet": false
   },
   {
+    "name": "Zebby Matthews",
+    "team": "Minnesota Twins @ Chicago Cubs",
+    "opp": "Chicago Cubs",
+    "line": 17.5,
+    "under": 105,
+    "book": "Bovada",
+    "proj": 17.8,
+    "edge": -3,
+    "pUnder": 46,
+    "siera": 4.211585206536093,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Robert Gasser",
     "team": "Miami Marlins @ Milwaukee Brewers",
+    "opp": "Miami Marlins",
     "line": 15.5,
     "under": -130,
     "book": "Bovada",
@@ -195,21 +224,9 @@
     "bet": false
   },
   {
-    "name": "Zebby Matthews",
-    "team": "Minnesota Twins @ Chicago Cubs",
-    "line": 17.5,
-    "under": -105,
-    "book": "Bovada",
-    "proj": 17.8,
-    "edge": -5,
-    "pUnder": 46,
-    "siera": 4.211585206536093,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Andre Pallante",
     "team": "St. Louis Cardinals @ Arizona Diamondbacks",
+    "opp": "Arizona Diamondbacks",
     "line": 16.5,
     "under": -105,
     "book": "Bovada",
@@ -223,6 +240,7 @@
   {
     "name": "Nolan McLean",
     "team": "New York Mets @ Philadelphia Phillies",
+    "opp": "Philadelphia Phillies",
     "line": 17.5,
     "under": -125,
     "book": "Bovada",
@@ -236,6 +254,7 @@
   {
     "name": "Shane McClanahan",
     "team": "Tampa Bay Rays @ Boston Red Sox",
+    "opp": "Boston Red Sox",
     "line": 15.5,
     "under": -150,
     "book": "Bovada",
@@ -249,6 +268,7 @@
   {
     "name": "Casey Mize",
     "team": "Detroit Tigers @ Los Angeles Angels",
+    "opp": "Los Angeles Angels",
     "line": 16.5,
     "under": -105,
     "book": "Bovada",
@@ -262,11 +282,12 @@
   {
     "name": "Cam Schlittler",
     "team": "Los Angeles Dodgers @ New York Yankees",
+    "opp": "Los Angeles Dodgers",
     "line": 17.5,
-    "under": -110,
+    "under": 100,
     "book": "Bovada",
     "proj": 18.2,
-    "edge": -11,
+    "edge": -9,
     "pUnder": 41,
     "siera": 2.967380770527248,
     "tag": null,
@@ -275,6 +296,7 @@
   {
     "name": "Nathan Eovaldi",
     "team": "Texas Rangers @ Atlanta Braves",
+    "opp": "Atlanta Braves",
     "line": 17.5,
     "under": 135,
     "book": "Bovada",
@@ -288,6 +310,7 @@
   {
     "name": "Logan Gilbert",
     "team": "San Francisco Giants @ Seattle Mariners",
+    "opp": "San Francisco Giants",
     "line": 17.5,
     "under": 115,
     "book": "Bovada",
@@ -301,6 +324,7 @@
   {
     "name": "Eury Perez",
     "team": "Miami Marlins @ Milwaukee Brewers",
+    "opp": "Milwaukee Brewers",
     "line": 15.5,
     "under": -160,
     "book": "Bovada",
@@ -314,11 +338,12 @@
   {
     "name": "Yoshinobu Yamamoto",
     "team": "Los Angeles Dodgers @ New York Yankees",
+    "opp": "New York Yankees",
     "line": 18.5,
-    "under": -175,
+    "under": -165,
     "book": "Bovada",
     "proj": 19.9,
-    "edge": -32,
+    "edge": -31,
     "pUnder": 32,
     "siera": 3.382864899557298,
     "tag": null,
