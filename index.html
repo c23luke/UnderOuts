@@ -61,7 +61,7 @@
   <div class="lab" style="margin-top:26px">Board · ranked by edge</div>
   <div id="board"><div class="empty">Waiting on the model — start the bot on your Mac. Updates hourly.</div></div>
 
-  <div class="lab" style="margin-top:26px">Correlated F5 · opposing offense</div>
+  <div class="lab" style="margin-top:26px">Correlated F5 · Over · ML · Run Line</div>
   <div id="corr"><div class="empty">No correlated bets yet. Fires whenever an under-outs alert sends.</div></div>
 
   <div class="lab" style="margin-top:26px">Recent results</div>
@@ -92,12 +92,20 @@ function renderAll(){ renderStats(); renderBets(); renderBoard(); renderCorr(); 
 function renderCorr(){
   const box=document.getElementById('corr'); if(!CORR.length)return;
   const chip=r=>r==='W'?'<b style="color:var(--green)">W</b>':r==='L'?'<b style="color:var(--red)">L</b>':r==='P'?'<b style="color:var(--muted)">push</b>':'<span style="color:var(--dim)">◷</span>';
-  box.innerHTML=CORR.slice(0,20).map(c=>{
-    const score=c.graded?(c.oppF5+'-'+c.ownF5+' F5'):'tracking';
+  // F5 OVER system record — taking the over when a bad-arm pitcher is on the mound
+  const sumOv=arr=>{const g=arr.filter(c=>c.ovResult&&c.ovResult!=='P');const w=g.filter(c=>c.ovResult==='W').length,l=g.length-w;let u=0;g.forEach(c=>u+=c.ovResult==='W'?bu(c.f5totOver):-1);return {w,l,u,n:g.length};};
+  const ovShort=sumOv(CORR.filter(c=>c.short)), ovAll=sumOv(CORR);
+  const sysrow=(cls,label,tag,s)=> s.n? ('<div class="sysrow '+cls+'"><div class="sysL">'+label+' <b>'+tag+' · '+Math.round(s.w/s.n*100)+'%</b></div><div class="sysR"><span>'+s.w+'-'+s.l+'</span><span style="color:'+(s.u>=0?'var(--green)':'var(--red)')+'">'+(s.u>=0?'+':'')+s.u.toFixed(1)+'u</span></div></div>') : '';
+  let head='';
+  if(ovAll.n){ head='<div class="systems" style="margin:0 0 14px">'+sysrow('b','F5 OVER · bad arm + short','O '+ovShort.n,ovShort)+sysrow('a','F5 OVER · any bad arm','O '+ovAll.n,ovAll)+'</div>'; }
+  box.innerHTML= head + CORR.slice(0,24).map(c=>{
+    const runs=c.f5Total!=null?(c.f5Total+'r F5'):(c.graded?(c.oppF5+'-'+c.ownF5+' F5'):'tracking');
     const ml=c.f5ml!=null?('ML '+AMER(c.f5ml)+' '+chip(c.mlResult)):'';
     const rl=c.f5rlPoint!=null?('RL '+(c.f5rlPoint>0?'+':'')+c.f5rlPoint+' '+chip(c.rlResult)):'';
-    const parts=[ml,rl].filter(Boolean).join(' · ');
-    return '<div class="hrow"><div><div>'+c.oppTeam+' <span style="color:var(--dim);font-size:11px">off '+c.pitcher+'</span></div><div class="t2">'+parts+' · '+score+'</div></div><div style="font-size:11px;color:var(--dim)">'+c.date+'</div></div>';
+    const ov=c.f5totPoint!=null?('O'+c.f5totPoint+' '+AMER(c.f5totOver)+' '+chip(c.ovResult)):'';
+    const parts=[ov,ml,rl].filter(Boolean).join(' · ');
+    const badge=c.short?'<span style="color:var(--green)">●</span> ':'<span style="color:var(--amber)">●</span> ';
+    return '<div class="hrow"><div><div>'+badge+c.oppTeam+' <span style="color:var(--dim);font-size:11px">off '+c.pitcher+'</span></div><div class="t2">'+parts+' · '+runs+'</div></div><div style="font-size:11px;color:var(--dim)">'+c.date+'</div></div>';
   }).join('');
 }
 
