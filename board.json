@@ -14,20 +14,6 @@
     "bet": false
   },
   {
-    "name": "Shota Imanaga",
-    "team": "Minnesota Twins @ Chicago Cubs",
-    "opp": "Minnesota Twins",
-    "line": 17.5,
-    "under": 155,
-    "book": "Bovada",
-    "proj": 16.9,
-    "edge": 20,
-    "pUnder": 59,
-    "siera": 3.7841863249994057,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "German Marquez",
     "team": "San Diego Padres @ Kansas City Royals",
     "opp": "Kansas City Royals",
@@ -38,6 +24,20 @@
     "edge": 18,
     "pUnder": 64,
     "siera": 5.585546562847026,
+    "tag": "both",
+    "bet": true
+  },
+  {
+    "name": "Ryan Johnson",
+    "team": "Detroit Tigers @ Los Angeles Angels",
+    "opp": "Detroit Tigers",
+    "line": 14.5,
+    "under": 145,
+    "book": "Bovada",
+    "proj": 13.9,
+    "edge": 17,
+    "pUnder": 58,
+    "siera": 4.616440827498826,
     "tag": "both",
     "bet": true
   },
@@ -70,20 +70,6 @@
     "bet": false
   },
   {
-    "name": "Ryan Johnson",
-    "team": "Detroit Tigers @ Los Angeles Angels",
-    "opp": "Detroit Tigers",
-    "line": 15.5,
-    "under": -160,
-    "book": "Bovada",
-    "proj": 13.9,
-    "edge": 8,
-    "pUnder": 69,
-    "siera": 4.616440827498826,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Sonny Gray",
     "team": "Tampa Bay Rays @ Boston Red Sox",
     "opp": "Tampa Bay Rays",
@@ -94,6 +80,20 @@
     "edge": 8,
     "pUnder": 51,
     "siera": 3.760601618071691,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Shota Imanaga",
+    "team": "Minnesota Twins @ Chicago Cubs",
+    "opp": "Minnesota Twins",
+    "line": 18.5,
+    "under": -190,
+    "book": "Bovada",
+    "proj": 16.9,
+    "edge": 7,
+    "pUnder": 73,
+    "siera": 3.7841863249994057,
     "tag": null,
     "bet": false
   },
@@ -196,6 +196,20 @@
     "bet": false
   },
   {
+    "name": "Robert Gasser",
+    "team": "Miami Marlins @ Milwaukee Brewers",
+    "opp": "Miami Marlins",
+    "line": 15.5,
+    "under": -125,
+    "book": "Bovada",
+    "proj": 15.2,
+    "edge": -2,
+    "pUnder": 53,
+    "siera": 4.353168095765975,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Zebby Matthews",
     "team": "Minnesota Twins @ Chicago Cubs",
     "opp": "Chicago Cubs",
@@ -206,20 +220,6 @@
     "edge": -3,
     "pUnder": 46,
     "siera": 4.211585206536093,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Robert Gasser",
-    "team": "Miami Marlins @ Milwaukee Brewers",
-    "opp": "Miami Marlins",
-    "line": 15.5,
-    "under": -130,
-    "book": "Bovada",
-    "proj": 15.2,
-    "edge": -3,
-    "pUnder": 53,
-    "siera": 4.353168095765975,
     "tag": null,
     "bet": false
   },
@@ -266,20 +266,6 @@
     "bet": false
   },
   {
-    "name": "Casey Mize",
-    "team": "Detroit Tigers @ Los Angeles Angels",
-    "opp": "Los Angeles Angels",
-    "line": 16.5,
-    "under": -105,
-    "book": "Bovada",
-    "proj": 17.2,
-    "edge": -9,
-    "pUnder": 43,
-    "siera": 3.590404343750073,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Cam Schlittler",
     "team": "Los Angeles Dodgers @ New York Yankees",
     "opp": "Los Angeles Dodgers",
@@ -290,6 +276,20 @@
     "edge": -9,
     "pUnder": 41,
     "siera": 2.967380770527248,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Casey Mize",
+    "team": "Detroit Tigers @ Los Angeles Angels",
+    "opp": "Los Angeles Angels",
+    "line": 16.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 17.2,
+    "edge": -11,
+    "pUnder": 43,
+    "siera": 3.590404343750073,
     "tag": null,
     "bet": false
   },
