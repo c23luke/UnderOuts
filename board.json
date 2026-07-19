@@ -13,6 +13,19 @@
     "bet": false
   },
   {
+    "name": "Shota Imanaga",
+    "team": "Minnesota Twins @ Chicago Cubs",
+    "line": 17.5,
+    "under": 150,
+    "book": "Bovada",
+    "proj": 16.9,
+    "edge": 19,
+    "pUnder": 59,
+    "siera": 3.7841863249994057,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "German Marquez",
     "team": "San Diego Padres @ Kansas City Royals",
     "line": 14.5,
@@ -24,19 +37,6 @@
     "siera": 5.585546562847026,
     "tag": "both",
     "bet": true
-  },
-  {
-    "name": "Shota Imanaga",
-    "team": "Minnesota Twins @ Chicago Cubs",
-    "line": 17.5,
-    "under": 135,
-    "book": "Bovada",
-    "proj": 16.9,
-    "edge": 16,
-    "pUnder": 59,
-    "siera": 3.7841863249994057,
-    "tag": null,
-    "bet": false
   },
   {
     "name": "Eduardo Rodriguez",
