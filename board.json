@@ -42,34 +42,6 @@
     "bet": true
   },
   {
-    "name": "Hunter Greene",
-    "team": "Cincinnati Reds @ Colorado Rockies",
-    "opp": null,
-    "line": 17.5,
-    "under": 100,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 15,
-    "pUnder": 65,
-    "siera": null,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Ryan Feltner",
-    "team": "Cincinnati Reds @ Colorado Rockies",
-    "opp": "Cincinnati Reds",
-    "line": 14.5,
-    "under": 120,
-    "book": "Bovada",
-    "proj": 14.4,
-    "edge": 6,
-    "pUnder": 51,
-    "siera": 4.77778867156798,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Casey Mize",
     "team": "Detroit Tigers @ Los Angeles Angels",
     "opp": "Los Angeles Angels",
