@@ -39,6 +39,32 @@
     "bet": false
   },
   {
+    "name": "Eduardo Rodriguez",
+    "team": "St. Louis Cardinals @ Arizona Diamondbacks",
+    "line": 17.5,
+    "under": 101,
+    "book": "DraftKings",
+    "proj": 16,
+    "edge": 16,
+    "pUnder": 66,
+    "siera": 4.855781398735161,
+    "tag": "both",
+    "bet": true
+  },
+  {
+    "name": "Ryan Johnson",
+    "team": "Detroit Tigers @ Los Angeles Angels",
+    "line": 14.5,
+    "under": 135,
+    "book": "Bovada",
+    "proj": 13.9,
+    "edge": 15,
+    "pUnder": 58,
+    "siera": 4.616440827498826,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "Noah Cameron",
     "team": "San Diego Padres @ Kansas City Royals",
     "line": 17.5,
@@ -91,6 +117,32 @@
     "bet": false
   },
   {
+    "name": "Robbie Ray",
+    "team": "San Francisco Giants @ Seattle Mariners",
+    "line": 17.5,
+    "under": -120,
+    "book": "Caesars",
+    "proj": 16.5,
+    "edge": 7,
+    "pUnder": 61,
+    "siera": 4.829484438271641,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Grant Holmes",
+    "team": "Texas Rangers @ Atlanta Braves",
+    "line": 15.5,
+    "under": -158,
+    "book": "DraftKings",
+    "proj": 14,
+    "edge": 6,
+    "pUnder": 67,
+    "siera": 4.662981603249189,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Paul Skenes",
     "team": "Pittsburgh Pirates @ Cleveland Guardians",
     "line": 17.5,
@@ -117,19 +169,6 @@
     "bet": false
   },
   {
-    "name": "Grant Holmes",
-    "team": "Texas Rangers @ Atlanta Braves",
-    "line": 15.5,
-    "under": -168,
-    "book": "DraftKings",
-    "proj": 14,
-    "edge": 4,
-    "pUnder": 67,
-    "siera": 4.662981603249189,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Ryan Feltner",
     "team": "Cincinnati Reds @ Colorado Rockies",
     "line": 15.5,
@@ -152,6 +191,19 @@
     "edge": 0,
     "pUnder": 41,
     "siera": 2.967380770527248,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Foster Griffin",
+    "team": "Washington Nationals @ Athletics",
+    "line": 17.5,
+    "under": 120,
+    "book": "DraftKings",
+    "proj": 17.9,
+    "edge": -1,
+    "pUnder": 45,
+    "siera": 3.588648100013487,
     "tag": null,
     "bet": false
   },
@@ -195,6 +247,19 @@
     "bet": false
   },
   {
+    "name": "Casey Mize",
+    "team": "Detroit Tigers @ Los Angeles Angels",
+    "line": 17.5,
+    "under": -135,
+    "book": "Fanatics",
+    "proj": 17.2,
+    "edge": -4,
+    "pUnder": 53,
+    "siera": 3.590404343750073,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Nolan McLean",
     "team": "New York Mets @ Philadelphia Phillies",
     "line": 17.5,
@@ -204,6 +269,19 @@
     "edge": -5,
     "pUnder": 49,
     "siera": 3.5014931249086385,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Andre Pallante",
+    "team": "St. Louis Cardinals @ Arizona Diamondbacks",
+    "line": 16.5,
+    "under": -109,
+    "book": "DraftKings",
+    "proj": 16.9,
+    "edge": -8,
+    "pUnder": 45,
+    "siera": 4.25920757170799,
     "tag": null,
     "bet": false
   },
@@ -221,6 +299,19 @@
     "bet": false
   },
   {
+    "name": "Logan Gilbert",
+    "team": "San Francisco Giants @ Seattle Mariners",
+    "line": 18.5,
+    "under": -145,
+    "book": "DraftKings",
+    "proj": 18.7,
+    "edge": -12,
+    "pUnder": 47,
+    "siera": 3.3467572660001252,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Eury Perez",
     "team": "Miami Marlins @ Milwaukee Brewers",
     "line": 15.5,
@@ -230,19 +321,6 @@
     "edge": -15,
     "pUnder": 41,
     "siera": 3.8233595538835745,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Nathan Eovaldi",
-    "team": "Texas Rangers @ Atlanta Braves",
-    "line": 17.5,
-    "under": 112,
-    "book": "DraftKings",
-    "proj": 19.1,
-    "edge": -16,
-    "pUnder": 31,
-    "siera": 3.320582076161402,
     "tag": null,
     "bet": false
   },
