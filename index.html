@@ -89,7 +89,7 @@
     <div class="lab">Today · team to bet F5</div>
     <div id="f5today"><div class="empty">No F5 plays today yet — fires when an under-outs alert sends.</div></div>
 
-    <div class="lab" style="margin-top:26px">F5 Over systems</div>
+    <div class="lab" style="margin-top:26px">F5 performance · record · units · ROI</div>
     <div id="f5sys"><div class="empty">Builds once games grade.</div></div>
 
     <div class="lab" style="margin-top:26px">All tracked F5 · results</div>
@@ -143,21 +143,24 @@ function renderF5(){
     }).join('');
   } else tbox.innerHTML='<div class="empty">No F5 plays today yet — fires when an under-outs alert sends.</div>';
 
-  // 2) F5 OVER system records
-  const sumOv=arr=>{const g=arr.filter(c=>c.ovResult&&c.ovResult!=='P');const w=g.filter(c=>c.ovResult==='W').length,l=g.length-w;let u=0;g.forEach(c=>u+=c.ovResult==='W'?bu(c.f5totOver):-1);return {w,l,u,n:g.length};};
-  const ovShort=sumOv(CORR.filter(c=>c.short)), ovAll=sumOv(CORR);
-  const sysrow=(cls,label,tag,s)=> s.n? ('<div class="sysrow '+cls+'"><div class="sysL">'+label+' <b>'+tag+' · '+Math.round(s.w/s.n*100)+'%</b></div><div class="sysR"><span>'+s.w+'-'+s.l+'</span><span style="color:'+(s.u>=0?'var(--green)':'var(--red)')+'">'+(s.u>=0?'+':'')+s.u.toFixed(1)+'u</span></div></div>') : '';
+  // 2) F5 performance — W/L, units, ROI for each market (Over / ML / RL), bad-arm+short system
+  const mkt=(arr,resKey,priceKey)=>{const g=arr.filter(c=>c[resKey]&&c[resKey]!=='P');const w=g.filter(c=>c[resKey]==='W').length,l=g.length-w;let u=0;g.forEach(c=>u+=c[resKey]==='W'?bu(c[priceKey]):-1);const roi=g.length?u/g.length*100:0;return {w,l,u,roi,n:g.length};};
+  const shortSet=CORR.filter(c=>c.short);
+  const mrow=(cls,label,m)=> ('<div class="sysrow '+cls+'"><div class="sysL">'+label+' <b>'+(m.n?m.w+'-'+m.l+' · '+Math.round(m.w/m.n*100)+'%':'0-0')+'</b></div><div class="sysR"><span style="color:'+(m.u>=0?'var(--green)':'var(--red)')+'">'+(m.u>=0?'+':'')+m.u.toFixed(1)+'u</span><span style="color:'+(m.roi>=0?'var(--green)':'var(--red)')+'">'+(m.n?(m.roi>=0?'+':'')+Math.round(m.roi)+'%':'—')+'</span></div></div>');
   const sbox=document.getElementById('f5sys');
-  sbox.innerHTML = ovAll.n ? (sysrow('b','F5 OVER · bad arm + short','O '+ovShort.n,ovShort)+sysrow('a','F5 OVER · any bad arm','O '+ovAll.n,ovAll)) : '<div class="empty">Builds once games grade.</div>';
+  sbox.innerHTML='<div class="syscap" style="margin:0 0 9px">Bad arm + short · '+shortSet.length+' games tracked</div>'
+    + mrow('b','F5 OVER',  mkt(shortSet,'ovResult','f5totOver'))
+    + mrow('a','F5 ML · opp',   mkt(shortSet,'mlResult','f5ml'))
+    + mrow('a','F5 RL · opp',   mkt(shortSet,'rlResult','f5rlPrice'));
 
-  // 3) ALL tracked F5 — full history incl. graded ML/RL (e.g. Tigers yesterday)
+  // 3) ALL tracked F5 — full history WITH the lines next to each result
   const kbox=document.getElementById('f5track');
   if(!CORR.length){ kbox.innerHTML='<div class="empty">Nothing tracked yet.</div>'; return; }
   kbox.innerHTML=CORR.slice(0,40).map(c=>{
     const runs=c.f5Total!=null?(c.f5Total+'r F5'):(c.graded?(c.oppF5+'-'+c.ownF5):'tracking');
-    const ov=c.f5totPoint!=null?('O'+c.f5totPoint+' '+chipF5(c.ovResult)):'';
-    const ml=c.f5ml!=null?('ML '+chipF5(c.mlResult)):'';
-    const rl=c.f5rlPoint!=null?('RL '+chipF5(c.rlResult)):'';
+    const ov=c.f5totPoint!=null?('O'+c.f5totPoint+' '+AMER(c.f5totOver)+' '+chipF5(c.ovResult)):'';
+    const ml=c.f5ml!=null?('ML '+AMER(c.f5ml)+' '+chipF5(c.mlResult)):'';
+    const rl=c.f5rlPoint!=null?('RL '+(c.f5rlPoint>0?'+':'')+c.f5rlPoint+' '+AMER(c.f5rlPrice)+' '+chipF5(c.rlResult)):'';
     const parts=[ov,ml,rl].filter(Boolean).join(' · ');
     const dot=c.short?'<span style="color:var(--green)">●</span> ':'<span style="color:var(--amber)">●</span> ';
     return '<div class="hrow"><div><div>'+dot+c.oppTeam+' <span style="color:var(--dim);font-size:11px">off '+c.pitcher+'</span></div><div class="t2">'+parts+' · '+runs+'</div></div><div style="font-size:11px;color:var(--dim)">'+c.date+'</div></div>';
