@@ -14,20 +14,6 @@
     "bet": false
   },
   {
-    "name": "German Marquez",
-    "team": "San Diego Padres @ Kansas City Royals",
-    "opp": "Kansas City Royals",
-    "line": 14.5,
-    "under": 120,
-    "book": "Bovada",
-    "proj": 13.4,
-    "edge": 18,
-    "pUnder": 64,
-    "siera": 5.585546562847026,
-    "tag": "both",
-    "bet": true
-  },
-  {
     "name": "Ryan Johnson",
     "team": "Detroit Tigers @ Los Angeles Angels",
     "opp": "Detroit Tigers",
@@ -38,6 +24,20 @@
     "edge": 16,
     "pUnder": 58,
     "siera": 4.616440827498826,
+    "tag": "both",
+    "bet": true
+  },
+  {
+    "name": "German Marquez",
+    "team": "San Diego Padres @ Kansas City Royals",
+    "opp": "Kansas City Royals",
+    "line": 15.5,
+    "under": -160,
+    "book": "Bovada",
+    "proj": 13.4,
+    "edge": 13,
+    "pUnder": 75,
+    "siera": 5.585546562847026,
     "tag": "both",
     "bet": true
   },
