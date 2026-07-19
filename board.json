@@ -26,6 +26,19 @@
     "bet": false
   },
   {
+    "name": "Eduardo Rodriguez",
+    "team": "St. Louis Cardinals @ Arizona Diamondbacks",
+    "line": 17.5,
+    "under": 105,
+    "book": "DraftKings",
+    "proj": 16,
+    "edge": 17,
+    "pUnder": 66,
+    "siera": 4.855781398735161,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "German Marquez",
     "team": "San Diego Padres @ Kansas City Royals",
     "line": 14.5,
@@ -48,19 +61,6 @@
     "edge": 17,
     "pUnder": 58,
     "siera": 4.616440827498826,
-    "tag": "both",
-    "bet": true
-  },
-  {
-    "name": "Eduardo Rodriguez",
-    "team": "St. Louis Cardinals @ Arizona Diamondbacks",
-    "line": 17.5,
-    "under": 101,
-    "book": "DraftKings",
-    "proj": 16,
-    "edge": 16,
-    "pUnder": 66,
-    "siera": 4.855781398735161,
     "tag": "both",
     "bet": true
   },
@@ -94,8 +94,8 @@
     "name": "Paul Skenes",
     "team": "Pittsburgh Pirates @ Cleveland Guardians",
     "line": 17.5,
-    "under": 150,
-    "book": "Fanatics",
+    "under": 151,
+    "book": "DraftKings",
     "proj": 17.5,
     "edge": 10,
     "pUnder": 50,
