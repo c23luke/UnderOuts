@@ -26,6 +26,19 @@
     "bet": true
   },
   {
+    "name": "Shota Imanaga",
+    "team": "Minnesota Twins @ Chicago Cubs",
+    "line": 17.5,
+    "under": 135,
+    "book": "Bovada",
+    "proj": 16.9,
+    "edge": 16,
+    "pUnder": 59,
+    "siera": 3.7841863249994057,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Noah Cameron",
     "team": "San Diego Padres @ Kansas City Royals",
     "line": 17.5,
@@ -143,6 +156,19 @@
     "bet": false
   },
   {
+    "name": "Zebby Matthews",
+    "team": "Minnesota Twins @ Chicago Cubs",
+    "line": 17.5,
+    "under": 105,
+    "book": "Bovada",
+    "proj": 17.8,
+    "edge": -3,
+    "pUnder": 46,
+    "siera": 4.211585206536093,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Nolan McLean",
     "team": "New York Mets @ Philadelphia Phillies",
     "line": 17.5,
@@ -169,13 +195,26 @@
     "bet": false
   },
   {
+    "name": "Eury Perez",
+    "team": "Miami Marlins @ Milwaukee Brewers",
+    "line": 15.5,
+    "under": -125,
+    "book": "Fanatics",
+    "proj": 16.2,
+    "edge": -15,
+    "pUnder": 41,
+    "siera": 3.8233595538835745,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Nathan Eovaldi",
     "team": "Texas Rangers @ Atlanta Braves",
     "line": 17.5,
-    "under": 116,
+    "under": 112,
     "book": "DraftKings",
     "proj": 19.1,
-    "edge": -15,
+    "edge": -16,
     "pUnder": 31,
     "siera": 3.320582076161402,
     "tag": null,
