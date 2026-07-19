@@ -13,6 +13,18 @@
   },
   {
     "date": "2026-07-18",
+    "name": "JT Ginn",
+    "line": 15.5,
+    "price": -156,
+    "proj": 15.1,
+    "siera": 4.5,
+    "actualOuts": 19,
+    "won": false,
+    "short": true,
+    "sharp": false
+  },
+  {
+    "date": "2026-07-18",
     "name": "Rhett Lowder",
     "line": 12.5,
     "price": -113,
@@ -46,6 +58,18 @@
     "won": true,
     "short": true,
     "sharp": false
+  },
+  {
+    "date": "2026-07-18",
+    "name": "Zack Littell",
+    "line": 14.5,
+    "price": 130,
+    "proj": 13.1,
+    "siera": 5.11,
+    "actualOuts": 18,
+    "won": false,
+    "short": true,
+    "sharp": true
   },
   {
     "date": "2026-07-17",
