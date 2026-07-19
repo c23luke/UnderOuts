@@ -1,18 +1,5 @@
 [
   {
-    "name": "Zack Littell",
-    "team": "Washington Nationals @ Athletics",
-    "line": 14.5,
-    "under": 130,
-    "book": "BetMGM",
-    "proj": 13.1,
-    "edge": 22,
-    "pUnder": 66,
-    "siera": 5.112916479775423,
-    "tag": "both",
-    "bet": true
-  },
-  {
     "name": "Grayson Rodriguez",
     "team": "Detroit Tigers @ Los Angeles Angels",
     "line": 15.5,
@@ -22,6 +9,19 @@
     "edge": 22,
     "pUnder": 79,
     "siera": 5.032762779392477,
+    "tag": "both",
+    "bet": true
+  },
+  {
+    "name": "Zack Littell",
+    "team": "Washington Nationals @ Athletics",
+    "line": 14.5,
+    "under": 115,
+    "book": "BetMGM",
+    "proj": 13.1,
+    "edge": 19,
+    "pUnder": 66,
+    "siera": 5.112916479775423,
     "tag": "both",
     "bet": true
   },
