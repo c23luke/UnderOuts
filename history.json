@@ -1,6 +1,18 @@
 [
   {
     "date": "2026-07-18",
+    "name": "Grayson Rodriguez",
+    "line": 15.5,
+    "price": -130,
+    "proj": 12.5,
+    "siera": 5.03,
+    "edge": 22,
+    "actualOuts": 12,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-18",
     "name": "Shane Bieber",
     "line": 15.5,
     "price": -102,

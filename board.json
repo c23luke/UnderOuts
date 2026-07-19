@@ -52,19 +52,6 @@
     "bet": false
   },
   {
-    "name": "Grant Holmes",
-    "team": "Texas Rangers @ Atlanta Braves",
-    "line": 14.5,
-    "under": 130,
-    "book": "Fanatics",
-    "proj": 14,
-    "edge": 12,
-    "pUnder": 56,
-    "siera": 4.662981603249189,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Brandon Young",
     "team": "Baltimore Orioles @ Houston Astros",
     "line": 17.5,
@@ -130,6 +117,19 @@
     "bet": false
   },
   {
+    "name": "Grant Holmes",
+    "team": "Texas Rangers @ Atlanta Braves",
+    "line": 15.5,
+    "under": -163,
+    "book": "DraftKings",
+    "proj": 14,
+    "edge": 5,
+    "pUnder": 67,
+    "siera": 4.662981603249189,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Cam Schlittler",
     "team": "Los Angeles Dodgers @ New York Yankees",
     "line": 17.5,
@@ -169,6 +169,19 @@
     "bet": false
   },
   {
+    "name": "Robert Gasser",
+    "team": "Miami Marlins @ Milwaukee Brewers",
+    "line": 15.5,
+    "under": -134,
+    "book": "Caesars",
+    "proj": 15.2,
+    "edge": -4,
+    "pUnder": 53,
+    "siera": 4.353168095765975,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Nolan McLean",
     "team": "New York Mets @ Philadelphia Phillies",
     "line": 17.5,
@@ -198,10 +211,10 @@
     "name": "Eury Perez",
     "team": "Miami Marlins @ Milwaukee Brewers",
     "line": 15.5,
-    "under": -125,
-    "book": "Fanatics",
+    "under": -122,
+    "book": "Caesars",
     "proj": 16.2,
-    "edge": -15,
+    "edge": -14,
     "pUnder": 41,
     "siera": 3.8233595538835745,
     "tag": null,
