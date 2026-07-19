@@ -1,5 +1,24 @@
 [
   {
+    "date": "2026-07-19",
+    "pitcher": "German Marquez",
+    "short": true,
+    "oppTeam": "Kansas City Royals",
+    "f5ml": -164,
+    "f5rlPoint": -0.5,
+    "f5rlPrice": -120,
+    "f5totPoint": 5.5,
+    "f5totOver": -128,
+    "f5totUnder": -102,
+    "f5Total": null,
+    "ovResult": null,
+    "oppF5": null,
+    "ownF5": null,
+    "mlResult": null,
+    "rlResult": null,
+    "graded": false
+  },
+  {
     "date": "2026-07-18",
     "pitcher": "Grayson Rodriguez",
     "short": false,

@@ -1,5 +1,44 @@
 [
   {
+    "name": "Hunter Brown",
+    "team": "Baltimore Orioles @ Houston Astros",
+    "line": 17.5,
+    "under": -115,
+    "book": "Fanatics",
+    "proj": 15.1,
+    "edge": 21,
+    "pUnder": 75,
+    "siera": 4.196967408248758,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "German Marquez",
+    "team": "San Diego Padres @ Kansas City Royals",
+    "line": 14.5,
+    "under": 113,
+    "book": "Caesars",
+    "proj": 13.4,
+    "edge": 17,
+    "pUnder": 64,
+    "siera": 5.585546562847026,
+    "tag": "both",
+    "bet": true
+  },
+  {
+    "name": "Noah Cameron",
+    "team": "San Diego Padres @ Kansas City Royals",
+    "line": 17.5,
+    "under": -108,
+    "book": "Caesars",
+    "proj": 16.2,
+    "edge": 15,
+    "pUnder": 67,
+    "siera": 4.300232012025752,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Grant Holmes",
     "team": "Texas Rangers @ Atlanta Braves",
     "line": 14.5,
@@ -9,6 +48,19 @@
     "edge": 12,
     "pUnder": 56,
     "siera": 4.662981603249189,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Brandon Young",
+    "team": "Baltimore Orioles @ Houston Astros",
+    "line": 17.5,
+    "under": -102,
+    "book": "Caesars",
+    "proj": 16.5,
+    "edge": 12,
+    "pUnder": 62,
+    "siera": 4.705843072117184,
     "tag": null,
     "bet": false
   },

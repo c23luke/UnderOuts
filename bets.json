@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "2026-07-19|marquez",
+    "date": "2026-07-19",
+    "name": "German Marquez",
+    "team": "San Diego Padres @ Kansas City Royals",
+    "line": 14.5,
+    "side": "under",
+    "price": 113,
+    "proj": 13.4,
+    "edge": 17,
+    "tag": "both",
+    "auto": true
+  }
+]
