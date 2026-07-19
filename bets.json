@@ -13,19 +13,6 @@
     "auto": true
   },
   {
-    "id": "2026-07-19|rodriguez",
-    "date": "2026-07-19",
-    "name": "Eduardo Rodriguez",
-    "team": "St. Louis Cardinals @ Arizona Diamondbacks",
-    "line": 17.5,
-    "side": "under",
-    "price": 101,
-    "proj": 16,
-    "edge": 16,
-    "tag": "both",
-    "auto": true
-  },
-  {
     "id": "2026-07-19|johnson",
     "date": "2026-07-19",
     "name": "Ryan Johnson",
