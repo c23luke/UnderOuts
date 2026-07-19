@@ -210,12 +210,12 @@
   {
     "name": "Shane McClanahan",
     "team": "Tampa Bay Rays @ Boston Red Sox",
-    "line": 14.5,
-    "under": 130,
-    "book": "Bovada",
+    "line": 15.5,
+    "under": -162,
+    "book": "Caesars",
     "proj": 15.4,
-    "edge": -7,
-    "pUnder": 37,
+    "edge": -10,
+    "pUnder": 52,
     "siera": 3.9877468895304453,
     "tag": null,
     "bet": false
