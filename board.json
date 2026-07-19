@@ -78,6 +78,19 @@
     "bet": false
   },
   {
+    "name": "Paul Skenes",
+    "team": "Pittsburgh Pirates @ Cleveland Guardians",
+    "line": 17.5,
+    "under": 163,
+    "book": "DraftKings",
+    "proj": 17.5,
+    "edge": 12,
+    "pUnder": 50,
+    "siera": 3.0969645239792483,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Brandon Young",
     "team": "Baltimore Orioles @ Houston Astros",
     "line": 17.5,
@@ -87,19 +100,6 @@
     "edge": 11,
     "pUnder": 62,
     "siera": 4.705843072117184,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Paul Skenes",
-    "team": "Pittsburgh Pirates @ Cleveland Guardians",
-    "line": 17.5,
-    "under": 151,
-    "book": "Caesars",
-    "proj": 17.5,
-    "edge": 10,
-    "pUnder": 50,
-    "siera": 3.0969645239792483,
     "tag": null,
     "bet": false
   },
@@ -133,10 +133,10 @@
     "name": "Grant Holmes",
     "team": "Texas Rangers @ Atlanta Braves",
     "line": 15.5,
-    "under": -155,
+    "under": -150,
     "book": "Fanatics",
     "proj": 14,
-    "edge": 6,
+    "edge": 7,
     "pUnder": 67,
     "siera": 4.662981603249189,
     "tag": null,
