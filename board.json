@@ -126,34 +126,6 @@
     "bet": true
   },
   {
-    "name": "Joey Cantillo",
-    "team": "Pittsburgh Pirates @ Cleveland Guardians",
-    "opp": "Pittsburgh Pirates",
-    "line": 15.5,
-    "under": 100,
-    "book": "Bovada",
-    "proj": 14.4,
-    "edge": 12,
-    "pUnder": 62,
-    "siera": 4.431683681046908,
-    "tag": "both",
-    "bet": true
-  },
-  {
-    "name": "Paul Skenes",
-    "team": "Pittsburgh Pirates @ Cleveland Guardians",
-    "opp": "Cleveland Guardians",
-    "line": 17.5,
-    "under": 150,
-    "book": "Bovada",
-    "proj": 17.5,
-    "edge": 10,
-    "pUnder": 50,
-    "siera": 3.0969645239792483,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Robbie Ray",
     "team": "San Francisco Giants @ Seattle Mariners",
     "opp": "Seattle Mariners",

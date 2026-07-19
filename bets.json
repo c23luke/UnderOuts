@@ -28,20 +28,5 @@
     "tag": "both",
     "book": "Bovada",
     "auto": true
-  },
-  {
-    "id": "2026-07-19|lopez",
-    "date": "2026-07-19",
-    "name": "Jacob Lopez",
-    "team": "Washington Nationals @ Athletics",
-    "opp": "Washington Nationals",
-    "line": 14.5,
-    "side": "under",
-    "price": -120,
-    "proj": 10.5,
-    "edge": 31,
-    "tag": "both",
-    "book": "Bovada",
-    "auto": true
   }
 ]
