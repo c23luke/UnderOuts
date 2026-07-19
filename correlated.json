@@ -74,24 +74,5 @@
     "mlResult": "W",
     "rlResult": "W",
     "graded": true
-  },
-  {
-    "date": "2026-07-18",
-    "pitcher": "Zack Littell",
-    "short": false,
-    "oppTeam": "Athletics",
-    "f5ml": -118,
-    "f5rlPoint": -0.5,
-    "f5rlPrice": 110,
-    "f5totPoint": null,
-    "f5totOver": null,
-    "f5totUnder": null,
-    "f5Total": 6,
-    "ovResult": null,
-    "oppF5": 6,
-    "ownF5": 0,
-    "mlResult": "W",
-    "rlResult": "W",
-    "graded": true
   }
 ]
