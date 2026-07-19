@@ -12,30 +12,6 @@
     "tag": "both"
   },
   {
-    "date": "2026-07-18",
-    "name": "Shane Bieber",
-    "line": 15.5,
-    "price": -102,
-    "proj": 11.9,
-    "siera": 5.69,
-    "edge": 37,
-    "actualOuts": 18,
-    "won": false,
-    "tag": "both"
-  },
-  {
-    "date": "2026-07-18",
-    "name": "Zack Littell",
-    "line": 14.5,
-    "price": 130,
-    "proj": 13.1,
-    "siera": 5.11,
-    "edge": 19,
-    "actualOuts": 18,
-    "won": false,
-    "tag": "both"
-  },
-  {
     "date": "2026-07-17",
     "name": "Anthony Kay",
     "line": 15.5,
