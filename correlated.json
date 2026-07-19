@@ -80,6 +80,26 @@
     "graded": false
   },
   {
+    "date": "2026-07-19",
+    "pitcher": "Jacob Lopez",
+    "short": true,
+    "underLine": 14.5,
+    "oppTeam": "Washington Nationals",
+    "f5ml": -180,
+    "f5rlPoint": -0.5,
+    "f5rlPrice": -130,
+    "f5totPoint": 5.5,
+    "f5totOver": -130,
+    "f5totUnder": 100,
+    "f5Total": null,
+    "ovResult": null,
+    "oppF5": null,
+    "ownF5": null,
+    "mlResult": null,
+    "rlResult": null,
+    "graded": false
+  },
+  {
     "date": "2026-07-18",
     "pitcher": "Grayson Rodriguez",
     "short": false,
