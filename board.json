@@ -14,20 +14,6 @@
     "bet": true
   },
   {
-    "name": "Hunter Brown",
-    "team": "Baltimore Orioles @ Houston Astros",
-    "opp": "Baltimore Orioles",
-    "line": 17.5,
-    "under": 105,
-    "book": "Bovada",
-    "proj": 15.1,
-    "edge": 26,
-    "pUnder": 75,
-    "siera": 4.196967408248758,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Zebby Matthews",
     "team": "Minnesota Twins @ Chicago Cubs",
     "opp": "Chicago Cubs",
@@ -84,20 +70,6 @@
     "bet": true
   },
   {
-    "name": "Noah Cameron",
-    "team": "San Diego Padres @ Kansas City Royals",
-    "opp": "San Diego Padres",
-    "line": 17.5,
-    "under": -115,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 15,
-    "pUnder": 69,
-    "siera": 4.300232012025752,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Hunter Greene",
     "team": "Cincinnati Reds @ Colorado Rockies",
     "opp": null,
@@ -110,20 +82,6 @@
     "siera": null,
     "tag": null,
     "bet": false
-  },
-  {
-    "name": "German Marquez",
-    "team": "San Diego Padres @ Kansas City Royals",
-    "opp": "Kansas City Royals",
-    "line": 14.5,
-    "under": 100,
-    "book": "Bovada",
-    "proj": 13.4,
-    "edge": 14,
-    "pUnder": 64,
-    "siera": 5.585546562847026,
-    "tag": "both",
-    "bet": true
   },
   {
     "name": "Ryan Feltner",
@@ -182,58 +140,16 @@
     "bet": false
   },
   {
-    "name": "Brandon Young",
-    "team": "Baltimore Orioles @ Houston Astros",
-    "opp": "Houston Astros",
-    "line": 16.5,
-    "under": -115,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 3,
-    "pUnder": 56,
-    "siera": 4.705843072117184,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Logan Gilbert",
     "team": "San Francisco Giants @ Seattle Mariners",
     "opp": "San Francisco Giants",
     "line": 17.5,
-    "under": 135,
+    "under": 140,
     "book": "Bovada",
     "proj": 18,
-    "edge": 0,
+    "edge": 1,
     "pUnder": 43,
     "siera": 3.3467572660001252,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Robert Gasser",
-    "team": "Miami Marlins @ Milwaukee Brewers",
-    "opp": "Miami Marlins",
-    "line": 15.5,
-    "under": -130,
-    "book": "Bovada",
-    "proj": 15.2,
-    "edge": -3,
-    "pUnder": 53,
-    "siera": 4.353168095765975,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Eury Perez",
-    "team": "Miami Marlins @ Milwaukee Brewers",
-    "opp": "Milwaukee Brewers",
-    "line": 15.5,
-    "under": -145,
-    "book": "Bovada",
-    "proj": 16.2,
-    "edge": -18,
-    "pUnder": 41,
-    "siera": 3.8233595538835745,
     "tag": null,
     "bet": false
   }
