@@ -4,12 +4,14 @@
     "date": "2026-07-19",
     "name": "German Marquez",
     "team": "San Diego Padres @ Kansas City Royals",
+    "opp": "Kansas City Royals",
     "line": 14.5,
     "side": "under",
-    "price": 113,
+    "price": 120,
     "proj": 13.4,
-    "edge": 17,
+    "edge": 18,
     "tag": "both",
+    "book": "Bovada",
     "auto": true
   },
   {
@@ -17,12 +19,14 @@
     "date": "2026-07-19",
     "name": "Ryan Johnson",
     "team": "Detroit Tigers @ Los Angeles Angels",
+    "opp": "Detroit Tigers",
     "line": 14.5,
     "side": "under",
-    "price": 135,
+    "price": 145,
     "proj": 13.9,
-    "edge": 15,
+    "edge": 17,
     "tag": "both",
+    "book": "Bovada",
     "auto": true
   }
 ]
