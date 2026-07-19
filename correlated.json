@@ -10,13 +10,13 @@
     "f5totPoint": null,
     "f5totOver": null,
     "f5totUnder": null,
-    "f5Total": null,
+    "f5Total": 7,
     "ovResult": null,
-    "oppF5": null,
-    "ownF5": null,
-    "mlResult": null,
-    "rlResult": null,
-    "graded": false
+    "oppF5": 7,
+    "ownF5": 0,
+    "mlResult": "W",
+    "rlResult": "W",
+    "graded": true
   },
   {
     "date": "2026-07-18",
@@ -29,12 +29,12 @@
     "f5totPoint": null,
     "f5totOver": null,
     "f5totUnder": null,
-    "f5Total": null,
+    "f5Total": 6,
     "ovResult": null,
-    "oppF5": null,
-    "ownF5": null,
-    "mlResult": null,
-    "rlResult": null,
-    "graded": false
+    "oppF5": 6,
+    "ownF5": 0,
+    "mlResult": "W",
+    "rlResult": "W",
+    "graded": true
   }
 ]
