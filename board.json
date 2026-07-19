@@ -26,19 +26,6 @@
     "bet": true
   },
   {
-    "name": "Bryan Woo",
-    "team": "San Francisco Giants @ Seattle Mariners",
-    "line": 17.5,
-    "under": 146,
-    "book": "FanDuel",
-    "proj": 17.5,
-    "edge": 9,
-    "pUnder": 50,
-    "siera": 3.628222841239033,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "JT Ginn",
     "team": "Washington Nationals @ Athletics",
     "line": 15.5,
@@ -48,19 +35,6 @@
     "edge": -7,
     "pUnder": 54,
     "siera": 4.4983223749031245,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Logan Webb",
-    "team": "San Francisco Giants @ Seattle Mariners",
-    "line": 18.5,
-    "under": -135,
-    "book": "Caesars",
-    "proj": 19.2,
-    "edge": -14,
-    "pUnder": 44,
-    "siera": 4.003402400979098,
     "tag": null,
     "bet": false
   },
