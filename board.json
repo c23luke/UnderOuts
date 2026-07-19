@@ -70,6 +70,20 @@
     "bet": false
   },
   {
+    "name": "Casey Mize",
+    "team": "Detroit Tigers @ Los Angeles Angels",
+    "opp": "Los Angeles Angels",
+    "line": 16.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 16,
+    "edge": 5,
+    "pUnder": 55,
+    "siera": 3.590404343750073,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Robbie Ray",
     "team": "San Francisco Giants @ Seattle Mariners",
     "opp": "Seattle Mariners",
@@ -98,29 +112,15 @@
     "bet": false
   },
   {
-    "name": "Casey Mize",
-    "team": "Detroit Tigers @ Los Angeles Angels",
-    "opp": "Los Angeles Angels",
-    "line": 16.5,
-    "under": -105,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 4,
-    "pUnder": 55,
-    "siera": 3.590404343750073,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Logan Gilbert",
     "team": "San Francisco Giants @ Seattle Mariners",
     "opp": "San Francisco Giants",
-    "line": 18.5,
-    "under": -165,
+    "line": 17.5,
+    "under": 130,
     "book": "Bovada",
     "proj": 18,
-    "edge": -5,
-    "pUnder": 57,
+    "edge": -1,
+    "pUnder": 43,
     "siera": 3.3467572660001252,
     "tag": null,
     "bet": false
