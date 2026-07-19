@@ -55,10 +55,10 @@
     "name": "Noah Cameron",
     "team": "San Diego Padres @ Kansas City Royals",
     "line": 17.5,
-    "under": -110,
-    "book": "Caesars",
+    "under": -105,
+    "book": "Fanatics",
     "proj": 16.2,
-    "edge": 14,
+    "edge": 15,
     "pUnder": 67,
     "siera": 4.300232012025752,
     "tag": null,
@@ -156,6 +156,19 @@
     "bet": false
   },
   {
+    "name": "Ryan Feltner",
+    "team": "Cincinnati Reds @ Colorado Rockies",
+    "line": 14.5,
+    "under": 125,
+    "book": "Bovada",
+    "proj": 14.4,
+    "edge": 7,
+    "pUnder": 51,
+    "siera": 4.77778867156798,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Trey Yesavage",
     "team": "Chicago White Sox @ Toronto Blue Jays",
     "line": 16.5,
@@ -178,19 +191,6 @@
     "edge": 5,
     "pUnder": 58,
     "siera": 3.709773531566852,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Ryan Feltner",
-    "team": "Cincinnati Reds @ Colorado Rockies",
-    "line": 15.5,
-    "under": -158,
-    "book": "DraftKings",
-    "proj": 14.4,
-    "edge": 0,
-    "pUnder": 61,
-    "siera": 4.77778867156798,
     "tag": null,
     "bet": false
   },
@@ -238,7 +238,7 @@
     "team": "New York Mets @ Philadelphia Phillies",
     "line": 17.5,
     "under": -117,
-    "book": "DraftKings",
+    "book": "Caesars",
     "proj": 17.6,
     "edge": -5,
     "pUnder": 49,
@@ -299,6 +299,19 @@
     "bet": false
   },
   {
+    "name": "Nathan Eovaldi",
+    "team": "Texas Rangers @ Atlanta Braves",
+    "line": 17.5,
+    "under": 131,
+    "book": "DraftKings",
+    "proj": 19.1,
+    "edge": -12,
+    "pUnder": 31,
+    "siera": 3.320582076161402,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Logan Gilbert",
     "team": "San Francisco Giants @ Seattle Mariners",
     "line": 17.5,
@@ -308,19 +321,6 @@
     "edge": -13,
     "pUnder": 33,
     "siera": 3.3467572660001252,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Nathan Eovaldi",
-    "team": "Texas Rangers @ Atlanta Braves",
-    "line": 17.5,
-    "under": 121,
-    "book": "DraftKings",
-    "proj": 19.1,
-    "edge": -14,
-    "pUnder": 31,
-    "siera": 3.320582076161402,
     "tag": null,
     "bet": false
   },
