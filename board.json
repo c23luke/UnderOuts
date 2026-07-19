@@ -17,7 +17,7 @@
     "team": "Minnesota Twins @ Chicago Cubs",
     "line": 17.5,
     "under": 150,
-    "book": "Bovada",
+    "book": "DraftKings",
     "proj": 16.9,
     "edge": 19,
     "pUnder": 59,
@@ -91,19 +91,6 @@
     "bet": false
   },
   {
-    "name": "Robbie Ray",
-    "team": "San Francisco Giants @ Seattle Mariners",
-    "line": 17.5,
-    "under": -110,
-    "book": "Fanatics",
-    "proj": 16.5,
-    "edge": 9,
-    "pUnder": 61,
-    "siera": 4.829484438271641,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Ryan Johnson",
     "team": "Detroit Tigers @ Los Angeles Angels",
     "line": 15.5,
@@ -113,6 +100,19 @@
     "edge": 8,
     "pUnder": 69,
     "siera": 4.616440827498826,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Robbie Ray",
+    "team": "San Francisco Giants @ Seattle Mariners",
+    "line": 17.5,
+    "under": -114,
+    "book": "Caesars",
+    "proj": 16.5,
+    "edge": 8,
+    "pUnder": 61,
+    "siera": 4.829484438271641,
     "tag": null,
     "bet": false
   },
