@@ -43,7 +43,7 @@
   .systems{margin:-12px 0 24px}
   .syscap{font-size:10px;color:var(--dim);letter-spacing:.6px;text-transform:uppercase;margin:0 2px 9px}
   .sysrow{display:flex;justify-content:space-between;align-items:center;background:var(--card);border-radius:12px;padding:11px 13px;margin-bottom:7px}
-  .sysrow.b{border-left:3px solid var(--green)} .sysrow.a{border-left:3px solid var(--amber)}
+  .sysrow.b{border-left:3px solid var(--green)} .sysrow.a{border-left:3px solid var(--amber)} .sysrow.n{border-left:3px solid var(--dim)}
   .sysL{font-size:11.5px;font-weight:700;letter-spacing:.3px}
   .sysL b{font-size:9.5px;color:var(--dim);font-weight:700;margin-left:5px}
   .sysR{display:flex;gap:13px;font-size:13px;font-weight:700}
@@ -111,15 +111,17 @@ function renderStats(){
    +'<div class="stat"><div class="v" style="color:'+(o.roi>=0?'var(--green)':'var(--red)')+'">'+(o.roi>=0?'+':'')+o.roi.toFixed(0)+'%</div><div class="k">roi</div></div>';
   // by-system breakdown backtested across EVERY bad-arm start (systems.json), not just flagship bets:
   //   BAD ARM = all SIERA≥4.4 · BAD ARM + SHORT = the short subset
-  const base = SYS.length ? SYS : g.map(r=>({won:r.won,price:r.price,short:r.tag==='both'}));
-  const badarmAll=calcSys(base);   // system 1: bet under on EVERY bad arm (SIERA≥4.4) → ~70%
-  const both=calcSys(g);           // system 2: the picks actually sent (bad arm + short) → your live record
+  const base = SYS.length ? SYS : g.map(r=>({won:r.won,price:r.price,short:r.tag==='both',sharp:true}));
+  const badArm=calcSys(base);                       // 1: bet under on EVERY bad arm (SIERA≥4.4)
+  const shortS=calcSys(base.filter(r=>r.short));     // 2: + projected short
+  const sharpS=calcSys(base.filter(r=>r.sharp));     // 3: + cleared edge = the picks actually sent
   const num=(c)=>'<div class="sysR"><span>'+c.w+'-'+c.l+'</span><span style="color:'+(c.u>=0?'var(--green)':'var(--red)')+'">'+(c.u>=0?'+':'')+c.u.toFixed(1)+'u</span><span style="color:'+(c.roi>=0?'var(--green)':'var(--red)')+'">'+(c.roi>=0?'+':'')+c.roi.toFixed(0)+'%</span></div>';
   const row=(cls,label,tag,c)=> c.n? ('<div class="sysrow '+cls+'"><div class="sysL">'+label+' <b>'+tag+' · '+(c.n?Math.round(c.w/c.n*100):0)+'%</b></div>'+num(c)+'</div>') : '';
   document.getElementById('systems').innerHTML =
-      '<div class="syscap">Two systems tracked</div>'
-    + row('a','BAD ARM · SIERA ≥4.4','ALL '+badarmAll.n,badarmAll)
-    + row('b','BAD ARM + SHORT · sent','PICKS '+both.n,both);
+      '<div class="syscap">Three systems tracked · widest → sharpest</div>'
+    + row('n','BAD ARM · SIERA ≥4.4','ALL '+badArm.n,badArm)
+    + row('a','BAD ARM + SHORT','SHORT '+shortS.n,shortS)
+    + row('b','+ SHARP · sent picks','SENT '+sharpS.n,sharpS);
 }
 
 function liveLine(name,line){
@@ -135,10 +137,13 @@ function renderBets(){
   const box=document.getElementById('bets');
   if(!BETS.length){box.innerHTML='<div class="empty">No bets tonight — nothing cleared the bar. Passing is the play.</div>';return;}
   box.innerHTML=BETS.map(b=>{
-    const both=b.tag==='both'; const ec=both?'':' amber'; const pc=both?'g':'a'; const tg=both?'BAD ARM + SHORT':'BAD ARM';
+    const both=b.tag==='both'; const ec=both?'':' amber';
+    // every sent bet is BAD ARM + SHARP; add SHORT when tagged 'both'
+    const badges=[['BAD ARM','a']].concat(both?[['SHORT','a']]:[]).concat([['SHARP','g']]);
+    const pills=badges.map(x=>'<span class="pill '+x[1]+'">'+x[0]+'</span>').join(' ');
     return '<div class="bet'+(both?'':' amber')+'"><div class="r1"><div><div class="nm">'+b.name+'</div><div class="sub">Under '+b.line+' · '+AMER(b.price)+'</div></div>'
       +'<div class="edge'+ec+'"><div class="e">+'+b.edge+'%</div><div class="l">EDGE</div></div></div>'
-      +'<div class="row2"><span class="pill '+pc+'">'+tg+'</span><span class="meta">SIERA '+(b.siera?b.siera.toFixed(1):'—')+' · proj '+b.proj+' outs</span></div>'
+      +'<div class="row2">'+pills+'<span class="meta">SIERA '+(b.siera?b.siera.toFixed(1):'—')+' · proj '+b.proj+' outs</span></div>'
       +liveLine(b.name,b.line)+'</div>';
   }).join('');
 }
@@ -154,7 +159,7 @@ function renderBoard(){
 
 function renderHist(){
   const box=document.getElementById('hist'); if(!HIST.length)return;
-  box.innerHTML=HIST.slice(0,12).map(r=>'<div class="hrow"><div><div>'+r.name+' <span style="color:var(--dim);font-size:11px">'+r.date+'</span></div><div class="t2">U '+r.line+' ('+AMER(r.price)+') · '+(r.tag==='both'?'bad arm + short':'bad arm')+' · '+r.actualOuts+' outs</div></div><b style="color:'+(r.won?'var(--green)':'var(--red)')+'">'+(r.won?'WON':'LOST')+'</b></div>').join('');
+  box.innerHTML=HIST.slice(0,12).map(r=>'<div class="hrow"><div><div>'+r.name+' <span style="color:var(--dim);font-size:11px">'+r.date+'</span></div><div class="t2">U '+r.line+' ('+AMER(r.price)+') · '+(r.tag==='both'?'bad arm + short + sharp':'bad arm + sharp')+' · '+r.actualOuts+' outs</div></div><b style="color:'+(r.won?'var(--green)':'var(--red)')+'">'+(r.won?'WON':'LOST')+'</b></div>').join('');
 }
 
 load(); setInterval(load, 120000);
