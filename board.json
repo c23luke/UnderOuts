@@ -55,10 +55,10 @@
     "name": "Noah Cameron",
     "team": "San Diego Padres @ Kansas City Royals",
     "line": 17.5,
-    "under": -105,
-    "book": "Fanatics",
+    "under": -110,
+    "book": "Caesars",
     "proj": 16.2,
-    "edge": 15,
+    "edge": 14,
     "pUnder": 67,
     "siera": 4.300232012025752,
     "tag": null,
@@ -182,6 +182,19 @@
     "bet": false
   },
   {
+    "name": "Robert Gasser",
+    "team": "Miami Marlins @ Milwaukee Brewers",
+    "line": 15.5,
+    "under": -115,
+    "book": "Fanatics",
+    "proj": 15.2,
+    "edge": 0,
+    "pUnder": 53,
+    "siera": 4.353168095765975,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Ryan Feltner",
     "team": "Cincinnati Reds @ Colorado Rockies",
     "line": 15.5,
@@ -191,19 +204,6 @@
     "edge": -1,
     "pUnder": 61,
     "siera": 4.77778867156798,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Robert Gasser",
-    "team": "Miami Marlins @ Milwaukee Brewers",
-    "line": 15.5,
-    "under": -120,
-    "book": "Fanatics",
-    "proj": 15.2,
-    "edge": -1,
-    "pUnder": 53,
-    "siera": 4.353168095765975,
     "tag": null,
     "bet": false
   },
