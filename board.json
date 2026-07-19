@@ -14,6 +14,20 @@
     "bet": false
   },
   {
+    "name": "Eduardo Rodriguez",
+    "team": "St. Louis Cardinals @ Arizona Diamondbacks",
+    "opp": "St. Louis Cardinals",
+    "line": 17.5,
+    "under": 115,
+    "book": "Bovada",
+    "proj": 16,
+    "edge": 19,
+    "pUnder": 66,
+    "siera": 4.855781398735161,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "German Marquez",
     "team": "San Diego Padres @ Kansas City Royals",
     "opp": "Kansas City Royals",
@@ -88,10 +102,10 @@
     "team": "San Diego Padres @ Kansas City Royals",
     "opp": "San Diego Padres",
     "line": 17.5,
-    "under": -125,
+    "under": -120,
     "book": "Bovada",
     "proj": 16,
-    "edge": 13,
+    "edge": 14,
     "pUnder": 69,
     "siera": 4.300232012025752,
     "tag": null,
@@ -196,20 +210,6 @@
     "bet": false
   },
   {
-    "name": "Brandon Young",
-    "team": "Baltimore Orioles @ Houston Astros",
-    "opp": "Houston Astros",
-    "line": 16.5,
-    "under": -105,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 5,
-    "pUnder": 56,
-    "siera": 4.705843072117184,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Robbie Ray",
     "team": "San Francisco Giants @ Seattle Mariners",
     "opp": "Seattle Mariners",
@@ -234,6 +234,20 @@
     "edge": 4,
     "pUnder": 57,
     "siera": 4.25920757170799,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Brandon Young",
+    "team": "Baltimore Orioles @ Houston Astros",
+    "opp": "Houston Astros",
+    "line": 16.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 16,
+    "edge": 3,
+    "pUnder": 56,
+    "siera": 4.705843072117184,
     "tag": null,
     "bet": false
   },

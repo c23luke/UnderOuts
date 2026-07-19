@@ -28,5 +28,20 @@
     "tag": "both",
     "book": "Bovada",
     "auto": true
+  },
+  {
+    "id": "2026-07-19|rodriguez",
+    "date": "2026-07-19",
+    "name": "Eduardo Rodriguez",
+    "team": "St. Louis Cardinals @ Arizona Diamondbacks",
+    "opp": "St. Louis Cardinals",
+    "line": 17.5,
+    "side": "under",
+    "price": 115,
+    "proj": 16,
+    "edge": 19,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
   }
 ]
