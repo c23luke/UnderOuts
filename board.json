@@ -16,10 +16,10 @@
     "name": "Shota Imanaga",
     "team": "Minnesota Twins @ Chicago Cubs",
     "line": 17.5,
-    "under": 155,
+    "under": 150,
     "book": "Bovada",
     "proj": 16.9,
-    "edge": 20,
+    "edge": 19,
     "pUnder": 59,
     "siera": 3.7841863249994057,
     "tag": null,
@@ -78,19 +78,6 @@
     "bet": false
   },
   {
-    "name": "Grant Holmes",
-    "team": "Texas Rangers @ Atlanta Braves",
-    "line": 14.5,
-    "under": 130,
-    "book": "Fanatics",
-    "proj": 14,
-    "edge": 12,
-    "pUnder": 56,
-    "siera": 4.662981603249189,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Brandon Young",
     "team": "Baltimore Orioles @ Houston Astros",
     "line": 17.5,
@@ -139,6 +126,19 @@
     "edge": 7,
     "pUnder": 61,
     "siera": 4.829484438271641,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Grant Holmes",
+    "team": "Texas Rangers @ Atlanta Braves",
+    "line": 15.5,
+    "under": -158,
+    "book": "DraftKings",
+    "proj": 14,
+    "edge": 6,
+    "pUnder": 67,
+    "siera": 4.662981603249189,
     "tag": null,
     "bet": false
   },
