@@ -1,5 +1,41 @@
 [
   {
+    "date": "2026-07-18",
+    "name": "Rhett Lowder",
+    "line": 12.5,
+    "price": -113,
+    "proj": 13.4,
+    "siera": 4.83,
+    "actualOuts": 7,
+    "won": true,
+    "short": true,
+    "sharp": false
+  },
+  {
+    "date": "2026-07-18",
+    "name": "Shane Bieber",
+    "line": 15.5,
+    "price": -102,
+    "proj": 11.9,
+    "siera": 5.69,
+    "actualOuts": 18,
+    "won": false,
+    "short": true,
+    "sharp": true
+  },
+  {
+    "date": "2026-07-18",
+    "name": "Spencer Arrighetti",
+    "line": 15.5,
+    "price": 100,
+    "proj": 14.6,
+    "siera": 4.67,
+    "actualOuts": 15,
+    "won": true,
+    "short": true,
+    "sharp": false
+  },
+  {
     "date": "2026-07-17",
     "name": "Anthony Kay",
     "line": 15.5,
