@@ -61,7 +61,7 @@
   <div class="lab" style="margin-top:26px">Correlated F5 · Over · ML · Run Line</div>
   <div id="corr"><div class="empty">No correlated bets yet. Fires whenever an under-outs alert sends.</div></div>
 
-  <div class="lab" style="margin-top:26px">Board · ranked by edge</div>
+  <div class="lab" style="margin-top:26px">Today's slate · pitcher vs opponent · ranked by edge</div>
   <div id="board"><div class="empty">Waiting on the model — start the bot on your Mac. Updates hourly.</div></div>
 
   <div class="lab" style="margin-top:26px">Recent results</div>
@@ -149,7 +149,7 @@ function renderBets(){
     // every sent bet is BAD ARM + SHARP; add SHORT when tagged 'both'
     const badges=[['BAD ARM','a']].concat(both?[['SHORT','a']]:[]).concat([['SHARP','g']]);
     const pills=badges.map(x=>'<span class="pill '+x[1]+'">'+x[0]+'</span>').join(' ');
-    return '<div class="bet'+(both?'':' amber')+'"><div class="r1"><div><div class="nm">'+b.name+'</div><div class="sub">Under '+b.line+' · '+AMER(b.price)+'</div></div>'
+    return '<div class="bet'+(both?'':' amber')+'"><div class="r1"><div><div class="nm">'+b.name+'</div><div class="sub">Under '+b.line+' · '+AMER(b.price)+(b.opp?' · vs '+b.opp:'')+'</div></div>'
       +'<div class="edge'+ec+'"><div class="e">+'+b.edge+'%</div><div class="l">EDGE</div></div></div>'
       +'<div class="row2">'+pills+'<span class="meta">SIERA '+(b.siera?b.siera.toFixed(1):'—')+' · proj '+b.proj+' outs</span></div>'
       +liveLine(b.name,b.line)+'</div>';
@@ -161,7 +161,7 @@ function renderBoard(){
   box.innerHTML=BOARD.map(p=>{
     const l=lv(p.name); let ls=''; if(l){const fl=Math.floor(p.line);const over=l.outs>fl;ls='<span style="color:'+(over?'var(--red)':'var(--green)')+';font-size:11px">'+l.outs+' outs</span>';}
     const tag=p.bet?('<span class="tag '+(p.tag==='both'?'g':'a')+'">'+(p.tag==='both'?'BOTH':'BAD ARM')+'</span>'):'<span class="tag p">pass</span>';
-    return '<div class="brow"><div class="n"><div>'+p.name+(p.siera!=null?' <span style="color:var(--dim);font-size:11px">SIERA '+p.siera.toFixed(1)+'</span>':'')+'</div><div class="t2">proj '+p.proj+' vs '+p.line+' · '+(p.edge>=0?'+':'')+p.edge+'%</div></div>'+ls+tag+'</div>';
+    return '<div class="brow"><div class="n"><div>'+p.name+(p.siera!=null?' <span style="color:var(--dim);font-size:11px">SIERA '+p.siera.toFixed(1)+'</span>':'')+'</div><div class="t2">'+(p.opp?'vs '+p.opp+' · ':'')+'proj '+p.proj+' vs '+p.line+' · '+(p.edge>=0?'+':'')+p.edge+'%</div></div>'+ls+tag+'</div>';
   }).join('');
 }
 
