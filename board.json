@@ -14,6 +14,20 @@
     "bet": false
   },
   {
+    "name": "German Marquez",
+    "team": "San Diego Padres @ Kansas City Royals",
+    "opp": "Kansas City Royals",
+    "line": 14.5,
+    "under": 120,
+    "book": "Bovada",
+    "proj": 13.4,
+    "edge": 18,
+    "pUnder": 64,
+    "siera": 5.585546562847026,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "Ryan Johnson",
     "team": "Detroit Tigers @ Los Angeles Angels",
     "opp": "Detroit Tigers",
@@ -24,20 +38,6 @@
     "edge": 16,
     "pUnder": 58,
     "siera": 4.616440827498826,
-    "tag": "both",
-    "bet": true
-  },
-  {
-    "name": "German Marquez",
-    "team": "San Diego Padres @ Kansas City Royals",
-    "opp": "Kansas City Royals",
-    "line": 15.5,
-    "under": -160,
-    "book": "Bovada",
-    "proj": 13.4,
-    "edge": 13,
-    "pUnder": 75,
-    "siera": 5.585546562847026,
     "tag": "both",
     "bet": true
   },
@@ -140,20 +140,6 @@
     "bet": false
   },
   {
-    "name": "Ryan Feltner",
-    "team": "Cincinnati Reds @ Colorado Rockies",
-    "opp": "Cincinnati Reds",
-    "line": 14.5,
-    "under": 120,
-    "book": "Bovada",
-    "proj": 14.4,
-    "edge": 6,
-    "pUnder": 51,
-    "siera": 4.77778867156798,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Grant Holmes",
     "team": "Texas Rangers @ Atlanta Braves",
     "opp": "Texas Rangers",
@@ -164,6 +150,20 @@
     "edge": 6,
     "pUnder": 67,
     "siera": 4.662981603249189,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Ryan Feltner",
+    "team": "Cincinnati Reds @ Colorado Rockies",
+    "opp": "Cincinnati Reds",
+    "line": 14.5,
+    "under": 115,
+    "book": "Bovada",
+    "proj": 14.4,
+    "edge": 5,
+    "pUnder": 51,
+    "siera": 4.77778867156798,
     "tag": null,
     "bet": false
   },
@@ -252,25 +252,11 @@
     "bet": false
   },
   {
-    "name": "Cam Schlittler",
-    "team": "Los Angeles Dodgers @ New York Yankees",
-    "opp": "Los Angeles Dodgers",
-    "line": 17.5,
-    "under": 105,
-    "book": "Bovada",
-    "proj": 18.2,
-    "edge": -7,
-    "pUnder": 41,
-    "siera": 2.967380770527248,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Shane McClanahan",
     "team": "Tampa Bay Rays @ Boston Red Sox",
     "opp": "Boston Red Sox",
     "line": 15.5,
-    "under": -150,
+    "under": -145,
     "book": "Bovada",
     "proj": 15.4,
     "edge": -8,
@@ -294,6 +280,34 @@
     "bet": false
   },
   {
+    "name": "Cam Schlittler",
+    "team": "Los Angeles Dodgers @ New York Yankees",
+    "opp": "Los Angeles Dodgers",
+    "line": 17.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 18.2,
+    "edge": -9,
+    "pUnder": 41,
+    "siera": 2.967380770527248,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Logan Gilbert",
+    "team": "San Francisco Giants @ Seattle Mariners",
+    "opp": "San Francisco Giants",
+    "line": 17.5,
+    "under": 130,
+    "book": "Bovada",
+    "proj": 18.7,
+    "edge": -10,
+    "pUnder": 33,
+    "siera": 3.3467572660001252,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Nathan Eovaldi",
     "team": "Texas Rangers @ Atlanta Braves",
     "opp": "Atlanta Braves",
@@ -304,20 +318,6 @@
     "edge": -12,
     "pUnder": 31,
     "siera": 3.320582076161402,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Logan Gilbert",
-    "team": "San Francisco Giants @ Seattle Mariners",
-    "opp": "San Francisco Giants",
-    "line": 18.5,
-    "under": -165,
-    "book": "Bovada",
-    "proj": 18.7,
-    "edge": -15,
-    "pUnder": 47,
-    "siera": 3.3467572660001252,
     "tag": null,
     "bet": false
   },
@@ -339,12 +339,12 @@
     "name": "Yoshinobu Yamamoto",
     "team": "Los Angeles Dodgers @ New York Yankees",
     "opp": "New York Yankees",
-    "line": 18.5,
-    "under": -170,
+    "line": 17.5,
+    "under": 115,
     "book": "Bovada",
     "proj": 19.9,
-    "edge": -31,
-    "pUnder": 32,
+    "edge": -26,
+    "pUnder": 21,
     "siera": 3.382864899557298,
     "tag": null,
     "bet": false
