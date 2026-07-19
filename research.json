@@ -1,261 +1,268 @@
 [
   {
-    "key": "sandoval",
+    "key": "rangel",
     "tier": 2,
-    "score": 68,
+    "score": 57,
     "flags": {
-      "il": true
-    },
-    "proj": "~4.1 IP (13 outs)",
-    "note": "CONFIRMED: 2nd start back from a 2-year Tommy John recovery; debut was 4.1 IP on 65 pitches with a manager-stated ~68-80 pitch ceiling — genuine short-outing build-up."
-  },
-  {
-    "key": "dobnak",
-    "tier": 2,
-    "score": 60,
-    "flags": {
+      "rookie": true,
       "trend": true
     },
-    "proj": "~4 IP (12 outs)",
-    "note": "CONFIRMED: making his first start of the season after only two relief appearances — a bullpen arm spot-starting, not stretched out to go deep."
+    "proj": "~4.2 IP (13 outs)",
+    "note": "CONFIRMED: making his first career MLB start (PHI vs NYM) as a career swingman/bulk reliever — the Phillies confirmed they won't use an opener, so Rangel starts, but his recent outings max out around 5 IP and he isn't stretched to go deep."
   },
   {
-    "key": "allen",
-    "tier": 2,
-    "score": 55,
-    "flags": {
-      "rookie": true
-    },
-    "proj": "~4.2 IP (14 outs)",
-    "note": "CONFIRMED: called up from Triple-A that day to start the doubleheader nightcap (Game 2) — fresh call-up spot start, likely short with heavy bullpen backing."
-  },
-  {
-    "key": "murphy",
-    "tier": 2,
-    "score": 50,
-    "flags": {
-      "rookie": true
-    },
-    "proj": "~4.2 IP (14 outs)",
-    "note": "CONFIRMED: first career MLB start after only two relief appearances — not built up as a big-league starter, so a limited pitch count is likely (market prices much of this)."
-  },
-  {
-    "key": "seymour",
-    "tier": 3,
-    "score": 28,
-    "flags": {
-      "trend": true
-    },
-    "proj": "~5 IP (15 outs)",
-    "note": "Converted reliever but now an established starter (6-2); no confirmed cap tonight — defer to market."
-  },
-  {
-    "key": "jones",
-    "tier": 3,
-    "score": 30,
-    "flags": {
-      "il": true
-    },
-    "proj": "~5 IP (15 outs)",
-    "note": "Back from May-2025 UCL surgery; workload managed but built up by mid-July with no confirmed per-start cap — defer to market."
-  },
-  {
-    "key": "sheehan",
-    "tier": 3,
-    "score": 30,
-    "flags": {
-      "il": true
-    },
-    "proj": "~5 IP (15 outs)",
-    "note": "Post-TJ and workload watched (recent 4.1-5 IP outings) but no announced hard cap — defer to market."
-  },
-  {
-    "key": "bieber",
+    "key": "johnson",
     "tier": 3,
     "score": 25,
     "flags": {
-      "il": true,
-      "vet": true
+      "trend": true
     },
     "proj": "~5 IP (15 outs)",
-    "note": "Back from 2024 TJ but fully built up (~80-85 pitches, manager says 'where he should be') — no current cap, defer to market."
+    "note": "Converted reliever now a rotation starter (5 GS, has gone 6 shutout innings) but inconsistent; no confirmed per-start cap — defer to market."
   },
   {
-    "key": "lowder",
+    "key": "greene",
     "tier": 3,
     "score": 22,
     "flags": {
       "il": true
     },
-    "proj": "~5 IP (15 outs)",
-    "note": "Returned from a June shoulder IL stint but rebuilt over 6+ weeks; no current confirmed cap — defer to market."
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Back from elbow bone-chip surgery, but manager Francona explicitly said he will NOT limit his workload ('stretched out enough') after an 82-pitch/6.1 IP rehab — no cap, defer to market."
   },
   {
-    "key": "canning",
+    "key": "gasser",
     "tier": 3,
-    "score": 18,
-    "flags": {},
-    "proj": "~5 IP (15 outs)",
-    "note": "Durable (13 GS) with a weak ERA that's already priced; no cap — defer to market."
+    "score": 15,
+    "flags": {
+      "il": true
+    },
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Past his 2025 TJ build-up with no announced per-start cap — defer to market."
   },
   {
-    "key": "drohan",
+    "key": "yesavage",
     "tier": 3,
-    "score": 18,
-    "flags": {},
-    "proj": "~5 IP (15 outs)",
-    "note": "Back-end starter, no confirmed cap — defer to market."
+    "score": 15,
+    "flags": {
+      "rookie": true
+    },
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Rookie but an established member of the Toronto rotation (SP84); no cap — defer to market."
   },
   {
-    "key": "weathers",
+    "key": "mclean",
     "tier": 3,
-    "score": 18,
-    "flags": {},
-    "proj": "~5 IP (15 outs)",
-    "note": "Recent starts near 5.1 IP; no confirmed innings limit — defer to market."
+    "score": 15,
+    "flags": {
+      "rookie": true
+    },
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Rookie right-hander now established (6-6); no cap — defer to market."
   },
   {
-    "key": "ginn",
+    "key": "cameron",
     "tier": 3,
     "score": 15,
     "flags": {},
     "proj": "~5.2 IP (16 outs)",
-    "note": "Young but established starter (SP149, 7-6); no cap — defer to market."
+    "note": "Established rotation lefty (SP77); no cap — defer to market."
   },
   {
-    "key": "rogers",
+    "key": "matthews",
     "tier": 3,
     "score": 15,
     "flags": {},
     "proj": "~5.2 IP (16 outs)",
-    "note": "Built up and healthy; no cap — defer to market."
+    "note": "Full-time starter (SP109); no cap — defer to market."
   },
   {
-    "key": "arrighetti",
+    "key": "young",
     "tier": 3,
     "score": 15,
     "flags": {},
     "proj": "~5.2 IP (16 outs)",
-    "note": "Established in the rotation; no confirmed cap — defer to market."
+    "note": "Established starter (7-2); no cap — defer to market."
   },
   {
-    "key": "may",
+    "key": "burke",
     "tier": 3,
     "score": 15,
     "flags": {},
     "proj": "~5.2 IP (16 outs)",
-    "note": "Fully built up this year; no cap — defer to market."
+    "note": "Rotation regular (6-4); no cap — defer to market."
   },
   {
-    "key": "sugano",
+    "key": "cantillo",
     "tier": 3,
     "score": 15,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Full-time starter (8-4); no cap — defer to market."
+  },
+  {
+    "key": "feltner",
+    "tier": 3,
+    "score": 15,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Rockies rotation regular; no cap — defer to market."
+  },
+  {
+    "key": "perez",
+    "tier": 3,
+    "score": 15,
+    "flags": {
+      "il": true
+    },
+    "proj": "~6 IP (17 outs)",
+    "note": "TJ return but now fully built up (recent 7 IP/92 pitches, pushing 150-160 IP on the year) — no cap, defer to market."
+  },
+  {
+    "key": "holmes",
+    "tier": 3,
+    "score": 12,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Braves rotation regular; no cap — defer to market."
+  },
+  {
+    "key": "griffin",
+    "tier": 3,
+    "score": 12,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Durable (10-2); no cap — defer to market."
+  },
+  {
+    "key": "mize",
+    "tier": 3,
+    "score": 12,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Full-time starter; no cap — defer to market."
+  },
+  {
+    "key": "marquez",
+    "tier": 3,
+    "score": 12,
     "flags": {
       "vet": true
     },
     "proj": "~5.2 IP (16 outs)",
-    "note": "Durable vet; no cap — defer to market."
+    "note": "Veteran innings-eater; no cap — defer to market."
+  },
+  {
+    "key": "pallante",
+    "tier": 3,
+    "score": 12,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Durable (10-6); no cap — defer to market."
   },
   {
     "key": "rodriguez",
     "tier": 3,
-    "score": 15,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Healthy and built up; no confirmed cap — defer to market."
-  },
-  {
-    "key": "ashcraft",
-    "tier": 3,
-    "score": 15,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Starting DH Game 2 but a rotation regular (9-3); no cap — defer to market."
-  },
-  {
-    "key": "martin",
-    "tier": 3,
-    "score": 12,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Durable (9-4); no cap — defer to market."
-  },
-  {
-    "key": "bradley",
-    "tier": 3,
-    "score": 12,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Durable starter; no cap — defer to market."
-  },
-  {
-    "key": "littell",
-    "tier": 3,
-    "score": 12,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Innings-eater; no cap — defer to market."
-  },
-  {
-    "key": "meyer",
-    "tier": 3,
-    "score": 12,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Strong season (9-1); no cap — defer to market."
-  },
-  {
-    "key": "manaea",
-    "tier": 3,
     "score": 12,
     "flags": {
       "vet": true
     },
     "proj": "~5.2 IP (16 outs)",
-    "note": "Veteran, built up; no cap — defer to market."
+    "note": "Veteran built up (8-3); no cap — defer to market."
   },
   {
-    "key": "gore",
+    "key": "schlittler",
+    "tier": 3,
+    "score": 12,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Yankees rotation regular (9-5) starting DH Game 1; no cap — defer to market."
+  },
+  {
+    "key": "ohtani",
+    "tier": 3,
+    "score": 12,
+    "flags": {
+      "il": true,
+      "vet": true
+    },
+    "proj": "~6 IP (18 outs)",
+    "note": "Post-TJ but fully stretched (~6.1 IP/start, 1.79 ERA); reporting also has him slated Wed vs PHI rather than this DH — no cap, defer to market."
+  },
+  {
+    "key": "imanaga",
     "tier": 3,
     "score": 10,
-    "flags": {},
+    "flags": {
+      "vet": true
+    },
     "proj": "~6 IP (17 outs)",
-    "note": "Quality starter who works deep; no cap — defer to market."
+    "note": "Established starter; no cap — defer to market."
   },
   {
-    "key": "pfaadt",
+    "key": "eovaldi",
     "tier": 3,
     "score": 10,
-    "flags": {},
-    "proj": "~6 IP (18 outs)",
-    "note": "Durable young starter; no cap — defer to market."
+    "flags": {
+      "vet": true
+    },
+    "proj": "~6 IP (17 outs)",
+    "note": "Durable vet (9-7); no cap — defer to market."
   },
   {
-    "key": "boyd",
+    "key": "ray",
     "tier": 3,
     "score": 10,
-    "flags": {},
-    "proj": "~6 IP (18 outs)",
-    "note": "All-Star form; no cap — defer to market."
+    "flags": {
+      "vet": true
+    },
+    "proj": "~6 IP (17 outs)",
+    "note": "Built up and healthy (8-6); no cap — defer to market."
   },
   {
-    "key": "williams",
+    "key": "gray",
     "tier": 3,
-    "score": 10,
-    "flags": {},
+    "score": 8,
+    "flags": {
+      "vet": true
+    },
     "proj": "~6 IP (18 outs)",
-    "note": "Durable (10-4); no cap — defer to market."
+    "note": "Ace-level (11-1) who works deep; no cap — defer to market."
   },
   {
-    "key": "luzardo",
+    "key": "brown",
     "tier": 3,
-    "score": 10,
+    "score": 8,
     "flags": {},
     "proj": "~6 IP (18 outs)",
-    "note": "Front-line starter (SP11); no cap — defer to market."
+    "note": "Front-line arm (SP21); no cap — defer to market."
   },
   {
-    "key": "skubal",
+    "key": "gilbert",
+    "tier": 3,
+    "score": 8,
+    "flags": {},
+    "proj": "~6 IP (18 outs)",
+    "note": "Front-line starter (SP8); no cap — defer to market."
+  },
+  {
+    "key": "mcclanahan",
+    "tier": 3,
+    "score": 8,
+    "flags": {},
+    "proj": "~6 IP (18 outs)",
+    "note": "Frontline lefty; no cap — defer to market."
+  },
+  {
+    "key": "yamamoto",
+    "tier": 3,
+    "score": 6,
+    "flags": {},
+    "proj": "~6.2 IP (19 outs)",
+    "note": "Front-line starter (SP12) who works deep; no cap — defer to market."
+  },
+  {
+    "key": "skenes",
     "tier": 3,
     "score": 5,
     "flags": {},
