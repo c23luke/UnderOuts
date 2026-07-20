@@ -56,6 +56,20 @@
     "bet": false
   },
   {
+    "name": "Joe Ryan",
+    "team": "Minnesota Twins @ Cleveland Guardians",
+    "opp": "Cleveland Guardians",
+    "line": 17.5,
+    "under": 145,
+    "book": "Bovada",
+    "proj": 17.8,
+    "edge": 6,
+    "pUnder": 47,
+    "siera": 3.186155308085894,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Emmet Sheehan",
     "team": "Los Angeles Dodgers @ Philadelphia Phillies",
     "opp": "Philadelphia Phillies",
@@ -122,20 +136,6 @@
     "edge": -4,
     "pUnder": 54,
     "siera": 4.237485742709565,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Joe Ryan",
-    "team": "Minnesota Twins @ Cleveland Guardians",
-    "opp": "Cleveland Guardians",
-    "line": 18.5,
-    "under": -165,
-    "book": "Bovada",
-    "proj": 17.8,
-    "edge": -6,
-    "pUnder": 56,
-    "siera": 3.186155308085894,
     "tag": null,
     "bet": false
   },
