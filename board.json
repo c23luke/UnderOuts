@@ -1,33 +1,5 @@
 [
   {
-    "name": "Jack Flaherty",
-    "team": "Detroit Tigers @ Chicago Cubs",
-    "opp": "Chicago Cubs",
-    "line": 14.5,
-    "under": 115,
-    "book": "Bovada",
-    "proj": 13.5,
-    "edge": 14,
-    "pUnder": 61,
-    "siera": 4.09451982978791,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "JP Sears",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "Atlanta Braves",
-    "line": 14.5,
-    "under": 110,
-    "book": "Bovada",
-    "proj": 13.7,
-    "edge": 13,
-    "pUnder": 61,
-    "siera": 4.649476783340989,
-    "tag": "both",
-    "bet": true
-  },
-  {
     "name": "Andrew Abbott",
     "team": "Cincinnati Reds @ Seattle Mariners",
     "opp": "Seattle Mariners",
@@ -54,6 +26,20 @@
     "siera": 4.981972534650209,
     "tag": "both",
     "bet": true
+  },
+  {
+    "name": "JP Sears",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "Atlanta Braves",
+    "line": 14.5,
+    "under": 105,
+    "book": "Bovada",
+    "proj": 13.7,
+    "edge": 12,
+    "pUnder": 61,
+    "siera": 4.649476783340989,
+    "tag": null,
+    "bet": false
   },
   {
     "name": "Joe Ryan",
@@ -130,7 +116,7 @@
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "Los Angeles Angels",
     "line": 15.5,
-    "under": -160,
+    "under": -165,
     "book": "Bovada",
     "proj": 14.7,
     "edge": 0,
@@ -150,20 +136,6 @@
     "edge": -1,
     "pUnder": 59,
     "siera": 4.665092229786444,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Jose Soriano",
-    "team": "St. Louis Cardinals @ Los Angeles Angels",
-    "opp": "St. Louis Cardinals",
-    "line": 16.5,
-    "under": -120,
-    "book": "Bovada",
-    "proj": 16.4,
-    "edge": -3,
-    "pUnder": 51,
-    "siera": 4.005172315792379,
     "tag": null,
     "bet": false
   },
@@ -224,6 +196,20 @@
     "bet": false
   },
   {
+    "name": "Jose Soriano",
+    "team": "St. Louis Cardinals @ Los Angeles Angels",
+    "opp": "St. Louis Cardinals",
+    "line": 16.5,
+    "under": -140,
+    "book": "Bovada",
+    "proj": 16.4,
+    "edge": -7,
+    "pUnder": 51,
+    "siera": 4.005172315792379,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Michael Wacha",
     "team": "San Francisco Giants @ Kansas City Royals",
     "opp": "San Francisco Giants",
@@ -242,10 +228,10 @@
     "team": "Pittsburgh Pirates @ New York Yankees",
     "opp": "New York Yankees",
     "line": 17.5,
-    "under": 100,
+    "under": -110,
     "book": "Bovada",
     "proj": 18.2,
-    "edge": -10,
+    "edge": -12,
     "pUnder": 40,
     "siera": 3.2220902246732708,
     "tag": null,
@@ -280,20 +266,6 @@
     "bet": false
   },
   {
-    "name": "Cristopher Sanchez",
-    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
-    "opp": "Los Angeles Dodgers",
-    "line": 17.5,
-    "under": 120,
-    "book": "Bovada",
-    "proj": 19.5,
-    "edge": -16,
-    "pUnder": 30,
-    "siera": 2.8448019890638605,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Payton Tolle",
     "team": "Baltimore Orioles @ Boston Red Sox",
     "opp": "Baltimore Orioles",
@@ -322,6 +294,20 @@
     "bet": false
   },
   {
+    "name": "Cristopher Sanchez",
+    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
+    "opp": "Los Angeles Dodgers",
+    "line": 18.5,
+    "under": -155,
+    "book": "Bovada",
+    "proj": 19.5,
+    "edge": -21,
+    "pUnder": 40,
+    "siera": 2.8448019890638605,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Bryce Elder",
     "team": "San Diego Padres @ Atlanta Braves",
     "opp": "San Diego Padres",
@@ -346,20 +332,6 @@
     "edge": -25,
     "pUnder": 25,
     "siera": 3.019658951886717,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Jacob Misiorowski",
-    "team": "New York Mets @ Milwaukee Brewers",
-    "opp": "New York Mets",
-    "line": 17.5,
-    "under": 110,
-    "book": "Bovada",
-    "proj": 20.6,
-    "edge": -31,
-    "pUnder": 16,
-    "siera": 2.19681715490842,
     "tag": null,
     "bet": false
   }
