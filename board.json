@@ -126,6 +126,20 @@
     "bet": false
   },
   {
+    "name": "Jeffrey Springs",
+    "team": "Athletics @ Arizona Diamondbacks",
+    "opp": "Arizona Diamondbacks",
+    "line": 15.5,
+    "under": -150,
+    "book": "Bovada",
+    "proj": 14.8,
+    "edge": -1,
+    "pUnder": 59,
+    "siera": 4.665092229786444,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Trevor McDonald",
     "team": "San Francisco Giants @ Kansas City Royals",
     "opp": "Kansas City Royals",
@@ -150,20 +164,6 @@
     "edge": -3,
     "pUnder": 40,
     "siera": 2.963050187718382,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Jeffrey Springs",
-    "team": "Athletics @ Arizona Diamondbacks",
-    "opp": "Arizona Diamondbacks",
-    "line": 15.5,
-    "under": -165,
-    "book": "Bovada",
-    "proj": 14.8,
-    "edge": -4,
-    "pUnder": 59,
-    "siera": 4.665092229786444,
     "tag": null,
     "bet": false
   },
@@ -280,6 +280,20 @@
     "bet": false
   },
   {
+    "name": "Janson Junk",
+    "team": "Miami Marlins @ Houston Astros",
+    "opp": "Houston Astros",
+    "line": 15.5,
+    "under": -160,
+    "book": "Bovada",
+    "proj": 15.8,
+    "edge": -16,
+    "pUnder": 46,
+    "siera": 4.50021246644628,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Bryce Elder",
     "team": "San Diego Padres @ Atlanta Braves",
     "opp": "San Diego Padres",
@@ -290,20 +304,6 @@
     "edge": -17,
     "pUnder": 26,
     "siera": 4.3274658887115205,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Janson Junk",
-    "team": "Miami Marlins @ Houston Astros",
-    "opp": "Houston Astros",
-    "line": 15.5,
-    "under": -165,
-    "book": "Bovada",
-    "proj": 15.8,
-    "edge": -17,
-    "pUnder": 46,
-    "siera": 4.50021246644628,
     "tag": null,
     "bet": false
   },
@@ -326,10 +326,10 @@
     "team": "Chicago White Sox @ Texas Rangers",
     "opp": "Chicago White Sox",
     "line": 15.5,
-    "under": -110,
+    "under": -120,
     "book": "Bovada",
     "proj": 17.6,
-    "edge": -27,
+    "edge": -30,
     "pUnder": 25,
     "siera": 3.019658951886717,
     "tag": null,
