@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "name": "Tanner Bibee",
+    "team": "Minnesota Twins @ Cleveland Guardians",
+    "opp": "Minnesota Twins",
+    "line": 17.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 16.8,
+    "edge": 7,
+    "pUnder": 57,
+    "siera": 4.358942054145419,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Joe Ryan",
+    "team": "Minnesota Twins @ Cleveland Guardians",
+    "opp": "Cleveland Guardians",
+    "line": 18.5,
+    "under": -165,
+    "book": "Bovada",
+    "proj": 17.8,
+    "edge": -6,
+    "pUnder": 56,
+    "siera": 3.186155308085894,
+    "tag": null,
+    "bet": false
+  }
+]
