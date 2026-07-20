@@ -238,6 +238,20 @@
     "bet": false
   },
   {
+    "name": "Nick Martinez",
+    "team": "Tampa Bay Rays @ Toronto Blue Jays",
+    "opp": "Toronto Blue Jays",
+    "line": 16.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 17.2,
+    "edge": -13,
+    "pUnder": 41,
+    "siera": 4.76155079005412,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "George Kirby",
     "team": "Cincinnati Reds @ Seattle Mariners",
     "opp": "Cincinnati Reds",
@@ -248,20 +262,6 @@
     "edge": -13,
     "pUnder": 50,
     "siera": 3.7889441223260847,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Nick Martinez",
-    "team": "Tampa Bay Rays @ Toronto Blue Jays",
-    "opp": "Toronto Blue Jays",
-    "line": 16.5,
-    "under": -120,
-    "book": "Bovada",
-    "proj": 17.2,
-    "edge": -14,
-    "pUnder": 41,
-    "siera": 4.76155079005412,
     "tag": null,
     "bet": false
   },
