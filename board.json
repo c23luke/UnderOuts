@@ -1,19 +1,5 @@
 [
   {
-    "name": "Jack Flaherty",
-    "team": "Detroit Tigers @ Chicago Cubs",
-    "opp": "Chicago Cubs",
-    "line": 14.5,
-    "under": 120,
-    "book": "Bovada",
-    "proj": 13.5,
-    "edge": 15,
-    "pUnder": 61,
-    "siera": 4.09451982978791,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Andrew Abbott",
     "team": "Cincinnati Reds @ Seattle Mariners",
     "opp": "Seattle Mariners",
@@ -38,6 +24,20 @@
     "edge": 10,
     "pUnder": 61,
     "siera": 4.649476783340989,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Jack Flaherty",
+    "team": "Detroit Tigers @ Chicago Cubs",
+    "opp": "Chicago Cubs",
+    "line": 15.5,
+    "under": -165,
+    "book": "Bovada",
+    "proj": 13.5,
+    "edge": 9,
+    "pUnder": 71,
+    "siera": 4.09451982978791,
     "tag": null,
     "bet": false
   },
@@ -102,10 +102,10 @@
     "team": "Baltimore Orioles @ Boston Red Sox",
     "opp": "Boston Red Sox",
     "line": 17.5,
-    "under": -105,
+    "under": 100,
     "book": "Bovada",
     "proj": 17.3,
-    "edge": 2,
+    "edge": 3,
     "pUnder": 53,
     "siera": 4.62490886317244,
     "tag": null,
