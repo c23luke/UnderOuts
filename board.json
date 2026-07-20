@@ -14,20 +14,6 @@
     "bet": true
   },
   {
-    "name": "JP Sears",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "Atlanta Braves",
-    "line": 14.5,
-    "under": 105,
-    "book": "Bovada",
-    "proj": 13.7,
-    "edge": 12,
-    "pUnder": 61,
-    "siera": 4.649476783340989,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Jack Flaherty",
     "team": "Detroit Tigers @ Chicago Cubs",
     "opp": "Chicago Cubs",
@@ -56,20 +42,6 @@
     "bet": false
   },
   {
-    "name": "Tanner Bibee",
-    "team": "Minnesota Twins @ Cleveland Guardians",
-    "opp": "Minnesota Twins",
-    "line": 17.5,
-    "under": -105,
-    "book": "Bovada",
-    "proj": 16.8,
-    "edge": 6,
-    "pUnder": 57,
-    "siera": 4.358942054145419,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Joe Ryan",
     "team": "Minnesota Twins @ Cleveland Guardians",
     "opp": "Cleveland Guardians",
@@ -94,6 +66,20 @@
     "edge": 5,
     "pUnder": 57,
     "siera": 3.7176806522099994,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Tanner Bibee",
+    "team": "Minnesota Twins @ Cleveland Guardians",
+    "opp": "Minnesota Twins",
+    "line": 17.5,
+    "under": -110,
+    "book": "Bovada",
+    "proj": 16.8,
+    "edge": 5,
+    "pUnder": 57,
+    "siera": 4.358942054145419,
     "tag": null,
     "bet": false
   },
@@ -130,26 +116,12 @@
     "team": "San Francisco Giants @ Kansas City Royals",
     "opp": "Kansas City Royals",
     "line": 15.5,
-    "under": -115,
+    "under": -135,
     "book": "Bovada",
     "proj": 15,
-    "edge": 1,
+    "edge": -3,
     "pUnder": 55,
     "siera": 4.0316025260201,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Jeffrey Springs",
-    "team": "Athletics @ Arizona Diamondbacks",
-    "opp": "Arizona Diamondbacks",
-    "line": 15.5,
-    "under": -165,
-    "book": "Bovada",
-    "proj": 14.8,
-    "edge": -4,
-    "pUnder": 59,
-    "siera": 4.665092229786444,
     "tag": null,
     "bet": false
   },
@@ -206,20 +178,6 @@
     "edge": -6,
     "pUnder": 40,
     "siera": 2.963050187718382,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Michael Wacha",
-    "team": "San Francisco Giants @ Kansas City Royals",
-    "opp": "San Francisco Giants",
-    "line": 17.5,
-    "under": 120,
-    "book": "Bovada",
-    "proj": 18.5,
-    "edge": -9,
-    "pUnder": 37,
-    "siera": 4.352727743869545,
     "tag": null,
     "bet": false
   },
