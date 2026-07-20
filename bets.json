@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": "2026-07-20|abbott",
+    "date": "2026-07-20",
+    "name": "Andrew Abbott",
+    "team": "Cincinnati Reds @ Seattle Mariners",
+    "opp": "Seattle Mariners",
+    "line": 16.5,
+    "side": "under",
+    "price": -115,
+    "proj": 15.4,
+    "edge": 12,
+    "tag": "badarm",
+    "book": "Bovada",
+    "auto": true
+  }
+]

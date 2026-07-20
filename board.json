@@ -14,6 +14,20 @@
     "bet": false
   },
   {
+    "name": "Andrew Abbott",
+    "team": "Cincinnati Reds @ Seattle Mariners",
+    "opp": "Seattle Mariners",
+    "line": 16.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 15.4,
+    "edge": 12,
+    "pUnder": 66,
+    "siera": 4.891593663781765,
+    "tag": "badarm",
+    "bet": true
+  },
+  {
     "name": "JP Sears",
     "team": "San Diego Padres @ Atlanta Braves",
     "opp": "Atlanta Braves",
@@ -220,6 +234,20 @@
     "edge": -13,
     "pUnder": 32,
     "siera": 4.50021246644628,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "George Kirby",
+    "team": "Cincinnati Reds @ Seattle Mariners",
+    "opp": "Cincinnati Reds",
+    "line": 18.5,
+    "under": -170,
+    "book": "Bovada",
+    "proj": 18.5,
+    "edge": -13,
+    "pUnder": 50,
+    "siera": 3.7889441223260847,
     "tag": null,
     "bet": false
   },
