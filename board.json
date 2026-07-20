@@ -1,5 +1,19 @@
 [
   {
+    "name": "Jack Flaherty",
+    "team": "Detroit Tigers @ Chicago Cubs",
+    "opp": "Chicago Cubs",
+    "line": 14.5,
+    "under": 120,
+    "book": "Bovada",
+    "proj": 13.5,
+    "edge": 15,
+    "pUnder": 61,
+    "siera": 4.09451982978791,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Ryan Weathers",
     "team": "Pittsburgh Pirates @ New York Yankees",
     "opp": "Pittsburgh Pirates",
@@ -168,6 +182,20 @@
     "bet": false
   },
   {
+    "name": "Janson Junk",
+    "team": "Miami Marlins @ Houston Astros",
+    "opp": "Houston Astros",
+    "line": 14.5,
+    "under": 120,
+    "book": "Bovada",
+    "proj": 15.8,
+    "edge": -14,
+    "pUnder": 32,
+    "siera": 4.50021246644628,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Payton Tolle",
     "team": "Baltimore Orioles @ Boston Red Sox",
     "opp": "Baltimore Orioles",
@@ -178,6 +206,20 @@
     "edge": -15,
     "pUnder": 39,
     "siera": 3.9324372965162975,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Jameson Taillon",
+    "team": "Detroit Tigers @ Chicago Cubs",
+    "opp": "Detroit Tigers",
+    "line": 13.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 14.9,
+    "edge": -17,
+    "pUnder": 37,
+    "siera": 4.4982971499001305,
     "tag": null,
     "bet": false
   },
@@ -206,6 +248,20 @@
     "edge": -19,
     "pUnder": 40,
     "siera": 2.8448019890638605,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Jacob deGrom",
+    "team": "Chicago White Sox @ Texas Rangers",
+    "opp": "Chicago White Sox",
+    "line": 15.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 17.6,
+    "edge": -25,
+    "pUnder": 25,
+    "siera": 3.019658951886717,
     "tag": null,
     "bet": false
   },
