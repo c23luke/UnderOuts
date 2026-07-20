@@ -14,6 +14,20 @@
     "bet": true
   },
   {
+    "name": "Jack Flaherty",
+    "team": "Detroit Tigers @ Chicago Cubs",
+    "opp": "Chicago Cubs",
+    "line": 14.5,
+    "under": 110,
+    "book": "Bovada",
+    "proj": 13.5,
+    "edge": 13,
+    "pUnder": 61,
+    "siera": 4.09451982978791,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Erick Fedde",
     "team": "Chicago White Sox @ Texas Rangers",
     "opp": "Texas Rangers",
@@ -42,42 +56,14 @@
     "bet": false
   },
   {
-    "name": "Jack Flaherty",
-    "team": "Detroit Tigers @ Chicago Cubs",
-    "opp": "Chicago Cubs",
-    "line": 15.5,
-    "under": -160,
-    "book": "Bovada",
-    "proj": 13.5,
-    "edge": 9,
-    "pUnder": 71,
-    "siera": 4.09451982978791,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Ryan Weathers",
-    "team": "Pittsburgh Pirates @ New York Yankees",
-    "opp": "Pittsburgh Pirates",
-    "line": 17.5,
-    "under": -135,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 6,
-    "pUnder": 63,
-    "siera": 3.477407950112784,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Emmet Sheehan",
     "team": "Los Angeles Dodgers @ Philadelphia Phillies",
     "opp": "Philadelphia Phillies",
     "line": 15.5,
-    "under": -120,
+    "under": -125,
     "book": "Bovada",
     "proj": 14.8,
-    "edge": 3,
+    "edge": 2,
     "pUnder": 57,
     "siera": 3.7176806522099994,
     "tag": null,
@@ -140,20 +126,6 @@
     "bet": false
   },
   {
-    "name": "Dylan Cease",
-    "team": "Tampa Bay Rays @ Toronto Blue Jays",
-    "opp": "Tampa Bay Rays",
-    "line": 17.5,
-    "under": 125,
-    "book": "Bovada",
-    "proj": 18.3,
-    "edge": -4,
-    "pUnder": 40,
-    "siera": 2.963050187718382,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Freddy Peralta",
     "team": "New York Mets @ Milwaukee Brewers",
     "opp": "Milwaukee Brewers",
@@ -210,20 +182,6 @@
     "bet": false
   },
   {
-    "name": "Braxton Ashcraft",
-    "team": "Pittsburgh Pirates @ New York Yankees",
-    "opp": "New York Yankees",
-    "line": 17.5,
-    "under": 100,
-    "book": "Bovada",
-    "proj": 18.2,
-    "edge": -10,
-    "pUnder": 40,
-    "siera": 3.2220902246732708,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Payton Tolle",
     "team": "Baltimore Orioles @ Boston Red Sox",
     "opp": "Baltimore Orioles",
@@ -234,20 +192,6 @@
     "edge": -10,
     "pUnder": 39,
     "siera": 3.9324372965162975,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Nick Martinez",
-    "team": "Tampa Bay Rays @ Toronto Blue Jays",
-    "opp": "Toronto Blue Jays",
-    "line": 16.5,
-    "under": -115,
-    "book": "Bovada",
-    "proj": 17.2,
-    "edge": -13,
-    "pUnder": 41,
-    "siera": 4.76155079005412,
     "tag": null,
     "bet": false
   },
