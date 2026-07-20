@@ -56,20 +56,6 @@
     "bet": false
   },
   {
-    "name": "Joe Ryan",
-    "team": "Minnesota Twins @ Cleveland Guardians",
-    "opp": "Cleveland Guardians",
-    "line": 17.5,
-    "under": 140,
-    "book": "Bovada",
-    "proj": 17.8,
-    "edge": 6,
-    "pUnder": 47,
-    "siera": 3.186155308085894,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Ryan Weathers",
     "team": "Pittsburgh Pirates @ New York Yankees",
     "opp": "Pittsburgh Pirates",
@@ -280,6 +266,20 @@
     "bet": false
   },
   {
+    "name": "Bryce Elder",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "San Diego Padres",
+    "line": 14.5,
+    "under": 140,
+    "book": "Bovada",
+    "proj": 16.9,
+    "edge": -16,
+    "pUnder": 26,
+    "siera": 4.3274658887115205,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Janson Junk",
     "team": "Miami Marlins @ Houston Astros",
     "opp": "Houston Astros",
@@ -290,20 +290,6 @@
     "edge": -16,
     "pUnder": 46,
     "siera": 4.50021246644628,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Bryce Elder",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "San Diego Padres",
-    "line": 14.5,
-    "under": 135,
-    "book": "Bovada",
-    "proj": 16.9,
-    "edge": -17,
-    "pUnder": 26,
-    "siera": 4.3274658887115205,
     "tag": null,
     "bet": false
   },
