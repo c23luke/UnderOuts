@@ -70,6 +70,20 @@
     "bet": false
   },
   {
+    "name": "Ryan Weathers",
+    "team": "Pittsburgh Pirates @ New York Yankees",
+    "opp": "Pittsburgh Pirates",
+    "line": 17.5,
+    "under": -140,
+    "book": "Bovada",
+    "proj": 16,
+    "edge": 5,
+    "pUnder": 63,
+    "siera": 3.477407950112784,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Emmet Sheehan",
     "team": "Los Angeles Dodgers @ Philadelphia Phillies",
     "opp": "Philadelphia Phillies",
@@ -80,20 +94,6 @@
     "edge": 5,
     "pUnder": 57,
     "siera": 3.7176806522099994,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Ryan Weathers",
-    "team": "Pittsburgh Pirates @ New York Yankees",
-    "opp": "Pittsburgh Pirates",
-    "line": 17.5,
-    "under": -145,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 4,
-    "pUnder": 63,
-    "siera": 3.477407950112784,
     "tag": null,
     "bet": false
   },
@@ -280,6 +280,20 @@
     "bet": false
   },
   {
+    "name": "Bryce Elder",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "San Diego Padres",
+    "line": 14.5,
+    "under": 140,
+    "book": "Bovada",
+    "proj": 16.9,
+    "edge": -16,
+    "pUnder": 26,
+    "siera": 4.3274658887115205,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Janson Junk",
     "team": "Miami Marlins @ Houston Astros",
     "opp": "Houston Astros",
@@ -290,20 +304,6 @@
     "edge": -16,
     "pUnder": 46,
     "siera": 4.50021246644628,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Bryce Elder",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "San Diego Padres",
-    "line": 14.5,
-    "under": 130,
-    "book": "Bovada",
-    "proj": 16.9,
-    "edge": -18,
-    "pUnder": 26,
-    "siera": 4.3274658887115205,
     "tag": null,
     "bet": false
   },
