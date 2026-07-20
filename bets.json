@@ -13,5 +13,35 @@
     "tag": "badarm",
     "book": "Bovada",
     "auto": true
+  },
+  {
+    "id": "2026-07-20|sears",
+    "date": "2026-07-20",
+    "name": "JP Sears",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "Atlanta Braves",
+    "line": 14.5,
+    "side": "under",
+    "price": 110,
+    "proj": 13.7,
+    "edge": 13,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  },
+  {
+    "id": "2026-07-20|fedde",
+    "date": "2026-07-20",
+    "name": "Erick Fedde",
+    "team": "Chicago White Sox @ Texas Rangers",
+    "opp": "Texas Rangers",
+    "line": 14.5,
+    "side": "under",
+    "price": 115,
+    "proj": 13.8,
+    "edge": 12,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
   }
 ]
