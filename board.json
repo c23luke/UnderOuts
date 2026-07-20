@@ -266,20 +266,6 @@
     "bet": false
   },
   {
-    "name": "Jacob Misiorowski",
-    "team": "New York Mets @ Milwaukee Brewers",
-    "opp": "New York Mets",
-    "line": 17.5,
-    "under": 145,
-    "book": "Bovada",
-    "proj": 20.6,
-    "edge": -24,
-    "pUnder": 16,
-    "siera": 2.19681715490842,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Jacob deGrom",
     "team": "Chicago White Sox @ Texas Rangers",
     "opp": "Chicago White Sox",
@@ -290,6 +276,20 @@
     "edge": -25,
     "pUnder": 25,
     "siera": 3.019658951886717,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Jacob Misiorowski",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": "New York Mets",
+    "line": 17.5,
+    "under": 140,
+    "book": "Bovada",
+    "proj": 20.6,
+    "edge": -25,
+    "pUnder": 16,
+    "siera": 2.19681715490842,
     "tag": null,
     "bet": false
   }
