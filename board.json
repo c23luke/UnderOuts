@@ -1,19 +1,5 @@
 [
   {
-    "name": "Andrew Abbott",
-    "team": "Cincinnati Reds @ Seattle Mariners",
-    "opp": "Seattle Mariners",
-    "line": 16.5,
-    "under": -105,
-    "book": "Bovada",
-    "proj": 15.4,
-    "edge": 14,
-    "pUnder": 66,
-    "siera": 4.891593663781765,
-    "tag": "badarm",
-    "bet": true
-  },
-  {
     "name": "Jack Flaherty",
     "team": "Detroit Tigers @ Chicago Cubs",
     "opp": "Chicago Cubs",
@@ -26,6 +12,20 @@
     "siera": 4.09451982978791,
     "tag": null,
     "bet": false
+  },
+  {
+    "name": "Andrew Abbott",
+    "team": "Cincinnati Reds @ Seattle Mariners",
+    "opp": "Seattle Mariners",
+    "line": 16.5,
+    "under": -110,
+    "book": "Bovada",
+    "proj": 15.4,
+    "edge": 13,
+    "pUnder": 66,
+    "siera": 4.891593663781765,
+    "tag": "badarm",
+    "bet": true
   },
   {
     "name": "Erick Fedde",
@@ -186,10 +186,10 @@
     "team": "New York Mets @ Milwaukee Brewers",
     "opp": "Milwaukee Brewers",
     "line": 15.5,
-    "under": -145,
+    "under": -140,
     "book": "Bovada",
     "proj": 15.2,
-    "edge": -5,
+    "edge": -4,
     "pUnder": 54,
     "siera": 4.237485742709565,
     "tag": null,
@@ -322,6 +322,20 @@
     "bet": false
   },
   {
+    "name": "Bryce Elder",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "San Diego Padres",
+    "line": 15.5,
+    "under": -140,
+    "book": "Bovada",
+    "proj": 16.9,
+    "edge": -23,
+    "pUnder": 35,
+    "siera": 4.3274658887115205,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Jacob deGrom",
     "team": "Chicago White Sox @ Texas Rangers",
     "opp": "Chicago White Sox",
@@ -332,20 +346,6 @@
     "edge": -26,
     "pUnder": 25,
     "siera": 3.019658951886717,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Bryce Elder",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "San Diego Padres",
-    "line": 15.5,
-    "under": -160,
-    "book": "Bovada",
-    "proj": 16.9,
-    "edge": -26,
-    "pUnder": 35,
-    "siera": 4.3274658887115205,
     "tag": null,
     "bet": false
   }
