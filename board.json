@@ -252,6 +252,20 @@
     "bet": false
   },
   {
+    "name": "Payton Tolle",
+    "team": "Baltimore Orioles @ Boston Red Sox",
+    "opp": "Baltimore Orioles",
+    "line": 15.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 16.6,
+    "edge": -11,
+    "pUnder": 39,
+    "siera": 3.9324372965162975,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Nick Martinez",
     "team": "Tampa Bay Rays @ Toronto Blue Jays",
     "opp": "Toronto Blue Jays",
@@ -276,20 +290,6 @@
     "edge": -13,
     "pUnder": 50,
     "siera": 3.7889441223260847,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Payton Tolle",
-    "team": "Baltimore Orioles @ Boston Red Sox",
-    "opp": "Baltimore Orioles",
-    "line": 15.5,
-    "under": -110,
-    "book": "Bovada",
-    "proj": 16.6,
-    "edge": -14,
-    "pUnder": 39,
-    "siera": 3.9324372965162975,
     "tag": null,
     "bet": false
   },
