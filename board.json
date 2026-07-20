@@ -18,10 +18,10 @@
     "team": "San Diego Padres @ Atlanta Braves",
     "opp": "Atlanta Braves",
     "line": 14.5,
-    "under": -105,
+    "under": 105,
     "book": "Bovada",
     "proj": 13.7,
-    "edge": 10,
+    "edge": 12,
     "pUnder": 61,
     "siera": 4.649476783340989,
     "tag": null,
@@ -98,6 +98,20 @@
     "bet": false
   },
   {
+    "name": "Trevor McDonald",
+    "team": "San Francisco Giants @ Kansas City Royals",
+    "opp": "Kansas City Royals",
+    "line": 15.5,
+    "under": -105,
+    "book": "Bovada",
+    "proj": 15,
+    "edge": 3,
+    "pUnder": 55,
+    "siera": 4.0316025260201,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Shane Baz",
     "team": "Baltimore Orioles @ Boston Red Sox",
     "opp": "Boston Red Sox",
@@ -108,20 +122,6 @@
     "edge": 3,
     "pUnder": 53,
     "siera": 4.62490886317244,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Trevor McDonald",
-    "team": "San Francisco Giants @ Kansas City Royals",
-    "opp": "Kansas City Royals",
-    "line": 15.5,
-    "under": -115,
-    "book": "Bovada",
-    "proj": 15,
-    "edge": 1,
-    "pUnder": 55,
-    "siera": 4.0316025260201,
     "tag": null,
     "bet": false
   },
@@ -238,20 +238,6 @@
     "bet": false
   },
   {
-    "name": "Janson Junk",
-    "team": "Miami Marlins @ Houston Astros",
-    "opp": "Houston Astros",
-    "line": 14.5,
-    "under": 125,
-    "book": "Bovada",
-    "proj": 15.8,
-    "edge": -13,
-    "pUnder": 32,
-    "siera": 4.50021246644628,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "George Kirby",
     "team": "Cincinnati Reds @ Seattle Mariners",
     "opp": "Cincinnati Reds",
@@ -294,6 +280,20 @@
     "bet": false
   },
   {
+    "name": "Janson Junk",
+    "team": "Miami Marlins @ Houston Astros",
+    "opp": "Houston Astros",
+    "line": 15.5,
+    "under": -170,
+    "book": "Bovada",
+    "proj": 15.8,
+    "edge": -17,
+    "pUnder": 46,
+    "siera": 4.50021246644628,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Cristopher Sanchez",
     "team": "Los Angeles Dodgers @ Philadelphia Phillies",
     "opp": "Los Angeles Dodgers",
@@ -332,6 +332,20 @@
     "edge": -25,
     "pUnder": 25,
     "siera": 3.019658951886717,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Jacob Misiorowski",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": "New York Mets",
+    "line": 17.5,
+    "under": 120,
+    "book": "Bovada",
+    "proj": 20.6,
+    "edge": -29,
+    "pUnder": 16,
+    "siera": 2.19681715490842,
     "tag": null,
     "bet": false
   }
