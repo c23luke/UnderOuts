@@ -42,6 +42,20 @@
     "bet": false
   },
   {
+    "name": "Joe Ryan",
+    "team": "Minnesota Twins @ Cleveland Guardians",
+    "opp": "Cleveland Guardians",
+    "line": 17.5,
+    "under": 145,
+    "book": "Bovada",
+    "proj": 17.8,
+    "edge": 6,
+    "pUnder": 47,
+    "siera": 3.186155308085894,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Ryan Weathers",
     "team": "Pittsburgh Pirates @ New York Yankees",
     "opp": "Pittsburgh Pirates",
@@ -126,20 +140,6 @@
     "bet": false
   },
   {
-    "name": "Dylan Cease",
-    "team": "Tampa Bay Rays @ Toronto Blue Jays",
-    "opp": "Tampa Bay Rays",
-    "line": 17.5,
-    "under": 130,
-    "book": "Bovada",
-    "proj": 18.3,
-    "edge": -3,
-    "pUnder": 40,
-    "siera": 2.963050187718382,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Trevor McDonald",
     "team": "San Francisco Giants @ Kansas City Royals",
     "opp": "Kansas City Royals",
@@ -178,20 +178,6 @@
     "edge": -5,
     "pUnder": 51,
     "siera": 4.005172315792379,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Joe Ryan",
-    "team": "Minnesota Twins @ Cleveland Guardians",
-    "opp": "Cleveland Guardians",
-    "line": 18.5,
-    "under": -165,
-    "book": "Bovada",
-    "proj": 17.8,
-    "edge": -6,
-    "pUnder": 56,
-    "siera": 3.186155308085894,
     "tag": null,
     "bet": false
   },
