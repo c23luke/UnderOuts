@@ -56,6 +56,20 @@
     "bet": false
   },
   {
+    "name": "Trevor McDonald",
+    "team": "San Francisco Giants @ Kansas City Royals",
+    "opp": "Kansas City Royals",
+    "line": 15.5,
+    "under": -120,
+    "book": "Bovada",
+    "proj": 15,
+    "edge": 0,
+    "pUnder": 55,
+    "siera": 4.0316025260201,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Shane Baz",
     "team": "Baltimore Orioles @ Boston Red Sox",
     "opp": "Boston Red Sox",
@@ -84,6 +98,20 @@
     "bet": false
   },
   {
+    "name": "Freddy Peralta",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": "Milwaukee Brewers",
+    "line": 15.5,
+    "under": -140,
+    "book": "Bovada",
+    "proj": 15.2,
+    "edge": -4,
+    "pUnder": 54,
+    "siera": 4.237485742709565,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Joe Ryan",
     "team": "Minnesota Twins @ Cleveland Guardians",
     "opp": "Cleveland Guardians",
@@ -94,6 +122,20 @@
     "edge": -6,
     "pUnder": 56,
     "siera": 3.186155308085894,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Michael Wacha",
+    "team": "San Francisco Giants @ Kansas City Royals",
+    "opp": "San Francisco Giants",
+    "line": 17.5,
+    "under": 120,
+    "book": "Bovada",
+    "proj": 18.5,
+    "edge": -9,
+    "pUnder": 37,
+    "siera": 4.352727743869545,
     "tag": null,
     "bet": false
   },
@@ -164,6 +206,20 @@
     "edge": -19,
     "pUnder": 40,
     "siera": 2.8448019890638605,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Jacob Misiorowski",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": "New York Mets",
+    "line": 17.5,
+    "under": 150,
+    "book": "Bovada",
+    "proj": 20.6,
+    "edge": -24,
+    "pUnder": 16,
+    "siera": 2.19681715490842,
     "tag": null,
     "bet": false
   }
