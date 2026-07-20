@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-07-19",
+    "name": "Eduardo Rodriguez",
+    "line": 17.5,
+    "price": 115,
+    "proj": 16,
+    "siera": 4.86,
+    "edge": 17,
+    "actualOuts": 8,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-19",
+    "name": "Jacob Lopez",
+    "line": 14.5,
+    "price": -120,
+    "proj": 10.5,
+    "siera": 5.68,
+    "edge": 27,
+    "actualOuts": 13,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-19",
+    "name": "Joey Cantillo",
+    "line": 16.5,
+    "price": -145,
+    "proj": 14.4,
+    "siera": 4.43,
+    "edge": 12,
+    "actualOuts": 15,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-19",
+    "name": "Ryan Johnson",
+    "line": 14.5,
+    "price": 135,
+    "proj": 13.9,
+    "siera": 4.62,
+    "edge": 16,
+    "actualOuts": 4,
+    "won": true,
+    "tag": "both"
+  },
+  {
     "date": "2026-07-18",
     "name": "Grayson Rodriguez",
     "line": 15.5,
