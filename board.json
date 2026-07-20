@@ -1,5 +1,19 @@
 [
   {
+    "name": "Andrew Abbott",
+    "team": "Cincinnati Reds @ Seattle Mariners",
+    "opp": "Seattle Mariners",
+    "line": 16.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 15.4,
+    "edge": 16,
+    "pUnder": 66,
+    "siera": 4.891593663781765,
+    "tag": "badarm",
+    "bet": true
+  },
+  {
     "name": "Jack Flaherty",
     "team": "Detroit Tigers @ Chicago Cubs",
     "opp": "Chicago Cubs",
@@ -12,20 +26,6 @@
     "siera": 4.09451982978791,
     "tag": null,
     "bet": false
-  },
-  {
-    "name": "Andrew Abbott",
-    "team": "Cincinnati Reds @ Seattle Mariners",
-    "opp": "Seattle Mariners",
-    "line": 16.5,
-    "under": -110,
-    "book": "Bovada",
-    "proj": 15.4,
-    "edge": 13,
-    "pUnder": 66,
-    "siera": 4.891593663781765,
-    "tag": "badarm",
-    "bet": true
   },
   {
     "name": "Erick Fedde",
@@ -70,34 +70,6 @@
     "bet": false
   },
   {
-    "name": "Trevor McDonald",
-    "team": "San Francisco Giants @ Kansas City Royals",
-    "opp": "Kansas City Royals",
-    "line": 15.5,
-    "under": -140,
-    "book": "Bovada",
-    "proj": 15,
-    "edge": -4,
-    "pUnder": 55,
-    "siera": 4.0316025260201,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Freddy Peralta",
-    "team": "New York Mets @ Milwaukee Brewers",
-    "opp": "Milwaukee Brewers",
-    "line": 15.5,
-    "under": -140,
-    "book": "Bovada",
-    "proj": 15.2,
-    "edge": -4,
-    "pUnder": 54,
-    "siera": 4.237485742709565,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Kyle Freeland",
     "team": "Washington Nationals @ Colorado Rockies",
     "opp": "Washington Nationals",
@@ -112,29 +84,15 @@
     "bet": false
   },
   {
-    "name": "Michael Wacha",
-    "team": "San Francisco Giants @ Kansas City Royals",
-    "opp": "San Francisco Giants",
-    "line": 17.5,
-    "under": 120,
-    "book": "Bovada",
-    "proj": 18.5,
-    "edge": -9,
-    "pUnder": 37,
-    "siera": 4.352727743869545,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Jose Soriano",
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "St. Louis Cardinals",
-    "line": 15.5,
-    "under": 100,
+    "line": 16.5,
+    "under": -140,
     "book": "Bovada",
     "proj": 16.4,
-    "edge": -10,
-    "pUnder": 40,
+    "edge": -7,
+    "pUnder": 51,
     "siera": 4.005172315792379,
     "tag": null,
     "bet": false
