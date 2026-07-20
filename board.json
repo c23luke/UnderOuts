@@ -266,6 +266,20 @@
     "bet": false
   },
   {
+    "name": "Payton Tolle",
+    "team": "Baltimore Orioles @ Boston Red Sox",
+    "opp": "Baltimore Orioles",
+    "line": 15.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 16.6,
+    "edge": -15,
+    "pUnder": 39,
+    "siera": 3.9324372965162975,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Bryce Elder",
     "team": "San Diego Padres @ Atlanta Braves",
     "opp": "San Diego Padres",
