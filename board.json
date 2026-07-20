@@ -56,20 +56,6 @@
     "bet": false
   },
   {
-    "name": "Tanner Bibee",
-    "team": "Minnesota Twins @ Cleveland Guardians",
-    "opp": "Minnesota Twins",
-    "line": 17.5,
-    "under": 100,
-    "book": "Bovada",
-    "proj": 16.8,
-    "edge": 7,
-    "pUnder": 57,
-    "siera": 4.358942054145419,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Ryan Weathers",
     "team": "Pittsburgh Pirates @ New York Yankees",
     "opp": "Pittsburgh Pirates",
@@ -80,6 +66,20 @@
     "edge": 6,
     "pUnder": 63,
     "siera": 3.477407950112784,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Tanner Bibee",
+    "team": "Minnesota Twins @ Cleveland Guardians",
+    "opp": "Minnesota Twins",
+    "line": 17.5,
+    "under": -105,
+    "book": "Bovada",
+    "proj": 16.8,
+    "edge": 6,
+    "pUnder": 57,
+    "siera": 4.358942054145419,
     "tag": null,
     "bet": false
   },
