@@ -1,5 +1,19 @@
 [
   {
+    "name": "Jack Flaherty",
+    "team": "Detroit Tigers @ Chicago Cubs",
+    "opp": "Chicago Cubs",
+    "line": 14.5,
+    "under": 125,
+    "book": "Bovada",
+    "proj": 13.5,
+    "edge": 16,
+    "pUnder": 61,
+    "siera": 4.09451982978791,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Andrew Abbott",
     "team": "Cincinnati Reds @ Seattle Mariners",
     "opp": "Seattle Mariners",
@@ -24,20 +38,6 @@
     "edge": 12,
     "pUnder": 61,
     "siera": 4.649476783340989,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Jack Flaherty",
-    "team": "Detroit Tigers @ Chicago Cubs",
-    "opp": "Chicago Cubs",
-    "line": 15.5,
-    "under": -165,
-    "book": "Bovada",
-    "proj": 13.5,
-    "edge": 9,
-    "pUnder": 71,
-    "siera": 4.09451982978791,
     "tag": null,
     "bet": false
   },
@@ -140,30 +140,30 @@
     "bet": false
   },
   {
-    "name": "Jeffrey Springs",
-    "team": "Athletics @ Arizona Diamondbacks",
-    "opp": "Arizona Diamondbacks",
-    "line": 15.5,
-    "under": -160,
-    "book": "Bovada",
-    "proj": 14.8,
-    "edge": -3,
-    "pUnder": 59,
-    "siera": 4.665092229786444,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Dylan Cease",
     "team": "Tampa Bay Rays @ Toronto Blue Jays",
     "opp": "Tampa Bay Rays",
     "line": 17.5,
-    "under": 125,
+    "under": 130,
     "book": "Bovada",
     "proj": 18.3,
-    "edge": -4,
+    "edge": -3,
     "pUnder": 40,
     "siera": 2.963050187718382,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Jeffrey Springs",
+    "team": "Athletics @ Arizona Diamondbacks",
+    "opp": "Arizona Diamondbacks",
+    "line": 15.5,
+    "under": -165,
+    "book": "Bovada",
+    "proj": 14.8,
+    "edge": -4,
+    "pUnder": 59,
+    "siera": 4.665092229786444,
     "tag": null,
     "bet": false
   },
@@ -238,20 +238,6 @@
     "bet": false
   },
   {
-    "name": "George Kirby",
-    "team": "Cincinnati Reds @ Seattle Mariners",
-    "opp": "Cincinnati Reds",
-    "line": 18.5,
-    "under": -165,
-    "book": "Bovada",
-    "proj": 18.5,
-    "edge": -12,
-    "pUnder": 50,
-    "siera": 3.7889441223260847,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Nick Martinez",
     "team": "Tampa Bay Rays @ Toronto Blue Jays",
     "opp": "Toronto Blue Jays",
@@ -262,6 +248,20 @@
     "edge": -14,
     "pUnder": 41,
     "siera": 4.76155079005412,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "George Kirby",
+    "team": "Cincinnati Reds @ Seattle Mariners",
+    "opp": "Cincinnati Reds",
+    "line": 18.5,
+    "under": -180,
+    "book": "Bovada",
+    "proj": 18.5,
+    "edge": -14,
+    "pUnder": 50,
+    "siera": 3.7889441223260847,
     "tag": null,
     "bet": false
   },
