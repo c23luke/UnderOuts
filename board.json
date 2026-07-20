@@ -140,6 +140,20 @@
     "bet": false
   },
   {
+    "name": "Kyle Freeland",
+    "team": "Washington Nationals @ Colorado Rockies",
+    "opp": "Washington Nationals",
+    "line": 15.5,
+    "under": -160,
+    "book": "Bovada",
+    "proj": 15.1,
+    "edge": -6,
+    "pUnder": 55,
+    "siera": 4.263284763115281,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Michael Wacha",
     "team": "San Francisco Giants @ Kansas City Royals",
     "opp": "San Francisco Giants",
@@ -168,6 +182,20 @@
     "bet": false
   },
   {
+    "name": "Janson Junk",
+    "team": "Miami Marlins @ Houston Astros",
+    "opp": "Houston Astros",
+    "line": 14.5,
+    "under": 125,
+    "book": "Bovada",
+    "proj": 15.8,
+    "edge": -13,
+    "pUnder": 32,
+    "siera": 4.50021246644628,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Nick Martinez",
     "team": "Tampa Bay Rays @ Toronto Blue Jays",
     "opp": "Toronto Blue Jays",
@@ -178,20 +206,6 @@
     "edge": -14,
     "pUnder": 41,
     "siera": 4.76155079005412,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Janson Junk",
-    "team": "Miami Marlins @ Houston Astros",
-    "opp": "Houston Astros",
-    "line": 14.5,
-    "under": 120,
-    "book": "Bovada",
-    "proj": 15.8,
-    "edge": -14,
-    "pUnder": 32,
-    "siera": 4.50021246644628,
     "tag": null,
     "bet": false
   },
