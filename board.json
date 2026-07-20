@@ -154,20 +154,6 @@
     "bet": false
   },
   {
-    "name": "Dylan Cease",
-    "team": "Tampa Bay Rays @ Toronto Blue Jays",
-    "opp": "Tampa Bay Rays",
-    "line": 17.5,
-    "under": 125,
-    "book": "Bovada",
-    "proj": 18.3,
-    "edge": -4,
-    "pUnder": 40,
-    "siera": 2.963050187718382,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Braxton Ashcraft",
     "team": "Pittsburgh Pirates @ New York Yankees",
     "opp": "New York Yankees",
@@ -192,6 +178,20 @@
     "edge": -6,
     "pUnder": 55,
     "siera": 4.263284763115281,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Dylan Cease",
+    "team": "Tampa Bay Rays @ Toronto Blue Jays",
+    "opp": "Tampa Bay Rays",
+    "line": 17.5,
+    "under": 115,
+    "book": "Bovada",
+    "proj": 18.3,
+    "edge": -6,
+    "pUnder": 40,
+    "siera": 2.963050187718382,
     "tag": null,
     "bet": false
   },
