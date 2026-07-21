@@ -30,6 +30,21 @@
     "auto": true
   },
   {
+    "id": "2026-07-21|schultz",
+    "date": "2026-07-21",
+    "name": "Noah Schultz",
+    "team": "Chicago White Sox @ Texas Rangers",
+    "opp": "Texas Rangers",
+    "line": 15.5,
+    "side": "under",
+    "price": -165,
+    "proj": 13,
+    "edge": 20,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  },
+  {
     "id": "2026-07-21|phillips",
     "date": "2026-07-21",
     "name": "Tyler Phillips",
@@ -40,21 +55,6 @@
     "price": 115,
     "proj": 12.4,
     "edge": 19,
-    "tag": "both",
-    "book": "Bovada",
-    "auto": true
-  },
-  {
-    "id": "2026-07-21|schultz",
-    "date": "2026-07-21",
-    "name": "Noah Schultz",
-    "team": "Chicago White Sox @ Texas Rangers",
-    "opp": "Texas Rangers",
-    "line": 15.5,
-    "side": "under",
-    "price": -165,
-    "proj": 13.4,
-    "edge": 16,
     "tag": "both",
     "book": "Bovada",
     "auto": true

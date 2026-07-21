@@ -42,6 +42,20 @@
     "bet": true
   },
   {
+    "name": "Noah Schultz",
+    "team": "Chicago White Sox @ Texas Rangers",
+    "opp": "Texas Rangers",
+    "line": 15.5,
+    "under": -160,
+    "book": "Bovada",
+    "proj": 13,
+    "edge": 20,
+    "pUnder": 82,
+    "siera": 5.234968136431758,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "Tyler Phillips",
     "team": "Miami Marlins @ Houston Astros",
     "opp": "Houston Astros",
@@ -56,18 +70,18 @@
     "bet": true
   },
   {
-    "name": "Noah Schultz",
-    "team": "Chicago White Sox @ Texas Rangers",
-    "opp": "Texas Rangers",
-    "line": 15.5,
-    "under": -160,
+    "name": "Justin Wrobleski",
+    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
+    "opp": "Philadelphia Phillies",
+    "line": 17.5,
+    "under": 100,
     "book": "Bovada",
-    "proj": 13.4,
-    "edge": 16,
-    "pUnder": 78,
-    "siera": 5.234968136431758,
-    "tag": "both",
-    "bet": true
+    "proj": 16,
+    "edge": 17,
+    "pUnder": 67,
+    "siera": 4.281031842222156,
+    "tag": null,
+    "bet": false
   },
   {
     "name": "David Peterson",
@@ -122,6 +136,20 @@
     "edge": 9,
     "pUnder": 57,
     "siera": 3.7576612162351184,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Drew Rasmussen",
+    "team": "Tampa Bay Rays @ Toronto Blue Jays",
+    "opp": "Toronto Blue Jays",
+    "line": 17.5,
+    "under": -135,
+    "book": "Bovada",
+    "proj": 16,
+    "edge": 8,
+    "pUnder": 66,
+    "siera": 3.3428704909249114,
     "tag": null,
     "bet": false
   },
@@ -210,16 +238,16 @@
     "bet": false
   },
   {
-    "name": "Drew Rasmussen",
-    "team": "Tampa Bay Rays @ Toronto Blue Jays",
-    "opp": "Toronto Blue Jays",
-    "line": 17.5,
-    "under": -135,
+    "name": "Zach Thornton",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": null,
+    "line": 15.5,
+    "under": -165,
     "book": "Bovada",
-    "proj": 17.5,
+    "proj": 15,
     "edge": -7,
-    "pUnder": 50,
-    "siera": 3.3428704909249114,
+    "pUnder": 55,
+    "siera": null,
     "tag": null,
     "bet": false
   },
@@ -262,20 +290,6 @@
     "edge": -18,
     "pUnder": 32,
     "siera": 3.585498796382343,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Justin Wrobleski",
-    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
-    "opp": "Philadelphia Phillies",
-    "line": 17.5,
-    "under": 100,
-    "book": "Bovada",
-    "proj": 19.2,
-    "edge": -19,
-    "pUnder": 31,
-    "siera": 4.281031842222156,
     "tag": null,
     "bet": false
   }
