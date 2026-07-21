@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-07-20",
+    "name": "Erick Fedde",
+    "line": 14.5,
+    "price": 115,
+    "proj": 13.8,
+    "siera": 4.98,
+    "edge": 13,
+    "actualOuts": 12,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-20",
+    "name": "JP Sears",
+    "line": 14.5,
+    "price": 110,
+    "proj": 13.7,
+    "siera": 4.65,
+    "edge": 12,
+    "actualOuts": 15,
+    "won": false,
+    "tag": "both"
+  },
+  {
     "date": "2026-07-19",
     "name": "Eduardo Rodriguez",
     "line": 17.5,
