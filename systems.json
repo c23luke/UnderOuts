@@ -49,6 +49,18 @@
   },
   {
     "date": "2026-07-20",
+    "name": "Jeffrey Springs",
+    "line": 15.5,
+    "price": -145,
+    "proj": 14.8,
+    "siera": 4.67,
+    "actualOuts": 15,
+    "won": true,
+    "short": true,
+    "sharp": false
+  },
+  {
+    "date": "2026-07-20",
     "name": "JP Sears",
     "line": 14.5,
     "price": 110,
