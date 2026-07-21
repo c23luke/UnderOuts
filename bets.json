@@ -15,6 +15,21 @@
     "auto": true
   },
   {
+    "id": "2026-07-21|lopez",
+    "date": "2026-07-21",
+    "name": "Reynaldo Lopez",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "San Diego Padres",
+    "line": 14.5,
+    "side": "under",
+    "price": 145,
+    "proj": 13.2,
+    "edge": 21,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  },
+  {
     "id": "2026-07-21|phillips",
     "date": "2026-07-21",
     "name": "Tyler Phillips",
@@ -24,7 +39,7 @@
     "side": "under",
     "price": 115,
     "proj": 12.4,
-    "edge": 20,
+    "edge": 19,
     "tag": "both",
     "book": "Bovada",
     "auto": true
@@ -54,6 +69,21 @@
     "side": "under",
     "price": 110,
     "proj": 13.5,
+    "edge": 15,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  },
+  {
+    "id": "2026-07-21|peterson",
+    "date": "2026-07-21",
+    "name": "David Peterson",
+    "team": "Detroit Tigers @ Chicago Cubs",
+    "opp": "Detroit Tigers",
+    "line": 15.5,
+    "side": "under",
+    "price": -160,
+    "proj": 13.7,
     "edge": 14,
     "tag": "both",
     "book": "Bovada",
