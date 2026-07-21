@@ -73,20 +73,5 @@
     "tag": "both",
     "book": "Bovada",
     "auto": true
-  },
-  {
-    "id": "2026-07-21|phillips",
-    "date": "2026-07-21",
-    "name": "Tyler Phillips",
-    "team": "Miami Marlins @ Houston Astros",
-    "opp": "Houston Astros",
-    "line": 14.5,
-    "side": "under",
-    "price": 115,
-    "proj": 12.4,
-    "edge": 13,
-    "tag": "both",
-    "book": "Bovada",
-    "auto": true
   }
 ]
