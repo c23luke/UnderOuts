@@ -1,5 +1,19 @@
 [
   {
+    "name": "Tatsuya Imai",
+    "team": "Miami Marlins @ Houston Astros",
+    "opp": "Miami Marlins",
+    "line": 14.5,
+    "under": 125,
+    "book": "Bovada",
+    "proj": 11.6,
+    "edge": 27,
+    "pUnder": 71,
+    "siera": 4.39352954218414,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Noah Schultz",
     "team": "Chicago White Sox @ Texas Rangers",
     "opp": "Texas Rangers",
@@ -42,6 +56,20 @@
     "bet": true
   },
   {
+    "name": "Luis Castillo",
+    "team": "Cincinnati Reds @ Seattle Mariners",
+    "opp": "Cincinnati Reds",
+    "line": 17.5,
+    "under": -120,
+    "book": "Bovada",
+    "proj": 15.5,
+    "edge": 20,
+    "pUnder": 75,
+    "siera": 4.205037246055318,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Tyler Phillips",
     "team": "Miami Marlins @ Houston Astros",
     "opp": "Houston Astros",
@@ -70,20 +98,6 @@
     "bet": false
   },
   {
-    "name": "Luis Castillo",
-    "team": "Cincinnati Reds @ Seattle Mariners",
-    "opp": "Cincinnati Reds",
-    "line": 17.5,
-    "under": -135,
-    "book": "Bovada",
-    "proj": 15.5,
-    "edge": 18,
-    "pUnder": 75,
-    "siera": 4.205037246055318,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "David Peterson",
     "team": "Detroit Tigers @ Chicago Cubs",
     "opp": "Detroit Tigers",
@@ -98,18 +112,18 @@
     "bet": true
   },
   {
-    "name": "Tatsuya Imai",
-    "team": "Miami Marlins @ Houston Astros",
-    "opp": "Miami Marlins",
-    "line": 15.5,
-    "under": -165,
+    "name": "Michael Lorenzen",
+    "team": "Washington Nationals @ Colorado Rockies",
+    "opp": "Washington Nationals",
+    "line": 14.5,
+    "under": 110,
     "book": "Bovada",
-    "proj": 11.6,
+    "proj": 13.5,
     "edge": 15,
-    "pUnder": 77,
-    "siera": 4.39352954218414,
-    "tag": null,
-    "bet": false
+    "pUnder": 62,
+    "siera": 4.723400519119101,
+    "tag": "both",
+    "bet": true
   },
   {
     "name": "Kumar Rocker",
@@ -124,20 +138,6 @@
     "siera": 4.311030986995121,
     "tag": null,
     "bet": false
-  },
-  {
-    "name": "Michael Lorenzen",
-    "team": "Washington Nationals @ Colorado Rockies",
-    "opp": "Washington Nationals",
-    "line": 14.5,
-    "under": 100,
-    "book": "Bovada",
-    "proj": 13.5,
-    "edge": 12,
-    "pUnder": 62,
-    "siera": 4.723400519119101,
-    "tag": "both",
-    "bet": true
   },
   {
     "name": "Kevin Gausman",
@@ -196,28 +196,14 @@
     "bet": false
   },
   {
-    "name": "Brandon Sproat",
-    "team": "New York Mets @ Milwaukee Brewers",
-    "opp": "New York Mets",
-    "line": 14.5,
-    "under": 100,
-    "book": "Bovada",
-    "proj": 14.2,
-    "edge": 4,
-    "pUnder": 54,
-    "siera": 4.145378496124429,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Walker Buehler",
     "team": "San Diego Padres @ Atlanta Braves",
     "opp": "Atlanta Braves",
     "line": 14.5,
-    "under": -115,
+    "under": -110,
     "book": "Bovada",
     "proj": 13.9,
-    "edge": 3,
+    "edge": 4,
     "pUnder": 57,
     "siera": 4.132094427875806,
     "tag": null,
@@ -228,12 +214,26 @@
     "team": "New York Mets @ Milwaukee Brewers",
     "opp": null,
     "line": 14.5,
-    "under": 125,
+    "under": 120,
     "book": "Bovada",
     "proj": 15,
-    "edge": 0,
+    "edge": -1,
     "pUnder": 45,
     "siera": null,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Tyler Mahle",
+    "team": "San Francisco Giants @ Kansas City Royals",
+    "opp": "Kansas City Royals",
+    "line": 15.5,
+    "under": -105,
+    "book": "Bovada",
+    "proj": 15.5,
+    "edge": -1,
+    "pUnder": 50,
+    "siera": 4.277620269415772,
     "tag": null,
     "bet": false
   },
@@ -248,20 +248,6 @@
     "edge": -2,
     "pUnder": 62,
     "siera": 4.44213699229683,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Tyler Mahle",
-    "team": "San Francisco Giants @ Kansas City Royals",
-    "opp": "Kansas City Royals",
-    "line": 15.5,
-    "under": -110,
-    "book": "Bovada",
-    "proj": 15.5,
-    "edge": -2,
-    "pUnder": 50,
-    "siera": 4.277620269415772,
     "tag": null,
     "bet": false
   },

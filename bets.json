@@ -84,7 +84,7 @@
     "side": "under",
     "price": 110,
     "proj": 13.5,
-    "edge": 12,
+    "edge": 15,
     "tag": "both",
     "book": "Bovada",
     "auto": true
