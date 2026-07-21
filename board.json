@@ -70,20 +70,6 @@
     "bet": true
   },
   {
-    "name": "Michael Lorenzen",
-    "team": "Washington Nationals @ Colorado Rockies",
-    "opp": "Washington Nationals",
-    "line": 14.5,
-    "under": 110,
-    "book": "Bovada",
-    "proj": 13.5,
-    "edge": 15,
-    "pUnder": 62,
-    "siera": 4.723400519119101,
-    "tag": "both",
-    "bet": true
-  },
-  {
     "name": "David Peterson",
     "team": "Detroit Tigers @ Chicago Cubs",
     "opp": "Detroit Tigers",
@@ -110,6 +96,20 @@
     "siera": 4.311030986995121,
     "tag": null,
     "bet": false
+  },
+  {
+    "name": "Michael Lorenzen",
+    "team": "Washington Nationals @ Colorado Rockies",
+    "opp": "Washington Nationals",
+    "line": 14.5,
+    "under": 105,
+    "book": "Bovada",
+    "proj": 13.5,
+    "edge": 14,
+    "pUnder": 62,
+    "siera": 4.723400519119101,
+    "tag": "both",
+    "bet": true
   },
   {
     "name": "Kevin Gausman",
@@ -200,10 +200,10 @@
     "team": "San Francisco Giants @ Kansas City Royals",
     "opp": "Kansas City Royals",
     "line": 15.5,
-    "under": -120,
+    "under": -110,
     "book": "Bovada",
     "proj": 15.5,
-    "edge": -5,
+    "edge": -2,
     "pUnder": 50,
     "siera": 4.277620269415772,
     "tag": null,
