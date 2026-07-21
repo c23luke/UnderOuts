@@ -1,19 +1,5 @@
 [
   {
-    "name": "Andrew Abbott",
-    "team": "Cincinnati Reds @ Seattle Mariners",
-    "opp": "Seattle Mariners",
-    "line": 16.5,
-    "under": 100,
-    "book": "Bovada",
-    "proj": 15.4,
-    "edge": 16,
-    "pUnder": 66,
-    "siera": 4.891593663781765,
-    "tag": "badarm",
-    "bet": true
-  },
-  {
     "name": "Kyle Leahy",
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "Los Angeles Angels",
@@ -28,20 +14,6 @@
     "bet": false
   },
   {
-    "name": "Jeffrey Springs",
-    "team": "Athletics @ Arizona Diamondbacks",
-    "opp": "Arizona Diamondbacks",
-    "line": 15.5,
-    "under": -145,
-    "book": "Bovada",
-    "proj": 14.8,
-    "edge": -1,
-    "pUnder": 59,
-    "siera": 4.665092229786444,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Jose Soriano",
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "St. Louis Cardinals",
@@ -52,20 +24,6 @@
     "edge": -7,
     "pUnder": 51,
     "siera": 4.005172315792379,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "George Kirby",
-    "team": "Cincinnati Reds @ Seattle Mariners",
-    "opp": "Cincinnati Reds",
-    "line": 18.5,
-    "under": -170,
-    "book": "Bovada",
-    "proj": 18.5,
-    "edge": -13,
-    "pUnder": 50,
-    "siera": 3.7889441223260847,
     "tag": null,
     "bet": false
   }
