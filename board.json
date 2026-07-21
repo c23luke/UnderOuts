@@ -42,20 +42,6 @@
     "bet": false
   },
   {
-    "name": "Kyle Freeland",
-    "team": "Washington Nationals @ Colorado Rockies",
-    "opp": "Washington Nationals",
-    "line": 15.5,
-    "under": -160,
-    "book": "Bovada",
-    "proj": 15.1,
-    "edge": -6,
-    "pUnder": 55,
-    "siera": 4.263284763115281,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Jose Soriano",
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "St. Louis Cardinals",
