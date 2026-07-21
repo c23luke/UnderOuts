@@ -60,21 +60,6 @@
     "auto": true
   },
   {
-    "id": "2026-07-21|lorenzen",
-    "date": "2026-07-21",
-    "name": "Michael Lorenzen",
-    "team": "Washington Nationals @ Colorado Rockies",
-    "opp": "Washington Nationals",
-    "line": 14.5,
-    "side": "under",
-    "price": 110,
-    "proj": 13.5,
-    "edge": 15,
-    "tag": "both",
-    "book": "Bovada",
-    "auto": true
-  },
-  {
     "id": "2026-07-21|peterson",
     "date": "2026-07-21",
     "name": "David Peterson",
@@ -85,6 +70,21 @@
     "price": -160,
     "proj": 13.7,
     "edge": 15,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  },
+  {
+    "id": "2026-07-21|lorenzen",
+    "date": "2026-07-21",
+    "name": "Michael Lorenzen",
+    "team": "Washington Nationals @ Colorado Rockies",
+    "opp": "Washington Nationals",
+    "line": 14.5,
+    "side": "under",
+    "price": 110,
+    "proj": 13.5,
+    "edge": 12,
     "tag": "both",
     "book": "Bovada",
     "auto": true
