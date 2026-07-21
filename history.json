@@ -13,6 +13,18 @@
   },
   {
     "date": "2026-07-19",
+    "name": "German Marquez",
+    "line": 14.5,
+    "price": 113,
+    "proj": 13.4,
+    "siera": 5.59,
+    "edge": 14,
+    "actualOuts": 9,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-19",
     "name": "Jacob Lopez",
     "line": 14.5,
     "price": -120,
