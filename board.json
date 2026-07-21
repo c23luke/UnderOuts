@@ -252,6 +252,20 @@
     "bet": false
   },
   {
+    "name": "Zack Wheeler",
+    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
+    "opp": "Los Angeles Dodgers",
+    "line": 17.5,
+    "under": 140,
+    "book": "Bovada",
+    "proj": 18.8,
+    "edge": -11,
+    "pUnder": 31,
+    "siera": 3.062393357271942,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Walbert Urena",
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "St. Louis Cardinals",
@@ -262,20 +276,6 @@
     "edge": -12,
     "pUnder": 49,
     "siera": 4.623766489522915,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Zack Wheeler",
-    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
-    "opp": "Los Angeles Dodgers",
-    "line": 18.5,
-    "under": -155,
-    "book": "Bovada",
-    "proj": 18.8,
-    "edge": -15,
-    "pUnder": 45,
-    "siera": 3.062393357271942,
     "tag": null,
     "bet": false
   },
