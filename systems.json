@@ -61,6 +61,18 @@
   },
   {
     "date": "2026-07-20",
+    "name": "Kyle Leahy",
+    "line": 14.5,
+    "price": 125,
+    "proj": 14.7,
+    "siera": 4.5,
+    "actualOuts": 18,
+    "won": false,
+    "short": true,
+    "sharp": false
+  },
+  {
+    "date": "2026-07-20",
     "name": "Nick Martinez",
     "line": 16.5,
     "price": -115,
