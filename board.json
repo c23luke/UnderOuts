@@ -42,6 +42,20 @@
     "bet": true
   },
   {
+    "name": "Luis Castillo",
+    "team": "Cincinnati Reds @ Seattle Mariners",
+    "opp": "Cincinnati Reds",
+    "line": 17.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 15.5,
+    "edge": 21,
+    "pUnder": 75,
+    "siera": 4.205037246055318,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Reynaldo Lopez",
     "team": "San Diego Padres @ Atlanta Braves",
     "opp": "San Diego Padres",
@@ -54,20 +68,6 @@
     "siera": 4.415008038672847,
     "tag": "both",
     "bet": true
-  },
-  {
-    "name": "Luis Castillo",
-    "team": "Cincinnati Reds @ Seattle Mariners",
-    "opp": "Cincinnati Reds",
-    "line": 17.5,
-    "under": -120,
-    "book": "Bovada",
-    "proj": 15.5,
-    "edge": 20,
-    "pUnder": 75,
-    "siera": 4.205037246055318,
-    "tag": null,
-    "bet": false
   },
   {
     "name": "Tyler Phillips",
