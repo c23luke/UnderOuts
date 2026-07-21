@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "name": "Zack Wheeler",
+    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
+    "opp": "Los Angeles Dodgers",
+    "line": 17.5,
+    "under": 145,
+    "book": "Bovada",
+    "proj": 18.8,
+    "edge": -10,
+    "pUnder": 31,
+    "siera": 3.062393357271942,
+    "tag": null,
+    "bet": false
+  }
+]
