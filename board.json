@@ -84,20 +84,6 @@
     "bet": false
   },
   {
-    "name": "Michael Lorenzen",
-    "team": "Washington Nationals @ Colorado Rockies",
-    "opp": "Washington Nationals",
-    "line": 14.5,
-    "under": 105,
-    "book": "Bovada",
-    "proj": 13.5,
-    "edge": 14,
-    "pUnder": 62,
-    "siera": 4.723400519119101,
-    "tag": "both",
-    "bet": true
-  },
-  {
     "name": "Kumar Rocker",
     "team": "Chicago White Sox @ Texas Rangers",
     "opp": "Chicago White Sox",
@@ -110,6 +96,20 @@
     "siera": 4.311030986995121,
     "tag": null,
     "bet": false
+  },
+  {
+    "name": "Michael Lorenzen",
+    "team": "Washington Nationals @ Colorado Rockies",
+    "opp": "Washington Nationals",
+    "line": 14.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 13.5,
+    "edge": 12,
+    "pUnder": 62,
+    "siera": 4.723400519119101,
+    "tag": "both",
+    "bet": true
   },
   {
     "name": "Tyler Phillips",
