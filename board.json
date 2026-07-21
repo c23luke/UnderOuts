@@ -168,6 +168,20 @@
     "bet": false
   },
   {
+    "name": "Jack Perkins",
+    "team": "Athletics @ Arizona Diamondbacks",
+    "opp": "Arizona Diamondbacks",
+    "line": 14.5,
+    "under": 110,
+    "book": "Bovada",
+    "proj": 14.1,
+    "edge": 8,
+    "pUnder": 56,
+    "siera": 3.517639067794594,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Drew Rasmussen",
     "team": "Tampa Bay Rays @ Toronto Blue Jays",
     "opp": "Toronto Blue Jays",
@@ -178,20 +192,6 @@
     "edge": 6,
     "pUnder": 66,
     "siera": 3.3428704909249114,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Jack Perkins",
-    "team": "Athletics @ Arizona Diamondbacks",
-    "opp": "Arizona Diamondbacks",
-    "line": 14.5,
-    "under": 100,
-    "book": "Bovada",
-    "proj": 14.1,
-    "edge": 6,
-    "pUnder": 56,
-    "siera": 3.517639067794594,
     "tag": null,
     "bet": false
   },
