@@ -1,6 +1,18 @@
 [
   {
     "date": "2026-07-20",
+    "name": "Andrew Abbott",
+    "line": 16.5,
+    "price": -115,
+    "proj": 15.4,
+    "siera": 4.89,
+    "edge": 16,
+    "actualOuts": 18,
+    "won": false,
+    "tag": "badarm"
+  },
+  {
+    "date": "2026-07-20",
     "name": "Erick Fedde",
     "line": 14.5,
     "price": 115,
