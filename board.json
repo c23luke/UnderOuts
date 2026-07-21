@@ -196,6 +196,20 @@
     "bet": false
   },
   {
+    "name": "Walker Buehler",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "Atlanta Braves",
+    "line": 14.5,
+    "under": -105,
+    "book": "Bovada",
+    "proj": 13.9,
+    "edge": 6,
+    "pUnder": 57,
+    "siera": 4.132094427875806,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Jack Perkins",
     "team": "Athletics @ Arizona Diamondbacks",
     "opp": "Arizona Diamondbacks",
@@ -248,20 +262,6 @@
     "edge": 1,
     "pUnder": 45,
     "siera": null,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Walker Buehler",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "Atlanta Braves",
-    "line": 14.5,
-    "under": -135,
-    "book": "Bovada",
-    "proj": 13.9,
-    "edge": -1,
-    "pUnder": 57,
-    "siera": 4.132094427875806,
     "tag": null,
     "bet": false
   },
