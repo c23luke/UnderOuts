@@ -28,20 +28,6 @@
     "bet": true
   },
   {
-    "name": "Kohl Drake",
-    "team": "Athletics @ Arizona Diamondbacks",
-    "opp": null,
-    "line": 14.5,
-    "under": -105,
-    "book": "Bovada",
-    "proj": 12,
-    "edge": 23,
-    "pUnder": 74,
-    "siera": null,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Luis Castillo",
     "team": "Cincinnati Reds @ Seattle Mariners",
     "opp": "Cincinnati Reds",
@@ -96,6 +82,20 @@
     "siera": 4.80004638710488,
     "tag": "both",
     "bet": true
+  },
+  {
+    "name": "Kohl Drake",
+    "team": "Athletics @ Arizona Diamondbacks",
+    "opp": null,
+    "line": 14.5,
+    "under": -130,
+    "book": "Bovada",
+    "proj": 12,
+    "edge": 18,
+    "pUnder": 74,
+    "siera": null,
+    "tag": null,
+    "bet": false
   },
   {
     "name": "Justin Wrobleski",
@@ -154,6 +154,20 @@
     "bet": true
   },
   {
+    "name": "Framber Valdez",
+    "team": "Detroit Tigers @ Chicago Cubs",
+    "opp": "Chicago Cubs",
+    "line": 17.5,
+    "under": -110,
+    "book": "Bovada",
+    "proj": 16.5,
+    "edge": 10,
+    "pUnder": 63,
+    "siera": 4.279804771292051,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Drew Rasmussen",
     "team": "Tampa Bay Rays @ Toronto Blue Jays",
     "opp": "Toronto Blue Jays",
@@ -178,20 +192,6 @@
     "edge": 9,
     "pUnder": 57,
     "siera": 3.7576612162351184,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Framber Valdez",
-    "team": "Detroit Tigers @ Chicago Cubs",
-    "opp": "Chicago Cubs",
-    "line": 17.5,
-    "under": -120,
-    "book": "Bovada",
-    "proj": 16.5,
-    "edge": 8,
-    "pUnder": 63,
-    "siera": 4.279804771292051,
     "tag": null,
     "bet": false
   },
@@ -238,6 +238,20 @@
     "bet": false
   },
   {
+    "name": "Zach Thornton",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": null,
+    "line": 14.5,
+    "under": 130,
+    "book": "Bovada",
+    "proj": 15,
+    "edge": 1,
+    "pUnder": 45,
+    "siera": null,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Walker Buehler",
     "team": "San Diego Padres @ Atlanta Braves",
     "opp": "Atlanta Braves",
@@ -262,20 +276,6 @@
     "edge": -2,
     "pUnder": 50,
     "siera": 4.277620269415772,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Zach Thornton",
-    "team": "New York Mets @ Milwaukee Brewers",
-    "opp": null,
-    "line": 15.5,
-    "under": -160,
-    "book": "Bovada",
-    "proj": 15,
-    "edge": -6,
-    "pUnder": 55,
-    "siera": null,
     "tag": null,
     "bet": false
   },
