@@ -26,5 +26,19 @@
     "siera": 3.062393357271942,
     "tag": null,
     "bet": false
+  },
+  {
+    "name": "Justin Wrobleski",
+    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
+    "opp": "Philadelphia Phillies",
+    "line": 17.5,
+    "under": 105,
+    "book": "Bovada",
+    "proj": 19.2,
+    "edge": -18,
+    "pUnder": 31,
+    "siera": 4.281031842222156,
+    "tag": null,
+    "bet": false
   }
 ]
