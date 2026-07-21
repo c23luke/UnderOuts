@@ -14,6 +14,20 @@
     "bet": true
   },
   {
+    "name": "Tyler Phillips",
+    "team": "Miami Marlins @ Houston Astros",
+    "opp": "Houston Astros",
+    "line": 14.5,
+    "under": 115,
+    "book": "Bovada",
+    "proj": 12.4,
+    "edge": 20,
+    "pUnder": 67,
+    "siera": 4.80004638710488,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "Kumar Rocker",
     "team": "Chicago White Sox @ Texas Rangers",
     "opp": "Chicago White Sox",

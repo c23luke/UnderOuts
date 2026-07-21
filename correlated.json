@@ -40,6 +40,26 @@
     "graded": false
   },
   {
+    "date": "2026-07-21",
+    "pitcher": "Tyler Phillips",
+    "short": true,
+    "underLine": 14.5,
+    "oppTeam": "Houston Astros",
+    "f5ml": -135,
+    "f5rlPoint": -0.5,
+    "f5rlPrice": 105,
+    "f5totPoint": 5,
+    "f5totOver": 100,
+    "f5totUnder": -130,
+    "f5Total": null,
+    "ovResult": null,
+    "oppF5": null,
+    "ownF5": null,
+    "mlResult": null,
+    "rlResult": null,
+    "graded": false
+  },
+  {
     "date": "2026-07-20",
     "pitcher": "Andrew Abbott",
     "short": false,
