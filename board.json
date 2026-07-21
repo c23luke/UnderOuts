@@ -98,20 +98,6 @@
     "bet": true
   },
   {
-    "name": "Kumar Rocker",
-    "team": "Chicago White Sox @ Texas Rangers",
-    "opp": "Chicago White Sox",
-    "line": 15.5,
-    "under": -110,
-    "book": "Bovada",
-    "proj": 14.1,
-    "edge": 14,
-    "pUnder": 66,
-    "siera": 4.311030986995121,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Michael Lorenzen",
     "team": "Washington Nationals @ Colorado Rockies",
     "opp": "Washington Nationals",
@@ -124,6 +110,20 @@
     "siera": 4.723400519119101,
     "tag": "both",
     "bet": true
+  },
+  {
+    "name": "Kumar Rocker",
+    "team": "Chicago White Sox @ Texas Rangers",
+    "opp": "Chicago White Sox",
+    "line": 15.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 14.1,
+    "edge": 13,
+    "pUnder": 66,
+    "siera": 4.311030986995121,
+    "tag": null,
+    "bet": false
   },
   {
     "name": "Kevin Gausman",
@@ -284,10 +284,10 @@
     "team": "Cincinnati Reds @ Seattle Mariners",
     "opp": "Seattle Mariners",
     "line": 16.5,
-    "under": 100,
+    "under": -105,
     "book": "Bovada",
     "proj": 17.7,
-    "edge": -18,
+    "edge": -19,
     "pUnder": 32,
     "siera": 3.585498796382343,
     "tag": null,
