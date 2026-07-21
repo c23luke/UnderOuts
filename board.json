@@ -4,10 +4,10 @@
     "team": "Chicago White Sox @ Texas Rangers",
     "opp": "Texas Rangers",
     "line": 14.5,
-    "under": 120,
+    "under": 125,
     "book": "Bovada",
     "proj": 13,
-    "edge": 25,
+    "edge": 26,
     "pUnder": 71,
     "siera": 5.234968136431758,
     "tag": "both",
@@ -40,6 +40,20 @@
     "siera": 4.205037246055318,
     "tag": null,
     "bet": false
+  },
+  {
+    "name": "Reynaldo Lopez",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "San Diego Padres",
+    "line": 14.5,
+    "under": 145,
+    "book": "Bovada",
+    "proj": 13.2,
+    "edge": 21,
+    "pUnder": 62,
+    "siera": 4.415008038672847,
+    "tag": "both",
+    "bet": true
   },
   {
     "name": "Tyler Phillips",
@@ -168,20 +182,6 @@
     "bet": false
   },
   {
-    "name": "Reynaldo Lopez",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "San Diego Padres",
-    "line": 15.5,
-    "under": -165,
-    "book": "Bovada",
-    "proj": 13.2,
-    "edge": 8,
-    "pUnder": 71,
-    "siera": 4.415008038672847,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Drew Rasmussen",
     "team": "Tampa Bay Rays @ Toronto Blue Jays",
     "opp": "Toronto Blue Jays",
@@ -280,20 +280,6 @@
     "bet": false
   },
   {
-    "name": "Walbert Urena",
-    "team": "St. Louis Cardinals @ Los Angeles Angels",
-    "opp": "St. Louis Cardinals",
-    "line": 15.5,
-    "under": -155,
-    "book": "Bovada",
-    "proj": 15.6,
-    "edge": -12,
-    "pUnder": 49,
-    "siera": 4.623766489522915,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Zack Wheeler",
     "team": "Los Angeles Dodgers @ Philadelphia Phillies",
     "opp": "Los Angeles Dodgers",
@@ -304,6 +290,20 @@
     "edge": -12,
     "pUnder": 31,
     "siera": 3.062393357271942,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Walbert Urena",
+    "team": "St. Louis Cardinals @ Los Angeles Angels",
+    "opp": "St. Louis Cardinals",
+    "line": 15.5,
+    "under": -160,
+    "book": "Bovada",
+    "proj": 15.6,
+    "edge": -13,
+    "pUnder": 49,
+    "siera": 4.623766489522915,
     "tag": null,
     "bet": false
   },
