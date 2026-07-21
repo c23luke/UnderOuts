@@ -1,5 +1,19 @@
 [
   {
+    "name": "Luinder Avila",
+    "team": "San Francisco Giants @ Kansas City Royals",
+    "opp": "San Francisco Giants",
+    "line": 14.5,
+    "under": 120,
+    "book": "Bovada",
+    "proj": 12.3,
+    "edge": 24,
+    "pUnder": 69,
+    "siera": 4.914923004520556,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "Luis Castillo",
     "team": "Cincinnati Reds @ Seattle Mariners",
     "opp": "Cincinnati Reds",
@@ -12,20 +26,6 @@
     "siera": 4.205037246055318,
     "tag": null,
     "bet": false
-  },
-  {
-    "name": "Luinder Avila",
-    "team": "San Francisco Giants @ Kansas City Royals",
-    "opp": "San Francisco Giants",
-    "line": 14.5,
-    "under": 115,
-    "book": "Bovada",
-    "proj": 12.3,
-    "edge": 23,
-    "pUnder": 69,
-    "siera": 4.914923004520556,
-    "tag": "both",
-    "bet": true
   },
   {
     "name": "Reynaldo Lopez",
@@ -140,20 +140,6 @@
     "bet": false
   },
   {
-    "name": "Framber Valdez",
-    "team": "Detroit Tigers @ Chicago Cubs",
-    "opp": "Chicago Cubs",
-    "line": 17.5,
-    "under": -120,
-    "book": "Bovada",
-    "proj": 16.5,
-    "edge": 8,
-    "pUnder": 63,
-    "siera": 4.279804771292051,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Drew Rasmussen",
     "team": "Tampa Bay Rays @ Toronto Blue Jays",
     "opp": "Toronto Blue Jays",
@@ -164,6 +150,20 @@
     "edge": 8,
     "pUnder": 66,
     "siera": 3.3428704909249114,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Framber Valdez",
+    "team": "Detroit Tigers @ Chicago Cubs",
+    "opp": "Chicago Cubs",
+    "line": 17.5,
+    "under": -125,
+    "book": "Bovada",
+    "proj": 16.5,
+    "edge": 7,
+    "pUnder": 63,
+    "siera": 4.279804771292051,
     "tag": null,
     "bet": false
   },
@@ -252,20 +252,6 @@
     "bet": false
   },
   {
-    "name": "Zack Wheeler",
-    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
-    "opp": "Los Angeles Dodgers",
-    "line": 17.5,
-    "under": 135,
-    "book": "Bovada",
-    "proj": 18.8,
-    "edge": -11,
-    "pUnder": 31,
-    "siera": 3.062393357271942,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Walbert Urena",
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "St. Louis Cardinals",
@@ -276,6 +262,20 @@
     "edge": -12,
     "pUnder": 49,
     "siera": 4.623766489522915,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Zack Wheeler",
+    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
+    "opp": "Los Angeles Dodgers",
+    "line": 18.5,
+    "under": -155,
+    "book": "Bovada",
+    "proj": 18.8,
+    "edge": -15,
+    "pUnder": 45,
+    "siera": 3.062393357271942,
     "tag": null,
     "bet": false
   },
