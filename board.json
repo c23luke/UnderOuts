@@ -56,20 +56,6 @@
     "bet": false
   },
   {
-    "name": "Reynaldo Lopez",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "San Diego Padres",
-    "line": 14.5,
-    "under": 145,
-    "book": "Bovada",
-    "proj": 13.2,
-    "edge": 21,
-    "pUnder": 62,
-    "siera": 4.415008038672847,
-    "tag": "both",
-    "bet": true
-  },
-  {
     "name": "Kohl Drake",
     "team": "Athletics @ Arizona Diamondbacks",
     "opp": null,
@@ -178,20 +164,6 @@
     "edge": 5,
     "pUnder": 54,
     "siera": 4.145378496124429,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Walker Buehler",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "Atlanta Braves",
-    "line": 14.5,
-    "under": -110,
-    "book": "Bovada",
-    "proj": 13.9,
-    "edge": 4,
-    "pUnder": 57,
-    "siera": 4.132094427875806,
     "tag": null,
     "bet": false
   },
