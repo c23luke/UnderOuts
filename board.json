@@ -96,19 +96,5 @@
     "siera": 3.7889441223260847,
     "tag": null,
     "bet": false
-  },
-  {
-    "name": "Janson Junk",
-    "team": "Miami Marlins @ Houston Astros",
-    "opp": "Houston Astros",
-    "line": 15.5,
-    "under": -160,
-    "book": "Bovada",
-    "proj": 15.8,
-    "edge": -16,
-    "pUnder": 46,
-    "siera": 4.50021246644628,
-    "tag": null,
-    "bet": false
   }
 ]
