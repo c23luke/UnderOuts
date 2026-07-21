@@ -1,27 +1,13 @@
 [
   {
-    "name": "Tatsuya Imai",
-    "team": "Miami Marlins @ Houston Astros",
-    "opp": "Miami Marlins",
-    "line": 14.5,
-    "under": 125,
-    "book": "Bovada",
-    "proj": 11.6,
-    "edge": 27,
-    "pUnder": 71,
-    "siera": 4.39352954218414,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Noah Schultz",
     "team": "Chicago White Sox @ Texas Rangers",
     "opp": "Texas Rangers",
     "line": 14.5,
-    "under": 125,
+    "under": 120,
     "book": "Bovada",
     "proj": 13,
-    "edge": 26,
+    "edge": 25,
     "pUnder": 71,
     "siera": 5.234968136431758,
     "tag": "both",
@@ -40,20 +26,6 @@
     "siera": 4.205037246055318,
     "tag": null,
     "bet": false
-  },
-  {
-    "name": "Reynaldo Lopez",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "San Diego Padres",
-    "line": 14.5,
-    "under": 140,
-    "book": "Bovada",
-    "proj": 13.2,
-    "edge": 20,
-    "pUnder": 62,
-    "siera": 4.415008038672847,
-    "tag": "both",
-    "bet": true
   },
   {
     "name": "Tyler Phillips",
@@ -112,6 +84,20 @@
     "bet": true
   },
   {
+    "name": "Tatsuya Imai",
+    "team": "Miami Marlins @ Houston Astros",
+    "opp": "Miami Marlins",
+    "line": 15.5,
+    "under": -165,
+    "book": "Bovada",
+    "proj": 11.6,
+    "edge": 15,
+    "pUnder": 77,
+    "siera": 4.39352954218414,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Luinder Avila",
     "team": "San Francisco Giants @ Kansas City Royals",
     "opp": "San Francisco Giants",
@@ -154,6 +140,20 @@
     "bet": true
   },
   {
+    "name": "Kevin Gausman",
+    "team": "Tampa Bay Rays @ Toronto Blue Jays",
+    "opp": "Tampa Bay Rays",
+    "line": 17.5,
+    "under": 125,
+    "book": "Bovada",
+    "proj": 16.9,
+    "edge": 13,
+    "pUnder": 57,
+    "siera": 3.7576612162351184,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Kumar Rocker",
     "team": "Chicago White Sox @ Texas Rangers",
     "opp": "Chicago White Sox",
@@ -168,16 +168,16 @@
     "bet": false
   },
   {
-    "name": "Kevin Gausman",
-    "team": "Tampa Bay Rays @ Toronto Blue Jays",
-    "opp": "Tampa Bay Rays",
-    "line": 18.5,
+    "name": "Reynaldo Lopez",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "San Diego Padres",
+    "line": 15.5,
     "under": -165,
     "book": "Bovada",
-    "proj": 16.9,
-    "edge": 7,
-    "pUnder": 69,
-    "siera": 3.7576612162351184,
+    "proj": 13.2,
+    "edge": 8,
+    "pUnder": 71,
+    "siera": 4.415008038672847,
     "tag": null,
     "bet": false
   },
@@ -234,6 +234,20 @@
     "edge": 3,
     "pUnder": 57,
     "siera": 4.132094427875806,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Zach Thornton",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": null,
+    "line": 14.5,
+    "under": 125,
+    "book": "Bovada",
+    "proj": 15,
+    "edge": 0,
+    "pUnder": 45,
+    "siera": null,
     "tag": null,
     "bet": false
   },
