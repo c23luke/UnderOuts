@@ -14,6 +14,20 @@
     "bet": true
   },
   {
+    "name": "Kyle Leahy",
+    "team": "St. Louis Cardinals @ Los Angeles Angels",
+    "opp": "Los Angeles Angels",
+    "line": 15.5,
+    "under": -165,
+    "book": "Bovada",
+    "proj": 14.7,
+    "edge": 0,
+    "pUnder": 62,
+    "siera": 4.501000400425263,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Jeffrey Springs",
     "team": "Athletics @ Arizona Diamondbacks",
     "opp": "Arizona Diamondbacks",
@@ -24,20 +38,6 @@
     "edge": -1,
     "pUnder": 59,
     "siera": 4.665092229786444,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Kyle Leahy",
-    "team": "St. Louis Cardinals @ Los Angeles Angels",
-    "opp": "Los Angeles Angels",
-    "line": 15.5,
-    "under": -170,
-    "book": "Bovada",
-    "proj": 14.7,
-    "edge": -1,
-    "pUnder": 62,
-    "siera": 4.501000400425263,
     "tag": null,
     "bet": false
   },
