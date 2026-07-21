@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": "2026-07-21|avila",
+    "date": "2026-07-21",
+    "name": "Luinder Avila",
+    "team": "San Francisco Giants @ Kansas City Royals",
+    "opp": "San Francisco Giants",
+    "line": 14.5,
+    "side": "under",
+    "price": 115,
+    "proj": 12.3,
+    "edge": 23,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  }
+]

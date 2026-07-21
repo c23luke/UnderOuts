@@ -1,5 +1,19 @@
 [
   {
+    "name": "Luinder Avila",
+    "team": "San Francisco Giants @ Kansas City Royals",
+    "opp": "San Francisco Giants",
+    "line": 14.5,
+    "under": 115,
+    "book": "Bovada",
+    "proj": 12.3,
+    "edge": 23,
+    "pUnder": 69,
+    "siera": 4.914923004520556,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "Kevin Gausman",
     "team": "Tampa Bay Rays @ Toronto Blue Jays",
     "opp": "Tampa Bay Rays",
@@ -10,6 +24,34 @@
     "edge": 7,
     "pUnder": 57,
     "siera": 3.7576612162351184,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Brandon Sproat",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": "New York Mets",
+    "line": 14.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 14.2,
+    "edge": 4,
+    "pUnder": 54,
+    "siera": 4.145378496124429,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Tyler Mahle",
+    "team": "San Francisco Giants @ Kansas City Royals",
+    "opp": "Kansas City Royals",
+    "line": 15.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 15.5,
+    "edge": -3,
+    "pUnder": 50,
+    "siera": 4.277620269415772,
     "tag": null,
     "bet": false
   },
