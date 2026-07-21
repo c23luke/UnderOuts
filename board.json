@@ -14,6 +14,34 @@
     "bet": true
   },
   {
+    "name": "Kumar Rocker",
+    "team": "Chicago White Sox @ Texas Rangers",
+    "opp": "Chicago White Sox",
+    "line": 16.5,
+    "under": -140,
+    "book": "Bovada",
+    "proj": 14.1,
+    "edge": 18,
+    "pUnder": 76,
+    "siera": 4.311030986995121,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Noah Schultz",
+    "team": "Chicago White Sox @ Texas Rangers",
+    "opp": "Texas Rangers",
+    "line": 15.5,
+    "under": -165,
+    "book": "Bovada",
+    "proj": 13.4,
+    "edge": 16,
+    "pUnder": 78,
+    "siera": 5.234968136431758,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "Kevin Gausman",
     "team": "Tampa Bay Rays @ Toronto Blue Jays",
     "opp": "Tampa Bay Rays",
@@ -38,6 +66,20 @@
     "edge": 4,
     "pUnder": 54,
     "siera": 4.145378496124429,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Framber Valdez",
+    "team": "Detroit Tigers @ Chicago Cubs",
+    "opp": "Chicago Cubs",
+    "line": 16.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 16.5,
+    "edge": 0,
+    "pUnder": 50,
+    "siera": 4.279804771292051,
     "tag": null,
     "bet": false
   },

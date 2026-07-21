@@ -20,6 +20,26 @@
     "graded": false
   },
   {
+    "date": "2026-07-21",
+    "pitcher": "Noah Schultz",
+    "short": true,
+    "underLine": 15.5,
+    "oppTeam": "Texas Rangers",
+    "f5ml": -145,
+    "f5rlPoint": -0.5,
+    "f5rlPrice": 100,
+    "f5totPoint": 4.5,
+    "f5totOver": -130,
+    "f5totUnder": 100,
+    "f5Total": null,
+    "ovResult": null,
+    "oppF5": null,
+    "ownF5": null,
+    "mlResult": null,
+    "rlResult": null,
+    "graded": false
+  },
+  {
     "date": "2026-07-20",
     "pitcher": "Andrew Abbott",
     "short": false,
