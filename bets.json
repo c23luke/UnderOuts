@@ -15,6 +15,21 @@
     "auto": true
   },
   {
+    "id": "2026-07-21|lopez",
+    "date": "2026-07-21",
+    "name": "Reynaldo Lopez",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "San Diego Padres",
+    "line": 14.5,
+    "side": "under",
+    "price": 145,
+    "proj": 13.2,
+    "edge": 21,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  },
+  {
     "id": "2026-07-21|schultz",
     "date": "2026-07-21",
     "name": "Noah Schultz",

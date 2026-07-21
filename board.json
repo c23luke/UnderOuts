@@ -42,6 +42,20 @@
     "bet": false
   },
   {
+    "name": "Reynaldo Lopez",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "San Diego Padres",
+    "line": 14.5,
+    "under": 145,
+    "book": "Bovada",
+    "proj": 13.2,
+    "edge": 21,
+    "pUnder": 62,
+    "siera": 4.415008038672847,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "Noah Schultz",
     "team": "Chicago White Sox @ Texas Rangers",
     "opp": "Texas Rangers",
@@ -154,20 +168,6 @@
     "bet": true
   },
   {
-    "name": "Drew Rasmussen",
-    "team": "Tampa Bay Rays @ Toronto Blue Jays",
-    "opp": "Toronto Blue Jays",
-    "line": 17.5,
-    "under": -130,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 9,
-    "pUnder": 66,
-    "siera": 3.3428704909249114,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Kevin Gausman",
     "team": "Tampa Bay Rays @ Toronto Blue Jays",
     "opp": "Tampa Bay Rays",
@@ -182,16 +182,16 @@
     "bet": false
   },
   {
-    "name": "Reynaldo Lopez",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "San Diego Padres",
-    "line": 15.5,
-    "under": -170,
+    "name": "Drew Rasmussen",
+    "team": "Tampa Bay Rays @ Toronto Blue Jays",
+    "opp": "Toronto Blue Jays",
+    "line": 16.5,
+    "under": 105,
     "book": "Bovada",
-    "proj": 13.2,
-    "edge": 8,
-    "pUnder": 71,
-    "siera": 4.415008038672847,
+    "proj": 16,
+    "edge": 7,
+    "pUnder": 55,
+    "siera": 3.3428704909249114,
     "tag": null,
     "bet": false
   },
@@ -210,20 +210,6 @@
     "bet": false
   },
   {
-    "name": "Walker Buehler",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "Atlanta Braves",
-    "line": 14.5,
-    "under": -110,
-    "book": "Bovada",
-    "proj": 13.9,
-    "edge": 4,
-    "pUnder": 57,
-    "siera": 4.132094427875806,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Brandon Sproat",
     "team": "New York Mets @ Milwaukee Brewers",
     "opp": "New York Mets",
@@ -234,6 +220,20 @@
     "edge": 4,
     "pUnder": 54,
     "siera": 4.145378496124429,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Walker Buehler",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "Atlanta Braves",
+    "line": 14.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 13.9,
+    "edge": 3,
+    "pUnder": 57,
+    "siera": 4.132094427875806,
     "tag": null,
     "bet": false
   },
