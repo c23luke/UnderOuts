@@ -15,6 +15,21 @@
     "auto": true
   },
   {
+    "id": "2026-07-21|avila",
+    "date": "2026-07-21",
+    "name": "Luinder Avila",
+    "team": "San Francisco Giants @ Kansas City Royals",
+    "opp": "San Francisco Giants",
+    "line": 14.5,
+    "side": "under",
+    "price": 115,
+    "proj": 12.3,
+    "edge": 23,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  },
+  {
     "id": "2026-07-21|phillips",
     "date": "2026-07-21",
     "name": "Tyler Phillips",
@@ -40,21 +55,6 @@
     "price": -160,
     "proj": 13.7,
     "edge": 16,
-    "tag": "both",
-    "book": "Bovada",
-    "auto": true
-  },
-  {
-    "id": "2026-07-21|avila",
-    "date": "2026-07-21",
-    "name": "Luinder Avila",
-    "team": "San Francisco Giants @ Kansas City Royals",
-    "opp": "San Francisco Giants",
-    "line": 14.5,
-    "side": "under",
-    "price": 115,
-    "proj": 12.3,
-    "edge": 15,
     "tag": "both",
     "book": "Bovada",
     "auto": true
