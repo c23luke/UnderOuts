@@ -13,6 +13,18 @@
   },
   {
     "date": "2026-07-20",
+    "name": "Jameson Taillon",
+    "line": 13.5,
+    "price": -135,
+    "proj": 14.9,
+    "siera": 4.5,
+    "actualOuts": 13,
+    "won": true,
+    "short": true,
+    "sharp": false
+  },
+  {
+    "date": "2026-07-20",
     "name": "Janson Junk",
     "line": 15.5,
     "price": -160,
