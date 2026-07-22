@@ -18,10 +18,10 @@
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "St. Louis Cardinals",
     "line": 17.5,
-    "under": -120,
+    "under": -125,
     "book": "Bovada",
     "proj": 15,
-    "edge": 22,
+    "edge": 21,
     "pUnder": 77,
     "siera": 3.600503570209624,
     "tag": null,
@@ -42,20 +42,6 @@
     "bet": true
   },
   {
-    "name": "Michael King",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "Atlanta Braves",
-    "line": 17.5,
-    "under": -145,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 11,
-    "pUnder": 70,
-    "siera": 4.486110759843315,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Bubba Chandler",
     "team": "Pittsburgh Pirates @ New York Yankees",
     "opp": "New York Yankees",
@@ -66,6 +52,20 @@
     "edge": 9,
     "pUnder": 72,
     "siera": 5.05752748103782,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Michael King",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "Atlanta Braves",
+    "line": 16.5,
+    "under": 105,
+    "book": "Bovada",
+    "proj": 16,
+    "edge": 8,
+    "pUnder": 57,
+    "siera": 4.486110759843315,
     "tag": null,
     "bet": false
   },
@@ -98,20 +98,6 @@
     "bet": false
   },
   {
-    "name": "Eric Lauer",
-    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
-    "opp": "Philadelphia Phillies",
-    "line": 15.5,
-    "under": -145,
-    "book": "Bovada",
-    "proj": 14.7,
-    "edge": 0,
-    "pUnder": 59,
-    "siera": 5.391512205025992,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Bailey Ober",
     "team": "Minnesota Twins @ Cleveland Guardians",
     "opp": "Cleveland Guardians",
@@ -122,6 +108,20 @@
     "edge": 0,
     "pUnder": 55,
     "siera": 4.800546335291405,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Eric Lauer",
+    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
+    "opp": "Philadelphia Phillies",
+    "line": 15.5,
+    "under": -155,
+    "book": "Bovada",
+    "proj": 14.7,
+    "edge": -2,
+    "pUnder": 59,
+    "siera": 5.391512205025992,
     "tag": null,
     "bet": false
   },
