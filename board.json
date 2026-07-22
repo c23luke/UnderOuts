@@ -224,20 +224,6 @@
     "bet": false
   },
   {
-    "name": "Slade Cecconi",
-    "team": "Minnesota Twins @ Cleveland Guardians",
-    "opp": "Minnesota Twins",
-    "line": 15.5,
-    "under": -160,
-    "book": "Bovada",
-    "proj": 15.2,
-    "edge": -7,
-    "pUnder": 54,
-    "siera": 4.477207962943128,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Emerson Hancock",
     "team": "Cincinnati Reds @ Seattle Mariners",
     "opp": "Cincinnati Reds",
@@ -248,6 +234,20 @@
     "edge": -8,
     "pUnder": 55,
     "siera": 3.7424606911228824,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Slade Cecconi",
+    "team": "Minnesota Twins @ Cleveland Guardians",
+    "opp": "Minnesota Twins",
+    "line": 15.5,
+    "under": -165,
+    "book": "Bovada",
+    "proj": 15.2,
+    "edge": -8,
+    "pUnder": 54,
+    "siera": 4.477207962943128,
     "tag": null,
     "bet": false
   },
