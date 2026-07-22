@@ -162,25 +162,26 @@ function renderF5(){
   const tbox=document.getElementById('f5today');
   if(todayC.length){
     tbox.innerHTML=todayC.map(c=>{
-      const tag=c.short?'<span class="f5tag">BAD ARM + SHORT</span>':'<span class="f5tag a">BAD ARM</span>';
+      const hi=c.edge!=null&&c.edge>=25;
+      const tag=hi?'<span class="f5tag">'+c.edge+'% EDGE</span>':(c.short?'<span class="f5tag">BAD ARM + SHORT</span>':'<span class="f5tag a">BAD ARM</span>');
       const lines=[];
       if(c.f5totPoint!=null) lines.push('<div class="f5line"><span class="k">F5 Over '+c.f5totPoint+'</span><span class="v">'+AMER(c.f5totOver)+' '+chipF5(c.ovResult)+'</span></div>');
       if(c.f5ml!=null) lines.push('<div class="f5line"><span class="k">'+c.oppTeam+' F5 ML</span><span class="v">'+AMER(c.f5ml)+' '+chipF5(c.mlResult)+'</span></div>');
       if(c.f5rlPoint!=null) lines.push('<div class="f5line"><span class="k">'+c.oppTeam+' F5 RL '+(c.f5rlPoint>0?'+':'')+c.f5rlPoint+'</span><span class="v">'+AMER(c.f5rlPrice)+' '+chipF5(c.rlResult)+'</span></div>');
       const runs=c.f5Total!=null?('<div class="f5off" style="margin-top:8px;color:var(--text)">First 5: '+c.oppF5+'-'+c.ownF5+' · '+c.f5Total+' total runs</div>'):'';
-      return '<div class="f5card"><div class="r1"><div><div class="f5team">Take '+c.oppTeam+'</div><div class="f5off">off '+c.pitcher+' (Under '+c.underLine+' outs)</div></div>'+tag+'</div>'+lines.join('')+runs+'</div>';
+      return '<div class="f5card"><div class="r1"><div><div class="f5team">Take '+c.oppTeam+'</div><div class="f5off">off '+c.pitcher+' · Under '+c.underLine+(c.edge!=null?' · +'+c.edge+'% edge':'')+'</div></div>'+tag+'</div>'+lines.join('')+runs+'</div>';
     }).join('');
   } else tbox.innerHTML='<div class="empty">No F5 plays today yet — fires when an under-outs alert sends.</div>';
 
   // 2) F5 performance — W/L, units, ROI for each market (Over / ML / RL), bad-arm+short system
   const mkt=(arr,resKey,priceKey)=>{const g=arr.filter(c=>c[resKey]&&c[resKey]!=='P');const w=g.filter(c=>c[resKey]==='W').length,l=g.length-w;let u=0;g.forEach(c=>u+=c[resKey]==='W'?bu(c[priceKey]):-1);const roi=g.length?u/g.length*100:0;return {w,l,u,roi,n:g.length};};
-  const shortSet=CORR.filter(c=>c.short);
   const mrow=(cls,label,m)=> ('<div class="sysrow '+cls+'"><div class="sysL">'+label+' <b>'+(m.n?m.w+'-'+m.l+' · '+Math.round(m.w/m.n*100)+'%':'0-0')+'</b></div><div class="sysR"><span style="color:'+(m.u>=0?'var(--green)':'var(--red)')+'">'+(m.u>=0?'+':'')+m.u.toFixed(1)+'u</span><span style="color:'+(m.roi>=0?'var(--green)':'var(--red)')+'">'+(m.n?(m.roi>=0?'+':'')+Math.round(m.roi)+'%':'—')+'</span></div></div>');
-  const sbox=document.getElementById('f5sys');
-  sbox.innerHTML='<div class="syscap" style="margin:0 0 9px">Bad arm + short · '+shortSet.length+' games tracked</div>'
-    + mrow('b','F5 OVER',  mkt(shortSet,'ovResult','f5totOver'))
-    + mrow('a','F5 ML · opp',   mkt(shortSet,'mlResult','f5ml'))
-    + mrow('a','F5 RL · opp',   mkt(shortSet,'rlResult','f5rlPrice'));
+  const s25=CORR.filter(c=>c.edge!=null&&c.edge>=25), s30=CORR.filter(c=>c.edge!=null&&c.edge>=30), shortSet=CORR.filter(c=>c.short);
+  const grp=(set)=> mrow('b','F5 OVER',mkt(set,'ovResult','f5totOver'))+mrow('a','F5 ML · opp',mkt(set,'mlResult','f5ml'))+mrow('a','F5 RL · opp',mkt(set,'rlResult','f5rlPrice'));
+  document.getElementById('f5sys').innerHTML=
+      '<div class="syscap" style="margin:0 0 9px">25%+ edge · take opponent F5 · '+s25.length+' games</div>'+grp(s25)
+    + '<div class="syscap" style="margin:16px 0 9px">30%+ edge · '+s30.length+' games</div>'+grp(s30)
+    + '<div class="syscap" style="margin:16px 0 9px">Bad arm + short · '+shortSet.length+' games</div>'+grp(shortSet);
 
   // 3) ALL tracked F5 — full history WITH the lines next to each result
   const kbox=document.getElementById('f5track');
