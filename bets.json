@@ -1,20 +1,5 @@
 [
   {
-    "id": "2026-07-22|kelly",
-    "date": "2026-07-22",
-    "name": "Merrill Kelly",
-    "team": "Athletics @ Arizona Diamondbacks",
-    "opp": "Athletics",
-    "line": 17.5,
-    "side": "under",
-    "price": 120,
-    "proj": 16,
-    "edge": 19,
-    "tag": "badarm",
-    "book": "Bovada",
-    "auto": true
-  },
-  {
     "id": "2026-07-22|lugo",
     "date": "2026-07-22",
     "name": "Seth Lugo",
@@ -25,6 +10,21 @@
     "price": 105,
     "proj": 15.9,
     "edge": 18,
+    "tag": "badarm",
+    "book": "Bovada",
+    "auto": true
+  },
+  {
+    "id": "2026-07-22|kelly",
+    "date": "2026-07-22",
+    "name": "Merrill Kelly",
+    "team": "Athletics @ Arizona Diamondbacks",
+    "opp": "Athletics",
+    "line": 17.5,
+    "side": "under",
+    "price": 120,
+    "proj": 16,
+    "edge": 16,
     "tag": "badarm",
     "book": "Bovada",
     "auto": true
