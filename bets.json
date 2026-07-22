@@ -13,5 +13,20 @@
     "tag": "badarm",
     "book": "Bovada",
     "auto": true
+  },
+  {
+    "id": "2026-07-22|kelly",
+    "date": "2026-07-22",
+    "name": "Merrill Kelly",
+    "team": "Athletics @ Arizona Diamondbacks",
+    "opp": "Athletics",
+    "line": 17.5,
+    "side": "under",
+    "price": 120,
+    "proj": 16.4,
+    "edge": 17,
+    "tag": "badarm",
+    "book": "Bovada",
+    "auto": true
   }
 ]

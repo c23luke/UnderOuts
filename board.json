@@ -28,6 +28,20 @@
     "bet": true
   },
   {
+    "name": "Merrill Kelly",
+    "team": "Athletics @ Arizona Diamondbacks",
+    "opp": "Athletics",
+    "line": 17.5,
+    "under": 120,
+    "book": "Bovada",
+    "proj": 16.4,
+    "edge": 17,
+    "pUnder": 62,
+    "siera": 5.30245780905921,
+    "tag": "badarm",
+    "bet": true
+  },
+  {
     "name": "Landen Roupp",
     "team": "San Francisco Giants @ Kansas City Royals",
     "opp": "Kansas City Royals",
@@ -52,6 +66,20 @@
     "edge": 5,
     "pUnder": 67,
     "siera": 3.947958717647239,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Gage Jump",
+    "team": "Athletics @ Arizona Diamondbacks",
+    "opp": "Arizona Diamondbacks",
+    "line": 15.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 15.5,
+    "edge": -3,
+    "pUnder": 50,
+    "siera": 4.035807548305836,
     "tag": null,
     "bet": false
   },
