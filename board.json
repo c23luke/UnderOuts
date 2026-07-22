@@ -70,20 +70,6 @@
     "bet": false
   },
   {
-    "name": "Eric Lauer",
-    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
-    "opp": "Philadelphia Phillies",
-    "line": 15.5,
-    "under": -160,
-    "book": "Bovada",
-    "proj": 14.7,
-    "edge": -2,
-    "pUnder": 59,
-    "siera": 5.391512205025992,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Kyle Bradish",
     "team": "Baltimore Orioles @ Boston Red Sox",
     "opp": "Boston Red Sox",
@@ -108,20 +94,6 @@
     "edge": -3,
     "pUnder": 43,
     "siera": 4.5785911925850735,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Aaron Nola",
-    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
-    "opp": "Los Angeles Dodgers",
-    "line": 15.5,
-    "under": -165,
-    "book": "Bovada",
-    "proj": 15.1,
-    "edge": -6,
-    "pUnder": 56,
-    "siera": 3.868947576757053,
     "tag": null,
     "bet": false
   },
