@@ -112,20 +112,6 @@
     "bet": false
   },
   {
-    "name": "Eric Lauer",
-    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
-    "opp": "Philadelphia Phillies",
-    "line": 15.5,
-    "under": -125,
-    "book": "Bovada",
-    "proj": 14.7,
-    "edge": 3,
-    "pUnder": 59,
-    "siera": 5.398884345910392,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Dean Kremer",
     "team": "Baltimore Orioles @ Boston Red Sox",
     "opp": "Boston Red Sox",
@@ -154,6 +140,34 @@
     "bet": false
   },
   {
+    "name": "Slade Cecconi",
+    "team": "Minnesota Twins @ Cleveland Guardians",
+    "opp": "Minnesota Twins",
+    "line": 15.5,
+    "under": -110,
+    "book": "Bovada",
+    "proj": 15.2,
+    "edge": 2,
+    "pUnder": 54,
+    "siera": 4.484580103827527,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Eric Lauer",
+    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
+    "opp": "Philadelphia Phillies",
+    "line": 15.5,
+    "under": -135,
+    "book": "Bovada",
+    "proj": 14.7,
+    "edge": 2,
+    "pUnder": 59,
+    "siera": 5.398884345910392,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Griffin Jax",
     "team": "Tampa Bay Rays @ Toronto Blue Jays",
     "opp": "Toronto Blue Jays",
@@ -164,20 +178,6 @@
     "edge": 1,
     "pUnder": 63,
     "siera": 3.68301279730026,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Slade Cecconi",
-    "team": "Minnesota Twins @ Cleveland Guardians",
-    "opp": "Minnesota Twins",
-    "line": 15.5,
-    "under": -115,
-    "book": "Bovada",
-    "proj": 15.2,
-    "edge": 1,
-    "pUnder": 54,
-    "siera": 4.484580103827527,
     "tag": null,
     "bet": false
   },
@@ -196,6 +196,20 @@
     "bet": false
   },
   {
+    "name": "Cade Cavalli",
+    "team": "Washington Nationals @ Colorado Rockies",
+    "opp": "Colorado Rockies",
+    "line": 15.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 15.3,
+    "edge": -2,
+    "pUnder": 52,
+    "siera": 3.59688847850125,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Reid Detmers",
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "St. Louis Cardinals",
@@ -206,20 +220,6 @@
     "edge": -2,
     "pUnder": 48,
     "siera": 3.6078757110940236,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Cade Cavalli",
-    "team": "Washington Nationals @ Colorado Rockies",
-    "opp": "Colorado Rockies",
-    "line": 15.5,
-    "under": -120,
-    "book": "Bovada",
-    "proj": 15.3,
-    "edge": -3,
-    "pUnder": 52,
-    "siera": 3.59688847850125,
     "tag": null,
     "bet": false
   },
