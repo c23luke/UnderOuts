@@ -444,6 +444,24 @@
       "f5totOver": -110,
       "f5totUnder": -120,
       "graded": false
+    },
+    "chandler": {
+      "date": "2026-07-22",
+      "pitcher": "Bubba Chandler",
+      "short": true,
+      "edge": 14,
+      "bad": true,
+      "underLine": 14.5,
+      "oppTeam": "New York Yankees",
+      "oppSide": "home",
+      "gamePk": 823519,
+      "f5ml": -200,
+      "f5rlPoint": -1,
+      "f5rlPrice": 100,
+      "f5totPoint": 5,
+      "f5totOver": -125,
+      "f5totUnder": -105,
+      "graded": false
     }
   }
 }

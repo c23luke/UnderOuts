@@ -45,6 +45,21 @@
     "auto": true
   },
   {
+    "id": "2026-07-22|chandler",
+    "date": "2026-07-22",
+    "name": "Bubba Chandler",
+    "team": "Pittsburgh Pirates @ New York Yankees",
+    "opp": "New York Yankees",
+    "line": 14.5,
+    "side": "under",
+    "price": 125,
+    "proj": 13.9,
+    "edge": 14,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  },
+  {
     "id": "2026-07-22|singer",
     "date": "2026-07-22",
     "name": "Brady Singer",
