@@ -98,6 +98,20 @@
     "bet": false
   },
   {
+    "name": "Eric Lauer",
+    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
+    "opp": "Philadelphia Phillies",
+    "line": 15.5,
+    "under": -125,
+    "book": "Bovada",
+    "proj": 14.7,
+    "edge": 3,
+    "pUnder": 59,
+    "siera": 5.398884345910392,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Dean Kremer",
     "team": "Baltimore Orioles @ Boston Red Sox",
     "opp": "Boston Red Sox",
@@ -108,20 +122,6 @@
     "edge": 3,
     "pUnder": 56,
     "siera": 3.2353001263238377,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Eric Lauer",
-    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
-    "opp": "Philadelphia Phillies",
-    "line": 15.5,
-    "under": -130,
-    "book": "Bovada",
-    "proj": 14.7,
-    "edge": 3,
-    "pUnder": 59,
-    "siera": 5.398884345910392,
     "tag": null,
     "bet": false
   },
@@ -140,16 +140,44 @@
     "bet": false
   },
   {
+    "name": "Griffin Jax",
+    "team": "Tampa Bay Rays @ Toronto Blue Jays",
+    "opp": "Toronto Blue Jays",
+    "line": 15.5,
+    "under": -165,
+    "book": "Bovada",
+    "proj": 14.3,
+    "edge": 1,
+    "pUnder": 63,
+    "siera": 3.68301279730026,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Slade Cecconi",
     "team": "Minnesota Twins @ Cleveland Guardians",
     "opp": "Minnesota Twins",
     "line": 15.5,
-    "under": -110,
+    "under": -115,
     "book": "Bovada",
     "proj": 15.2,
-    "edge": 2,
+    "edge": 1,
     "pUnder": 54,
     "siera": 4.484580103827527,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Aaron Nola",
+    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
+    "opp": "Los Angeles Dodgers",
+    "line": 15.5,
+    "under": -125,
+    "book": "Bovada",
+    "proj": 15.1,
+    "edge": 0,
+    "pUnder": 56,
+    "siera": 3.946816497978269,
     "tag": null,
     "bet": false
   },
@@ -168,20 +196,6 @@
     "bet": false
   },
   {
-    "name": "Griffin Jax",
-    "team": "Tampa Bay Rays @ Toronto Blue Jays",
-    "opp": "Toronto Blue Jays",
-    "line": 15.5,
-    "under": -175,
-    "book": "Bovada",
-    "proj": 14.3,
-    "edge": 0,
-    "pUnder": 63,
-    "siera": 3.68301279730026,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Reid Detmers",
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "St. Louis Cardinals",
@@ -192,20 +206,6 @@
     "edge": -2,
     "pUnder": 48,
     "siera": 3.6078757110940236,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Aaron Nola",
-    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
-    "opp": "Los Angeles Dodgers",
-    "line": 15.5,
-    "under": -140,
-    "book": "Bovada",
-    "proj": 15.1,
-    "edge": -2,
-    "pUnder": 56,
-    "siera": 3.946816497978269,
     "tag": null,
     "bet": false
   },
@@ -234,20 +234,6 @@
     "edge": -3,
     "pUnder": 50,
     "siera": 4.035807548305836,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Logan Henderson",
-    "team": "New York Mets @ Milwaukee Brewers",
-    "opp": "New York Mets",
-    "line": 14.5,
-    "under": 135,
-    "book": "Bovada",
-    "proj": 15.7,
-    "edge": -5,
-    "pUnder": 37,
-    "siera": 3.1817674581531397,
     "tag": null,
     "bet": false
   },
@@ -290,6 +276,20 @@
     "edge": -13,
     "pUnder": 38,
     "siera": 3.7479195553032616,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Logan Henderson",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": "New York Mets",
+    "line": 15.5,
+    "under": -175,
+    "book": "Bovada",
+    "proj": 15.7,
+    "edge": -16,
+    "pUnder": 48,
+    "siera": 3.1817674581531397,
     "tag": null,
     "bet": false
   },
