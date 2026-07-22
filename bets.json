@@ -15,21 +15,6 @@
     "auto": true
   },
   {
-    "id": "2026-07-22|kelly",
-    "date": "2026-07-22",
-    "name": "Merrill Kelly",
-    "team": "Athletics @ Arizona Diamondbacks",
-    "opp": "Athletics",
-    "line": 17.5,
-    "side": "under",
-    "price": 120,
-    "proj": 16.4,
-    "edge": 16,
-    "tag": "badarm",
-    "book": "Bovada",
-    "auto": true
-  },
-  {
     "id": "2026-07-22|singer",
     "date": "2026-07-22",
     "name": "Brady Singer",
@@ -40,6 +25,21 @@
     "price": -105,
     "proj": 15.6,
     "edge": 16,
+    "tag": "badarm",
+    "book": "Bovada",
+    "auto": true
+  },
+  {
+    "id": "2026-07-22|kelly",
+    "date": "2026-07-22",
+    "name": "Merrill Kelly",
+    "team": "Athletics @ Arizona Diamondbacks",
+    "opp": "Athletics",
+    "line": 17.5,
+    "side": "under",
+    "price": 120,
+    "proj": 16.4,
+    "edge": 12,
     "tag": "badarm",
     "book": "Bovada",
     "auto": true
