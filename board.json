@@ -28,20 +28,6 @@
     "bet": false
   },
   {
-    "name": "Merrill Kelly",
-    "team": "Athletics @ Arizona Diamondbacks",
-    "opp": "Athletics",
-    "line": 17.5,
-    "under": 105,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 18,
-    "pUnder": 66,
-    "siera": 5.291997212642983,
-    "tag": "both",
-    "bet": true
-  },
-  {
     "name": "Anthony Kay",
     "team": "Chicago White Sox @ Texas Rangers",
     "opp": "Texas Rangers",
@@ -54,20 +40,6 @@
     "siera": 4.667800439378493,
     "tag": "both",
     "bet": true
-  },
-  {
-    "name": "Brady Singer",
-    "team": "Cincinnati Reds @ Seattle Mariners",
-    "opp": "Seattle Mariners",
-    "line": 17.5,
-    "under": -135,
-    "book": "Bovada",
-    "proj": 15.6,
-    "edge": 11,
-    "pUnder": 69,
-    "siera": 4.46934439108085,
-    "tag": null,
-    "bet": false
   },
   {
     "name": "Michael King",
@@ -126,16 +98,16 @@
     "bet": false
   },
   {
-    "name": "Gage Jump",
-    "team": "Athletics @ Arizona Diamondbacks",
-    "opp": "Arizona Diamondbacks",
+    "name": "Eric Lauer",
+    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
+    "opp": "Philadelphia Phillies",
     "line": 15.5,
-    "under": -115,
+    "under": -145,
     "book": "Bovada",
-    "proj": 15,
-    "edge": 2,
-    "pUnder": 55,
-    "siera": 3.9106193011829373,
+    "proj": 14.7,
+    "edge": 0,
+    "pUnder": 59,
+    "siera": 5.391512205025992,
     "tag": null,
     "bet": false
   },
@@ -150,20 +122,6 @@
     "edge": 0,
     "pUnder": 55,
     "siera": 4.800546335291405,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Eric Lauer",
-    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
-    "opp": "Philadelphia Phillies",
-    "line": 15.5,
-    "under": -150,
-    "book": "Bovada",
-    "proj": 14.7,
-    "edge": -1,
-    "pUnder": 59,
-    "siera": 5.391512205025992,
     "tag": null,
     "bet": false
   },
@@ -224,25 +182,11 @@
     "bet": false
   },
   {
-    "name": "Emerson Hancock",
-    "team": "Cincinnati Reds @ Seattle Mariners",
-    "opp": "Cincinnati Reds",
-    "line": 15.5,
-    "under": -170,
-    "book": "Bovada",
-    "proj": 15,
-    "edge": -8,
-    "pUnder": 55,
-    "siera": 3.7424606911228824,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Colin Rea",
     "team": "Detroit Tigers @ Chicago Cubs",
     "opp": "Detroit Tigers",
     "line": 15.5,
-    "under": -160,
+    "under": -165,
     "book": "Bovada",
     "proj": 15.3,
     "edge": -9,
