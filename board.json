@@ -46,10 +46,10 @@
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "St. Louis Cardinals",
     "line": 17.5,
-    "under": -120,
+    "under": -125,
     "book": "Bovada",
     "proj": 15,
-    "edge": 22,
+    "edge": 21,
     "pUnder": 77,
     "siera": 3.600503570209624,
     "tag": null,
@@ -98,20 +98,6 @@
     "bet": false
   },
   {
-    "name": "Jake Bennett",
-    "team": "Baltimore Orioles @ Boston Red Sox",
-    "opp": "Baltimore Orioles",
-    "line": 16.5,
-    "under": -115,
-    "book": "Bovada",
-    "proj": 15,
-    "edge": 15,
-    "pUnder": 69,
-    "siera": 3.8832013870831394,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Brady Singer",
     "team": "Cincinnati Reds @ Seattle Mariners",
     "opp": "Seattle Mariners",
@@ -124,6 +110,20 @@
     "siera": 4.46934439108085,
     "tag": "both",
     "bet": true
+  },
+  {
+    "name": "Jake Bennett",
+    "team": "Baltimore Orioles @ Boston Red Sox",
+    "opp": "Baltimore Orioles",
+    "line": 16.5,
+    "under": -120,
+    "book": "Bovada",
+    "proj": 15,
+    "edge": 14,
+    "pUnder": 69,
+    "siera": 3.8832013870831394,
+    "tag": null,
+    "bet": false
   },
   {
     "name": "Anthony Kay",
@@ -368,7 +368,7 @@
     "team": "Pittsburgh Pirates @ New York Yankees",
     "opp": "New York Yankees",
     "line": 15.5,
-    "under": -155,
+    "under": -160,
     "book": "Bovada",
     "proj": 15.4,
     "edge": -10,
