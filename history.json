@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-07-21",
+    "name": "David Peterson",
+    "line": 15.5,
+    "price": -160,
+    "proj": 13.7,
+    "siera": 4.52,
+    "edge": 15,
+    "actualOuts": 20,
+    "won": false,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-21",
+    "name": "Luinder Avila",
+    "line": 14.5,
+    "price": 115,
+    "proj": 12.3,
+    "siera": 4.91,
+    "edge": 24,
+    "actualOuts": 19,
+    "won": false,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-21",
+    "name": "Michael Lorenzen",
+    "line": 14.5,
+    "price": 110,
+    "proj": 13.5,
+    "siera": 4.72,
+    "edge": 12,
+    "actualOuts": 11,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-21",
+    "name": "Noah Schultz",
+    "line": 15.5,
+    "price": -165,
+    "proj": 13,
+    "siera": 5.23,
+    "edge": 26,
+    "actualOuts": 11,
+    "won": true,
+    "tag": "both"
+  },
+  {
     "date": "2026-07-20",
     "name": "Andrew Abbott",
     "line": 16.5,

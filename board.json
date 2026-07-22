@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "name": "Gerrit Cole",
+    "team": "Pittsburgh Pirates @ New York Yankees",
+    "opp": "Pittsburgh Pirates",
+    "line": 17.5,
+    "under": 130,
+    "book": "Bovada",
+    "proj": 16.1,
+    "edge": 25,
+    "pUnder": 68,
+    "siera": 3.9083220752633534,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Mitch Keller",
+    "team": "Pittsburgh Pirates @ New York Yankees",
+    "opp": "New York Yankees",
+    "line": 15.5,
+    "under": -155,
+    "book": "Bovada",
+    "proj": 15.4,
+    "edge": -10,
+    "pUnder": 51,
+    "siera": 4.72027659838948,
+    "tag": null,
+    "bet": false
+  }
+]
