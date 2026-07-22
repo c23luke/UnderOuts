@@ -1,242 +1,261 @@
 [
   {
-    "key": "drake",
-    "tier": 1,
-    "score": 76,
-    "flags": { "rookie": true },
-    "proj": "~4 IP (12 outs)",
-    "note": "CONFIRMED: MLB debut (ARI vs ATH) on a stated ~70-pitch limit (could stretch to ~80) — first career start, not built up to go deep (Arizona Sports/CBS Sports)."
-  },
-  {
-    "key": "schultz",
-    "tier": 2,
-    "score": 64,
-    "flags": { "il": true, "rookie": true },
-    "proj": "~4 IP (13 outs)",
-    "note": "CONFIRMED: first start back from a knee (patellar tendinitis) IL stint — rehab built only to a ~65-75 pitch ceiling, so a short leash is expected (CBS Sports/RotoWire)."
-  },
-  {
-    "key": "rojas",
+    "key": "scott",
     "tier": 2,
     "score": 60,
-    "flags": { "rookie": true, "trend": true },
-    "proj": "~4 IP (12 outs)",
-    "note": "CONFIRMED: rookie the Twins are openly managing — has not exceeded 4 IP / 60 pitches in any 2026 outing, so a short outing is the expectation (MLB.com)."
+    "flags": {
+      "il": true,
+      "trend": true
+    },
+    "proj": "~4.2 IP (13 outs)",
+    "note": "CONFIRMED: building back from hybrid Tommy John surgery (missed all of 2025) \u2014 Mets are managing him and he has not worked deep in 9 starts (2.87 ERA over 40.2 IP, ~4.5 IP/start with several 4-inning outings), so a short leash is expected (NBC Sports/Field Level Media)."
   },
   {
-    "key": "avila",
-    "tier": 3,
-    "score": 26,
-    "flags": { "trend": true },
-    "proj": "~5 IP (15 outs)",
-    "note": "Bulk reliever making a spot start; recent starts have reached ~5.2 IP and no per-start cap was announced — defer to market."
-  },
-  {
-    "key": "thornton",
+    "key": "jump",
     "tier": 3,
     "score": 22,
-    "flags": { "rookie": true },
+    "flags": {
+      "rookie": true
+    },
     "proj": "~5 IP (15 outs)",
-    "note": "Rookie kept in the rotation after the break; no confirmed per-start cap — defer to market."
+    "note": "Rookie lefty holding a rotation spot; no confirmed per-start cap \u2014 defer to market."
   },
   {
-    "key": "perkins",
+    "key": "kelly",
     "tier": 3,
-    "score": 20,
-    "flags": { "trend": true },
-    "proj": "~5 IP (15 outs)",
-    "note": "Swing/spot starter (2-5) with no announced per-start cap — defer to market."
-  },
-  {
-    "key": "sproat",
-    "tier": 3,
-    "score": 20,
-    "flags": { "rookie": true },
-    "proj": "~5 IP (15 outs)",
-    "note": "Rookie in the Milwaukee rotation; no announced cap — defer to market."
-  },
-  {
-    "key": "phillips",
-    "tier": 3,
-    "score": 18,
-    "flags": { "trend": true },
-    "proj": "~5 IP (15 outs)",
-    "note": "Reliever-turned-starter now holding a rotation spot (~5 IP recent); no confirmed per-start cap — defer to market."
-  },
-  {
-    "key": "chandler",
-    "tier": 3,
-    "score": 18,
-    "flags": { "rookie": true },
+    "score": 12,
+    "flags": {
+      "vet": true
+    },
     "proj": "~5.2 IP (16 outs)",
-    "note": "Top-prospect rookie now an established starter; no cap — defer to market."
+    "note": "Durable veteran, no cap announced \u2014 defer to market."
   },
   {
-    "key": "urena",
+    "key": "sale",
     "tier": 3,
-    "score": 15,
-    "flags": { "rookie": true },
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Rookie but now established (five straight 5+ IP starts); no cap — defer to market."
+    "score": 8,
+    "flags": {
+      "vet": true
+    },
+    "proj": "~6 IP (18 outs)",
+    "note": "Front-line workhorse (2.06 ERA) who works deep \u2014 defer to market."
   },
   {
-    "key": "wrobleski",
-    "tier": 3,
-    "score": 15,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Dodgers starter (10-2); no cap — defer to market."
-  },
-  {
-    "key": "rocker",
+    "key": "kremer",
     "tier": 3,
     "score": 14,
-    "flags": { "il": true },
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Past his TJ build-up with no announced per-start cap — defer to market."
+    "flags": {},
+    "proj": "~5.1 IP (16 outs)",
+    "note": "Established mid-rotation arm, no cap \u2014 defer to market."
   },
   {
-    "key": "lopez",
+    "key": "bennett",
+    "tier": 3,
+    "score": 24,
+    "flags": {
+      "rookie": true
+    },
+    "proj": "~5 IP (15 outs)",
+    "note": "Rookie lefty but has been reaching ~5 IP with no announced cap \u2014 defer to market."
+  },
+  {
+    "key": "rea",
     "tier": 3,
     "score": 12,
     "flags": {},
     "proj": "~5.2 IP (16 outs)",
-    "note": "Braves rotation regular; no cap — defer to market."
+    "note": "Durable innings-eater, no cap \u2014 defer to market."
   },
   {
-    "key": "peterson",
+    "key": "kay",
+    "tier": 3,
+    "score": 18,
+    "flags": {},
+    "proj": "~5 IP (15 outs)",
+    "note": "Back-end starter, no confirmed cap \u2014 defer to market."
+  },
+  {
+    "key": "singer",
+    "tier": 3,
+    "score": 15,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Established starter, no cap \u2014 defer to market."
+  },
+  {
+    "key": "williams",
     "tier": 3,
     "score": 12,
     "flags": {},
     "proj": "~5.2 IP (16 outs)",
-    "note": "Cubs rotation regular; no cap — defer to market."
+    "note": "Durable strikeout arm (10-5), no cap \u2014 defer to market."
   },
   {
-    "key": "messick",
+    "key": "hughes",
+    "tier": 3,
+    "score": 30,
+    "flags": {
+      "rookie": true
+    },
+    "proj": "~5 IP (15 outs)",
+    "note": "Rookie in just his 2nd-3rd career start (at Coors), but no specific pitch cap was reported \u2014 defer to market."
+  },
+  {
+    "key": "montero",
+    "tier": 3,
+    "score": 16,
+    "flags": {},
+    "proj": "~5 IP (15 outs)",
+    "note": "Established young starter, no cap \u2014 defer to market."
+  },
+  {
+    "key": "lambert",
+    "tier": 3,
+    "score": 20,
+    "flags": {},
+    "proj": "~5 IP (15 outs)",
+    "note": "Rotation regular, no cap \u2014 defer to market."
+  },
+  {
+    "key": "lugo",
+    "tier": 3,
+    "score": 10,
+    "flags": {
+      "vet": true
+    },
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Durable veteran, no cap \u2014 defer to market."
+  },
+  {
+    "key": "detmers",
+    "tier": 3,
+    "score": 26,
+    "flags": {
+      "trend": true
+    },
+    "proj": "~5 IP (15 outs)",
+    "note": "Has bounced between pen and rotation but is starting conventionally with no announced opener/piggyback \u2014 defer to market."
+  },
+  {
+    "key": "sasaki",
+    "tier": 3,
+    "score": 20,
+    "flags": {},
+    "proj": "~5.1 IP (16 outs)",
+    "note": "Early-season 90-pitch limit is long gone; a full rotation member (16 starts) by July, no current cap \u2014 defer to market."
+  },
+  {
+    "key": "alcantara",
+    "tier": 3,
+    "score": 8,
+    "flags": {
+      "vet": true
+    },
+    "proj": "~6 IP (18 outs)",
+    "note": "Workhorse who pitches deep, no cap \u2014 defer to market."
+  },
+  {
+    "key": "henderson",
+    "tier": 3,
+    "score": 30,
+    "flags": {
+      "rookie": true
+    },
+    "proj": "~5 IP (15 outs)",
+    "note": "Rookie the Brewers are lightly managing, but he has reached 5.1 IP on 76 pitches \u2014 no sub-5 cap announced, so defer to market."
+  },
+  {
+    "key": "ober",
     "tier": 3,
     "score": 12,
     "flags": {},
     "proj": "~5.2 IP (16 outs)",
-    "note": "Guardians rotation regular; no cap — defer to market."
+    "note": "Established starter, no cap \u2014 defer to market."
   },
   {
-    "key": "lorenzen",
+    "key": "cole",
     "tier": 3,
     "score": 12,
-    "flags": { "vet": true },
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Veteran innings-eater; no cap — defer to market."
+    "flags": {
+      "vet": true
+    },
+    "proj": "~6 IP (18 outs)",
+    "note": "Front-line arm who works deep, no cap \u2014 defer to market."
   },
   {
-    "key": "imai",
+    "key": "nola",
     "tier": 3,
-    "score": 12,
-    "flags": {},
-    "proj": "~6 IP (17 outs)",
-    "note": "Established starter; no cap — defer to market."
+    "score": 10,
+    "flags": {
+      "vet": true
+    },
+    "proj": "~6 IP (18 outs)",
+    "note": "Durable veteran, no cap \u2014 defer to market."
   },
   {
-    "key": "warren",
-    "tier": 3,
-    "score": 12,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Yankees rotation regular; no cap — defer to market."
-  },
-  {
-    "key": "buehler",
-    "tier": 3,
-    "score": 12,
-    "flags": { "vet": true },
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Veteran fully built up; no cap — defer to market."
-  },
-  {
-    "key": "mahle",
-    "tier": 3,
-    "score": 12,
-    "flags": { "vet": true },
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Veteran starter; no cap — defer to market."
-  },
-  {
-    "key": "liberatore",
-    "tier": 3,
-    "score": 12,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Cardinals rotation regular; no cap — defer to market."
-  },
-  {
-    "key": "rasmussen",
-    "tier": 3,
-    "score": 12,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Rays starter, fully stretched; no announced cap — defer to market."
-  },
-  {
-    "key": "mikolas",
-    "tier": 3,
-    "score": 12,
-    "flags": { "vet": true },
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Veteran innings-eater; no cap — defer to market."
-  },
-  {
-    "key": "bradish",
+    "key": "keller",
     "tier": 3,
     "score": 10,
     "flags": {},
-    "proj": "~6 IP (17 outs)",
-    "note": "Established starter fully built up; no cap — defer to market."
+    "proj": "~6 IP (18 outs)",
+    "note": "Durable innings-eater, no cap \u2014 defer to market."
   },
   {
-    "key": "suarez",
+    "key": "king",
     "tier": 3,
-    "score": 10,
-    "flags": { "vet": true },
-    "proj": "~6 IP (17 outs)",
-    "note": "Veteran lefty, built up; no cap — defer to market."
-  },
-  {
-    "key": "valdez",
-    "tier": 3,
-    "score": 8,
-    "flags": { "vet": true },
-    "proj": "~6.2 IP (19 outs)",
-    "note": "Workhorse who pitches deep; no cap — defer to market."
-  },
-  {
-    "key": "castillo",
-    "tier": 3,
-    "score": 8,
-    "flags": { "vet": true },
-    "proj": "~6.2 IP (19 outs)",
-    "note": "Durable veteran who works deep; no cap — defer to market."
-  },
-  {
-    "key": "gausman",
-    "tier": 3,
-    "score": 8,
-    "flags": { "vet": true },
-    "proj": "~6.2 IP (19 outs)",
-    "note": "Veteran workhorse; no cap — defer to market."
-  },
-  {
-    "key": "burns",
-    "tier": 3,
-    "score": 6,
+    "score": 12,
     "flags": {},
-    "proj": "~6.2 IP (19 outs)",
-    "note": "Front-line arm (11-1) who works deep; no cap — defer to market."
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Established starter, no cap \u2014 defer to market."
   },
   {
-    "key": "wheeler",
+    "key": "roupp",
     "tier": 3,
-    "score": 4,
-    "flags": { "vet": true },
-    "proj": "~6.2 IP (20 outs)",
-    "note": "Ace who routinely works deep; no cap — defer to market."
+    "score": 18,
+    "flags": {},
+    "proj": "~5 IP (15 outs)",
+    "note": "Rotation regular, no cap \u2014 defer to market."
+  },
+  {
+    "key": "hancock",
+    "tier": 3,
+    "score": 22,
+    "flags": {},
+    "proj": "~5 IP (15 outs)",
+    "note": "Back-end starter, no confirmed cap \u2014 defer to market."
+  },
+  {
+    "key": "mcgreevy",
+    "tier": 3,
+    "score": 18,
+    "flags": {},
+    "proj": "~5 IP (15 outs)",
+    "note": "Spot/back-end starter, no cap \u2014 defer to market."
+  },
+  {
+    "key": "jax",
+    "tier": 3,
+    "score": 32,
+    "flags": {
+      "trend": true
+    },
+    "proj": "~5 IP (15 outs)",
+    "note": "Converted reliever now a traditional starter (15 starts) topping out around 5 IP \u2014 the market already prices this, no announced hard cap \u2014 defer to market."
+  },
+  {
+    "key": "quantrill",
+    "tier": 3,
+    "score": 16,
+    "flags": {},
+    "proj": "~5 IP (15 outs)",
+    "note": "Established back-end starter, no cap \u2014 defer to market."
+  },
+  {
+    "key": "cavalli",
+    "tier": 3,
+    "score": 20,
+    "flags": {},
+    "proj": "~5.1 IP (16 outs)",
+    "note": "Tommy John build-up complete (cleared 120 IP in 2025); the Nationals imposed no 2026 workload restriction \u2014 defer to market."
   }
 ]
