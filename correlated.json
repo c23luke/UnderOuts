@@ -71,13 +71,13 @@
     "f5totPoint": 7,
     "f5totOver": -105,
     "f5totUnder": -125,
-    "f5Total": null,
-    "ovResult": null,
-    "oppF5": null,
-    "ownF5": null,
-    "mlResult": null,
-    "rlResult": null,
-    "graded": false
+    "f5Total": 12,
+    "ovResult": "W",
+    "oppF5": 6,
+    "ownF5": 6,
+    "mlResult": "P",
+    "rlResult": "L",
+    "graded": true
   },
   {
     "date": "2026-07-21",
