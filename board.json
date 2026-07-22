@@ -98,6 +98,20 @@
     "bet": false
   },
   {
+    "name": "Christian Scott",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": "Milwaukee Brewers",
+    "line": 15.5,
+    "under": -155,
+    "book": "Bovada",
+    "proj": 14,
+    "edge": 6,
+    "pUnder": 67,
+    "siera": null,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Merrill Kelly",
     "team": "Athletics @ Arizona Diamondbacks",
     "opp": "Athletics",
@@ -107,20 +121,6 @@
     "proj": 17.4,
     "edge": 6,
     "pUnder": 51,
-    "siera": null,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Christian Scott",
-    "team": "New York Mets @ Milwaukee Brewers",
-    "opp": "Milwaukee Brewers",
-    "line": 15.5,
-    "under": -160,
-    "book": "Bovada",
-    "proj": 14,
-    "edge": 5,
-    "pUnder": 67,
     "siera": null,
     "tag": null,
     "bet": false
@@ -224,20 +224,6 @@
     "bet": false
   },
   {
-    "name": "Logan Henderson",
-    "team": "New York Mets @ Milwaukee Brewers",
-    "opp": "New York Mets",
-    "line": 15.5,
-    "under": -165,
-    "book": "Bovada",
-    "proj": 15.1,
-    "edge": -8,
-    "pUnder": 54,
-    "siera": null,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Bailey Ober",
     "team": "Minnesota Twins @ Cleveland Guardians",
     "opp": "Cleveland Guardians",
@@ -247,6 +233,20 @@
     "proj": 16.9,
     "edge": -9,
     "pUnder": 46,
+    "siera": null,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Logan Henderson",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": "New York Mets",
+    "line": 15.5,
+    "under": -175,
+    "book": "Bovada",
+    "proj": 15.1,
+    "edge": -9,
+    "pUnder": 54,
     "siera": null,
     "tag": null,
     "bet": false
@@ -280,20 +280,6 @@
     "bet": false
   },
   {
-    "name": "Mitch Keller",
-    "team": "Pittsburgh Pirates @ New York Yankees",
-    "opp": "New York Yankees",
-    "line": 14.5,
-    "under": 115,
-    "book": "Bovada",
-    "proj": 15.9,
-    "edge": -13,
-    "pUnder": 33,
-    "siera": null,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Emerson Hancock",
     "team": "Cincinnati Reds @ Seattle Mariners",
     "opp": "Cincinnati Reds",
@@ -308,14 +294,28 @@
     "bet": false
   },
   {
+    "name": "Mitch Keller",
+    "team": "Pittsburgh Pirates @ New York Yankees",
+    "opp": "New York Yankees",
+    "line": 15.5,
+    "under": -160,
+    "book": "Bovada",
+    "proj": 15.9,
+    "edge": -16,
+    "pUnder": 45,
+    "siera": null,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Colin Rea",
     "team": "Detroit Tigers @ Chicago Cubs",
     "opp": "Detroit Tigers",
     "line": 15.5,
-    "under": -155,
+    "under": -160,
     "book": "Bovada",
     "proj": 15.9,
-    "edge": -16,
+    "edge": -17,
     "pUnder": 44,
     "siera": null,
     "tag": null,
@@ -359,6 +359,20 @@
     "proj": 18.3,
     "edge": -26,
     "pUnder": 28,
+    "siera": null,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Keider Montero",
+    "team": "Detroit Tigers @ Chicago Cubs",
+    "opp": "Chicago Cubs",
+    "line": 14.5,
+    "under": 115,
+    "book": "Bovada",
+    "proj": 17.2,
+    "edge": -30,
+    "pUnder": 16,
     "siera": null,
     "tag": null,
     "bet": false
