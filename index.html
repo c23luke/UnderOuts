@@ -105,10 +105,10 @@
 <script>
 const AMER=p=>(p==null?'':(p>0?('+'+p):(''+p)));
 function bu(a){a=+a;if(isNaN(a))a=-110;return a>=0?a/100:100/Math.abs(a);}
-let BOARD=[],BETS=[],HIST=[],CORR=[],SYS=[],PASS=[],HIGH=[],LIVE={};
+let BOARD=[],BETS=[],BETS25=[],HIST=[],CORR=[],SYS=[],PASS=[],HIGH=[],LIVE={};
 
 async function j(u){ try{const d=await fetch(u,{cache:'no-store'}).then(r=>r.ok?r.json():null); return Array.isArray(d)?d:[];}catch(e){return [];} }
-async function load(){ BOARD=await j('board.json'); BETS=await j('bets.json'); HIST=await j('history.json'); CORR=await j('correlated.json'); SYS=await j('systems.json'); HIGH=await j('highedge.json'); await live(); renderAll(); }
+async function load(){ BOARD=await j('board.json'); BETS=await j('bets.json'); BETS25=await j('bets25.json'); HIST=await j('history.json'); CORR=await j('correlated.json'); SYS=await j('systems.json'); HIGH=await j('highedge.json'); await live(); renderAll(); }
 async function live(){
   try{ const t=new Date().toLocaleDateString('en-CA');
     const s=await fetch('https://statsapi.mlb.com/api/v1/schedule?sportId=1&date='+t,{cache:'no-store'}).then(r=>r.json());
@@ -126,7 +126,7 @@ function renderAll(){ renderStats(); renderBets(); renderBets25(); renderBoard()
 
 function renderBets25(){
   const box=document.getElementById('bets25');
-  const plays=BOARD.filter(p=>p.edge>=25).sort((a,b)=>b.edge-a.edge);
+  const plays=(BETS25.length?BETS25:BOARD.filter(p=>p.edge>=25)).slice().sort((a,b)=>b.edge-a.edge);
   if(!plays.length){box.innerHTML='<div class="empty">No 25%+ edge plays today.</div>';return;}
   box.innerHTML=plays.map(p=>{
     const bad=(p.siera!=null&&p.siera>=4.4);
