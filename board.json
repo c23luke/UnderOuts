@@ -18,10 +18,10 @@
     "team": "San Francisco Giants @ Kansas City Royals",
     "opp": "Kansas City Royals",
     "line": 17.5,
-    "under": 115,
+    "under": 110,
     "book": "Bovada",
     "proj": 15,
-    "edge": 28,
+    "edge": 27,
     "pUnder": 74,
     "siera": 3.956859926471369,
     "tag": null,
@@ -112,20 +112,6 @@
     "bet": true
   },
   {
-    "name": "Hunter Dobbins",
-    "team": "St. Louis Cardinals @ Los Angeles Angels",
-    "opp": "Los Angeles Angels",
-    "line": 14.5,
-    "under": 110,
-    "book": "Bovada",
-    "proj": 14.1,
-    "edge": 8,
-    "pUnder": 55,
-    "siera": 4.0040699556350114,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Michael King",
     "team": "San Diego Padres @ Atlanta Braves",
     "opp": "Atlanta Braves",
@@ -136,6 +122,20 @@
     "edge": 7,
     "pUnder": 57,
     "siera": 4.486110759843315,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Hunter Dobbins",
+    "team": "St. Louis Cardinals @ Los Angeles Angels",
+    "opp": "Los Angeles Angels",
+    "line": 14.5,
+    "under": 105,
+    "book": "Bovada",
+    "proj": 14.1,
+    "edge": 7,
+    "pUnder": 55,
+    "siera": 4.0040699556350114,
     "tag": null,
     "bet": false
   },
@@ -224,20 +224,6 @@
     "bet": false
   },
   {
-    "name": "Cade Cavalli",
-    "team": "Washington Nationals @ Colorado Rockies",
-    "opp": "Colorado Rockies",
-    "line": 15.5,
-    "under": -115,
-    "book": "Bovada",
-    "proj": 15.3,
-    "edge": -2,
-    "pUnder": 52,
-    "siera": 3.5792185996431787,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Gabriel Hughes",
     "team": "Washington Nationals @ Colorado Rockies",
     "opp": null,
@@ -248,6 +234,20 @@
     "edge": -2,
     "pUnder": 45,
     "siera": null,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Cade Cavalli",
+    "team": "Washington Nationals @ Colorado Rockies",
+    "opp": "Colorado Rockies",
+    "line": 15.5,
+    "under": -120,
+    "book": "Bovada",
+    "proj": 15.3,
+    "edge": -3,
+    "pUnder": 52,
+    "siera": 3.5792185996431787,
     "tag": null,
     "bet": false
   },
