@@ -4,10 +4,10 @@
     "team": "Miami Marlins @ Houston Astros",
     "opp": "Miami Marlins",
     "line": 17.5,
-    "under": -120,
+    "under": -115,
     "book": "Bovada",
     "proj": 15,
-    "edge": 27,
+    "edge": 28,
     "pUnder": 82,
     "siera": 4.275659565055637,
     "tag": null,
@@ -26,34 +26,6 @@
     "siera": 4.667800439378493,
     "tag": "both",
     "bet": true
-  },
-  {
-    "name": "Michael King",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "Atlanta Braves",
-    "line": 16.5,
-    "under": 100,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 7,
-    "pUnder": 57,
-    "siera": 4.486110759843315,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Kyle Bradish",
-    "team": "Baltimore Orioles @ Boston Red Sox",
-    "opp": "Boston Red Sox",
-    "line": 17.5,
-    "under": -125,
-    "book": "Bovada",
-    "proj": 17.2,
-    "edge": -3,
-    "pUnder": 53,
-    "siera": 4.2824345224721325,
-    "tag": null,
-    "bet": false
   },
   {
     "name": "Keider Montero",
@@ -94,20 +66,6 @@
     "edge": -9,
     "pUnder": 53,
     "siera": 4.763844958985958,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Martin Perez",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "San Diego Padres",
-    "line": 14.5,
-    "under": -145,
-    "book": "Bovada",
-    "proj": 15.2,
-    "edge": -20,
-    "pUnder": 39,
-    "siera": 4.590966576498252,
     "tag": null,
     "bet": false
   }
