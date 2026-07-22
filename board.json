@@ -56,6 +56,20 @@
     "bet": false
   },
   {
+    "name": "Hunter Dobbins",
+    "team": "St. Louis Cardinals @ Los Angeles Angels",
+    "opp": "Los Angeles Angels",
+    "line": 14.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 14.1,
+    "edge": 5,
+    "pUnder": 55,
+    "siera": 4.011442096519411,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Christian Scott",
     "team": "New York Mets @ Milwaukee Brewers",
     "opp": "Milwaukee Brewers",
@@ -66,6 +80,20 @@
     "edge": 5,
     "pUnder": 67,
     "siera": 3.947958717647239,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Reid Detmers",
+    "team": "St. Louis Cardinals @ Los Angeles Angels",
+    "opp": "St. Louis Cardinals",
+    "line": 17.5,
+    "under": 105,
+    "book": "Bovada",
+    "proj": 17.7,
+    "edge": -1,
+    "pUnder": 48,
+    "siera": 3.6078757110940236,
     "tag": null,
     "bet": false
   },
