@@ -84,6 +84,20 @@
     "bet": false
   },
   {
+    "name": "Hunter Dobbins",
+    "team": "St. Louis Cardinals @ Los Angeles Angels",
+    "opp": "Los Angeles Angels",
+    "line": 14.5,
+    "under": -105,
+    "book": "Bovada",
+    "proj": 14.1,
+    "edge": 4,
+    "pUnder": 55,
+    "siera": 4.011442096519411,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Dean Kremer",
     "team": "Baltimore Orioles @ Boston Red Sox",
     "opp": "Boston Red Sox",
@@ -98,20 +112,6 @@
     "bet": false
   },
   {
-    "name": "Hunter Dobbins",
-    "team": "St. Louis Cardinals @ Los Angeles Angels",
-    "opp": "Los Angeles Angels",
-    "line": 14.5,
-    "under": -115,
-    "book": "Bovada",
-    "proj": 14.1,
-    "edge": 2,
-    "pUnder": 55,
-    "siera": 4.011442096519411,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Slade Cecconi",
     "team": "Minnesota Twins @ Cleveland Guardians",
     "opp": "Minnesota Twins",
@@ -122,6 +122,20 @@
     "edge": 2,
     "pUnder": 54,
     "siera": 4.484580103827527,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Michael King",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "Atlanta Braves",
+    "line": 16.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 16.5,
+    "edge": 0,
+    "pUnder": 50,
+    "siera": 4.493482900727715,
     "tag": null,
     "bet": false
   },
@@ -227,12 +241,12 @@
     "name": "Jake Bennett",
     "team": "Baltimore Orioles @ Boston Red Sox",
     "opp": "Baltimore Orioles",
-    "line": 16.5,
-    "under": 100,
+    "line": 17.5,
+    "under": -140,
     "book": "Bovada",
     "proj": 18.4,
-    "edge": -23,
-    "pUnder": 27,
+    "edge": -20,
+    "pUnder": 38,
     "siera": 3.890573527967539,
     "tag": null,
     "bet": false
