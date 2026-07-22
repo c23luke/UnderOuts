@@ -70,20 +70,6 @@
     "bet": false
   },
   {
-    "name": "Bailey Ober",
-    "team": "Minnesota Twins @ Cleveland Guardians",
-    "opp": "Cleveland Guardians",
-    "line": 16.5,
-    "under": -125,
-    "book": "Bovada",
-    "proj": 16,
-    "edge": 0,
-    "pUnder": 55,
-    "siera": 4.800546335291405,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Eric Lauer",
     "team": "Los Angeles Dodgers @ Philadelphia Phillies",
     "opp": "Philadelphia Phillies",
@@ -150,20 +136,6 @@
     "edge": -6,
     "pUnder": 56,
     "siera": 4.288459930983394,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Slade Cecconi",
-    "team": "Minnesota Twins @ Cleveland Guardians",
-    "opp": "Minnesota Twins",
-    "line": 15.5,
-    "under": -165,
-    "book": "Bovada",
-    "proj": 15.2,
-    "edge": -8,
-    "pUnder": 54,
-    "siera": 4.477207962943128,
     "tag": null,
     "bet": false
   },
