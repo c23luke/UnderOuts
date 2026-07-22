@@ -4,10 +4,10 @@
     "team": "Pittsburgh Pirates @ New York Yankees",
     "opp": "Pittsburgh Pirates",
     "line": 17.5,
-    "under": 135,
+    "under": 125,
     "book": "Bovada",
     "proj": 16.1,
-    "edge": 26,
+    "edge": 24,
     "pUnder": 68,
     "siera": 3.9083220752633534,
     "tag": null,
@@ -98,6 +98,20 @@
     "bet": false
   },
   {
+    "name": "Dean Kremer",
+    "team": "Baltimore Orioles @ Boston Red Sox",
+    "opp": "Boston Red Sox",
+    "line": 16.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 16,
+    "edge": 3,
+    "pUnder": 56,
+    "siera": 3.2353001263238377,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Reid Detmers",
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "St. Louis Cardinals",
@@ -178,6 +192,20 @@
     "edge": -14,
     "pUnder": 48,
     "siera": 3.1817674581531397,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Jake Bennett",
+    "team": "Baltimore Orioles @ Boston Red Sox",
+    "opp": "Baltimore Orioles",
+    "line": 17.5,
+    "under": -140,
+    "book": "Bovada",
+    "proj": 18.4,
+    "edge": -20,
+    "pUnder": 38,
+    "siera": 3.890573527967539,
     "tag": null,
     "bet": false
   }
