@@ -385,7 +385,13 @@
       "f5totPoint": 4.5,
       "f5totOver": -115,
       "f5totUnder": -115,
-      "graded": false
+      "graded": true,
+      "oppF5": 3,
+      "ownF5": 2,
+      "mlResult": "W",
+      "rlResult": "W",
+      "f5Total": 5,
+      "ovResult": "W"
     },
     "kay": {
       "date": "2026-07-22",
