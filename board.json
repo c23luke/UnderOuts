@@ -14,20 +14,6 @@
     "bet": false
   },
   {
-    "name": "Anthony Kay",
-    "team": "Chicago White Sox @ Texas Rangers",
-    "opp": "Texas Rangers",
-    "line": 15.5,
-    "under": -155,
-    "book": "Bovada",
-    "proj": 13.7,
-    "edge": 14,
-    "pUnder": 75,
-    "siera": 4.667800439378493,
-    "tag": "both",
-    "bet": true
-  },
-  {
     "name": "Bubba Chandler",
     "team": "Pittsburgh Pirates @ New York Yankees",
     "opp": "New York Yankees",
@@ -42,15 +28,29 @@
     "bet": true
   },
   {
+    "name": "Anthony Kay",
+    "team": "Chicago White Sox @ Texas Rangers",
+    "opp": "Texas Rangers",
+    "line": 15.5,
+    "under": -160,
+    "book": "Bovada",
+    "proj": 13.7,
+    "edge": 13,
+    "pUnder": 75,
+    "siera": 4.667800439378493,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "Michael King",
     "team": "San Diego Padres @ Atlanta Braves",
     "opp": "Atlanta Braves",
-    "line": 17.5,
-    "under": -145,
+    "line": 16.5,
+    "under": 100,
     "book": "Bovada",
     "proj": 16,
-    "edge": 11,
-    "pUnder": 70,
+    "edge": 7,
+    "pUnder": 57,
     "siera": 4.486110759843315,
     "tag": null,
     "bet": false
