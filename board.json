@@ -56,6 +56,20 @@
     "bet": false
   },
   {
+    "name": "Cade Cavalli",
+    "team": "Washington Nationals @ Colorado Rockies",
+    "opp": "Colorado Rockies",
+    "line": 15.5,
+    "under": -135,
+    "book": "Bovada",
+    "proj": 15.3,
+    "edge": -6,
+    "pUnder": 52,
+    "siera": 3.59688847850125,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Mitch Keller",
     "team": "Pittsburgh Pirates @ New York Yankees",
     "opp": "New York Yankees",
