@@ -1,19 +1,5 @@
 [
   {
-    "name": "Gerrit Cole",
-    "team": "Pittsburgh Pirates @ New York Yankees",
-    "opp": "Pittsburgh Pirates",
-    "line": 17.5,
-    "under": 130,
-    "book": "Bovada",
-    "proj": 16.1,
-    "edge": 25,
-    "pUnder": 68,
-    "siera": 3.9083220752633534,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Seth Lugo",
     "team": "San Francisco Giants @ Kansas City Royals",
     "opp": "San Francisco Giants",
@@ -154,6 +140,20 @@
     "bet": false
   },
   {
+    "name": "Logan Henderson",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": "New York Mets",
+    "line": 14.5,
+    "under": 130,
+    "book": "Bovada",
+    "proj": 15.7,
+    "edge": -6,
+    "pUnder": 37,
+    "siera": 3.1817674581531397,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Emerson Hancock",
     "team": "Cincinnati Reds @ Seattle Mariners",
     "opp": "Cincinnati Reds",
@@ -164,34 +164,6 @@
     "edge": -8,
     "pUnder": 49,
     "siera": 3.7479195553032616,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Mitch Keller",
-    "team": "Pittsburgh Pirates @ New York Yankees",
-    "opp": "New York Yankees",
-    "line": 15.5,
-    "under": -160,
-    "book": "Bovada",
-    "proj": 15.4,
-    "edge": -10,
-    "pUnder": 51,
-    "siera": 4.72027659838948,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Logan Henderson",
-    "team": "New York Mets @ Milwaukee Brewers",
-    "opp": "New York Mets",
-    "line": 15.5,
-    "under": -175,
-    "book": "Bovada",
-    "proj": 15.7,
-    "edge": -16,
-    "pUnder": 48,
-    "siera": 3.1817674581531397,
     "tag": null,
     "bet": false
   },
