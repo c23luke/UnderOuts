@@ -51,13 +51,13 @@
     "f5totPoint": 5,
     "f5totOver": 100,
     "f5totUnder": -130,
-    "f5Total": null,
-    "ovResult": null,
-    "oppF5": null,
-    "ownF5": null,
-    "mlResult": null,
-    "rlResult": null,
-    "graded": false
+    "f5Total": 6,
+    "ovResult": "W",
+    "oppF5": 5,
+    "ownF5": 1,
+    "mlResult": "W",
+    "rlResult": "W",
+    "graded": true
   },
   {
     "date": "2026-07-21",
@@ -111,13 +111,13 @@
     "f5totPoint": 4.5,
     "f5totOver": 100,
     "f5totUnder": -130,
-    "f5Total": null,
-    "ovResult": null,
-    "oppF5": null,
-    "ownF5": null,
-    "mlResult": null,
-    "rlResult": null,
-    "graded": false
+    "f5Total": 9,
+    "ovResult": "W",
+    "oppF5": 0,
+    "ownF5": 9,
+    "mlResult": "L",
+    "rlResult": "L",
+    "graded": true
   },
   {
     "date": "2026-07-20",
