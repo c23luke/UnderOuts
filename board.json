@@ -154,6 +154,20 @@
     "bet": false
   },
   {
+    "name": "Logan Henderson",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": "New York Mets",
+    "line": 14.5,
+    "under": 135,
+    "book": "Bovada",
+    "proj": 15.1,
+    "edge": 1,
+    "pUnder": 44,
+    "siera": null,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Cade Cavalli",
     "team": "Washington Nationals @ Colorado Rockies",
     "opp": "Colorado Rockies",
@@ -233,20 +247,6 @@
     "proj": 16.9,
     "edge": -9,
     "pUnder": 46,
-    "siera": null,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Logan Henderson",
-    "team": "New York Mets @ Milwaukee Brewers",
-    "opp": "New York Mets",
-    "line": 15.5,
-    "under": -175,
-    "book": "Bovada",
-    "proj": 15.1,
-    "edge": -9,
-    "pUnder": 54,
     "siera": null,
     "tag": null,
     "bet": false
