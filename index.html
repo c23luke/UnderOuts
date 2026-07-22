@@ -81,6 +81,9 @@
 
     <div class="lab" style="margin-top:26px">Recent results</div>
     <div id="hist"><div class="empty">No graded bets yet.</div></div>
+
+    <div class="lab" style="margin-top:26px">Passes · did skipping them help?</div>
+    <div id="passes"><div class="empty">Tracking the high-edge plays we passed on.</div></div>
   </div>
 
   <div id="tab-f5" style="display:none">
@@ -99,10 +102,10 @@
 <script>
 const AMER=p=>(p==null?'':(p>0?('+'+p):(''+p)));
 function bu(a){a=+a;if(isNaN(a))a=-110;return a>=0?a/100:100/Math.abs(a);}
-let BOARD=[],BETS=[],HIST=[],CORR=[],SYS=[],LIVE={};
+let BOARD=[],BETS=[],HIST=[],CORR=[],SYS=[],PASS=[],LIVE={};
 
 async function j(u){ try{const d=await fetch(u,{cache:'no-store'}).then(r=>r.ok?r.json():null); return Array.isArray(d)?d:[];}catch(e){return [];} }
-async function load(){ BOARD=await j('board.json'); BETS=await j('bets.json'); HIST=await j('history.json'); CORR=await j('correlated.json'); SYS=await j('systems.json'); await live(); renderAll(); }
+async function load(){ BOARD=await j('board.json'); BETS=await j('bets.json'); HIST=await j('history.json'); CORR=await j('correlated.json'); SYS=await j('systems.json'); PASS=await j('passes.json'); await live(); renderAll(); }
 async function live(){
   try{ const t=new Date().toLocaleDateString('en-CA');
     const s=await fetch('https://statsapi.mlb.com/api/v1/schedule?sportId=1&date='+t,{cache:'no-store'}).then(r=>r.json());
@@ -116,7 +119,17 @@ async function live(){
 }
 function lv(n){return LIVE[n.toLowerCase().split(' ').pop()];}
 
-function renderAll(){ renderStats(); renderBets(); renderBoard(); renderF5(); renderHist(); }
+function renderAll(){ renderStats(); renderBets(); renderBoard(); renderF5(); renderHist(); renderPasses(); }
+
+function renderPasses(){
+  const box=document.getElementById('passes'); if(!PASS.length)return;
+  const good=PASS.filter(p=>p.reason==='good arm');
+  const s=calcSys(good.map(p=>({won:p.won,price:p.price})));
+  const cap='<div class="syscap" style="margin:0 0 9px">If you’d bet these high-edge good arms instead of passing</div>';
+  const row='<div class="sysrow n"><div class="sysL">PASSED · good arm <b>'+(s.n?s.w+'-'+s.l+' · '+Math.round(s.w/s.n*100)+'%':'0-0')+'</b></div><div class="sysR"><span style="color:'+(s.u>=0?'var(--green)':'var(--red)')+'">'+(s.u>=0?'+':'')+s.u.toFixed(1)+'u</span><span style="color:'+(s.roi>=0?'var(--green)':'var(--red)')+'">'+(s.n?(s.roi>=0?'+':'')+Math.round(s.roi)+'%':'—')+'</span></div></div>';
+  const list=PASS.slice(0,15).map(p=>'<div class="hrow"><div><div>'+p.name+' <span style="color:var(--dim);font-size:11px">'+p.date+'</span></div><div class="t2">U'+p.line+' · +'+p.edge+'% · SIERA '+(p.siera!=null?p.siera.toFixed(2):'—')+' · '+p.actualOuts+' outs</div></div><b style="color:'+(p.won?'var(--green)':'var(--red)')+'">'+(p.won?'under':'OVER')+'</b></div>').join('');
+  box.innerHTML=cap+row+'<div style="height:12px"></div>'+list;
+}
 
 function tab(t){
   document.getElementById('tab-outs').style.display = t==='outs'?'':'none';
