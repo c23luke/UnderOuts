@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Under Outs</title>
 <style>
   :root{--bg:#0a0e14;--card:#111722;--card2:#161d2a;--line:#1e2836;--text:#eef3fa;--muted:#6b7789;--dim:#5f6b7d;--green:#00e58a;--amber:#e0a33a;--red:#ff5c5c}
@@ -126,11 +129,15 @@ function renderAll(){ renderStats(); renderBets(); renderBets25(); renderBoard()
 
 function renderBets25(){
   const box=document.getElementById('bets25');
-  const plays=(BETS25.length?BETS25:BOARD.filter(p=>p.edge>=25)).slice().sort((a,b)=>b.edge-a.edge);
+  // merge sticky list (bets25.json) with the live board's 25%+ so nothing drops off, whichever source lags
+  const m={};
+  (BETS25||[]).forEach(p=>{ m[p.name]={name:p.name,opp:p.opp,line:p.line,price:p.price,edge:p.edge,proj:p.proj,siera:p.siera}; });
+  (BOARD||[]).filter(p=>(p.edge||0)>=25).forEach(p=>{ if(!m[p.name]) m[p.name]={name:p.name,opp:p.opp,line:p.line,price:p.under,edge:p.edge,proj:p.proj,siera:p.siera}; });
+  const plays=Object.values(m).sort((a,b)=>b.edge-a.edge);
   if(!plays.length){box.innerHTML='<div class="empty">No 25%+ edge plays today.</div>';return;}
   box.innerHTML=plays.map(p=>{
     const bad=(p.siera!=null&&p.siera>=4.4);
-    return '<div class="bet'+(bad?'':' amber')+'"><div class="r1"><div><div class="nm">'+p.name+'</div><div class="sub">Under '+p.line+' · '+AMER(p.under)+(p.opp?' · vs '+p.opp:'')+'</div></div>'
+    return '<div class="bet'+(bad?'':' amber')+'"><div class="r1"><div><div class="nm">'+p.name+'</div><div class="sub">Under '+p.line+' · '+AMER(p.price)+(p.opp?' · vs '+p.opp:'')+'</div></div>'
       +'<div class="edge'+(bad?'':' amber')+'"><div class="e">+'+p.edge+'%</div><div class="l">EDGE</div></div></div>'
       +'<div class="row2"><span class="pill '+(bad?'g':'a')+'">'+(bad?'BAD ARM':'GOOD ARM')+'</span><span class="meta">SIERA '+(p.siera!=null?p.siera.toFixed(2):'—')+' · proj '+p.proj+' outs</span></div>'
       +liveLine(p.name,p.line)+'</div>';
