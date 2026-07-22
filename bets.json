@@ -10,6 +10,7 @@
     "price": 120,
     "proj": 16,
     "edge": 19,
+    "siera": 5.29,
     "tag": "badarm",
     "book": "Bovada",
     "auto": true
@@ -25,6 +26,7 @@
     "price": 105,
     "proj": 15.9,
     "edge": 18,
+    "siera": 4.47,
     "tag": "badarm",
     "book": "Bovada",
     "auto": true
@@ -40,6 +42,7 @@
     "price": -155,
     "proj": 13.7,
     "edge": 14,
+    "siera": 4.67,
     "tag": "both",
     "book": "Bovada",
     "auto": true
@@ -55,6 +58,7 @@
     "price": -105,
     "proj": 15.6,
     "edge": 11,
+    "siera": 4.47,
     "tag": "badarm",
     "book": "Bovada",
     "auto": true
