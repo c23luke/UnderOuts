@@ -126,6 +126,20 @@
     "bet": false
   },
   {
+    "name": "Griffin Jax",
+    "team": "Tampa Bay Rays @ Toronto Blue Jays",
+    "opp": "Toronto Blue Jays",
+    "line": 15.5,
+    "under": -175,
+    "book": "Bovada",
+    "proj": 14.3,
+    "edge": 0,
+    "pUnder": 63,
+    "siera": 3.68301279730026,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Reid Detmers",
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "St. Louis Cardinals",
