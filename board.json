@@ -14,20 +14,6 @@
     "bet": false
   },
   {
-    "name": "Landen Roupp",
-    "team": "San Francisco Giants @ Kansas City Royals",
-    "opp": "Kansas City Royals",
-    "line": 17.5,
-    "under": 110,
-    "book": "Bovada",
-    "proj": 15,
-    "edge": 27,
-    "pUnder": 74,
-    "siera": 3.956859926471369,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Reid Detmers",
     "team": "St. Louis Cardinals @ Los Angeles Angels",
     "opp": "St. Louis Cardinals",
@@ -56,48 +42,6 @@
     "bet": true
   },
   {
-    "name": "Seth Lugo",
-    "team": "San Francisco Giants @ Kansas City Royals",
-    "opp": "San Francisco Giants",
-    "line": 17.5,
-    "under": -105,
-    "book": "Bovada",
-    "proj": 15.9,
-    "edge": 18,
-    "pUnder": 69,
-    "siera": 4.466935111434066,
-    "tag": "both",
-    "bet": true
-  },
-  {
-    "name": "Christian Scott",
-    "team": "New York Mets @ Milwaukee Brewers",
-    "opp": "Milwaukee Brewers",
-    "line": 15.5,
-    "under": -155,
-    "book": "Bovada",
-    "proj": 13,
-    "edge": 16,
-    "pUnder": 77,
-    "siera": 3.9405865767628394,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Brady Singer",
-    "team": "Cincinnati Reds @ Seattle Mariners",
-    "opp": "Seattle Mariners",
-    "line": 17.5,
-    "under": -120,
-    "book": "Bovada",
-    "proj": 15.6,
-    "edge": 14,
-    "pUnder": 69,
-    "siera": 4.46934439108085,
-    "tag": "both",
-    "bet": true
-  },
-  {
     "name": "Anthony Kay",
     "team": "Chicago White Sox @ Texas Rangers",
     "opp": "Texas Rangers",
@@ -110,6 +54,20 @@
     "siera": 4.667800439378493,
     "tag": "both",
     "bet": true
+  },
+  {
+    "name": "Brady Singer",
+    "team": "Cincinnati Reds @ Seattle Mariners",
+    "opp": "Seattle Mariners",
+    "line": 17.5,
+    "under": -135,
+    "book": "Bovada",
+    "proj": 15.6,
+    "edge": 11,
+    "pUnder": 69,
+    "siera": 4.46934439108085,
+    "tag": null,
+    "bet": false
   },
   {
     "name": "Michael King",
@@ -136,20 +94,6 @@
     "edge": 7,
     "pUnder": 55,
     "siera": 4.0040699556350114,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Logan Henderson",
-    "team": "New York Mets @ Milwaukee Brewers",
-    "opp": "New York Mets",
-    "line": 14.5,
-    "under": 145,
-    "book": "Bovada",
-    "proj": 15,
-    "edge": 4,
-    "pUnder": 45,
-    "siera": 3.1743953172687402,
     "tag": null,
     "bet": false
   },
