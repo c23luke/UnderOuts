@@ -84,20 +84,6 @@
     "bet": false
   },
   {
-    "name": "Michael King",
-    "team": "San Diego Padres @ Atlanta Braves",
-    "opp": "Atlanta Braves",
-    "line": 17.5,
-    "under": -140,
-    "book": "Bovada",
-    "proj": 16.5,
-    "edge": 6,
-    "pUnder": 64,
-    "siera": 4.493482900727715,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Christian Scott",
     "team": "New York Mets @ Milwaukee Brewers",
     "opp": "Milwaukee Brewers",
@@ -178,6 +164,20 @@
     "edge": 1,
     "pUnder": 63,
     "siera": 3.68301279730026,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Michael King",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": "Atlanta Braves",
+    "line": 16.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 16.5,
+    "edge": 0,
+    "pUnder": 50,
+    "siera": 4.493482900727715,
     "tag": null,
     "bet": false
   },
