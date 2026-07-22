@@ -82,6 +82,9 @@
     <div class="lab" style="margin-top:26px">Recent results</div>
     <div id="hist"><div class="empty">No graded bets yet.</div></div>
 
+    <div class="lab" style="margin-top:26px">High edge · 25%+ · any arm</div>
+    <div id="highedge"><div class="empty">Tracking every 25%+ edge play, good arm or bad.</div></div>
+
     <div class="lab" style="margin-top:26px">Passes · did skipping them help?</div>
     <div id="passes"><div class="empty">Tracking the high-edge plays we passed on.</div></div>
   </div>
@@ -102,10 +105,10 @@
 <script>
 const AMER=p=>(p==null?'':(p>0?('+'+p):(''+p)));
 function bu(a){a=+a;if(isNaN(a))a=-110;return a>=0?a/100:100/Math.abs(a);}
-let BOARD=[],BETS=[],HIST=[],CORR=[],SYS=[],PASS=[],LIVE={};
+let BOARD=[],BETS=[],HIST=[],CORR=[],SYS=[],PASS=[],HIGH=[],LIVE={};
 
 async function j(u){ try{const d=await fetch(u,{cache:'no-store'}).then(r=>r.ok?r.json():null); return Array.isArray(d)?d:[];}catch(e){return [];} }
-async function load(){ BOARD=await j('board.json'); BETS=await j('bets.json'); HIST=await j('history.json'); CORR=await j('correlated.json'); SYS=await j('systems.json'); PASS=await j('passes.json'); await live(); renderAll(); }
+async function load(){ BOARD=await j('board.json'); BETS=await j('bets.json'); HIST=await j('history.json'); CORR=await j('correlated.json'); SYS=await j('systems.json'); PASS=await j('passes.json'); HIGH=await j('highedge.json'); await live(); renderAll(); }
 async function live(){
   try{ const t=new Date().toLocaleDateString('en-CA');
     const s=await fetch('https://statsapi.mlb.com/api/v1/schedule?sportId=1&date='+t,{cache:'no-store'}).then(r=>r.json());
@@ -119,7 +122,17 @@ async function live(){
 }
 function lv(n){return LIVE[n.toLowerCase().split(' ').pop()];}
 
-function renderAll(){ renderStats(); renderBets(); renderBoard(); renderF5(); renderHist(); renderPasses(); }
+function renderAll(){ renderStats(); renderBets(); renderBoard(); renderF5(); renderHist(); renderHigh(); renderPasses(); }
+
+function renderHigh(){
+  const box=document.getElementById('highedge'); if(!HIGH.length)return;
+  const s=calcSys(HIGH.map(p=>({won:p.won,price:p.price})));
+  const sb=calcSys(HIGH.filter(p=>p.bad).map(p=>({won:p.won,price:p.price})));
+  const cap='<div class="syscap" style="margin:0 0 9px">Every 25%+ edge play — betting all of them, blind to arm</div>';
+  const mk=(label,c)=> c.n? ('<div class="sysrow '+(c.roi>=0?'b':'a')+'"><div class="sysL">'+label+' <b>'+c.w+'-'+c.l+' · '+Math.round(c.w/c.n*100)+'%</b></div><div class="sysR"><span style="color:'+(c.u>=0?'var(--green)':'var(--red)')+'">'+(c.u>=0?'+':'')+c.u.toFixed(1)+'u</span><span style="color:'+(c.roi>=0?'var(--green)':'var(--red)')+'">'+(c.roi>=0?'+':'')+Math.round(c.roi)+'%</span></div></div>') : '';
+  const list=HIGH.slice(0,15).map(p=>'<div class="hrow"><div><div>'+(p.bad?'<span style="color:var(--green)">●</span> ':'<span style="color:var(--amber)">●</span> ')+p.name+' <span style="color:var(--dim);font-size:11px">'+p.date+'</span></div><div class="t2">U'+p.line+' · +'+p.edge+'% · SIERA '+(p.siera!=null?p.siera.toFixed(2):'—')+' · '+p.actualOuts+' outs</div></div><b style="color:'+(p.won?'var(--green)':'var(--red)')+'">'+(p.won?'under':'OVER')+'</b></div>').join('');
+  box.innerHTML=cap+mk('25%+ · all arms',s)+mk('25%+ · bad arm',sb)+'<div style="height:12px"></div>'+list;
+}
 
 function renderPasses(){
   const box=document.getElementById('passes'); if(!PASS.length)return;
