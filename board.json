@@ -126,6 +126,20 @@
     "bet": false
   },
   {
+    "name": "Emerson Hancock",
+    "team": "Cincinnati Reds @ Seattle Mariners",
+    "opp": "Cincinnati Reds",
+    "line": 16.5,
+    "under": -135,
+    "book": "Bovada",
+    "proj": 16.6,
+    "edge": -9,
+    "pUnder": 49,
+    "siera": 3.7479195553032616,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Mitch Keller",
     "team": "Pittsburgh Pirates @ New York Yankees",
     "opp": "New York Yankees",
