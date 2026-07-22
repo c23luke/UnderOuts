@@ -126,6 +126,20 @@
     "bet": false
   },
   {
+    "name": "Reid Detmers",
+    "team": "St. Louis Cardinals @ Los Angeles Angels",
+    "opp": "St. Louis Cardinals",
+    "line": 17.5,
+    "under": 110,
+    "book": "Bovada",
+    "proj": 17.7,
+    "edge": 0,
+    "pUnder": 48,
+    "siera": 3.6078757110940236,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Michael King",
     "team": "San Diego Padres @ Atlanta Braves",
     "opp": "Atlanta Braves",
@@ -150,20 +164,6 @@
     "edge": 0,
     "pUnder": 63,
     "siera": 3.68301279730026,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Reid Detmers",
-    "team": "St. Louis Cardinals @ Los Angeles Angels",
-    "opp": "St. Louis Cardinals",
-    "line": 17.5,
-    "under": 105,
-    "book": "Bovada",
-    "proj": 17.7,
-    "edge": -1,
-    "pUnder": 48,
-    "siera": 3.6078757110940236,
     "tag": null,
     "bet": false
   },
