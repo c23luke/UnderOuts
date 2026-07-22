@@ -42,6 +42,20 @@
     "bet": true
   },
   {
+    "name": "Anthony Kay",
+    "team": "Chicago White Sox @ Texas Rangers",
+    "opp": "Texas Rangers",
+    "line": 15.5,
+    "under": -155,
+    "book": "Bovada",
+    "proj": 13.7,
+    "edge": 14,
+    "pUnder": 75,
+    "siera": 4.675172580262893,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "Landen Roupp",
     "team": "San Francisco Giants @ Kansas City Royals",
     "opp": "Kansas City Royals",
@@ -52,20 +66,6 @@
     "edge": 9,
     "pUnder": 59,
     "siera": 3.9642320673557685,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Eric Lauer",
-    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
-    "opp": "Philadelphia Phillies",
-    "line": 15.5,
-    "under": -110,
-    "book": "Bovada",
-    "proj": 14.7,
-    "edge": 7,
-    "pUnder": 59,
-    "siera": 5.398884345910392,
     "tag": null,
     "bet": false
   },
@@ -94,6 +94,20 @@
     "edge": 3,
     "pUnder": 56,
     "siera": 3.2353001263238377,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Eric Lauer",
+    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
+    "opp": "Philadelphia Phillies",
+    "line": 15.5,
+    "under": -130,
+    "book": "Bovada",
+    "proj": 14.7,
+    "edge": 3,
+    "pUnder": 59,
+    "siera": 5.398884345910392,
     "tag": null,
     "bet": false
   },
@@ -206,6 +220,20 @@
     "edge": -4,
     "pUnder": 48,
     "siera": 3.6078757110940236,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Colin Rea",
+    "team": "Detroit Tigers @ Chicago Cubs",
+    "opp": "Detroit Tigers",
+    "line": 15.5,
+    "under": -150,
+    "book": "Bovada",
+    "proj": 15.3,
+    "edge": -7,
+    "pUnder": 53,
+    "siera": 4.771217099870357,
     "tag": null,
     "bet": false
   },

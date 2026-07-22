@@ -60,6 +60,26 @@
     "graded": false
   },
   {
+    "date": "2026-07-22",
+    "pitcher": "Anthony Kay",
+    "short": true,
+    "underLine": 15.5,
+    "oppTeam": "Texas Rangers",
+    "f5ml": -115,
+    "f5rlPoint": -0.5,
+    "f5rlPrice": 115,
+    "f5totPoint": 5,
+    "f5totOver": 100,
+    "f5totUnder": -130,
+    "f5Total": null,
+    "ovResult": null,
+    "oppF5": null,
+    "ownF5": null,
+    "mlResult": null,
+    "rlResult": null,
+    "graded": false
+  },
+  {
     "date": "2026-07-21",
     "pitcher": "Luinder Avila",
     "short": true,

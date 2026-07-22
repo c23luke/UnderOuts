@@ -43,5 +43,20 @@
     "tag": "badarm",
     "book": "Bovada",
     "auto": true
+  },
+  {
+    "id": "2026-07-22|kay",
+    "date": "2026-07-22",
+    "name": "Anthony Kay",
+    "team": "Chicago White Sox @ Texas Rangers",
+    "opp": "Texas Rangers",
+    "line": 15.5,
+    "side": "under",
+    "price": -155,
+    "proj": 13.7,
+    "edge": 14,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
   }
 ]
