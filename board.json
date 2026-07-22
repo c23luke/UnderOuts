@@ -56,6 +56,20 @@
     "bet": true
   },
   {
+    "name": "Peter Lambert",
+    "team": "Miami Marlins @ Houston Astros",
+    "opp": "Miami Marlins",
+    "line": 17.5,
+    "under": 105,
+    "book": "Bovada",
+    "proj": 16.9,
+    "edge": 10,
+    "pUnder": 59,
+    "siera": 4.382264000137164,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Landen Roupp",
     "team": "San Francisco Giants @ Kansas City Royals",
     "opp": "Kansas City Royals",
@@ -224,6 +238,20 @@
     "bet": false
   },
   {
+    "name": "Logan Henderson",
+    "team": "New York Mets @ Milwaukee Brewers",
+    "opp": "New York Mets",
+    "line": 14.5,
+    "under": 135,
+    "book": "Bovada",
+    "proj": 15.7,
+    "edge": -5,
+    "pUnder": 37,
+    "siera": 3.1817674581531397,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Colin Rea",
     "team": "Detroit Tigers @ Chicago Cubs",
     "opp": "Detroit Tigers",
@@ -238,6 +266,20 @@
     "bet": false
   },
   {
+    "name": "Sandy Alcantara",
+    "team": "Miami Marlins @ Houston Astros",
+    "opp": "Houston Astros",
+    "line": 18.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 19.1,
+    "edge": -10,
+    "pUnder": 43,
+    "siera": 4.389433343744845,
+    "tag": null,
+    "bet": false
+  },
+  {
     "name": "Emerson Hancock",
     "team": "Cincinnati Reds @ Seattle Mariners",
     "opp": "Cincinnati Reds",
@@ -248,20 +290,6 @@
     "edge": -13,
     "pUnder": 38,
     "siera": 3.7479195553032616,
-    "tag": null,
-    "bet": false
-  },
-  {
-    "name": "Logan Henderson",
-    "team": "New York Mets @ Milwaukee Brewers",
-    "opp": "New York Mets",
-    "line": 15.5,
-    "under": -170,
-    "book": "Bovada",
-    "proj": 15.7,
-    "edge": -15,
-    "pUnder": 48,
-    "siera": 3.1817674581531397,
     "tag": null,
     "bet": false
   },
