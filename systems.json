@@ -25,6 +25,18 @@
   },
   {
     "date": "2026-07-21",
+    "name": "Matthew Liberatore",
+    "line": 15.5,
+    "price": -180,
+    "proj": 14.5,
+    "siera": 4.44,
+    "actualOuts": 16,
+    "won": false,
+    "short": true,
+    "sharp": false
+  },
+  {
+    "date": "2026-07-21",
     "name": "Michael Lorenzen",
     "line": 14.5,
     "price": 110,

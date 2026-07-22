@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-07-22",
+    "pitcher": "Seth Lugo",
+    "short": false,
+    "underLine": 17.5,
+    "oppTeam": "San Francisco Giants",
+    "f5ml": -125,
+    "f5rlPoint": -0.5,
+    "f5rlPrice": 110,
+    "f5totPoint": 4.5,
+    "f5totOver": -130,
+    "f5totUnder": 100,
+    "f5Total": null,
+    "ovResult": null,
+    "oppF5": null,
+    "ownF5": null,
+    "mlResult": null,
+    "rlResult": null,
+    "graded": false
+  },
+  {
     "date": "2026-07-21",
     "pitcher": "Luinder Avila",
     "short": true,
