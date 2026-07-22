@@ -266,20 +266,6 @@
     "bet": false
   },
   {
-    "name": "Aaron Nola",
-    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
-    "opp": "Los Angeles Dodgers",
-    "line": 14.5,
-    "under": 120,
-    "book": "Bovada",
-    "proj": 15.1,
-    "edge": -4,
-    "pUnder": 41,
-    "siera": 3.868947576757053,
-    "tag": null,
-    "bet": false
-  },
-  {
     "name": "Sandy Alcantara",
     "team": "Miami Marlins @ Houston Astros",
     "opp": "Houston Astros",
@@ -290,6 +276,20 @@
     "edge": -5,
     "pUnder": 56,
     "siera": 4.288459930983394,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Aaron Nola",
+    "team": "Los Angeles Dodgers @ Philadelphia Phillies",
+    "opp": "Los Angeles Dodgers",
+    "line": 15.5,
+    "under": -160,
+    "book": "Bovada",
+    "proj": 15.1,
+    "edge": -6,
+    "pUnder": 56,
+    "siera": 3.868947576757053,
     "tag": null,
     "bet": false
   },
