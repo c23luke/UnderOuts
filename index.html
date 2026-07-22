@@ -73,8 +73,11 @@
     <div class="stats" id="stats"></div>
     <div class="systems" id="systems"></div>
 
-    <div class="lab">Tonight's bets</div>
+    <div class="lab">Tonight's bets · bad arm</div>
     <div id="bets"></div>
+
+    <div class="lab" style="margin-top:26px">Tonight · 25%+ edge · any arm</div>
+    <div id="bets25"><div class="empty">No 25%+ edge plays today.</div></div>
 
     <div class="lab" style="margin-top:26px">Today's slate · pitcher vs opponent · ranked by edge</div>
     <div id="board"><div class="empty">Waiting on the model — start the bot on your Mac. Updates every 10 min.</div></div>
@@ -82,7 +85,7 @@
     <div class="lab" style="margin-top:26px">Recent results</div>
     <div id="hist"><div class="empty">No graded bets yet.</div></div>
 
-    <div class="lab" style="margin-top:26px">All 25%+ edge plays · any arm</div>
+    <div class="lab" style="margin-top:26px">All 25%+ bets · results (tracked)</div>
     <div id="highedge"><div class="empty">Tracking every 25%+ edge play, good arm or bad.</div></div>
   </div>
 
@@ -119,7 +122,20 @@ async function live(){
 }
 function lv(n){return LIVE[n.toLowerCase().split(' ').pop()];}
 
-function renderAll(){ renderStats(); renderBets(); renderBoard(); renderF5(); renderHist(); renderHigh(); }
+function renderAll(){ renderStats(); renderBets(); renderBets25(); renderBoard(); renderF5(); renderHist(); renderHigh(); }
+
+function renderBets25(){
+  const box=document.getElementById('bets25');
+  const plays=BOARD.filter(p=>p.edge>=25).sort((a,b)=>b.edge-a.edge);
+  if(!plays.length){box.innerHTML='<div class="empty">No 25%+ edge plays today.</div>';return;}
+  box.innerHTML=plays.map(p=>{
+    const bad=(p.siera!=null&&p.siera>=4.4);
+    return '<div class="bet'+(bad?'':' amber')+'"><div class="r1"><div><div class="nm">'+p.name+'</div><div class="sub">Under '+p.line+' · '+AMER(p.under)+(p.opp?' · vs '+p.opp:'')+'</div></div>'
+      +'<div class="edge'+(bad?'':' amber')+'"><div class="e">+'+p.edge+'%</div><div class="l">EDGE</div></div></div>'
+      +'<div class="row2"><span class="pill '+(bad?'g':'a')+'">'+(bad?'BAD ARM':'GOOD ARM')+'</span><span class="meta">SIERA '+(p.siera!=null?p.siera.toFixed(2):'—')+' · proj '+p.proj+' outs</span></div>'
+      +liveLine(p.name,p.line)+'</div>';
+  }).join('');
+}
 
 function renderHigh(){
   const box=document.getElementById('highedge'); if(!HIGH.length)return;
