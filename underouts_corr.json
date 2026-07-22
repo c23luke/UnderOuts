@@ -369,7 +369,13 @@
       "f5totPoint": 5,
       "f5totOver": -105,
       "f5totUnder": -125,
-      "graded": false
+      "graded": true,
+      "oppF5": 2,
+      "ownF5": 9,
+      "mlResult": "L",
+      "rlResult": "L",
+      "f5Total": 11,
+      "ovResult": "W"
     },
     "singer": {
       "date": "2026-07-22",
