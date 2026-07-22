@@ -347,7 +347,13 @@
       "f5totPoint": 4.5,
       "f5totOver": -130,
       "f5totUnder": 100,
-      "graded": false
+      "graded": true,
+      "oppF5": 0,
+      "ownF5": 0,
+      "mlResult": "P",
+      "rlResult": "L",
+      "f5Total": 0,
+      "ovResult": "L"
     },
     "kelly": {
       "date": "2026-07-22",
@@ -413,7 +419,13 @@
       "f5totPoint": 4.5,
       "f5totOver": -125,
       "f5totUnder": -105,
-      "graded": false
+      "graded": true,
+      "oppF5": 0,
+      "ownF5": 0,
+      "mlResult": "P",
+      "rlResult": "W",
+      "f5Total": 0,
+      "ovResult": "L"
     },
     "lambert": {
       "date": "2026-07-22",

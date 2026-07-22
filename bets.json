@@ -24,7 +24,7 @@
     "side": "under",
     "price": 120,
     "proj": 16,
-    "edge": 16,
+    "edge": 18,
     "tag": "badarm",
     "book": "Bovada",
     "auto": true
