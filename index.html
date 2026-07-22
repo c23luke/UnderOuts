@@ -151,10 +151,11 @@ function renderHigh(){
   const box=document.getElementById('highedge'); if(!HIGH.length)return;
   const s=calcSys(HIGH.map(p=>({won:p.won,price:p.price})));
   const sb=calcSys(HIGH.filter(p=>p.bad).map(p=>({won:p.won,price:p.price})));
+  const sg=calcSys(HIGH.filter(p=>!p.bad).map(p=>({won:p.won,price:p.price})));
   const cap='<div class="syscap" style="margin:0 0 9px">Every 25%+ edge play — betting all of them, blind to arm</div>';
   const mk=(label,c)=> c.n? ('<div class="sysrow '+(c.roi>=0?'b':'a')+'"><div class="sysL">'+label+' <b>'+c.w+'-'+c.l+' · '+Math.round(c.w/c.n*100)+'%</b></div><div class="sysR"><span style="color:'+(c.u>=0?'var(--green)':'var(--red)')+'">'+(c.u>=0?'+':'')+c.u.toFixed(1)+'u</span><span style="color:'+(c.roi>=0?'var(--green)':'var(--red)')+'">'+(c.roi>=0?'+':'')+Math.round(c.roi)+'%</span></div></div>') : '';
   const list=HIGH.slice(0,15).map(p=>'<div class="hrow"><div><div>'+(p.bad?'<span style="color:var(--green)">●</span> ':'<span style="color:var(--amber)">●</span> ')+p.name+' <span style="color:var(--dim);font-size:11px">'+p.date+'</span></div><div class="t2">U'+p.line+' · +'+p.edge+'% · SIERA '+(p.siera!=null?p.siera.toFixed(2):'—')+' · '+p.actualOuts+' outs</div></div><b style="color:'+(p.won?'var(--green)':'var(--red)')+'">'+(p.won?'under':'OVER')+'</b></div>').join('');
-  box.innerHTML=cap+mk('25%+ · all arms',s)+mk('25%+ · bad arm',sb)+'<div style="height:12px"></div>'+list;
+  box.innerHTML=cap+mk('25%+ · all arms',s)+mk('25%+ · bad arm',sb)+mk('25%+ · good arm',sg)+'<div style="height:12px"></div>'+list;
 }
 
 function tab(t){
