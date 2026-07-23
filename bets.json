@@ -13,5 +13,20 @@
     "tag": "both",
     "book": "Bovada",
     "auto": true
+  },
+  {
+    "id": "2026-07-23|mcgreevy",
+    "date": "2026-07-23",
+    "name": "Michael McGreevy",
+    "team": "Arizona Diamondbacks @ St. Louis Cardinals",
+    "opp": "Arizona Diamondbacks",
+    "line": 17.5,
+    "side": "under",
+    "price": -140,
+    "proj": 15,
+    "edge": 25,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
   }
 ]

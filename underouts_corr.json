@@ -512,6 +512,24 @@
       "f5totOver": -120,
       "f5totUnder": -110,
       "graded": false
+    },
+    "mcgreevy": {
+      "date": "2026-07-23",
+      "pitcher": "Michael McGreevy",
+      "short": true,
+      "edge": 25,
+      "bad": true,
+      "underLine": 17.5,
+      "oppTeam": "Arizona Diamondbacks",
+      "oppSide": "away",
+      "gamePk": 823042,
+      "f5ml": 100,
+      "f5rlPoint": 0.5,
+      "f5rlPrice": -135,
+      "f5totPoint": 4.5,
+      "f5totOver": -120,
+      "f5totUnder": -110,
+      "graded": false
     }
   }
 }

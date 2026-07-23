@@ -14,6 +14,20 @@
     "bet": true
   },
   {
+    "name": "Michael McGreevy",
+    "team": "Arizona Diamondbacks @ St. Louis Cardinals",
+    "opp": "Arizona Diamondbacks",
+    "line": 17.5,
+    "under": -140,
+    "book": "Bovada",
+    "proj": 15,
+    "edge": 25,
+    "pUnder": 83,
+    "siera": 4.4481959548595,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "Gavin Williams",
     "team": "Minnesota Twins @ Cleveland Guardians",
     "opp": "Minnesota Twins",
@@ -38,6 +52,20 @@
     "edge": 11,
     "pUnder": 72,
     "siera": 3.526255836631297,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Brandon Pfaadt",
+    "team": "Arizona Diamondbacks @ St. Louis Cardinals",
+    "opp": "St. Louis Cardinals",
+    "line": 16.5,
+    "under": -125,
+    "book": "Bovada",
+    "proj": 15.9,
+    "edge": 4,
+    "pUnder": 59,
+    "siera": 4.345278797731922,
     "tag": null,
     "bet": false
   },

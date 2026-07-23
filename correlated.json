@@ -22,6 +22,28 @@
     "graded": false
   },
   {
+    "date": "2026-07-23",
+    "pitcher": "Michael McGreevy",
+    "short": true,
+    "edge": 25,
+    "bad": true,
+    "underLine": 17.5,
+    "oppTeam": "Arizona Diamondbacks",
+    "f5ml": 100,
+    "f5rlPoint": 0.5,
+    "f5rlPrice": -135,
+    "f5totPoint": 4.5,
+    "f5totOver": -120,
+    "f5totUnder": -110,
+    "f5Total": null,
+    "ovResult": null,
+    "oppF5": null,
+    "ownF5": null,
+    "mlResult": null,
+    "rlResult": null,
+    "graded": false
+  },
+  {
     "date": "2026-07-22",
     "pitcher": "Seth Lugo",
     "short": false,

@@ -8,5 +8,15 @@
     "proj": 13.1,
     "siera": 5.51,
     "bad": true
+  },
+  {
+    "name": "Michael McGreevy",
+    "opp": "Arizona Diamondbacks",
+    "line": 17.5,
+    "price": -140,
+    "edge": 25,
+    "proj": 15,
+    "siera": 4.45,
+    "bad": true
   }
 ]
