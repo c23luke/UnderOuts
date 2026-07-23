@@ -4,10 +4,10 @@
     "team": "Tampa Bay Rays @ Toronto Blue Jays",
     "opp": "Tampa Bay Rays",
     "line": 16.5,
-    "under": -115,
+    "under": -125,
     "book": "Bovada",
     "proj": 13.1,
-    "edge": 32,
+    "edge": 30,
     "pUnder": 85,
     "siera": 5.511964921667868,
     "tag": "both",
@@ -94,6 +94,20 @@
     "edge": -6,
     "pUnder": 56,
     "siera": 3.1171686269117496,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Troy Melton",
+    "team": "Kansas City Royals @ Detroit Tigers",
+    "opp": "Kansas City Royals",
+    "line": 17.5,
+    "under": -120,
+    "book": "Bovada",
+    "proj": 18.1,
+    "edge": -12,
+    "pUnder": 42,
+    "siera": 3.9290357294507667,
     "tag": null,
     "bet": false
   }
