@@ -473,7 +473,13 @@
       "f5totPoint": 5,
       "f5totOver": -125,
       "f5totUnder": -105,
-      "graded": false
+      "graded": true,
+      "oppF5": 0,
+      "ownF5": 0,
+      "mlResult": "P",
+      "rlResult": "L",
+      "f5Total": 0,
+      "ovResult": "L"
     }
   }
 }
