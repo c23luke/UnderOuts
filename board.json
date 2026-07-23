@@ -12,5 +12,19 @@
     "siera": null,
     "tag": null,
     "bet": false
+  },
+  {
+    "name": "Chris Sale",
+    "team": "San Diego Padres @ Atlanta Braves",
+    "opp": null,
+    "line": 18.5,
+    "under": -160,
+    "book": "Bovada",
+    "proj": 18,
+    "edge": -6,
+    "pUnder": 55,
+    "siera": null,
+    "tag": null,
+    "bet": false
   }
 ]

@@ -5243,6 +5243,36 @@
       "line25": null,
       "price25": null,
       "graded": false
+    },
+    "sale": {
+      "date": "2026-07-22",
+      "name": "Chris Sale",
+      "team": "San Diego Padres @ Atlanta Braves",
+      "oppName": null,
+      "line": 18.5,
+      "under": -160,
+      "proj": 18,
+      "mean": null,
+      "sd": 3.8,
+      "n": null,
+      "siera": null,
+      "oppOPS": null,
+      "edge": -6,
+      "pUnder": 55,
+      "bet": false,
+      "reason": "cap",
+      "capped": true,
+      "book": "Bovada",
+      "betLine": null,
+      "betPrice": null,
+      "betTagV": null,
+      "betTime": null,
+      "firstPitch": "2026-07-23T16:16:00Z",
+      "hi25": false,
+      "edge25": null,
+      "line25": null,
+      "price25": null,
+      "graded": false
     }
   }
 }
