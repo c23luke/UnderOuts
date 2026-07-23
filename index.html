@@ -111,7 +111,7 @@ function bu(a){a=+a;if(isNaN(a))a=-110;return a>=0?a/100:100/Math.abs(a);}
 let BOARD=[],BETS=[],BETS25=[],HIST=[],CORR=[],SYS=[],PASS=[],HIGH=[],LIVE={};
 
 // Data is pulled straight from GitHub (raw) so it updates the instant the bot pushes — no Vercel redeploy needed.
-const RAW='https://raw.githubusercontent.com/c23luke/UnderOuts/main/';
+const RAW='https://raw.githubusercontent.com/c23luke/UnderOuts/data/';
 async function j(u){ try{const d=await fetch(RAW+u+'?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null); if(Array.isArray(d))return d;}catch(e){}
   try{const d=await fetch(u+'?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null); return Array.isArray(d)?d:[];}catch(e){return [];} }
 async function load(){ BOARD=await j('board.json'); BETS=await j('bets.json'); BETS25=await j('bets25.json'); HIST=await j('history.json'); CORR=await j('correlated.json'); SYS=await j('systems.json'); HIGH=await j('highedge.json'); await live(); renderAll(); }
