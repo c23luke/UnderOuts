@@ -1,5 +1,41 @@
 [
   {
+    "date": "2026-07-22",
+    "name": "Peter Lambert",
+    "line": 17.5,
+    "price": -115,
+    "siera": 4.28,
+    "proj": 15,
+    "edge": 28,
+    "actualOuts": 18,
+    "won": false,
+    "bad": false
+  },
+  {
+    "date": "2026-07-22",
+    "name": "Landen Roupp",
+    "line": 17.5,
+    "price": 110,
+    "siera": 3.96,
+    "proj": 15,
+    "edge": 27,
+    "actualOuts": 18,
+    "won": false,
+    "bad": false
+  },
+  {
+    "date": "2026-07-22",
+    "name": "Gerrit Cole",
+    "line": 17.5,
+    "price": 135,
+    "siera": 3.9,
+    "proj": 16.1,
+    "edge": 26,
+    "actualOuts": 21,
+    "won": false,
+    "bad": false
+  },
+  {
     "date": "2026-07-21",
     "name": "Tatsuya Imai",
     "line": 14.5,

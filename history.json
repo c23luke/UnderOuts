@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-07-22",
+    "name": "Anthony Kay",
+    "line": 15.5,
+    "price": -155,
+    "proj": 13.7,
+    "siera": 4.67,
+    "edge": 13,
+    "actualOuts": 15,
+    "won": true,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-22",
+    "name": "Bubba Chandler",
+    "line": 14.5,
+    "price": 125,
+    "proj": 13.9,
+    "siera": 5.06,
+    "edge": 13,
+    "actualOuts": 19,
+    "won": false,
+    "tag": "both"
+  },
+  {
+    "date": "2026-07-22",
+    "name": "Merrill Kelly",
+    "line": 17.5,
+    "price": 120,
+    "proj": 16,
+    "siera": 5.29,
+    "edge": 18,
+    "actualOuts": 15,
+    "won": true,
+    "tag": "badarm"
+  },
+  {
+    "date": "2026-07-22",
+    "name": "Seth Lugo",
+    "line": 17.5,
+    "price": 105,
+    "proj": 15.9,
+    "siera": 4.47,
+    "edge": 18,
+    "actualOuts": 21,
+    "won": false,
+    "tag": "badarm"
+  },
+  {
     "date": "2026-07-21",
     "name": "David Peterson",
     "line": 15.5,

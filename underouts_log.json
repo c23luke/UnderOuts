@@ -4342,11 +4342,13 @@
       "betTagV": null,
       "betTime": null,
       "firstPitch": "2026-07-22T17:06:00Z",
-      "graded": false,
+      "graded": true,
       "hi25": true,
       "edge25": 26,
       "line25": 17.5,
-      "price25": 135
+      "price25": 135,
+      "actualOuts": 21,
+      "underHit": false
     },
     "keller": {
       "date": "2026-07-22",
@@ -4372,7 +4374,9 @@
       "betTagV": null,
       "betTime": null,
       "firstPitch": "2026-07-22T17:06:00Z",
-      "graded": false
+      "graded": true,
+      "actualOuts": 15,
+      "underHit": true
     },
     "roupp": {
       "date": "2026-07-22",
@@ -4402,7 +4406,9 @@
       "edge25": 27,
       "line25": 17.5,
       "price25": 110,
-      "graded": false
+      "graded": true,
+      "actualOuts": 18,
+      "underHit": false
     },
     "lugo": {
       "date": "2026-07-22",
@@ -4432,7 +4438,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 21,
+      "underHit": false
     },
     "scott": {
       "date": "2026-07-22",
@@ -4462,7 +4470,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 11,
+      "underHit": true
     },
     "henderson": {
       "date": "2026-07-22",
@@ -4492,7 +4502,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 15,
+      "underHit": false
     },
     "cavalli": {
       "date": "2026-07-22",
@@ -4522,7 +4534,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 18,
+      "underHit": false
     },
     "jump": {
       "date": "2026-07-22",
@@ -4552,7 +4566,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 14,
+      "underHit": true
     },
     "kelly": {
       "date": "2026-07-22",
@@ -4582,7 +4598,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 15,
+      "underHit": true
     },
     "dobbins": {
       "date": "2026-07-22",
@@ -4612,7 +4630,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 18,
+      "underHit": false
     },
     "detmers": {
       "date": "2026-07-22",
@@ -4642,7 +4662,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 16,
+      "underHit": true
     },
     "hancock": {
       "date": "2026-07-22",
@@ -4672,7 +4694,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 18,
+      "underHit": false
     },
     "singer": {
       "date": "2026-07-22",
@@ -4702,7 +4726,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 20,
+      "underHit": false
     },
     "kremer": {
       "date": "2026-07-22",
@@ -4732,7 +4758,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 18,
+      "underHit": false
     },
     "bennett": {
       "date": "2026-07-22",
@@ -4762,7 +4790,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 17,
+      "underHit": false
     },
     "nola": {
       "date": "2026-07-22",
@@ -4792,7 +4822,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 16,
+      "underHit": false
     },
     "lauer": {
       "date": "2026-07-22",
@@ -4822,7 +4854,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 16,
+      "underHit": false
     },
     "cecconi": {
       "date": "2026-07-22",
@@ -4852,7 +4886,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 14,
+      "underHit": true
     },
     "jax": {
       "date": "2026-07-22",
@@ -4882,7 +4918,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 18,
+      "underHit": false
     },
     "king": {
       "date": "2026-07-22",
@@ -4912,7 +4950,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 18,
+      "underHit": false
     },
     "rea": {
       "date": "2026-07-22",
@@ -4942,7 +4982,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 15,
+      "underHit": true
     },
     "kay": {
       "date": "2026-07-22",
@@ -4972,7 +5014,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 15,
+      "underHit": true
     },
     "lambert": {
       "date": "2026-07-22",
@@ -5002,7 +5046,9 @@
       "edge25": 29,
       "line25": 17.5,
       "price25": -110,
-      "graded": false
+      "graded": true,
+      "actualOuts": 18,
+      "underHit": false
     },
     "alcantara": {
       "date": "2026-07-22",
@@ -5032,7 +5078,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 21,
+      "underHit": false
     },
     "ober": {
       "date": "2026-07-22",
@@ -5062,7 +5110,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 12,
+      "underHit": true
     },
     "perez": {
       "date": "2026-07-22",
@@ -5122,7 +5172,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 16,
+      "underHit": false
     },
     "hughes": {
       "date": "2026-07-22",
@@ -5152,7 +5204,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 15,
+      "underHit": false
     },
     "chandler": {
       "date": "2026-07-22",
@@ -5182,7 +5236,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 19,
+      "underHit": false
     },
     "bradish": {
       "date": "2026-07-22",
@@ -5212,7 +5268,9 @@
       "edge25": null,
       "line25": null,
       "price25": null,
-      "graded": false
+      "graded": true,
+      "actualOuts": 18,
+      "underHit": false
     },
     "williams": {
       "date": "2026-07-22",
@@ -5268,6 +5326,98 @@
       "betTagV": null,
       "betTime": null,
       "firstPitch": "2026-07-23T16:16:00Z",
+      "hi25": false,
+      "edge25": null,
+      "line25": null,
+      "price25": null,
+      "graded": false
+    }
+  },
+  "2026-07-23": {
+    "sale": {
+      "date": "2026-07-23",
+      "name": "Chris Sale",
+      "team": "San Diego Padres @ Atlanta Braves",
+      "oppName": "San Diego Padres",
+      "line": 18.5,
+      "under": -165,
+      "proj": 18,
+      "mean": 17.4,
+      "sd": 3.31,
+      "n": 18,
+      "siera": 3.1171686269117496,
+      "oppOPS": 0.69,
+      "edge": -6,
+      "pUnder": 56,
+      "bet": false,
+      "reason": "cap",
+      "capped": true,
+      "book": "Bovada",
+      "betLine": null,
+      "betPrice": null,
+      "betTagV": null,
+      "betTime": null,
+      "firstPitch": "2026-07-23T16:16:00Z",
+      "hi25": false,
+      "edge25": null,
+      "line25": null,
+      "price25": null,
+      "graded": false
+    },
+    "williams": {
+      "date": "2026-07-23",
+      "name": "Gavin Williams",
+      "team": "Minnesota Twins @ Cleveland Guardians",
+      "oppName": "Minnesota Twins",
+      "line": 17.5,
+      "under": 110,
+      "proj": 16,
+      "mean": 17.8,
+      "sd": 3.12,
+      "n": 20,
+      "siera": 3.3196056361224078,
+      "oppOPS": 0.734,
+      "edge": 21,
+      "pUnder": 68,
+      "bet": false,
+      "reason": "cap",
+      "capped": true,
+      "book": "Bovada",
+      "betLine": null,
+      "betPrice": null,
+      "betTagV": null,
+      "betTime": null,
+      "firstPitch": "2026-07-23T17:11:00Z",
+      "hi25": false,
+      "edge25": null,
+      "line25": null,
+      "price25": null,
+      "graded": false
+    },
+    "bradley": {
+      "date": "2026-07-23",
+      "name": "Taj Bradley",
+      "team": "Minnesota Twins @ Cleveland Guardians",
+      "oppName": "Cleveland Guardians",
+      "line": 17.5,
+      "under": 115,
+      "proj": 17.5,
+      "mean": 17.1,
+      "sd": 3.18,
+      "n": 19,
+      "siera": 3.762992580921054,
+      "oppOPS": 0.691,
+      "edge": 3,
+      "pUnder": 50,
+      "bet": false,
+      "reason": "none",
+      "capped": false,
+      "book": "Bovada",
+      "betLine": null,
+      "betPrice": null,
+      "betTagV": null,
+      "betTime": null,
+      "firstPitch": "2026-07-23T17:11:00Z",
       "hi25": false,
       "edge25": null,
       "line25": null,
