@@ -5213,6 +5213,36 @@
       "line25": null,
       "price25": null,
       "graded": false
+    },
+    "williams": {
+      "date": "2026-07-22",
+      "name": "Gavin Williams",
+      "team": "Minnesota Twins @ Cleveland Guardians",
+      "oppName": null,
+      "line": 17.5,
+      "under": 110,
+      "proj": 16,
+      "mean": null,
+      "sd": 3.8,
+      "n": null,
+      "siera": null,
+      "oppOPS": null,
+      "edge": 18,
+      "pUnder": 65,
+      "bet": false,
+      "reason": "cap",
+      "capped": true,
+      "book": "Bovada",
+      "betLine": null,
+      "betPrice": null,
+      "betTagV": null,
+      "betTime": null,
+      "firstPitch": "2026-07-23T17:11:00Z",
+      "hi25": false,
+      "edge25": null,
+      "line25": null,
+      "price25": null,
+      "graded": false
     }
   }
 }
