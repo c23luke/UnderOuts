@@ -1,5 +1,27 @@
 [
   {
+    "date": "2026-07-23",
+    "pitcher": "Shane Bieber",
+    "short": true,
+    "edge": 31,
+    "bad": true,
+    "underLine": 16.5,
+    "oppTeam": "Tampa Bay Rays",
+    "f5ml": -115,
+    "f5rlPoint": 0.5,
+    "f5rlPrice": -160,
+    "f5totPoint": 4.5,
+    "f5totOver": -120,
+    "f5totUnder": -110,
+    "f5Total": null,
+    "ovResult": null,
+    "oppF5": null,
+    "ownF5": null,
+    "mlResult": null,
+    "rlResult": null,
+    "graded": false
+  },
+  {
     "date": "2026-07-22",
     "pitcher": "Seth Lugo",
     "short": false,

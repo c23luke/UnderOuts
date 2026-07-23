@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "name": "Shane Bieber",
+    "opp": "Tampa Bay Rays",
+    "line": 16.5,
+    "price": -120,
+    "edge": 31,
+    "proj": 13.1,
+    "siera": 5.51,
+    "bad": true
+  }
+]

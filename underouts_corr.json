@@ -493,5 +493,25 @@
       "f5Total": 0,
       "ovResult": "L"
     }
+  },
+  "2026-07-23": {
+    "bieber": {
+      "date": "2026-07-23",
+      "pitcher": "Shane Bieber",
+      "short": true,
+      "edge": 31,
+      "bad": true,
+      "underLine": 16.5,
+      "oppTeam": "Tampa Bay Rays",
+      "oppSide": "away",
+      "gamePk": 822785,
+      "f5ml": -115,
+      "f5rlPoint": 0.5,
+      "f5rlPrice": -160,
+      "f5totPoint": 4.5,
+      "f5totOver": -120,
+      "f5totUnder": -110,
+      "graded": false
+    }
   }
 }

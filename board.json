@@ -1,5 +1,19 @@
 [
   {
+    "name": "Shane Bieber",
+    "team": "Tampa Bay Rays @ Toronto Blue Jays",
+    "opp": "Tampa Bay Rays",
+    "line": 16.5,
+    "under": -120,
+    "book": "Bovada",
+    "proj": 13.1,
+    "edge": 31,
+    "pUnder": 85,
+    "siera": 5.511964921667868,
+    "tag": "both",
+    "bet": true
+  },
+  {
     "name": "Gavin Williams",
     "team": "Minnesota Twins @ Cleveland Guardians",
     "opp": "Minnesota Twins",
@@ -10,6 +24,20 @@
     "edge": 21,
     "pUnder": 68,
     "siera": 3.3196056361224078,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Ian Seymour",
+    "team": "Tampa Bay Rays @ Toronto Blue Jays",
+    "opp": "Toronto Blue Jays",
+    "line": 15.5,
+    "under": -160,
+    "book": "Bovada",
+    "proj": 13.1,
+    "edge": 11,
+    "pUnder": 72,
+    "siera": 3.526255836631297,
     "tag": null,
     "bet": false
   },
@@ -32,10 +60,10 @@
     "team": "San Diego Padres @ Atlanta Braves",
     "opp": "San Diego Padres",
     "line": 18.5,
-    "under": -155,
+    "under": -160,
     "book": "Bovada",
     "proj": 18,
-    "edge": -5,
+    "edge": -6,
     "pUnder": 56,
     "siera": 3.1171686269117496,
     "tag": null,

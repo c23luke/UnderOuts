@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "id": "2026-07-23|bieber",
+    "date": "2026-07-23",
+    "name": "Shane Bieber",
+    "team": "Tampa Bay Rays @ Toronto Blue Jays",
+    "opp": "Tampa Bay Rays",
+    "line": 16.5,
+    "side": "under",
+    "price": -120,
+    "proj": 13.1,
+    "edge": 31,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  }
+]
