@@ -413,7 +413,13 @@
       "f5totPoint": 5,
       "f5totOver": 100,
       "f5totUnder": -130,
-      "graded": false
+      "graded": true,
+      "oppF5": 2,
+      "ownF5": 3,
+      "mlResult": "L",
+      "rlResult": "L",
+      "f5Total": 5,
+      "ovResult": "P"
     },
     "roupp": {
       "date": "2026-07-22",
