@@ -455,7 +455,13 @@
       "f5totPoint": 4.5,
       "f5totOver": -110,
       "f5totUnder": -120,
-      "graded": false
+      "graded": true,
+      "oppF5": 2,
+      "ownF5": 2,
+      "mlResult": "P",
+      "rlResult": "W",
+      "f5Total": 4,
+      "ovResult": "L"
     },
     "chandler": {
       "date": "2026-07-22",
