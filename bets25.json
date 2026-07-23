@@ -10,6 +10,16 @@
     "bad": true
   },
   {
+    "name": "Gavin Williams",
+    "opp": "Minnesota Twins",
+    "line": 17.5,
+    "price": 130,
+    "edge": 25,
+    "proj": 16,
+    "siera": 3.32,
+    "bad": false
+  },
+  {
     "name": "Michael McGreevy",
     "opp": "Arizona Diamondbacks",
     "line": 17.5,
