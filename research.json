@@ -1,94 +1,226 @@
 [
   {
-    "key": "sale",
-    "tier": 3,
-    "score": 8,
-    "flags": {
-      "vet": true
-    },
-    "proj": "~6 IP (18 outs)",
-    "note": "Front-line workhorse (2.06 ERA) who works deep, no cap — defer to market."
+    "key": "way",
+    "tier": 1,
+    "score": 80,
+    "flags": { "opener": true },
+    "proj": "~2 IP (6 outs)",
+    "note": "CONFIRMED opener — Royals announced Beck Way opens Friday vs DET ahead of Zack Littell and will be limited to ~2 innings (CBS Sports)."
   },
   {
-    "key": "canning",
-    "tier": 3,
-    "score": 14,
-    "flags": {},
-    "proj": "~5.1 IP (16 outs)",
-    "note": "Back from June Achilles surgery but activated May 2 and now fully stretched (12th start); struggling (6.67 ERA) yet no announced cap — defer to market."
+    "key": "palmquist",
+    "tier": 1,
+    "score": 78,
+    "flags": { "opener": true, "rookie": true },
+    "proj": "~2 IP (6 outs)",
+    "note": "CONFIRMED opener — Nationals announced Palmquist opens Friday vs AZ ahead of Zack Littell; last two opener stints went 3 IP and 1.2 IP (CBS/FantasyPros)."
   },
   {
-    "key": "bradley",
-    "tier": 3,
-    "score": 14,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Established mid-rotation arm (9-4), no cap — defer to market."
+    "key": "sandoval",
+    "tier": 2,
+    "score": 58,
+    "flags": { "il": true },
+    "proj": "~4.1 IP (13 outs)",
+    "note": "CONFIRMED build-up — back July 9 from a 2-year Tommy John layoff, manager set an ~80-pitch ceiling (65 pitches/4.1 IP debut); still stretching out."
   },
   {
-    "key": "williams",
-    "tier": 3,
-    "score": 12,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Durable strikeout arm (10-5), no cap — defer to market."
+    "key": "jones",
+    "tier": 2,
+    "score": 50,
+    "flags": { "il": true },
+    "proj": "~4.1 IP (13 outs)",
+    "note": "CONFIRMED managed workload — back from UCL surgery (debut May 29), Pirates capping him: topped 80 pitches once and reached 5 IP only 3 times in 2026."
   },
   {
-    "key": "seymour",
-    "tier": 3,
-    "score": 24,
-    "flags": {
-      "rookie": true
-    },
-    "proj": "~5 IP (15 outs)",
-    "note": "Rookie lefty on a conventional starter workload (path to 5-6 IP), no announced cap — defer to market."
-  },
-  {
-    "key": "bieber",
+    "key": "yesavage",
     "tier": 3,
     "score": 32,
-    "flags": {
-      "il": true
-    },
+    "flags": { "rookie": true },
     "proj": "~5 IP (15 outs)",
-    "note": "Only a couple starts into his return from the 2024 Tommy John / elbow layoff, but reported capable of a normal workload (80-pitch rehab outing) with no announced cap for today — defer to market."
+    "note": "Rookie the Jays manage loosely (piggybacked early) but GM stated no hard innings cap and none announced today — defer to market."
   },
   {
-    "key": "pfaadt",
+    "key": "lopez",
     "tier": 3,
-    "score": 12,
-    "flags": {},
-    "proj": "~5.2 IP (16 outs)",
-    "note": "Established rotation regular, no cap — defer to market."
+    "score": 34,
+    "flags": { "trend": true },
+    "proj": "~5 IP (15 outs)",
+    "note": "Reliever-turned-starter not yet stretched (4.1 IP last start, opened July 10) but no announced cap today — defer to market."
+  },
+  {
+    "key": "grodriguez",
+    "tier": 3,
+    "score": 30,
+    "flags": { "il": true },
+    "proj": "~5 IP (15 outs)",
+    "note": "Back from a back-injury IL stint and already went 5.1 IP in his return; no announced per-start cap — defer to market."
+  },
+  {
+    "key": "lowder",
+    "tier": 3,
+    "score": 30,
+    "flags": { "il": true, "trend": true },
+    "proj": "~5 IP (15 outs)",
+    "note": "Recently moved back to the rotation from the bullpen; his short last outing (2.1 IP) was performance, not an announced cap — defer to market."
   },
   {
     "key": "may",
     "tier": 3,
-    "score": 28,
-    "flags": {
-      "trend": true
-    },
+    "score": 26,
+    "flags": { "trend": true },
     "proj": "~5.1 IP (16 outs)",
-    "note": "Cardinals gave him a situational 65-pitch limit on July 7 (workload/doubleheader) but he has since shown he can go deep and no cap is announced for today — defer to market."
+    "note": "Had a one-off 65-pitch limit on July 7 but has since gone deep; no cap announced today — defer to market."
   },
   {
-    "key": "cameron",
+    "key": "sasaki",
+    "tier": 3,
+    "score": 26,
+    "flags": { "rookie": true },
+    "proj": "~5.1 IP (16 outs)",
+    "note": "Generic durability watch but going 5.1-5.2 IP with his best stretch of the year and no announced cap — defer to market."
+  },
+  {
+    "key": "mcclanahan",
     "tier": 3,
     "score": 24,
-    "flags": {
-      "rookie": true
-    },
-    "proj": "~5 IP (15 outs)",
-    "note": "Rookie lefty stepping in for the injured Kolek; Royals are mindful of his workload but no announced per-start cap — defer to market."
+    "flags": { "il": true },
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Back from Tommy John but fully stretched (three straight quality starts, 6.1 IP on 7/8), no cap — defer to market."
   },
   {
-    "key": "melton",
+    "key": "drohan",
     "tier": 3,
-    "score": 28,
-    "flags": {
-      "rookie": true
-    },
-    "proj": "~5 IP (15 outs)",
-    "note": "Rookie back from early-season elbow inflammation and breaking out, but no reported pitch/inning cap — defer to market."
+    "score": 20,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Regular Brewers starter (5-3, 3.20), no announced cap — defer to market."
+  },
+  {
+    "key": "cantillo",
+    "tier": 3,
+    "score": 18,
+    "flags": {},
+    "proj": "~5.1 IP (16 outs)",
+    "note": "Solidified as a full-time starter (3.56 ERA), no announced cap — defer to market."
+  },
+  {
+    "key": "matthews",
+    "tier": 3,
+    "score": 16,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Young rotation regular, no cap — defer to market."
+  },
+  {
+    "key": "miller",
+    "tier": 3,
+    "score": 16,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Back in the rotation and stretched, no announced cap — defer to market."
+  },
+  {
+    "key": "warren",
+    "tier": 3,
+    "score": 14,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Established rotation regular (7-4), no cap — defer to market."
+  },
+  {
+    "key": "marquez",
+    "tier": 3,
+    "score": 14,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Veteran innings-eater past his TJ build-up, no cap — defer to market."
+  },
+  {
+    "key": "arrighetti",
+    "tier": 3,
+    "score": 14,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Established Astros starter, no cap — defer to market."
+  },
+  {
+    "key": "martin",
+    "tier": 3,
+    "score": 14,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Rotation regular, no cap — defer to market."
+  },
+  {
+    "key": "holmes",
+    "tier": 3,
+    "score": 12,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Established mid-rotation starter (6-4, 3.70), no cap — defer to market."
+  },
+  {
+    "key": "manaea",
+    "tier": 3,
+    "score": 12,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Veteran starter working deep, no cap — defer to market."
+  },
+  {
+    "key": "boyd",
+    "tier": 3,
+    "score": 10,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Veteran mid-rotation starter (6-1) working deep, no cap — defer to market."
+  },
+  {
+    "key": "luzardo",
+    "tier": 3,
+    "score": 10,
+    "flags": {},
+    "proj": "~6 IP (18 outs)",
+    "note": "Durable front-half starter (9-4, 3.43), no cap — defer to market."
+  },
+  {
+    "key": "sugano",
+    "tier": 3,
+    "score": 10,
+    "flags": {},
+    "proj": "~5.2 IP (16 outs)",
+    "note": "Established veteran innings-eater, no cap — defer to market."
+  },
+  {
+    "key": "erodriguez",
+    "tier": 3,
+    "score": 8,
+    "flags": {},
+    "proj": "~6 IP (18 outs)",
+    "note": "Front-line veteran (8-3, 2.62 ERA) who works deep, no cap — defer to market."
+  },
+  {
+    "key": "gore",
+    "tier": 3,
+    "score": 8,
+    "flags": {},
+    "proj": "~6 IP (18 outs)",
+    "note": "Front-line strikeout arm who works deep, no cap — defer to market."
+  },
+  {
+    "key": "webb",
+    "tier": 3,
+    "score": 5,
+    "flags": {},
+    "proj": "~6.2 IP (20 outs)",
+    "note": "Elite workhorse who routinely works deep, no cap — defer to market."
+  },
+  {
+    "key": "skubal",
+    "tier": 3,
+    "score": 5,
+    "flags": {},
+    "proj": "~6.2 IP (20 outs)",
+    "note": "Front-line ace workhorse, works deep, no cap — defer to market."
   }
 ]
