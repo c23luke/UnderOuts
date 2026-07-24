@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Shane Drohan",
+    "team": "Colorado Rockies @ Milwaukee Brewers",
+    "opp": "Colorado Rockies",
+    "line": 17.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 15.8,
+    "edge": 18,
+    "pUnder": 68,
+    "siera": 3.7789779397942858,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Jared Jones",
+    "team": "Chicago Cubs @ Pittsburgh Pirates",
+    "opp": "Chicago Cubs",
+    "line": 14.5,
+    "under": 120,
+    "book": "Bovada",
+    "proj": 13.6,
+    "edge": 17,
+    "pUnder": 62,
+    "siera": 3.523855219032951,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Matthew Boyd",
+    "team": "Chicago Cubs @ Pittsburgh Pirates",
+    "opp": "Pittsburgh Pirates",
+    "line": 16.5,
+    "under": -135,
+    "book": "Bovada",
+    "proj": 15.8,
+    "edge": 2,
+    "pUnder": 59,
+    "siera": 3.736440082992821,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Tomoyuki Sugano",
+    "team": "Colorado Rockies @ Milwaukee Brewers",
+    "opp": "Milwaukee Brewers",
+    "line": 15.5,
+    "under": -155,
+    "book": "Bovada",
+    "proj": 15.1,
+    "edge": -5,
+    "pUnder": 56,
+    "siera": 5.1636837445432855,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Tarik Skubal",
+    "team": "Kansas City Royals @ Detroit Tigers",
+    "opp": "Kansas City Royals",
+    "line": 18.5,
+    "under": -135,
+    "book": "Bovada",
+    "proj": 18.7,
+    "edge": -10,
+    "pUnder": 47,
+    "siera": 2.7415822829528778,
+    "tag": null,
+    "bet": false
+  }
+]
