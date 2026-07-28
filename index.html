@@ -137,17 +137,29 @@ function renderF5Picks(){
   const box=document.getElementById('f5picks'); if(!box) return;
   const today=new Date().toLocaleDateString('en-CA');
   // today's bad-arm + short pitchers, the two edge plays only (Over + opp ML)
-  const picks=CORR.filter(c=>c.date===today && c.short && (c.f5totPoint!=null || c.f5ml!=null))
-                  .sort((a,b)=>(b.edge||0)-(a.edge||0));
+  const picks=CORR.filter(c=>c.date===today && c.short && (c.f5totPoint!=null || c.f5ml!=null));
   if(!picks.length){ box.innerHTML='<div class="empty">No bad-arm + short F5 plays today.</div>'; return; }
-  box.innerHTML=picks.map(c=>{
-    const hot=c.edge!=null&&c.edge>=20;
-    const tag=hot?'<span class="f5tag">'+c.edge+'% EDGE</span>':'<span class="f5tag a">BAD ARM + SHORT</span>';
+  // GROUP BY GAME — when both starters in a game are picked, they play each other:
+  // the Over is one bet (show once), and there's NO ML play (taking both sides is a guaranteed loss).
+  const games={};
+  picks.forEach(c=>{ const g=(c.gamePk!=null?c.gamePk:(c.oppTeam+'|'+c.pitcher)); (games[g]=games[g]||[]).push(c); });
+  const cards=Object.values(games).sort((a,b)=>(Math.max(...b.map(x=>x.edge||0)))-(Math.max(...a.map(x=>x.edge||0)))).map(grp=>{
+    grp.sort((a,b)=>(b.edge||0)-(a.edge||0));
+    const both=grp.length>=2, c=grp[0];
+    const hot=grp.some(x=>x.edge!=null&&x.edge>=20);
+    const tag = both ? '<span class="f5tag">BOTH STARTERS</span>' : (hot?'<span class="f5tag">'+c.edge+'% EDGE</span>':'<span class="f5tag a">BAD ARM + SHORT</span>');
     const rows=[];
     if(c.f5totPoint!=null) rows.push('<div class="f5line"><span class="k">F5 OVER '+c.f5totPoint+'</span><span class="v">'+AMER(c.f5totOver)+' '+chipF5(c.ovResult)+'</span></div>');
-    if(c.f5ml!=null) rows.push('<div class="f5line"><span class="k">'+c.oppTeam+' F5 ML</span><span class="v">'+AMER(c.f5ml)+' '+chipF5(c.mlResult)+'</span></div>');
-    return '<div class="f5card"><div class="r1"><div><div class="f5team">'+c.oppTeam+' F5</div><div class="f5off">off '+c.pitcher+' · Under '+c.underLine+(c.edge!=null?' · +'+c.edge+'% edge':'')+'</div></div>'+tag+'</div>'+rows.join('')+'</div>';
-  }).join('');
+    if(both){
+      rows.push('<div class="f5line"><span class="k">F5 ML</span><span class="v" style="color:var(--dim)">— both starters picked, no side</span></div>');
+    } else if(c.f5ml!=null){
+      rows.push('<div class="f5line"><span class="k">'+c.oppTeam+' F5 ML</span><span class="v">'+AMER(c.f5ml)+' '+chipF5(c.mlResult)+'</span></div>');
+    }
+    const title = both ? (grp.map(x=>x.pitcher.split(' ').pop()).join(' vs ')+' — same game') : (c.oppTeam+' F5');
+    const off = both ? ('both starters bad arm + short — Over only') : ('off '+c.pitcher+' · Under '+c.underLine+(c.edge!=null?' · +'+c.edge+'% edge':''));
+    return '<div class="f5card"><div class="r1"><div><div class="f5team">'+title+'</div><div class="f5off">'+off+'</div></div>'+tag+'</div>'+rows.join('')+'</div>';
+  });
+  box.innerHTML=cards.join('');
 }
 
 function renderBets25(){
