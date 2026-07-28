@@ -82,6 +82,9 @@
     <div class="lab" style="margin-top:26px">Tonight · 25%+ edge · bad arm</div>
     <div id="bets25"><div class="empty">No 25%+ bad-arm plays today.</div></div>
 
+    <div class="lab" style="margin-top:26px">Best F5 plays · today · Over + opp ML</div>
+    <div id="f5picks"><div class="empty">No bad-arm + short F5 plays today.</div></div>
+
     <div class="lab" style="margin-top:26px">Today's slate · pitcher vs opponent · ranked by edge</div>
     <div id="board"><div class="empty">Waiting on the model — start the bot on your Mac. Updates every 10 min.</div></div>
 
@@ -128,7 +131,24 @@ async function live(){
 }
 function lv(n){return LIVE[n.toLowerCase().split(' ').pop()];}
 
-function renderAll(){ renderStats(); renderBets(); renderBets25(); renderBoard(); renderF5(); renderHist(); renderHigh(); }
+function renderAll(){ renderStats(); renderBets(); renderBets25(); renderF5Picks(); renderBoard(); renderF5(); renderHist(); renderHigh(); }
+
+function renderF5Picks(){
+  const box=document.getElementById('f5picks'); if(!box) return;
+  const today=new Date().toLocaleDateString('en-CA');
+  // today's bad-arm + short pitchers, the two edge plays only (Over + opp ML)
+  const picks=CORR.filter(c=>c.date===today && c.short && (c.f5totPoint!=null || c.f5ml!=null))
+                  .sort((a,b)=>(b.edge||0)-(a.edge||0));
+  if(!picks.length){ box.innerHTML='<div class="empty">No bad-arm + short F5 plays today.</div>'; return; }
+  box.innerHTML=picks.map(c=>{
+    const hot=c.edge!=null&&c.edge>=20;
+    const tag=hot?'<span class="f5tag">'+c.edge+'% EDGE</span>':'<span class="f5tag a">BAD ARM + SHORT</span>';
+    const rows=[];
+    if(c.f5totPoint!=null) rows.push('<div class="f5line"><span class="k">F5 OVER '+c.f5totPoint+'</span><span class="v">'+AMER(c.f5totOver)+' '+chipF5(c.ovResult)+'</span></div>');
+    if(c.f5ml!=null) rows.push('<div class="f5line"><span class="k">'+c.oppTeam+' F5 ML</span><span class="v">'+AMER(c.f5ml)+' '+chipF5(c.mlResult)+'</span></div>');
+    return '<div class="f5card"><div class="r1"><div><div class="f5team">'+c.oppTeam+' F5</div><div class="f5off">off '+c.pitcher+' · Under '+c.underLine+(c.edge!=null?' · +'+c.edge+'% edge':'')+'</div></div>'+tag+'</div>'+rows.join('')+'</div>';
+  }).join('');
+}
 
 function renderBets25(){
   const box=document.getElementById('bets25');
