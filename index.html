@@ -82,7 +82,7 @@
     <div class="lab" style="margin-top:26px">Tonight · 25%+ edge · bad arm</div>
     <div id="bets25"><div class="empty">No 25%+ bad-arm plays today.</div></div>
 
-    <div class="lab" style="margin-top:26px">Best F5 plays · today · Over + opp ML</div>
+    <div class="lab" style="margin-top:26px">Best F5 plays · today · UNDER (★ = high total)</div>
     <div id="f5picks"><div class="empty">No bad-arm + short F5 plays today.</div></div>
 
     <div class="lab" style="margin-top:26px">Today's slate · pitcher vs opponent · ranked by edge</div>
@@ -96,9 +96,9 @@
   </div>
 
   <div id="tab-f5" style="display:none">
-    <div class="syscap" style="margin-bottom:14px">A bad-arm pitcher going short = his opponent's offense scores early. Take that opponent's F5 — Over first, then ML / Run Line.</div>
+    <div class="syscap" style="margin-bottom:14px">The data flipped it: these games go UNDER, not over — the market overprices the bad arm and the bullpen comes in early. Play the F5/full UNDER, strongest when the total is set high (★). Still a small sample — track, don't hammer.</div>
 
-    <div class="lab">Today · team to bet F5</div>
+    <div class="lab">Today · F5 UNDER plays</div>
     <div id="f5today"><div class="empty">No F5 plays today yet — fires when an under-outs alert sends.</div></div>
 
     <div class="lab" style="margin-top:26px">F5 performance · record · units · ROI</div>
@@ -137,7 +137,7 @@ function renderF5Picks(){
   const box=document.getElementById('f5picks'); if(!box) return;
   const today=new Date().toLocaleDateString('en-CA');
   // today's bad-arm + short pitchers, the two edge plays only (Over + opp ML)
-  const picks=CORR.filter(c=>c.date===today && c.short && (c.f5totPoint!=null || c.f5ml!=null));
+  const picks=CORR.filter(c=>c.date===today && c.short && (c.f5totPoint!=null || c.fullTotPoint!=null));
   if(!picks.length){ box.innerHTML='<div class="empty">No bad-arm + short F5 plays today.</div>'; return; }
   // GROUP BY GAME — when both starters in a game are picked, they play each other:
   // the Over is one bet (show once), and there's NO ML play (taking both sides is a guaranteed loss).
@@ -146,17 +146,13 @@ function renderF5Picks(){
   const cards=Object.values(games).sort((a,b)=>(Math.max(...b.map(x=>x.edge||0)))-(Math.max(...a.map(x=>x.edge||0)))).map(grp=>{
     grp.sort((a,b)=>(b.edge||0)-(a.edge||0));
     const both=grp.length>=2, c=grp[0];
-    const hot=grp.some(x=>x.edge!=null&&x.edge>=20);
-    const tag = both ? '<span class="f5tag">BOTH STARTERS</span>' : (hot?'<span class="f5tag">'+c.edge+'% EDGE</span>':'<span class="f5tag a">BAD ARM + SHORT</span>');
+    const hiTot=c.f5totPoint!=null&&c.f5totPoint>4.5;   // the edge: fade the inflated total
+    const tag = both ? '<span class="f5tag">BOTH ARMS BAD</span>' : (hiTot?'<span class="f5tag">★ HIGH TOTAL</span>':'<span class="f5tag a">under lean</span>');
     const rows=[];
-    if(c.f5totPoint!=null) rows.push('<div class="f5line"><span class="k">F5 OVER '+c.f5totPoint+'</span><span class="v">'+AMER(c.f5totOver)+' '+chipF5(c.ovResult)+'</span></div>');
-    if(both){
-      rows.push('<div class="f5line"><span class="k">F5 ML</span><span class="v" style="color:var(--dim)">— both starters picked, no side</span></div>');
-    } else if(c.f5ml!=null){
-      rows.push('<div class="f5line"><span class="k">'+c.oppTeam+' F5 ML</span><span class="v">'+AMER(c.f5ml)+' '+chipF5(c.mlResult)+'</span></div>');
-    }
-    const title = both ? (grp.map(x=>x.pitcher.split(' ').pop()).join(' vs ')+' — same game') : (c.oppTeam+' F5');
-    const off = both ? ('both starters bad arm + short — Over only') : ('off '+c.pitcher+' · Under '+c.underLine+(c.edge!=null?' · +'+c.edge+'% edge':''));
+    if(c.f5totPoint!=null) rows.push('<div class="f5line"><span class="k">F5 UNDER '+c.f5totPoint+(hiTot?' ★':'')+'</span><span class="v">'+AMER(c.f5totUnder)+' '+chipF5(flipR(c.ovResult))+'</span></div>');
+    if(c.fullTotPoint!=null) rows.push('<div class="f5line"><span class="k">Full-game UNDER '+c.fullTotPoint+'</span><span class="v">'+AMER(c.fullTotUnder)+' '+chipF5(flipR(c.fullOvResult))+'</span></div>');
+    const title = both ? (grp.map(x=>x.pitcher.split(' ').pop()).join(' vs ')+' — same game') : (c.oppTeam+' game');
+    const off = both ? ('both starters bad arm + short') : ('off '+c.pitcher+' · Under '+c.underLine+(c.edge!=null?' · +'+c.edge+'% edge':''));
     return '<div class="f5card"><div class="r1"><div><div class="f5team">'+title+'</div><div class="f5off">'+off+'</div></div>'+tag+'</div>'+rows.join('')+'</div>';
   });
   box.innerHTML=cards.join('');
@@ -196,6 +192,8 @@ function tab(t){
 }
 
 const chipF5=r=>r==='W'?'<b style="color:var(--green)">W</b>':r==='L'?'<b style="color:var(--red)">L</b>':r==='P'?'<b style="color:var(--muted)">push</b>':'<span style="color:var(--dim)">◷ live</span>';
+const flipR=r=>r==='W'?'L':(r==='L'?'W':r);   // over result -> under result (the play is now the UNDER)
+const dedupGames=arr=>{const m={};arr.forEach(c=>{const g=(c.gamePk!=null?c.gamePk:(c.pitcher+'|'+c.date));if(!m[g])m[g]=c;});return Object.values(m);};
 function renderF5(){
   const today=new Date().toLocaleDateString('en-CA');
   // 1) TODAY — the team to bet, one card per pick, Over highlighted
@@ -206,35 +204,40 @@ function renderF5(){
       const hi=c.edge!=null&&c.edge>=25;
       const tag=hi?'<span class="f5tag">'+c.edge+'% EDGE</span>':(c.short?'<span class="f5tag">BAD ARM + SHORT</span>':'<span class="f5tag a">BAD ARM</span>');
       const lines=[];
-      if(c.f5totPoint!=null) lines.push('<div class="f5line"><span class="k">F5 Over '+c.f5totPoint+'</span><span class="v">'+AMER(c.f5totOver)+' '+chipF5(c.ovResult)+'</span></div>');
-      if(c.fullTotPoint!=null) lines.push('<div class="f5line"><span class="k">Full-game Over '+c.fullTotPoint+'</span><span class="v">'+AMER(c.fullTotOver)+' '+chipF5(c.fullOvResult)+'</span></div>');
-      if(c.f5ml!=null) lines.push('<div class="f5line"><span class="k">'+c.oppTeam+' F5 ML</span><span class="v">'+AMER(c.f5ml)+' '+chipF5(c.mlResult)+'</span></div>');
-      if(c.f5rlPoint!=null) lines.push('<div class="f5line"><span class="k">'+c.oppTeam+' F5 RL '+(c.f5rlPoint>0?'+':'')+c.f5rlPoint+'</span><span class="v">'+AMER(c.f5rlPrice)+' '+chipF5(c.rlResult)+'</span></div>');
-      const runs=c.f5Total!=null?('<div class="f5off" style="margin-top:8px;color:var(--text)">First 5: '+c.oppF5+'-'+c.ownF5+' · '+c.f5Total+' total runs</div>'):'';
-      return '<div class="f5card"><div class="r1"><div><div class="f5team">Take '+c.oppTeam+'</div><div class="f5off">off '+c.pitcher+' · Under '+c.underLine+(c.edge!=null?' · +'+c.edge+'% edge':'')+'</div></div>'+tag+'</div>'+lines.join('')+runs+'</div>';
+      if(c.f5totPoint!=null) lines.push('<div class="f5line"><span class="k">F5 UNDER '+c.f5totPoint+(c.f5totPoint>4.5?' ★':'')+'</span><span class="v">'+AMER(c.f5totUnder)+' '+chipF5(flipR(c.ovResult))+'</span></div>');
+      if(c.fullTotPoint!=null) lines.push('<div class="f5line"><span class="k">Full-game UNDER '+c.fullTotPoint+'</span><span class="v">'+AMER(c.fullTotUnder)+' '+chipF5(flipR(c.fullOvResult))+'</span></div>');
+      const runs=c.f5Total!=null?('<div class="f5off" style="margin-top:8px;color:var(--text)">First 5: '+c.f5Total+' total runs'+(c.fullTotal!=null?' · game '+c.fullTotal:'')+'</div>'):'';
+      return '<div class="f5card"><div class="r1"><div><div class="f5team">'+c.oppTeam+' game</div><div class="f5off">off '+c.pitcher+' · Under '+c.underLine+(c.edge!=null?' · +'+c.edge+'% edge':'')+'</div></div>'+tag+'</div>'+lines.join('')+runs+'</div>';
     }).join('');
   } else tbox.innerHTML='<div class="empty">No F5 plays today yet — fires when an under-outs alert sends.</div>';
 
   // 2) F5 performance — W/L, units, ROI for each market (Over / ML / RL), bad-arm+short system
-  const mkt=(arr,resKey,priceKey)=>{const g=arr.filter(c=>c[resKey]&&c[resKey]!=='P');const w=g.filter(c=>c[resKey]==='W').length,l=g.length-w;let u=0;g.forEach(c=>u+=c[resKey]==='W'?bu(c[priceKey]):-1);const roi=g.length?u/g.length*100:0;return {w,l,u,roi,n:g.length};};
+  // UNDER grader (over result flipped): under wins when the over LOST ('L'); price = the under side
+  const mktU=(arr,resKey,underPx)=>{const g=arr.filter(c=>c[resKey]&&c[resKey]!=='P'&&c[underPx]!=null);const w=g.filter(c=>c[resKey]==='L').length,l=g.length-w;let u=0;g.forEach(c=>u+=c[resKey]==='L'?bu(c[underPx]):-1);const roi=g.length?u/g.length*100:0;return {w,l,u,roi,n:g.length};};
   const mrow=(cls,label,m)=> ('<div class="sysrow '+cls+'"><div class="sysL">'+label+' <b>'+(m.n?m.w+'-'+m.l+' · '+Math.round(m.w/m.n*100)+'%':'0-0')+'</b></div><div class="sysR"><span style="color:'+(m.u>=0?'var(--green)':'var(--red)')+'">'+(m.u>=0?'+':'')+m.u.toFixed(1)+'u</span><span style="color:'+(m.roi>=0?'var(--green)':'var(--red)')+'">'+(m.n?(m.roi>=0?'+':'')+Math.round(m.roi)+'%':'—')+'</span></div></div>');
-  const s25=CORR.filter(c=>c.edge!=null&&c.edge>=25), s30=CORR.filter(c=>c.edge!=null&&c.edge>=30), shortSet=CORR.filter(c=>c.short);
-  const grp=(set)=> mrow('b','F5 OVER',mkt(set,'ovResult','f5totOver'))+mrow('b','FULL OVER',mkt(set,'fullOvResult','fullTotOver'))+mrow('a','F5 ML · opp',mkt(set,'mlResult','f5ml'))+mrow('a','F5 RL · opp',mkt(set,'rlResult','f5rlPrice'));
+  const short=dedupGames(CORR.filter(c=>c.short));                                   // one row per GAME
+  const hiTot=short.filter(c=>c.f5totPoint!=null&&c.f5totPoint>4.5);
+  const e20=short.filter(c=>c.edge!=null&&c.edge>=20);
+  const bothBad=(()=>{const cnt={};CORR.filter(c=>c.short&&c.gamePk!=null).forEach(c=>cnt[c.gamePk]=(cnt[c.gamePk]||0)+1);return short.filter(c=>c.gamePk!=null&&cnt[c.gamePk]>=2);})();
   document.getElementById('f5sys').innerHTML=
-      '<div class="syscap" style="margin:0 0 9px">25%+ edge · take opponent F5 · '+s25.length+' games</div>'+grp(s25)
-    + '<div class="syscap" style="margin:16px 0 9px">30%+ edge · '+s30.length+' games</div>'+grp(s30)
-    + '<div class="syscap" style="margin:16px 0 9px">Bad arm + short · '+shortSet.length+' games</div>'+grp(shortSet);
+      '<div class="syscap" style="margin:0 0 9px">Bad arm + short · the play is the UNDER · '+short.length+' games</div>'
+    + mrow('b','F5 UNDER',mktU(short,'ovResult','f5totUnder'))
+    + mrow('b','FULL-game UNDER',mktU(short,'fullOvResult','fullTotUnder'))
+    + '<div class="syscap" style="margin:16px 0 9px">★ F5 UNDER · high total (>4.5) — the edge · '+hiTot.length+' games</div>'
+    + mrow('b','F5 UNDER · high tot',mktU(hiTot,'ovResult','f5totUnder'))
+    + '<div class="syscap" style="margin:16px 0 9px">F5 UNDER · edge ≥20% · '+e20.length+' games</div>'
+    + mrow('b','F5 UNDER · 20%+',mktU(e20,'ovResult','f5totUnder'))
+    + '<div class="syscap" style="margin:16px 0 9px">Both arms bad (watch — tiny) · '+bothBad.length+' games</div>'
+    + mrow('a','F5 UNDER · both bad',mktU(bothBad,'ovResult','f5totUnder'));
 
   // 3) ALL tracked F5 — full history WITH the lines next to each result
   const kbox=document.getElementById('f5track');
   if(!CORR.length){ kbox.innerHTML='<div class="empty">Nothing tracked yet.</div>'; return; }
   kbox.innerHTML=CORR.slice(0,40).map(c=>{
     const runs=c.f5Total!=null?(c.f5Total+'r F5'):(c.graded?(c.oppF5+'-'+c.ownF5):'tracking');
-    const ov=c.f5totPoint!=null?('F5 O'+c.f5totPoint+' '+chipF5(c.ovResult)):'';
-    const fo=c.fullTotPoint!=null?('Full O'+c.fullTotPoint+' '+chipF5(c.fullOvResult)):'';
-    const ml=c.f5ml!=null?('ML '+chipF5(c.mlResult)):'';
-    const rl=c.f5rlPoint!=null?('RL '+chipF5(c.rlResult)):'';
-    const parts=[ov,fo,ml,rl].filter(Boolean).join(' · ');
+    const ov=c.f5totPoint!=null?('F5 U'+c.f5totPoint+(c.f5totPoint>4.5?'★':'')+' '+chipF5(flipR(c.ovResult))):'';
+    const fo=c.fullTotPoint!=null?('Full U'+c.fullTotPoint+' '+chipF5(flipR(c.fullOvResult))):'';
+    const parts=[ov,fo].filter(Boolean).join(' · ');
     const dot=c.short?'<span style="color:var(--green)">●</span> ':'<span style="color:var(--amber)">●</span> ';
     return '<div class="hrow"><div><div>'+dot+c.oppTeam+' <span style="color:var(--dim);font-size:11px">off '+c.pitcher+'</span></div><div class="t2">'+parts+' · '+runs+'</div></div><div style="font-size:11px;color:var(--dim)">'+c.date+'</div></div>';
   }).join('');
