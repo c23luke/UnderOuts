@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Ethan Pecko",
+    "opp": "Arizona Diamondbacks",
+    "line": 14.5,
+    "price": 125,
+    "edge": 36,
+    "proj": 11.8,
+    "siera": 6.18,
+    "bad": true
+  },
+  {
+    "name": "Brandon Pfaadt",
+    "opp": "Houston Astros",
+    "line": 17.5,
+    "price": 120,
+    "edge": 26,
+    "proj": 16,
+    "siera": 4.43,
+    "bad": true
+  }
+]
