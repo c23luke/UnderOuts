@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Grayson Rodriguez",
+    "team": "Los Angeles Angels @ Boston Red Sox",
+    "opp": "Boston Red Sox",
+    "line": 15.5,
+    "under": -115,
+    "book": "Bovada",
+    "proj": 14.4,
+    "edge": 8,
+    "pUnder": 61,
+    "siera": 4.543202569053233,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Matthew Boyd",
+    "team": "Chicago Cubs @ Milwaukee Brewers",
+    "opp": "Milwaukee Brewers",
+    "line": 17.5,
+    "under": -105,
+    "book": "Bovada",
+    "proj": 16.9,
+    "edge": 6,
+    "pUnder": 58,
+    "siera": 4.405596347820623,
+    "tag": null,
+    "bet": false
+  },
+  {
+    "name": "Grant Holmes",
+    "team": "Atlanta Braves @ Philadelphia Phillies",
+    "opp": "Philadelphia Phillies",
+    "line": 14.5,
+    "under": 100,
+    "book": "Bovada",
+    "proj": 14.1,
+    "edge": 5,
+    "pUnder": 55,
+    "siera": 4.7190952504509545,
+    "tag": null,
+    "bet": false
+  }
+]
