@@ -1,0 +1,50 @@
+[
+  {
+    "id": "2026-09-15|kent",
+    "date": "2026-09-15",
+    "name": "Jackson Kent",
+    "team": "Philadelphia Phillies @ Washington Nationals",
+    "opp": "Philadelphia Phillies",
+    "line": 14.5,
+    "side": "under",
+    "price": 115,
+    "proj": 12.5,
+    "edge": 22,
+    "siera": 5.62,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  },
+  {
+    "id": "2026-09-15|lowder",
+    "date": "2026-09-15",
+    "name": "Rhett Lowder",
+    "team": "Los Angeles Dodgers @ Cincinnati Reds",
+    "opp": "Los Angeles Dodgers",
+    "line": 14.5,
+    "side": "under",
+    "price": 115,
+    "proj": 13.6,
+    "edge": 12,
+    "siera": 4.82,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  },
+  {
+    "id": "2026-09-15|sandoval",
+    "date": "2026-09-15",
+    "name": "Patrick Sandoval",
+    "team": "Boston Red Sox @ Texas Rangers",
+    "opp": "Texas Rangers",
+    "line": 16.5,
+    "side": "under",
+    "price": -115,
+    "proj": 14.7,
+    "edge": 4,
+    "siera": 4.53,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  }
+]
