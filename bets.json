@@ -1,0 +1,34 @@
+[
+  {
+    "id": "2026-09-26|wilkinson",
+    "date": "2026-09-26",
+    "name": "Matt Wilkinson",
+    "team": "Los Angeles Dodgers @ San Francisco Giants",
+    "opp": "Los Angeles Dodgers",
+    "line": 14.5,
+    "side": "under",
+    "price": 120,
+    "proj": 10.4,
+    "edge": 40,
+    "siera": 5.78,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  },
+  {
+    "id": "2026-09-26|quintana",
+    "date": "2026-09-26",
+    "name": "Jose Quintana",
+    "team": "Colorado Rockies @ Chicago White Sox",
+    "opp": "Chicago White Sox",
+    "line": 13.5,
+    "side": "under",
+    "price": -115,
+    "proj": 11.7,
+    "edge": 13,
+    "siera": 5.91,
+    "tag": "both",
+    "book": "Bovada",
+    "auto": true
+  }
+]
